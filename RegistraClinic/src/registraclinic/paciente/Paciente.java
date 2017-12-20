@@ -18,7 +18,7 @@ public class Paciente {
     private String dataNascimentoPaciente;
     private String enderecoPaciente;
     private String telefonePaciente;
-    private String nomeResponsavelPaciente;
+    private String nomeResponsavelPaciente; //NOVA CLASSE??? SERIA UMA CLASSE "RESPONSAVEL"??
     private String telefoneResponsavelPaciente;
     private String dataCadastroPaciente;
     private boolean urgenciaPaciente;

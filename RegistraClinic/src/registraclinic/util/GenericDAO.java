@@ -188,25 +188,6 @@ public abstract class GenericDAO<T> {
 
     }
 
-    public T carregarGradeCurricular(String campo, Object valor, String campo2, Object valor2) {
-        T objeto = null;
-        try {
-            this.setSessao(HibernateUtil.getSessionFactory().openSession());
-            setTransacao(getSessao().beginTransaction());
-            objeto = (T) this.getSessao().createCriteria(classe).add(Restrictions.eq(campo, valor)).add(Restrictions.eq(campo2, valor2)).uniqueResult();
-            sessao.close();
-        } catch (Throwable e) {
-            if (getTransacao().isActive()) {
-                getTransacao().rollback();
-            }
-            JOptionPane.showMessageDialog(null, "Não foi possível executar essa operação"
-                    + ". Erro: " + e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
-        }
-        return objeto;
-
-    }
-
-
     /**
      * @return the sessao
      */
