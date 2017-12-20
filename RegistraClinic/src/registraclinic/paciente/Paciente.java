@@ -22,7 +22,7 @@ public class Paciente {
     private String telefoneResponsavelPaciente;
     private String dataCadastroPaciente;
     private boolean urgenciaPaciente;
-    private int numeroProntuarioPaciente;
+    private int numeroProntuarioPaciente; //ESSE NÚMERO VIRIA DE UMA CLASSE PRONTUÁRIO??
 
     public int getIdPaciente() {
         return idPaciente;

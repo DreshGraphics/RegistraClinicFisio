@@ -3,35 +3,35 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package registraclinic.paciente;
+package registraclinic.consulta;
 
 import javax.swing.JOptionPane;
+import registraclinic.paciente.Paciente;
 import registraclinic.util.GenericDAO;
 
 /**
  *
  * @author Karlos
  */
-public class PacienteDAO extends GenericDAO<Paciente>{
+public class ConsultaDAO extends GenericDAO<Consulta>{
     
-    public PacienteDAO() {
-        super(Paciente.class);
+    public ConsultaDAO() {
+        super(Consulta.class);
     }
     
-    public void salvar(Paciente paciente) {
+    public void salvar(Consulta consulta) {
         Object[] options = {"Sim", "Não"};
-        if (paciente.getIdPaciente() == 0) {
-            if (adicionar(paciente)) {
-                JOptionPane.showMessageDialog(null, "Paciente cadastrado(a) com sucesso!");
+        if (consulta.getIdConsulta() == 0) {
+            if (adicionar(consulta)) {
+                JOptionPane.showMessageDialog(null, "Consulta cadastrada com sucesso!");
             }
         } else if (JOptionPane.showOptionDialog(null, "Deseja mesmo realizar essa edição"
                 + "?", "RegistraClinic", JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[0]) == JOptionPane.YES_OPTION) {
-            if (atualizar(paciente)) {
-                JOptionPane.showMessageDialog(null, "Paciente editado(a) com sucesso!!");
+            if (atualizar(consulta)) {
+                JOptionPane.showMessageDialog(null, "Consulta editada com sucesso!!");
             }
         } else {
             JOptionPane.showMessageDialog(null, "A edição foi cancelada!");
         }
     }
-    
 }
