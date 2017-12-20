@@ -3,12 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package registraclinic.usuario;
+package registraclinic.paciente;
 
 /**
  *
  * @author Paulo
  */
-public class Usuario {
+public class Paciente {
+    
+    private int idPaciente;
+    private String nomePaciente;
+    private int rgPaciente;
+    private int cpfPaciente;
+    private int idPaciente;
+    
     
 }
