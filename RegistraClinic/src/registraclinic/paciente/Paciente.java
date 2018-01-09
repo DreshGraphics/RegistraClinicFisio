@@ -12,17 +12,19 @@ package registraclinic.paciente;
 public class Paciente {
     
     private int idPaciente;
+    private int numeroProntuarioPaciente; //Seria a mesma coisa do ID???
     private String nomePaciente;
     private String rgPaciente;
     private String cpfPaciente;
+    private int idadePaciente;
     private String dataNascimentoPaciente;
+    private String sexoPaciente;
     private String enderecoPaciente;
     private String telefonePaciente;
-    private String nomeResponsavelPaciente; //NOVA CLASSE??? SERIA UMA CLASSE "RESPONSAVEL"??
+    private String nomeResponsavelPaciente;
     private String telefoneResponsavelPaciente;
     private String dataCadastroPaciente;
-    private boolean urgenciaPaciente;
-    private int numeroProntuarioPaciente; //ESSE NÚMERO VIRIA DE UMA CLASSE PRONTUÁRIO??
+    
 
     public int getIdPaciente() {
         return idPaciente;
@@ -104,14 +106,22 @@ public class Paciente {
         this.dataCadastroPaciente = dataCadastroPaciente;
     }
 
-    public boolean isUrgenciaPaciente() {
-        return urgenciaPaciente;
+    public int getIdadePaciente() {
+        return idadePaciente;
     }
 
-    public void setUrgenciaPaciente(boolean urgenciaPaciente) {
-        this.urgenciaPaciente = urgenciaPaciente;
+    public void setIdadePaciente(int idadePaciente) {
+        this.idadePaciente = idadePaciente;
     }
 
+    public String getSexoPaciente() {
+        return sexoPaciente;
+    }
+
+    public void setSexoPaciente(String sexoPaciente) {
+        this.sexoPaciente = sexoPaciente;
+    }
+    
     public int getNumeroProntuarioPaciente() {
         return numeroProntuarioPaciente;
     }
