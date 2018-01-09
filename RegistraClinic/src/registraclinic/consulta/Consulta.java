@@ -16,10 +16,10 @@ public class Consulta {
     
     private int idConsulta;
     private String nomeConsulta;
-    private Paciente paciente;
+    private Paciente pacienteConsulta;
     private String dataConsulta;
     private String horaConsulta;
-    private Funcionario funcionario;
+    private Funcionario funcionarioConsulta;
 
     public int getIdConsulta() {
         return idConsulta;
@@ -38,11 +38,11 @@ public class Consulta {
     }
 
     public Paciente getPaciente() {
-        return paciente;
+        return pacienteConsulta;
     }
 
     public void setPaciente(Paciente paciente) {
-        this.paciente = paciente;
+        this.pacienteConsulta = paciente;
     }
 
     public String getDataConsulta() {
@@ -62,11 +62,11 @@ public class Consulta {
     }
 
     public Funcionario getFuncionario() {
-        return funcionario;
+        return funcionarioConsulta;
     }
 
     public void setFuncionario(Funcionario funcionario) {
-        this.funcionario = funcionario;
+        this.funcionarioConsulta = funcionario;
     }
     
 }
