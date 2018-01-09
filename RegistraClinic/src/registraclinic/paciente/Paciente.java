@@ -5,12 +5,19 @@
  */
 package registraclinic.paciente;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 /**
  *
  * @author Paulo
  */
+@Entity
 public class Paciente {
     
+    @Id
+    @GeneratedValue
     private int idPaciente;
     private int numeroProntuarioPaciente; //Seria a mesma coisa do ID???
     private String nomePaciente;
@@ -106,22 +113,6 @@ public class Paciente {
         this.dataCadastroPaciente = dataCadastroPaciente;
     }
 
-    public int getIdadePaciente() {
-        return idadePaciente;
-    }
-
-    public void setIdadePaciente(int idadePaciente) {
-        this.idadePaciente = idadePaciente;
-    }
-
-    public String getSexoPaciente() {
-        return sexoPaciente;
-    }
-
-    public void setSexoPaciente(String sexoPaciente) {
-        this.sexoPaciente = sexoPaciente;
-    }
-    
     public int getNumeroProntuarioPaciente() {
         return numeroProntuarioPaciente;
     }
