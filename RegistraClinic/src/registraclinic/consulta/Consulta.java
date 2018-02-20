@@ -5,6 +5,7 @@
  */
 package registraclinic.consulta;
 
+import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -23,7 +24,7 @@ public class Consulta {
     private int idConsulta;
     private String nomeConsulta;
     private Paciente pacienteConsulta;
-    private String dataConsulta;
+    private Date dataConsulta;
     private String horaConsulta;
     private Funcionario funcionarioConsulta;
 
@@ -43,19 +44,19 @@ public class Consulta {
         this.nomeConsulta = nomeConsulta;
     }
 
-    public Paciente getPaciente() {
+    public Paciente getPacienteConsulta() {
         return pacienteConsulta;
     }
 
-    public void setPaciente(Paciente paciente) {
-        this.pacienteConsulta = paciente;
+    public void setPacienteConsulta(Paciente pacienteConsulta) {
+        this.pacienteConsulta = pacienteConsulta;
     }
 
-    public String getDataConsulta() {
+    public Date getDataConsulta() {
         return dataConsulta;
     }
 
-    public void setDataConsulta(String dataConsulta) {
+    public void setDataConsulta(Date dataConsulta) {
         this.dataConsulta = dataConsulta;
     }
 
@@ -67,12 +68,13 @@ public class Consulta {
         this.horaConsulta = horaConsulta;
     }
 
-    public Funcionario getFuncionario() {
+    public Funcionario getFuncionarioConsulta() {
         return funcionarioConsulta;
     }
 
-    public void setFuncionario(Funcionario funcionario) {
-        this.funcionarioConsulta = funcionario;
+    public void setFuncionarioConsulta(Funcionario funcionarioConsulta) {
+        this.funcionarioConsulta = funcionarioConsulta;
     }
+
     
 }

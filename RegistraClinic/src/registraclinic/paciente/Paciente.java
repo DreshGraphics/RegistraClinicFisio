@@ -5,6 +5,7 @@
  */
 package registraclinic.paciente;
 
+import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -30,8 +31,7 @@ public class Paciente {
     private String telefonePaciente;
     private String nomeResponsavelPaciente;
     private String telefoneResponsavelPaciente;
-    private String dataCadastroPaciente;
-    
+    private Date dataCadastroPaciente;
 
     public int getIdPaciente() {
         return idPaciente;
@@ -39,6 +39,14 @@ public class Paciente {
 
     public void setIdPaciente(int idPaciente) {
         this.idPaciente = idPaciente;
+    }
+
+    public int getNumeroProntuarioPaciente() {
+        return numeroProntuarioPaciente;
+    }
+
+    public void setNumeroProntuarioPaciente(int numeroProntuarioPaciente) {
+        this.numeroProntuarioPaciente = numeroProntuarioPaciente;
     }
 
     public String getNomePaciente() {
@@ -65,12 +73,28 @@ public class Paciente {
         this.cpfPaciente = cpfPaciente;
     }
 
+    public int getIdadePaciente() {
+        return idadePaciente;
+    }
+
+    public void setIdadePaciente(int idadePaciente) {
+        this.idadePaciente = idadePaciente;
+    }
+
     public String getDataNascimentoPaciente() {
         return dataNascimentoPaciente;
     }
 
     public void setDataNascimentoPaciente(String dataNascimentoPaciente) {
         this.dataNascimentoPaciente = dataNascimentoPaciente;
+    }
+
+    public String getSexoPaciente() {
+        return sexoPaciente;
+    }
+
+    public void setSexoPaciente(String sexoPaciente) {
+        this.sexoPaciente = sexoPaciente;
     }
 
     public String getEnderecoPaciente() {
@@ -105,21 +129,13 @@ public class Paciente {
         this.telefoneResponsavelPaciente = telefoneResponsavelPaciente;
     }
 
-    public String getDataCadastroPaciente() {
+    public Date getDataCadastroPaciente() {
         return dataCadastroPaciente;
     }
 
-    public void setDataCadastroPaciente(String dataCadastroPaciente) {
+    public void setDataCadastroPaciente(Date dataCadastroPaciente) {
         this.dataCadastroPaciente = dataCadastroPaciente;
     }
-
-    public int getNumeroProntuarioPaciente() {
-        return numeroProntuarioPaciente;
-    }
-
-    public void setNumeroProntuarioPaciente(int numeroProntuarioPaciente) {
-        this.numeroProntuarioPaciente = numeroProntuarioPaciente;
-    }
-    
+        
     
 }
