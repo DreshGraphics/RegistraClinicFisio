@@ -25,7 +25,7 @@ public class Paciente {
     private String rgPaciente;
     private String cpfPaciente;
     private int idadePaciente;
-    private String dataNascimentoPaciente;
+    private Date dataNascimentoPaciente;
     private String sexoPaciente;
     private String enderecoPaciente;
     private String telefonePaciente;
@@ -81,14 +81,14 @@ public class Paciente {
         this.idadePaciente = idadePaciente;
     }
 
-    public String getDataNascimentoPaciente() {
+    public Date getDataNascimentoPaciente() {
         return dataNascimentoPaciente;
     }
 
-    public void setDataNascimentoPaciente(String dataNascimentoPaciente) {
+    public void setDataNascimentoPaciente(Date dataNascimentoPaciente) {
         this.dataNascimentoPaciente = dataNascimentoPaciente;
     }
-
+    
     public String getSexoPaciente() {
         return sexoPaciente;
     }
