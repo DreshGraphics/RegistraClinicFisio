@@ -5,6 +5,9 @@
  */
 package registraclinic.consulta;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import registraclinic.funcionario.Funcionario;
 import registraclinic.paciente.Paciente;
 
@@ -12,8 +15,11 @@ import registraclinic.paciente.Paciente;
  *
  * @author Karlos
  */
+@Entity
 public class Consulta {
     
+    @Id
+    @GeneratedValue
     private int idConsulta;
     private String nomeConsulta;
     private Paciente pacienteConsulta;

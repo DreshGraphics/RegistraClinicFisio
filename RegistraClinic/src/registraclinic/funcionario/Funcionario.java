@@ -5,12 +5,19 @@
  */
 package registraclinic.funcionario;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 /**
  *
  * @author Karlos
  */
+@Entity
 public class Funcionario {
     
+    @Id
+    @GeneratedValue
     private int idFuncionario;
     private String nomeFuncionario;
     private String enderecoFuncionario;

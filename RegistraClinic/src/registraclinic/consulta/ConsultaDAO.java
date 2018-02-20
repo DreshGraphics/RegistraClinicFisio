@@ -6,7 +6,6 @@
 package registraclinic.consulta;
 
 import javax.swing.JOptionPane;
-import registraclinic.paciente.Paciente;
 import registraclinic.util.GenericDAO;
 
 /**
