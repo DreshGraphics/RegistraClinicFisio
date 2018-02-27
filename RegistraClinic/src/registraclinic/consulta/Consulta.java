@@ -24,7 +24,7 @@ public class Consulta {
     private int idConsulta;
     private String nomeConsulta;
     private Paciente pacienteConsulta;
-    private Date dataConsulta;
+    private String dataConsulta;
     private String horaConsulta;
     private Funcionario funcionarioConsulta;
 
@@ -52,14 +52,14 @@ public class Consulta {
         this.pacienteConsulta = pacienteConsulta;
     }
 
-    public Date getDataConsulta() {
+    public String getDataConsulta() {
         return dataConsulta;
     }
 
-    public void setDataConsulta(Date dataConsulta) {
+    public void setDataConsulta(String dataConsulta) {
         this.dataConsulta = dataConsulta;
     }
-
+    
     public String getHoraConsulta() {
         return horaConsulta;
     }
