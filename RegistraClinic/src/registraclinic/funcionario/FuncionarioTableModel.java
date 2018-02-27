@@ -8,7 +8,6 @@ package registraclinic.funcionario;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
-import registraclinic.consulta.Consulta;
 
 /**
  *

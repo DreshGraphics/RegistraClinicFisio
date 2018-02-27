@@ -31,7 +31,7 @@ public class PesquisaGenerica extends javax.swing.JDialog {
 
     private PesquisaGenerica(AbstractTableModel atm, String pesquisa) {
         initComponents();
-        this.setIconImage(new ImageIcon(getClass().getResource("/birdpoint/imagens/logo-1.png")).getImage());
+        //this.setIconImage(new ImageIcon(getClass().getResource("/birdpoint/imagens/logo-1.png")).getImage());
         tbPesquisa.setAutoCreateRowSorter(true);
         tbPesquisa.setModel(atm);
         setLocationRelativeTo(null);
@@ -39,7 +39,7 @@ public class PesquisaGenerica extends javax.swing.JDialog {
         FormataTamanhoColunasJTable.packColumns(tbPesquisa, 1);
         tfPesquisa.grabFocus();
         btEditar.setEnabled(false);
-        this.setIconImage(new ImageIcon(getClass().getResource("/birdpoint/imagens/logo-1.png")).getImage());
+        //this.setIconImage(new ImageIcon(getClass().getResource("/birdpoint/imagens/logo-1.png")).getImage());
         setModal(true);
     }
 
@@ -119,7 +119,7 @@ public class PesquisaGenerica extends javax.swing.JDialog {
         jScrollPane1.setBounds(20, 100, 560, 240);
 
         btEditar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/birdpoint/imagens/ok.png"))); // NOI18N
+        btEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/ok.png"))); // NOI18N
         btEditar.setText("Selecionar");
         btEditar.setContentAreaFilled(false);
         btEditar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -134,7 +134,7 @@ public class PesquisaGenerica extends javax.swing.JDialog {
         btEditar.setBounds(250, 340, 103, 70);
 
         btVoltar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/birdpoint/imagens/voltar.png"))); // NOI18N
+        btVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/voltar.png"))); // NOI18N
         btVoltar.setText("Voltar");
         btVoltar.setContentAreaFilled(false);
         btVoltar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -158,10 +158,10 @@ public class PesquisaGenerica extends javax.swing.JDialog {
         tfPesquisa.setBounds(100, 53, 340, 30);
 
         jlPesquisar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jlPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/birdpoint/imagens/PesquisaGenerica.png"))); // NOI18N
+        jlPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/PesquisaGenerica.png"))); // NOI18N
         jlPesquisar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         getContentPane().add(jlPesquisar);
-        jlPesquisar.setBounds(0, 0, 2, 420);
+        jlPesquisar.setBounds(0, 0, 600, 420);
 
         pack();
         setLocationRelativeTo(null);

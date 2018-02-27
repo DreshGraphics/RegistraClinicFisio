@@ -5,10 +5,13 @@
  */
 package registraclinic.consulta;
 
+import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import registraclinic.funcionario.Funcionario;
 import registraclinic.paciente.Paciente;
 
@@ -17,15 +20,18 @@ import registraclinic.paciente.Paciente;
  * @author Karlos
  */
 @Entity
-public class Consulta {
+public class Consulta implements Serializable {
     
     @Id
     @GeneratedValue
     private int idConsulta;
     private String nomeConsulta;
+    
+    @OneToOne
     private Paciente pacienteConsulta;
     private String dataConsulta;
     private String horaConsulta;
+    @OneToOne
     private Funcionario funcionarioConsulta;
 
     public int getIdConsulta() {

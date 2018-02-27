@@ -86,7 +86,7 @@ public class CadastroPaciente extends javax.swing.JDialog {
         jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(602, 421));
+        setMinimumSize(new java.awt.Dimension(700, 500));
         setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(null);
@@ -165,7 +165,11 @@ public class CadastroPaciente extends javax.swing.JDialog {
         jlSenha3.setBounds(40, 340, 180, 19);
 
         txtTelefoneResponsavel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(100, 44, 143)));
-        txtTelefoneResponsavel.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("(##) # ####-####"))));
+        try {
+            txtTelefoneResponsavel.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) # ####-####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
         txtTelefoneResponsavel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         getContentPane().add(txtTelefoneResponsavel);
         txtTelefoneResponsavel.setBounds(40, 360, 180, 30);
@@ -244,8 +248,17 @@ public class CadastroPaciente extends javax.swing.JDialog {
         txtNomePaciente.setBounds(40, 120, 430, 30);
 
         txtTelefonePaciente.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(100, 44, 143)));
-        txtTelefonePaciente.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("(##) # ####-####"))));
+        try {
+            txtTelefonePaciente.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) # ####-####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
         txtTelefonePaciente.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtTelefonePaciente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTelefonePacienteActionPerformed(evt);
+            }
+        });
         getContentPane().add(txtTelefonePaciente);
         txtTelefonePaciente.setBounds(40, 300, 180, 30);
 
@@ -395,6 +408,8 @@ public class CadastroPaciente extends javax.swing.JDialog {
             txtNomeResponsavel.setText(paciente.getNomeResponsavelPaciente());
             txtTelefonePaciente.setText(paciente.getTelefonePaciente());
             txtTelefoneResponsavel.setText(paciente.getTelefoneResponsavelPaciente());
+            jcSexo.setSelectedItem(paciente.getSexoPaciente());
+            
             btExcluir.setEnabled(true);
         }
     }//GEN-LAST:event_btPesquisarActionPerformed
@@ -432,6 +447,7 @@ public class CadastroPaciente extends javax.swing.JDialog {
             paciente.setNomeResponsavelPaciente(txtNomeResponsavel.getText());
             paciente.setTelefonePaciente(txtTelefonePaciente.getText());
             paciente.setTelefoneResponsavelPaciente(txtTelefoneResponsavel.getText());
+            paciente.setSexoPaciente(jcSexo.getSelectedItem().toString());
                     
             pacienteDAO.salvar(paciente);
             btLimparActionPerformed(null);
@@ -451,6 +467,10 @@ public class CadastroPaciente extends javax.swing.JDialog {
     private void txtNomeResponsavelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeResponsavelActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNomeResponsavelActionPerformed
+
+    private void txtTelefonePacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelefonePacienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTelefonePacienteActionPerformed
 
     /**
      * @param args the command line arguments

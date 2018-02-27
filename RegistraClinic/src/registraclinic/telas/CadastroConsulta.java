@@ -24,23 +24,22 @@ import registraclinic.util.Util;
  */
 public class CadastroConsulta extends javax.swing.JDialog {
 
-    Consulta consulta = new Consulta();
+    Consulta consulta;
     ConsultaDAO consultaDAO;
-    Funcionario funcionario = new Funcionario();
-    FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+    Funcionario funcionario;
+    FuncionarioDAO funcionarioDAO;
     Paciente paciente;
     PacienteDAO pacienteDAO;
 
-    /**
-     * Creates new form TelaCadastroUsuario
-     * @param usuario
-     */
     public CadastroConsulta() {
         initComponents();
         btExcluir.setEnabled(false);
         getRootPane().setDefaultButton(btSalvar);
         consulta = new Consulta();
         consultaDAO = new ConsultaDAO();
+        funcionario = new Funcionario();
+        funcionarioDAO = new FuncionarioDAO();
+        pacienteDAO = new PacienteDAO();
         txtFuncionario.setEnabled(false);
         txtPaciente.setEnabled(false);
     }

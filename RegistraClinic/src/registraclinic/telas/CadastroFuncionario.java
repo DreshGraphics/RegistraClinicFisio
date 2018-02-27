@@ -111,10 +111,14 @@ public class CadastroFuncionario extends javax.swing.JDialog {
         btVoltar.setBounds(20, 340, 90, 70);
 
         txtTelefone.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(100, 44, 143)));
-        txtTelefone.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("(##) # ####-####"))));
+        try {
+            txtTelefone.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) # ####-####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
         txtTelefone.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         getContentPane().add(txtTelefone);
-        txtTelefone.setBounds(40, 260, 250, 30);
+        txtTelefone.setBounds(40, 260, 180, 30);
 
         btPesquisar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/pesquisar.png"))); // NOI18N
@@ -186,7 +190,7 @@ public class CadastroFuncionario extends javax.swing.JDialog {
         jLObrigatorioLogin.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioLogin.setText("*");
         getContentPane().add(jLObrigatorioLogin);
-        jLObrigatorioLogin.setBounds(290, 260, 10, 10);
+        jLObrigatorioLogin.setBounds(220, 260, 10, 10);
 
         jLObrigatorioSenha.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioSenha.setForeground(new java.awt.Color(204, 0, 0));

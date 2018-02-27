@@ -16,7 +16,7 @@ import registraclinic.util.GenericDAO;
 public class FuncionarioDAO extends GenericDAO<Funcionario>{
     
     public FuncionarioDAO() {
-        super(Consulta.class);
+        super(Funcionario.class);
     }
     
     public void salvar(Funcionario funcionario) {
