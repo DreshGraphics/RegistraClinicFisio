@@ -226,7 +226,7 @@ public class CadastroFuncionario extends javax.swing.JDialog {
         Util.limparCamposGenerico(this);
         btExcluir.setEnabled(false);
         funcionario = new Funcionario();
-        tfEndereco.setEnabled(true);
+        //tfEndereco.setEnabled(true);
 
     }//GEN-LAST:event_btLimparActionPerformed
 
