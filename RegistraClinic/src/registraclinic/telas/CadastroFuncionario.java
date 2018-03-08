@@ -214,8 +214,8 @@ public class CadastroFuncionario extends javax.swing.JDialog {
         Object objetoRetorno = PesquisaGenerica.exibeTela(itm, "Funcionário");
         if (objetoRetorno != null) {
             funcionario = funcionarioDAO.consultarObjetoId("idFuncionario", objetoRetorno);
-            tfEndereco.setText(funcionario.getNomeFuncionario());
-            tfNomeFuncionario.setText(funcionario.getEnderecoFuncionario());
+            tfEndereco.setText(funcionario.getEnderecoFuncionario());
+            tfNomeFuncionario.setText(funcionario.getNomeFuncionario());
             txtTelefone.setText(funcionario.getTelefoneFuncionario());
             btExcluir.setEnabled(true);
         }
