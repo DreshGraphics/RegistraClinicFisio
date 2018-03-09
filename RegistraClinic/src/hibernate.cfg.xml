@@ -17,7 +17,9 @@
         <mapping class="registraclinic.funcionario.Funcionario"/>
         <mapping class="registraclinic.paciente.Paciente"/>
         <mapping class="registraclinic.consulta.Consulta"/>
-        
+        <mapping class="registraclinic.aluno.Aluno"/>
+        <mapping class="registraclinic.cidade.Cidade"/>
+        <mapping class="registraclinic.supervisor.Supervisor"/>
 
     </session-factory>
 </hibernate-configuration>

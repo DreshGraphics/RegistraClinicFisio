@@ -28,7 +28,7 @@ public class FuncionarioDAO extends GenericDAO<Funcionario>{
         } else if (JOptionPane.showOptionDialog(null, "Deseja mesmo realizar essa edição"
                 + "?", "RegistraClinic", JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[0]) == JOptionPane.YES_OPTION) {
             if (atualizar(funcionario)) {
-                JOptionPane.showMessageDialog(null, "Consulta editada com sucesso!!");
+                JOptionPane.showMessageDialog(null, "Funcionário editado com sucesso!!");
             }
         } else {
             JOptionPane.showMessageDialog(null, "A edição foi cancelada!");
