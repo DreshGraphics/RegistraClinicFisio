@@ -122,7 +122,7 @@ public class PesquisaGenerica extends javax.swing.JDialog {
         jScrollPane1.setViewportView(tbPesquisa);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(20, 160, 660, 220);
+        jScrollPane1.setBounds(20, 160, 660, 250);
 
         btEditar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/ok.png"))); // NOI18N
@@ -137,7 +137,7 @@ public class PesquisaGenerica extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btEditar);
-        btEditar.setBounds(590, 380, 103, 70);
+        btEditar.setBounds(590, 420, 103, 70);
 
         btVoltar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/voltar.png"))); // NOI18N
@@ -152,7 +152,7 @@ public class PesquisaGenerica extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btVoltar);
-        btVoltar.setBounds(10, 380, 80, 70);
+        btVoltar.setBounds(130, 420, 80, 70);
 
         tfPesquisa.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         tfPesquisa.addKeyListener(new java.awt.event.KeyAdapter() {

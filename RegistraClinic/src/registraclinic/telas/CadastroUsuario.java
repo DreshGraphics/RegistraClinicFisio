@@ -209,9 +209,9 @@ public class CadastroUsuario extends javax.swing.JDialog {
         List<Usuario> lista;
         lista = (funcionarioDAO.listar());
         UsuarioTableModel itm = new UsuarioTableModel(lista);
-        Object objetoRetorno = PesquisaGenerica.exibeTela(itm, "Funcionário");
+        Object objetoRetorno = PesquisaGenerica.exibeTela(itm, "Usuário");
         if (objetoRetorno != null) {
-            funcionario = funcionarioDAO.consultarObjetoId("idFuncionario", objetoRetorno);
+            funcionario = funcionarioDAO.consultarObjetoId("idUsuario", objetoRetorno);
             txtNomeUsuario.setText(funcionario.getNomeUsuario());
             txtLogin.setText(funcionario.getLoginUsuario());
             txtSenha.setText(funcionario.getSenhaUsuario());

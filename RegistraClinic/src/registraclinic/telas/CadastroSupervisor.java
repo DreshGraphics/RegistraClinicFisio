@@ -49,11 +49,6 @@ public class CadastroSupervisor extends javax.swing.JDialog {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel4 = new javax.swing.JPanel();
-        jcNivelAcesso = new javax.swing.JComboBox<>();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        txtLogin = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         txtNome = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
@@ -68,7 +63,6 @@ public class CadastroSupervisor extends javax.swing.JDialog {
         txtCpf = new javax.swing.JFormattedTextField();
         jcSexo = new javax.swing.JComboBox<>();
         txtDataNascimento = new javax.swing.JFormattedTextField();
-        txtSenha = new javax.swing.JPasswordField();
         jPanel3 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
@@ -109,40 +103,6 @@ public class CadastroSupervisor extends javax.swing.JDialog {
         jPanel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jPanel4.setForeground(new java.awt.Color(22, 64, 61));
         jPanel4.setLayout(null);
-
-        jcNivelAcesso.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jcNivelAcesso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-----", "Supervisor", "Professor" }));
-        jcNivelAcesso.setOpaque(false);
-        jPanel4.add(jcNivelAcesso);
-        jcNivelAcesso.setBounds(480, 210, 190, 30);
-
-        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel13.setText("Nível de Acesso");
-        jPanel4.add(jLabel13);
-        jLabel13.setBounds(480, 190, 120, 17);
-
-        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel10.setText("Senha");
-        jPanel4.add(jLabel10);
-        jLabel10.setBounds(260, 190, 70, 17);
-
-        txtLogin.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtLogin.setForeground(new java.awt.Color(22, 64, 61));
-        txtLogin.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        txtLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        txtLogin.setMargin(null);
-        txtLogin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtLoginActionPerformed(evt);
-            }
-        });
-        jPanel4.add(txtLogin);
-        txtLogin.setBounds(30, 210, 210, 30);
-
-        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel9.setText("Login");
-        jPanel4.add(jLabel9);
-        jLabel9.setBounds(30, 190, 70, 17);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setText("Nome Completo");
@@ -267,11 +227,6 @@ public class CadastroSupervisor extends javax.swing.JDialog {
         });
         jPanel4.add(txtDataNascimento);
         txtDataNascimento.setBounds(540, 90, 130, 30);
-
-        txtSenha.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtSenha.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jPanel4.add(txtSenha);
-        txtSenha.setBounds(260, 210, 200, 30);
 
         jTabbedPane1.addTab("Dados Pessoais", jPanel4);
 
@@ -504,11 +459,8 @@ public class CadastroSupervisor extends javax.swing.JDialog {
             txtComplemento.setText(supervisor.getComplementoSupervisor());
             txtTurma.setText(supervisor.getTurmaSupervisor());
             txtEspecializacao.setText(supervisor.getEspecializaçãoSupervisor());
-            txtLogin.setText(supervisor.getLoginSupervisor());
-            txtSenha.setText(supervisor.getSenhaSupervisor());
             jcEstado.setSelectedItem(supervisor.getTelefoneSupervisor());
             jcSexo.setSelectedItem(supervisor.getSexoSupervisor());
-            jcNivelAcesso.setSelectedItem(supervisor.getNivelAcessoSupervisor());
 
             btExcluir.setEnabled(true);
         }
@@ -531,8 +483,7 @@ public class CadastroSupervisor extends javax.swing.JDialog {
         if (txtEndereco.getText().equals("") || txtCpf.getText().equals("")
                 || txtDataNascimento.getText().equals("") || txtEndereco.getText().equals("")
                 || txtEndereco.getText().equals("") || jcSexo.getSelectedItem().equals("-------")
-                || txtRg.getText().equals("") || txtTelefone.getText().equals("") || txtLogin.getText().equals("")
-                || txtSenha.getText().equals("") ) {
+                || txtRg.getText().equals("") || txtTelefone.getText().equals("")) {
             JOptionPane.showMessageDialog(this, "Prencha todos os campos !!");
         } else {
             supervisor.setNomeSupervisor(txtNome.getText().toUpperCase());
@@ -542,7 +493,6 @@ public class CadastroSupervisor extends javax.swing.JDialog {
             supervisor.setEnderecoNumeroSupervisor(txtEndNumero.getText());
             supervisor.setRgSupervisor(txtRg.getText());
             supervisor.setSexoSupervisor(jcSexo.getSelectedItem().toString());
-            supervisor.setNivelAcessoSupervisor(jcNivelAcesso.getSelectedItem().toString());
             supervisor.setEstadoSupervisor(jcEstado.getSelectedItem().toString());
             supervisor.setCidadeSupervisor(txtCidade.getText());
             supervisor.setBairroSupervisor(txtBairro.getText());
@@ -550,8 +500,6 @@ public class CadastroSupervisor extends javax.swing.JDialog {
             supervisor.setComplementoSupervisor(txtComplemento.getText());
             supervisor.setTurmaSupervisor(txtTurma.getText());
             supervisor.setTelefoneSupervisor(txtTelefone.getText());
-            supervisor.setLoginSupervisor(txtLogin.getText());
-            supervisor.setSenhaSupervisor(txtSenha.getText());
             supervisor.setEspecializaçãoSupervisor(txtEspecializacao.getText());
 
             supervisorDAO.salvar(supervisor);
@@ -608,10 +556,6 @@ public class CadastroSupervisor extends javax.swing.JDialog {
     private void txtCidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCidadeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCidadeActionPerformed
-
-    private void txtLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLoginActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtLoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -676,10 +620,8 @@ public class CadastroSupervisor extends javax.swing.JDialog {
     private javax.swing.JButton btPesquisar;
     private javax.swing.JButton btSalvar;
     private javax.swing.JButton btVoltar;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
@@ -694,12 +636,10 @@ public class CadastroSupervisor extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JComboBox<String> jcEstado;
-    private javax.swing.JComboBox<String> jcNivelAcesso;
     private javax.swing.JComboBox<String> jcSexo;
     private javax.swing.JTextField txtBairro;
     private javax.swing.JTextField txtCidade;
@@ -710,10 +650,8 @@ public class CadastroSupervisor extends javax.swing.JDialog {
     private javax.swing.JTextField txtEndNumero;
     private javax.swing.JTextField txtEndereco;
     private javax.swing.JTextField txtEspecializacao;
-    private javax.swing.JTextField txtLogin;
     private javax.swing.JTextField txtNome;
     private javax.swing.JTextField txtRg;
-    private javax.swing.JPasswordField txtSenha;
     private javax.swing.JFormattedTextField txtTelefone;
     private javax.swing.JTextField txtTurma;
     // End of variables declaration//GEN-END:variables

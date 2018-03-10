@@ -204,7 +204,7 @@ public class CadastroAluno extends javax.swing.JDialog {
         txtCpf.setBounds(160, 100, 160, 30);
 
         jcSexo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jcSexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Feminino" }));
+        jcSexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-----", "Masculino", "Feminino", "Não Definido" }));
         jcSexo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jcSexo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
