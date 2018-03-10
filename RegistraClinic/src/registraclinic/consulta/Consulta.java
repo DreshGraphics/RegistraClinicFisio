@@ -12,7 +12,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
-import registraclinic.funcionario.Funcionario;
+import registraclinic.usuario.Usuario;
 import registraclinic.paciente.Paciente;
 
 /**
@@ -32,7 +32,7 @@ public class Consulta implements Serializable {
     private String dataConsulta;
     private String horaConsulta;
     @OneToOne
-    private Funcionario funcionarioConsulta;
+    private Usuario funcionarioConsulta;
 
     public int getIdConsulta() {
         return idConsulta;
@@ -74,11 +74,11 @@ public class Consulta implements Serializable {
         this.horaConsulta = horaConsulta;
     }
 
-    public Funcionario getFuncionarioConsulta() {
+    public Usuario getFuncionarioConsulta() {
         return funcionarioConsulta;
     }
 
-    public void setFuncionarioConsulta(Funcionario funcionarioConsulta) {
+    public void setFuncionarioConsulta(Usuario funcionarioConsulta) {
         this.funcionarioConsulta = funcionarioConsulta;
     }
 

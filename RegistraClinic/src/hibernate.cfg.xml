@@ -14,11 +14,9 @@
         <property name="generate_statistics">true</property>
         <property name="use_sql_coments">true</property>
         <property name="hibernate.hbm2ddl.auto">update</property>
-        <mapping class="registraclinic.funcionario.Funcionario"/>
+        <mapping class="registraclinic.usuario.Usuario"/>
         <mapping class="registraclinic.paciente.Paciente"/>
-        <mapping class="registraclinic.consulta.Consulta"/>
         <mapping class="registraclinic.aluno.Aluno"/>
-        <mapping class="registraclinic.cidade.Cidade"/>
         <mapping class="registraclinic.supervisor.Supervisor"/>
 
     </session-factory>

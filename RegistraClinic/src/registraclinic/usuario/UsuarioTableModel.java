@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package registraclinic.cidade;
+package registraclinic.usuario;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,20 +11,20 @@ import javax.swing.table.AbstractTableModel;
 
 /**
  *
- * @author Adriano Lima
+ * @author Karlos Oliveira
  */
-public class CidadeTableModel extends AbstractTableModel {
+public class UsuarioTableModel extends AbstractTableModel {
 
-    private List<Cidade> cidades = new ArrayList<>();
-    private String[] colunas = {"Código", "Cidade", "Estado", "CEP"};
+    private List<Usuario> funcionarios = new ArrayList<>();
+    private String[] colunas = {"Código", "Nome", "Login", "Usuário",};
 
-    public CidadeTableModel(List<Cidade> cidade) {
-        this.cidades = cidade;
+    public UsuarioTableModel(List<Usuario> funcionarios) {
+        this.funcionarios = funcionarios;
     }
 
     @Override
     public int getRowCount() {
-        return cidades.size();
+        return funcionarios.size();
     }
 
     @Override
@@ -34,21 +34,21 @@ public class CidadeTableModel extends AbstractTableModel {
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        Cidade cidade = cidades.get(rowIndex);
+        Usuario funcionario = funcionarios.get(rowIndex);
         switch (columnIndex) {
             case 0:
-                return cidade.getIdCidade();
+                return funcionario.getIdLogin();
             case 1:
-                return cidade.getNomeCidade();
+                return funcionario.getNomeUsuario();
             case 2:
-                return cidade.getEstadoCidade();
+                return funcionario.getLoginUsuario();
             case 3:
-                return cidade.getCepCidade();
-
+                return funcionario.getTipoUsuario();
         }
         return null;
     }
 
+    @Override
     public String getColumnName(int index) {
         switch (index) {
             case 0:

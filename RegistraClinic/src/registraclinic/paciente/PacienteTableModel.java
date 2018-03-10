@@ -8,7 +8,7 @@ package registraclinic.paciente;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
-import registraclinic.funcionario.Funcionario;
+import registraclinic.usuario.Usuario;
 
 /**
  *

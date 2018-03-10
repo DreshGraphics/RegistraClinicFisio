@@ -47,7 +47,7 @@ public class ConsultaTableModel extends AbstractTableModel {
             case 4:
                 return consultas.getHoraConsulta();
             case 5:
-                return consultas.getFuncionarioConsulta().getNomeFuncionario();
+                return consultas.getFuncionarioConsulta().getNomeUsuario();
 
         }
         return null;

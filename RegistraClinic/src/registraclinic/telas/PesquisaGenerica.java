@@ -72,6 +72,7 @@ public class PesquisaGenerica extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbPesquisa = new javax.swing.JTable();
         btEditar = new javax.swing.JButton();
@@ -81,10 +82,15 @@ public class PesquisaGenerica extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setLocationByPlatform(true);
-        setMinimumSize(new java.awt.Dimension(602, 421));
+        setMinimumSize(new java.awt.Dimension(700, 500));
         setModal(true);
         setUndecorated(true);
         getContentPane().setLayout(null);
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel1.setText("Pesquisar");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(30, 120, 90, 20);
 
         tbPesquisa.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         tbPesquisa.setModel(new javax.swing.table.DefaultTableModel(
@@ -116,7 +122,7 @@ public class PesquisaGenerica extends javax.swing.JDialog {
         jScrollPane1.setViewportView(tbPesquisa);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(20, 100, 560, 240);
+        jScrollPane1.setBounds(20, 160, 660, 220);
 
         btEditar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/ok.png"))); // NOI18N
@@ -131,7 +137,7 @@ public class PesquisaGenerica extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btEditar);
-        btEditar.setBounds(250, 340, 103, 70);
+        btEditar.setBounds(590, 380, 103, 70);
 
         btVoltar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/voltar.png"))); // NOI18N
@@ -146,7 +152,7 @@ public class PesquisaGenerica extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btVoltar);
-        btVoltar.setBounds(10, 340, 80, 70);
+        btVoltar.setBounds(10, 380, 80, 70);
 
         tfPesquisa.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         tfPesquisa.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -155,13 +161,13 @@ public class PesquisaGenerica extends javax.swing.JDialog {
             }
         });
         getContentPane().add(tfPesquisa);
-        tfPesquisa.setBounds(100, 53, 340, 30);
+        tfPesquisa.setBounds(120, 110, 340, 30);
 
         jlPesquisar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jlPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/PesquisaGenerica.png"))); // NOI18N
+        jlPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Tela-Busca2.png"))); // NOI18N
         jlPesquisar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         getContentPane().add(jlPesquisar);
-        jlPesquisar.setBounds(0, 0, 600, 420);
+        jlPesquisar.setBounds(0, 0, 700, 500);
 
         pack();
         setLocationRelativeTo(null);
@@ -262,6 +268,7 @@ public class PesquisaGenerica extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btEditar;
     private javax.swing.JButton btVoltar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel jlPesquisar;
     private javax.swing.JTable tbPesquisa;
