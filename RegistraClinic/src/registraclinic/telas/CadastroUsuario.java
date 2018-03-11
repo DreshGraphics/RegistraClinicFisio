@@ -18,8 +18,8 @@ import registraclinic.util.Util;
  */
 public class CadastroUsuario extends javax.swing.JDialog {
 
-    Usuario funcionario = new Usuario();
-    UsuarioDAO funcionarioDAO = new UsuarioDAO();
+    Usuario usuario = new Usuario();
+    UsuarioDAO usuarioDAO = new UsuarioDAO();
 
     /**
      * Creates new form TelaCadastroUsuario
@@ -207,28 +207,28 @@ public class CadastroUsuario extends javax.swing.JDialog {
 
     private void btPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPesquisarActionPerformed
         List<Usuario> lista;
-        lista = (funcionarioDAO.listar());
+        lista = (usuarioDAO.listar());
         UsuarioTableModel itm = new UsuarioTableModel(lista);
         Object objetoRetorno = PesquisaGenerica.exibeTela(itm, "Usuário");
         if (objetoRetorno != null) {
-            funcionario = funcionarioDAO.consultarObjetoId("idUsuario", objetoRetorno);
-            txtNomeUsuario.setText(funcionario.getNomeUsuario());
-            txtLogin.setText(funcionario.getLoginUsuario());
-            txtSenha.setText(funcionario.getSenhaUsuario());
-            jcNivelAcesso.setSelectedItem(funcionario.getTipoUsuario());
+            usuario = usuarioDAO.consultarObjetoId("idUsuario", objetoRetorno);
+            txtNomeUsuario.setText(usuario.getNomeUsuario());
+            txtLogin.setText(usuario.getLoginUsuario());
+            txtSenha.setText(usuario.getSenhaUsuario());
+            jcNivelAcesso.setSelectedItem(usuario.getTipoUsuario());
             btExcluir.setEnabled(true);
         }
     }//GEN-LAST:event_btPesquisarActionPerformed
 
     private void btExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExcluirActionPerformed
-        funcionarioDAO.excluir(funcionario);
+        usuarioDAO.excluir(usuario);
         btLimparActionPerformed(null);
     }//GEN-LAST:event_btExcluirActionPerformed
 
     private void btLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLimparActionPerformed
         Util.limparCamposGenerico(this);
         btExcluir.setEnabled(false);
-        funcionario = new Usuario();
+        usuario = new Usuario();
         //tfEndereco.setEnabled(true);
 
     }//GEN-LAST:event_btLimparActionPerformed
@@ -238,11 +238,11 @@ public class CadastroUsuario extends javax.swing.JDialog {
         if (txtLogin.getText().equals("") || txtNomeUsuario.getText().equals("") || txtSenha.getText().equals("") || jcNivelAcesso.getSelectedItem().equals("-----")) {
             JOptionPane.showMessageDialog(this, "Prencha todos os campos !!");
         } else {
-            funcionario.setNomeUsuario(txtNomeUsuario.getText().toUpperCase());
-            funcionario.setLoginUsuario(txtLogin.getText());
-            funcionario.setSenhaUsuario(txtSenha.getText());
-            funcionario.setTipoUsuario(jcNivelAcesso.getSelectedItem().toString());
-            funcionarioDAO.salvar(funcionario);
+            usuario.setNomeUsuario(txtNomeUsuario.getText().toUpperCase());
+            usuario.setLoginUsuario(txtLogin.getText());
+            usuario.setSenhaUsuario(txtSenha.getText());
+            usuario.setTipoUsuario(jcNivelAcesso.getSelectedItem().toString());
+            usuarioDAO.salvar(usuario);
             btLimparActionPerformed(null);
 
         }

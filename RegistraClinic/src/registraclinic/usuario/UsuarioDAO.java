@@ -6,8 +6,9 @@
 package registraclinic.usuario;
 
 import javax.swing.JOptionPane;
-import registraclinic.consulta.Consulta;
+import org.hibernate.criterion.Restrictions;
 import registraclinic.util.GenericDAO;
+import registraclinic.util.HibernateUtil;
 
 /**
  *
@@ -21,30 +22,43 @@ public class UsuarioDAO extends GenericDAO<Usuario>{
     
     public void salvar(Usuario usuario) {
         Object[] options = {"Sim", "Não"};
-        if (usuario.getIdLogin() == 0) {
+        if (usuario.getIdUsuario() == 0) {
             if (adicionar(usuario)) {
-                JOptionPane.showMessageDialog(null, "Funcionário cadastrado com sucesso!");
+                JOptionPane.showMessageDialog(null, "Usuário cadastrado com sucesso!");
             }
         } else if (JOptionPane.showOptionDialog(null, "Deseja mesmo realizar essa edição"
                 + "?", "RegistraClinic", JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[0]) == JOptionPane.YES_OPTION) {
             if (atualizar(usuario)) {
-                JOptionPane.showMessageDialog(null, "Funcionário editado com sucesso!!");
+                JOptionPane.showMessageDialog(null, "Usuário editado com sucesso!!");
             }
         } else {
             JOptionPane.showMessageDialog(null, "A edição foi cancelada!");
         }
     }
     
-    public boolean excluir(Usuario funcionario) {
+    public Usuario autenticarUsuario(String login, String senha) {
+        sessao = HibernateUtil.getSessionFactory().openSession();
+        transacao = sessao.beginTransaction();
+        Usuario usuario = (Usuario) sessao.createCriteria(Usuario.class).add(Restrictions.eq("senhaUsuario", senha)).add(Restrictions.eq("loginUsuario", login)).uniqueResult();
+        if (usuario == null) {
+            JOptionPane.showMessageDialog(null, "Usuário ou Senha Inválidos!");
+        } else {
+            sessao.close();
+            return usuario;
+        }
+        return usuario;
+    }
+    
+    public boolean excluir(Usuario usuario) {
         Object[] options = {"Sim", "Não"};
-        if (funcionario.getIdLogin() != 0) {
-            if (JOptionPane.showOptionDialog(null, "Deseja excluir o Funcionário " + funcionario.getNomeUsuario()
-                    + "?", "BirdStork", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]) == JOptionPane.YES_OPTION) {
+        if (usuario.getIdUsuario() != 0) {
+            if (JOptionPane.showOptionDialog(null, "Deseja excluir o Usuário " + usuario.getNomeUsuario()
+                    + "?", "Registra Clinic", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]) == JOptionPane.YES_OPTION) {
 
-                if (remover(funcionario)) {
-                    JOptionPane.showMessageDialog(null, "Funcionário excluído com sucesso!");                    
+                if (remover(usuario)) {
+                    JOptionPane.showMessageDialog(null, "Usuário excluído com sucesso!");                    
                 } else {
-                    JOptionPane.showMessageDialog(null, "Não foi possível excluir o Funcionário " + funcionario.getNomeUsuario(),
+                    JOptionPane.showMessageDialog(null, "Não foi possível excluir o Usuário " + usuario.getNomeUsuario(),
                             "Erro ao Excluir", JOptionPane.ERROR_MESSAGE);
                     return false;
                 }

@@ -3,8 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/Katyeudo/Desktop/RegistraClinic/RegistraClinic/src/registraclinic/telas/TelaInicial.java</file>
             <file>file:/C:/Users/Katyeudo/Desktop/RegistraClinic/RegistraClinic/src/registraclinic/telas/CadastroConsulta.java</file>
+            <file>file:/C:/Users/Katyeudo/Desktop/RegistraClinic/RegistraClinic/src/registraclinic/paciente/Paciente.java</file>
+            <file>file:/C:/Users/Katyeudo/Desktop/RegistraClinic/RegistraClinic/src/registraclinic/consulta/ConsultaTableModel.java</file>
+            <file>file:/C:/Users/Katyeudo/Desktop/RegistraClinic/RegistraClinic/src/registraclinic/telas/PesquisaGenerica.java</file>
+            <file>file:/C:/Users/Katyeudo/Desktop/RegistraClinic/RegistraClinic/src/registraclinic/supervisor/Supervisor.java</file>
+            <file>file:/C:/Users/Katyeudo/Desktop/RegistraClinic/RegistraClinic/src/registraclinic/telas/CadastroPaciente.java</file>
             <file>file:/C:/Users/Katyeudo/Desktop/RegistraClinic/RegistraClinic/src/registraclinic/telas/CadastroAluno.java</file>
+            <file>file:/C:/Users/Katyeudo/Desktop/RegistraClinic/RegistraClinic/src/registraclinic/telas/CadastroUsuario.java</file>
+            <file>file:/C:/Users/Katyeudo/Desktop/RegistraClinic/RegistraClinic/src/registraclinic/telas/CadastroSupervisor.java</file>
         </group>
     </open-files>
 </project-private>

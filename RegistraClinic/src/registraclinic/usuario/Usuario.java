@@ -18,20 +18,20 @@ public class Usuario {
     
     @Id
     @GeneratedValue
-    private int idLogin;
+    private int idUsuario;
     private String nomeUsuario;
     private String loginUsuario;
     private String senhaUsuario;
     private String tipoUsuario;
 
-    public int getIdLogin() {
-        return idLogin;
+    public int getIdUsuario() {
+        return idUsuario;
     }
 
-    public void setIdLogin(int idLogin) {
-        this.idLogin = idLogin;
+    public void setIdUsuario(int idUsuario) {
+        this.idUsuario = idUsuario;
     }
-
+    
     public String getNomeUsuario() {
         return nomeUsuario;
     }

@@ -60,6 +60,7 @@ public class CadastroAluno extends javax.swing.JDialog {
         txtCpf = new javax.swing.JFormattedTextField();
         jcSexo = new javax.swing.JComboBox<>();
         txtDataNascimento = new javax.swing.JFormattedTextField();
+        jLabel1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
@@ -77,6 +78,7 @@ public class CadastroAluno extends javax.swing.JDialog {
         txtEmail = new javax.swing.JTextField();
         jLabel20 = new javax.swing.JLabel();
         txtTelefone = new javax.swing.JFormattedTextField();
+        jLabel9 = new javax.swing.JLabel();
         btVoltar = new javax.swing.JButton();
         btPesquisar = new javax.swing.JButton();
         btExcluir = new javax.swing.JButton();
@@ -224,6 +226,10 @@ public class CadastroAluno extends javax.swing.JDialog {
         jPanel4.add(txtDataNascimento);
         txtDataNascimento.setBounds(520, 100, 150, 30);
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Tela-CadastrarSupervisor.png"))); // NOI18N
+        jPanel4.add(jLabel1);
+        jLabel1.setBounds(0, 0, 710, 275);
+
         jTabbedPane1.addTab("Dados Pessoais", jPanel4);
 
         jPanel3.setBackground(new java.awt.Color(65, 191, 182));
@@ -343,6 +349,10 @@ public class CadastroAluno extends javax.swing.JDialog {
         jPanel3.add(txtTelefone);
         txtTelefone.setBounds(512, 210, 160, 30);
 
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Tela-CadastrarSupervisor.png"))); // NOI18N
+        jPanel3.add(jLabel9);
+        jLabel9.setBounds(0, 0, 710, 275);
+
         jTabbedPane1.addTab("Contato", jPanel3);
 
         getContentPane().add(jTabbedPane1);
@@ -455,7 +465,7 @@ public class CadastroAluno extends javax.swing.JDialog {
             txtEmail.setText(alunos.getEmailAluno());
             txtComplemento.setText(alunos.getComplementoAluno());
             txtTurma.setText(alunos.getTurmaAluno());
-            jcEstado.setSelectedItem(alunos.getTelefoneAluno());
+            jcEstado.setSelectedItem(alunos.getEstadoAluno());
             jcSexo.setSelectedItem(alunos.getSexoAluno());
 
             btExcluir.setEnabled(true);
@@ -470,7 +480,7 @@ public class CadastroAluno extends javax.swing.JDialog {
     private void btLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLimparActionPerformed
         Util.limparCamposGenerico(this);
         btExcluir.setEnabled(false);
-   //     jcSexo.setSelectedIndex(0);
+        jcSexo.setSelectedIndex(0);
         alunos = new Aluno();
     }//GEN-LAST:event_btLimparActionPerformed
 
@@ -608,6 +618,7 @@ public class CadastroAluno extends javax.swing.JDialog {
     private javax.swing.JButton btPesquisar;
     private javax.swing.JButton btSalvar;
     private javax.swing.JButton btVoltar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel15;
@@ -624,6 +635,7 @@ public class CadastroAluno extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JTabbedPane jTabbedPane1;

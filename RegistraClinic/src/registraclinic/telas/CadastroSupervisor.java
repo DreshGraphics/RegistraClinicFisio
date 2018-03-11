@@ -63,6 +63,7 @@ public class CadastroSupervisor extends javax.swing.JDialog {
         txtCpf = new javax.swing.JFormattedTextField();
         jcSexo = new javax.swing.JComboBox<>();
         txtDataNascimento = new javax.swing.JFormattedTextField();
+        jLabel1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
@@ -80,6 +81,7 @@ public class CadastroSupervisor extends javax.swing.JDialog {
         txtEmail = new javax.swing.JTextField();
         jLabel20 = new javax.swing.JLabel();
         txtTelefone = new javax.swing.JFormattedTextField();
+        jLabel9 = new javax.swing.JLabel();
         btVoltar = new javax.swing.JButton();
         btPesquisar = new javax.swing.JButton();
         btExcluir = new javax.swing.JButton();
@@ -208,6 +210,7 @@ public class CadastroSupervisor extends javax.swing.JDialog {
 
         jcSexo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jcSexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-----", "Masculino", "Feminino", "Não Definido" }));
+        jcSexo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jcSexo.setOpaque(false);
         jPanel4.add(jcSexo);
         jcSexo.setBounds(543, 32, 130, 30);
@@ -227,6 +230,10 @@ public class CadastroSupervisor extends javax.swing.JDialog {
         });
         jPanel4.add(txtDataNascimento);
         txtDataNascimento.setBounds(540, 90, 130, 30);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Tela-CadastrarSupervisor.png"))); // NOI18N
+        jPanel4.add(jLabel1);
+        jLabel1.setBounds(0, 0, 710, 290);
 
         jTabbedPane1.addTab("Dados Pessoais", jPanel4);
 
@@ -347,6 +354,10 @@ public class CadastroSupervisor extends javax.swing.JDialog {
         jPanel3.add(txtTelefone);
         txtTelefone.setBounds(460, 150, 210, 30);
 
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Tela-CadastrarSupervisor.png"))); // NOI18N
+        jPanel3.add(jLabel9);
+        jLabel9.setBounds(0, 0, 710, 290);
+
         jTabbedPane1.addTab("Contato", jPanel3);
 
         getContentPane().add(jTabbedPane1);
@@ -443,9 +454,9 @@ public class CadastroSupervisor extends javax.swing.JDialog {
         List<Supervisor> lista;
         lista = (supervisorDAO.listar());
         SupervisorTableModel itm = new SupervisorTableModel(lista);
-        Object objetoRetorno = PesquisaGenerica.exibeTela(itm, "Aluno");
+        Object objetoRetorno = PesquisaGenerica.exibeTela(itm, "Supervisor");
         if (objetoRetorno != null) {
-            supervisor = supervisorDAO.consultarObjetoId("idAluno", objetoRetorno);
+            supervisor = supervisorDAO.consultarObjetoId("idSupervisor", objetoRetorno);
             txtNome.setText(supervisor.getNomeSupervisor());
             txtCpf.setText(supervisor.getCpfSupervisor());
             txtRg.setText(supervisor.getRgSupervisor());
@@ -459,7 +470,7 @@ public class CadastroSupervisor extends javax.swing.JDialog {
             txtComplemento.setText(supervisor.getComplementoSupervisor());
             txtTurma.setText(supervisor.getTurmaSupervisor());
             txtEspecializacao.setText(supervisor.getEspecializaçãoSupervisor());
-            jcEstado.setSelectedItem(supervisor.getTelefoneSupervisor());
+            jcEstado.setSelectedItem(supervisor.getEstadoSupervisor());
             jcSexo.setSelectedItem(supervisor.getSexoSupervisor());
 
             btExcluir.setEnabled(true);
@@ -620,6 +631,7 @@ public class CadastroSupervisor extends javax.swing.JDialog {
     private javax.swing.JButton btPesquisar;
     private javax.swing.JButton btSalvar;
     private javax.swing.JButton btVoltar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel15;
@@ -636,6 +648,7 @@ public class CadastroSupervisor extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JTabbedPane jTabbedPane1;

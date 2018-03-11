@@ -65,6 +65,7 @@ public class CadastroPaciente extends javax.swing.JDialog {
         jLabel24 = new javax.swing.JLabel();
         txtDataNascimento = new javax.swing.JFormattedTextField();
         jcSexo = new javax.swing.JComboBox<>();
+        jLabel1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
@@ -84,6 +85,7 @@ public class CadastroPaciente extends javax.swing.JDialog {
         txtTelefonePaciente = new javax.swing.JFormattedTextField();
         jLabel22 = new javax.swing.JLabel();
         txtTelefoneResponsavel = new javax.swing.JFormattedTextField();
+        jLabel9 = new javax.swing.JLabel();
         btVoltar = new javax.swing.JButton();
         btPesquisar = new javax.swing.JButton();
         btExcluir = new javax.swing.JButton();
@@ -254,6 +256,10 @@ public class CadastroPaciente extends javax.swing.JDialog {
         jPanel4.add(jcSexo);
         jcSexo.setBounds(30, 90, 120, 30);
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Tela-CadastrarSupervisor.png"))); // NOI18N
+        jPanel4.add(jLabel1);
+        jLabel1.setBounds(0, 0, 710, 275);
+
         jTabbedPane1.addTab("Dados Pessoais", jPanel4);
 
         jPanel3.setBackground(new java.awt.Color(65, 191, 182));
@@ -394,6 +400,10 @@ public class CadastroPaciente extends javax.swing.JDialog {
         txtTelefoneResponsavel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jPanel3.add(txtTelefoneResponsavel);
         txtTelefoneResponsavel.setBounds(450, 210, 218, 30);
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Tela-CadastrarSupervisor.png"))); // NOI18N
+        jPanel3.add(jLabel9);
+        jLabel9.setBounds(0, 0, 710, 275);
 
         jTabbedPane1.addTab("Contato", jPanel3);
 
@@ -666,6 +676,7 @@ public class CadastroPaciente extends javax.swing.JDialog {
     private javax.swing.JButton btPesquisar;
     private javax.swing.JButton btSalvar;
     private javax.swing.JButton btVoltar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel15;
@@ -685,6 +696,7 @@ public class CadastroPaciente extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JTabbedPane jTabbedPane1;
