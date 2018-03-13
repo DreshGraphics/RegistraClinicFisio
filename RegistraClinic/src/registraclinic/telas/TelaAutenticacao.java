@@ -42,14 +42,14 @@ public class TelaAutenticacao extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(780, 560));
+        setMinimumSize(new java.awt.Dimension(700, 500));
         setUndecorated(true);
         getContentPane().setLayout(null);
 
         btCancelar.setBackground(new java.awt.Color(255, 255, 255));
         btCancelar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         btCancelar.setForeground(new java.awt.Color(255, 255, 255));
-        btCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/ExcluiM.png"))); // NOI18N
+        btCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Sair2.png"))); // NOI18N
         btCancelar.setBorder(null);
         btCancelar.setBorderPainted(false);
         btCancelar.setContentAreaFilled(false);
@@ -65,12 +65,12 @@ public class TelaAutenticacao extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btCancelar);
-        btCancelar.setBounds(530, 440, 100, 110);
+        btCancelar.setBounds(170, 390, 60, 60);
 
         btEntrar.setBackground(new java.awt.Color(255, 255, 255));
         btEntrar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         btEntrar.setForeground(new java.awt.Color(255, 255, 255));
-        btEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/BotãoOkM.png"))); // NOI18N
+        btEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Entrar2.png"))); // NOI18N
         btEntrar.setContentAreaFilled(false);
         btEntrar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btEntrar.addActionListener(new java.awt.event.ActionListener() {
@@ -79,17 +79,17 @@ public class TelaAutenticacao extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btEntrar);
-        btEntrar.setBounds(650, 440, 110, 110);
+        btEntrar.setBounds(460, 390, 70, 60);
 
         jLabel3.setFont(new java.awt.Font("Calibri", 1, 28)); // NOI18N
         jLabel3.setText("SENHA");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(270, 300, 120, 30);
+        jLabel3.setBounds(190, 280, 120, 30);
 
         jLabel2.setFont(new java.awt.Font("Calibri", 1, 28)); // NOI18N
         jLabel2.setText("LOGIN");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(270, 200, 110, 30);
+        jLabel2.setBounds(190, 170, 110, 30);
 
         txtLogin.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
         txtLogin.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
@@ -99,7 +99,7 @@ public class TelaAutenticacao extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtLogin);
-        txtLogin.setBounds(270, 230, 340, 50);
+        txtLogin.setBounds(190, 200, 310, 50);
 
         txtSenha.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
         txtSenha.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
@@ -111,15 +111,15 @@ public class TelaAutenticacao extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtSenha);
-        txtSenha.setBounds(270, 330, 340, 50);
+        txtSenha.setBounds(190, 310, 310, 50);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Login.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Login3.png"))); // NOI18N
         jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jLabel1.setMaximumSize(new java.awt.Dimension(780, 560));
-        jLabel1.setMinimumSize(new java.awt.Dimension(780, 560));
-        jLabel1.setPreferredSize(new java.awt.Dimension(780, 560));
+        jLabel1.setMaximumSize(new java.awt.Dimension(700, 500));
+        jLabel1.setMinimumSize(new java.awt.Dimension(700, 500));
+        jLabel1.setPreferredSize(new java.awt.Dimension(700, 500));
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 780, 560);
+        jLabel1.setBounds(0, 0, 700, 500);
 
         pack();
         setLocationRelativeTo(null);

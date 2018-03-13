@@ -37,10 +37,10 @@ public class TelaInicial extends javax.swing.JDialog {
 
         jPanel1 = new javax.swing.JPanel();
         tfAluno = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
         tfPaciente = new javax.swing.JButton();
         tfSupervisor1 = new javax.swing.JButton();
         btnUsuario = new javax.swing.JButton();
+        btLogout = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -62,17 +62,6 @@ public class TelaInicial extends javax.swing.JDialog {
         });
         jPanel1.add(tfAluno);
         tfAluno.setBounds(520, 210, 83, 100);
-
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/icons8_Delete_26px_2.png"))); // NOI18N
-        jButton1.setContentAreaFilled(false);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton1);
-        jButton1.setBounds(650, 0, 50, 50);
 
         tfPaciente.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tfPaciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/icons8_Cast_50px.png"))); // NOI18N
@@ -119,6 +108,22 @@ public class TelaInicial extends javax.swing.JDialog {
         jPanel1.add(btnUsuario);
         btnUsuario.setBounds(510, 340, 100, 100);
 
+        btLogout.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btLogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/logoff2.png"))); // NOI18N
+        btLogout.setText("Sair");
+        btLogout.setToolTipText("Sair");
+        btLogout.setContentAreaFilled(false);
+        btLogout.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btLogout.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btLogout.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btLogout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btLogoutActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btLogout);
+        btLogout.setBounds(310, 410, 70, 90);
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Menu-Principal.png"))); // NOI18N
         jPanel1.add(jLabel1);
         jLabel1.setBounds(0, 0, 700, 500);
@@ -143,10 +148,6 @@ public class TelaInicial extends javax.swing.JDialog {
         MainAluno.setVisible(true);
     }//GEN-LAST:event_tfAlunoActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void tfPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfPacienteActionPerformed
         CadastroPaciente MainPaciente = new CadastroPaciente(null, rootPaneCheckingEnabled);
         MainPaciente.setVisible(true);
@@ -161,6 +162,12 @@ public class TelaInicial extends javax.swing.JDialog {
         CadastroUsuario cadastroFuncionario = new CadastroUsuario(null, rootPaneCheckingEnabled);
         cadastroFuncionario.setVisible(true);
     }//GEN-LAST:event_btnUsuarioActionPerformed
+
+    private void btLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLogoutActionPerformed
+        TelaAutenticacao telaAutenticacao = new TelaAutenticacao();
+        telaAutenticacao.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btLogoutActionPerformed
 
     /**
      * @param args the command line arguments
@@ -206,8 +213,8 @@ public class TelaInicial extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btLogout;
     private javax.swing.JButton btnUsuario;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton tfAluno;
