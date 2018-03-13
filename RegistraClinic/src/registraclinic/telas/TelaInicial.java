@@ -53,67 +53,63 @@ public class TelaInicial extends javax.swing.JDialog {
         tfAluno.setText("Aluno");
         tfAluno.setContentAreaFilled(false);
         tfAluno.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        tfAluno.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        tfAluno.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        tfAluno.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         tfAluno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfAlunoActionPerformed(evt);
             }
         });
         jPanel1.add(tfAluno);
-        tfAluno.setBounds(520, 210, 83, 100);
+        tfAluno.setBounds(10, 320, 140, 50);
 
         tfPaciente.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tfPaciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/icons8_Cast_50px.png"))); // NOI18N
         tfPaciente.setText("Paciente");
         tfPaciente.setContentAreaFilled(false);
         tfPaciente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        tfPaciente.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        tfPaciente.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        tfPaciente.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         tfPaciente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfPacienteActionPerformed(evt);
             }
         });
         jPanel1.add(tfPaciente);
-        tfPaciente.setBounds(70, 210, 100, 100);
+        tfPaciente.setBounds(0, 160, 160, 60);
 
         tfSupervisor1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tfSupervisor1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/icons8_Course_50px.png"))); // NOI18N
         tfSupervisor1.setText("Supervisor");
         tfSupervisor1.setContentAreaFilled(false);
         tfSupervisor1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        tfSupervisor1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        tfSupervisor1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        tfSupervisor1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         tfSupervisor1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfSupervisor1ActionPerformed(evt);
             }
         });
         jPanel1.add(tfSupervisor1);
-        tfSupervisor1.setBounds(60, 340, 120, 100);
+        tfSupervisor1.setBounds(10, 240, 170, 60);
 
         btnUsuario.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/icon_func.png"))); // NOI18N
         btnUsuario.setText("Usuário");
         btnUsuario.setContentAreaFilled(false);
         btnUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnUsuario.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnUsuario.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnUsuario.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         btnUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUsuarioActionPerformed(evt);
             }
         });
         jPanel1.add(btnUsuario);
-        btnUsuario.setBounds(510, 340, 100, 100);
+        btnUsuario.setBounds(10, 400, 150, 50);
 
         btLogout.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btLogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/logoff2.png"))); // NOI18N
         btLogout.setText("Sair");
         btLogout.setToolTipText("Sair");
         btLogout.setContentAreaFilled(false);
-        btLogout.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btLogout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btLogout.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btLogout.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         btLogout.addActionListener(new java.awt.event.ActionListener() {
@@ -122,7 +118,7 @@ public class TelaInicial extends javax.swing.JDialog {
             }
         });
         jPanel1.add(btLogout);
-        btLogout.setBounds(310, 410, 70, 90);
+        btLogout.setBounds(630, 410, 70, 90);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Menu-Principal.png"))); // NOI18N
         jPanel1.add(jLabel1);
