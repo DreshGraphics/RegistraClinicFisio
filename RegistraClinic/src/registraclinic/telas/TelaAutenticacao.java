@@ -114,10 +114,8 @@ public class TelaAutenticacao extends javax.swing.JFrame {
         txtSenha.setBounds(190, 310, 310, 50);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Login3.png"))); // NOI18N
+        jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jLabel1.setMaximumSize(new java.awt.Dimension(700, 500));
-        jLabel1.setMinimumSize(new java.awt.Dimension(700, 500));
-        jLabel1.setPreferredSize(new java.awt.Dimension(700, 500));
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 700, 500);
 

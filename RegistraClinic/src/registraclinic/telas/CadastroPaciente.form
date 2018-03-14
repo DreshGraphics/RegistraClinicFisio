@@ -447,10 +447,15 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/registraclinic/imagens/Tela-CadastrarSupervisor.png"/>
                 </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder roundedCorners="true" thickness="2"/>
+                  </Border>
+                </Property>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="0" y="0" width="710" height="275"/>
+                  <AbsoluteConstraints x="0" y="0" width="700" height="275"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -819,10 +824,15 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/registraclinic/imagens/Tela-CadastrarSupervisor.png"/>
                 </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder roundedCorners="true" thickness="2"/>
+                  </Border>
+                </Property>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="0" y="0" width="710" height="275"/>
+                  <AbsoluteConstraints x="0" y="0" width="700" height="275"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -836,7 +846,7 @@
           <Font name="Tahoma" size="14" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/registraclinic/imagens/voltar.png"/>
+          <Image iconType="3" name="/registraclinic/imagens/voltar2.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Voltar"/>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -861,7 +871,7 @@
           <Font name="Tahoma" size="14" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/registraclinic/imagens/pesquisar.png"/>
+          <Image iconType="3" name="/registraclinic/imagens/pesquisa.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Pesquisar"/>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -886,7 +896,7 @@
           <Font name="Tahoma" size="14" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/registraclinic/imagens/excluir.png"/>
+          <Image iconType="3" name="/registraclinic/imagens/excluir_1.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Excluir"/>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -911,7 +921,7 @@
           <Font name="Tahoma" size="14" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/registraclinic/imagens/limpar.png"/>
+          <Image iconType="3" name="/registraclinic/imagens/limpar_1.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Limpar"/>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -936,7 +946,7 @@
           <Font name="Tahoma" size="14" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/registraclinic/imagens/Salvar.png"/>
+          <Image iconType="3" name="/registraclinic/imagens/salvar_1.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Salvar"/>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -962,7 +972,7 @@
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-            <LineBorder roundedCorners="true"/>
+            <LineBorder roundedCorners="true" thickness="2"/>
           </Border>
         </Property>
       </Properties>

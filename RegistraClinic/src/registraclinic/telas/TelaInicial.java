@@ -60,7 +60,7 @@ public class TelaInicial extends javax.swing.JDialog {
             }
         });
         jPanel1.add(tfAluno);
-        tfAluno.setBounds(10, 320, 140, 50);
+        tfAluno.setBounds(10, 340, 140, 50);
 
         tfPaciente.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tfPaciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/icons8_Cast_50px.png"))); // NOI18N
@@ -88,7 +88,7 @@ public class TelaInicial extends javax.swing.JDialog {
             }
         });
         jPanel1.add(tfSupervisor1);
-        tfSupervisor1.setBounds(10, 240, 170, 60);
+        tfSupervisor1.setBounds(10, 250, 170, 60);
 
         btnUsuario.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/icon_func.png"))); // NOI18N
@@ -102,11 +102,11 @@ public class TelaInicial extends javax.swing.JDialog {
             }
         });
         jPanel1.add(btnUsuario);
-        btnUsuario.setBounds(10, 400, 150, 50);
+        btnUsuario.setBounds(10, 430, 150, 50);
 
         btLogout.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btLogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/logoff2.png"))); // NOI18N
-        btLogout.setText("Sair");
+        btLogout.setForeground(new java.awt.Color(255, 255, 255));
+        btLogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/icons8_Delete_26px_2.png"))); // NOI18N
         btLogout.setToolTipText("Sair");
         btLogout.setContentAreaFilled(false);
         btLogout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -118,9 +118,10 @@ public class TelaInicial extends javax.swing.JDialog {
             }
         });
         jPanel1.add(btLogout);
-        btLogout.setBounds(630, 410, 70, 90);
+        btLogout.setBounds(650, 0, 50, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Menu-Principal.png"))); // NOI18N
+        jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         jPanel1.add(jLabel1);
         jLabel1.setBounds(0, 0, 700, 500);
 

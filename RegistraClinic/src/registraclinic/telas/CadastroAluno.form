@@ -96,9 +96,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="3d" green="40" red="16" type="rgb"/>
-                </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                     <LineBorder roundedCorners="true"/>
@@ -124,9 +121,6 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="3d" green="40" red="16" type="rgb"/>
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -219,9 +213,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="3d" green="40" red="16" type="rgb"/>
-                </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                     <LineBorder roundedCorners="true"/>
@@ -260,9 +251,6 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="3d" green="40" red="16" type="rgb"/>
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -359,15 +347,20 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel1">
+            <Component class="javax.swing.JLabel" name="labelDadosPessoais">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/registraclinic/imagens/Tela-CadastrarSupervisor.png"/>
                 </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder roundedCorners="true" thickness="2"/>
+                  </Border>
+                </Property>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="0" y="0" width="710" height="275"/>
+                  <AbsoluteConstraints x="0" y="0" width="700" height="275"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -693,15 +686,20 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel9">
+            <Component class="javax.swing.JLabel" name="labelContato">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/registraclinic/imagens/Tela-CadastrarSupervisor.png"/>
                 </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder roundedCorners="true" thickness="2"/>
+                  </Border>
+                </Property>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="0" y="0" width="710" height="275"/>
+                  <AbsoluteConstraints x="0" y="0" width="700" height="275"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -715,7 +713,7 @@
           <Font name="Tahoma" size="14" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/registraclinic/imagens/voltar.png"/>
+          <Image iconType="3" name="/registraclinic/imagens/voltar2.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Voltar"/>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -740,7 +738,7 @@
           <Font name="Tahoma" size="14" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/registraclinic/imagens/pesquisar.png"/>
+          <Image iconType="3" name="/registraclinic/imagens/pesquisa.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Pesquisar"/>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -765,7 +763,7 @@
           <Font name="Tahoma" size="14" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/registraclinic/imagens/excluir.png"/>
+          <Image iconType="3" name="/registraclinic/imagens/excluir_1.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Excluir"/>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -790,7 +788,7 @@
           <Font name="Tahoma" size="14" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/registraclinic/imagens/limpar.png"/>
+          <Image iconType="3" name="/registraclinic/imagens/limpar_1.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Limpar"/>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -815,7 +813,7 @@
           <Font name="Tahoma" size="14" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/registraclinic/imagens/Salvar.png"/>
+          <Image iconType="3" name="/registraclinic/imagens/salvar_1.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Salvar"/>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -841,7 +839,7 @@
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-            <LineBorder roundedCorners="true"/>
+            <LineBorder roundedCorners="true" thickness="2"/>
           </Border>
         </Property>
         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">

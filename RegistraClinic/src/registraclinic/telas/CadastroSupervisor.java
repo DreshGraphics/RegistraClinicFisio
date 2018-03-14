@@ -232,8 +232,9 @@ public class CadastroSupervisor extends javax.swing.JDialog {
         txtDataNascimento.setBounds(540, 90, 130, 30);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Tela-CadastrarSupervisor.png"))); // NOI18N
+        jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         jPanel4.add(jLabel1);
-        jLabel1.setBounds(0, 0, 710, 290);
+        jLabel1.setBounds(0, 0, 700, 290);
 
         jTabbedPane1.addTab("Dados Pessoais", jPanel4);
 
@@ -355,8 +356,9 @@ public class CadastroSupervisor extends javax.swing.JDialog {
         txtTelefone.setBounds(460, 150, 210, 30);
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Tela-CadastrarSupervisor.png"))); // NOI18N
+        jLabel9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         jPanel3.add(jLabel9);
-        jLabel9.setBounds(0, 0, 710, 290);
+        jLabel9.setBounds(0, 0, 700, 290);
 
         jTabbedPane1.addTab("Contato", jPanel3);
 
@@ -364,7 +366,7 @@ public class CadastroSupervisor extends javax.swing.JDialog {
         jTabbedPane1.setBounds(0, 100, 700, 310);
 
         btVoltar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/voltar.png"))); // NOI18N
+        btVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/voltar2.png"))); // NOI18N
         btVoltar.setText("Voltar");
         btVoltar.setContentAreaFilled(false);
         btVoltar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -379,7 +381,7 @@ public class CadastroSupervisor extends javax.swing.JDialog {
         btVoltar.setBounds(160, 420, 90, 70);
 
         btPesquisar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/pesquisar.png"))); // NOI18N
+        btPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/pesquisa.png"))); // NOI18N
         btPesquisar.setText("Pesquisar");
         btPesquisar.setContentAreaFilled(false);
         btPesquisar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -394,7 +396,7 @@ public class CadastroSupervisor extends javax.swing.JDialog {
         btPesquisar.setBounds(390, 420, 100, 70);
 
         btExcluir.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/excluir.png"))); // NOI18N
+        btExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/excluir_1.png"))); // NOI18N
         btExcluir.setText("Excluir");
         btExcluir.setContentAreaFilled(false);
         btExcluir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -409,7 +411,7 @@ public class CadastroSupervisor extends javax.swing.JDialog {
         btExcluir.setBounds(510, 420, 80, 70);
 
         btLimpar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/limpar.png"))); // NOI18N
+        btLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/limpar_1.png"))); // NOI18N
         btLimpar.setText("Limpar");
         btLimpar.setContentAreaFilled(false);
         btLimpar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -424,7 +426,7 @@ public class CadastroSupervisor extends javax.swing.JDialog {
         btLimpar.setBounds(290, 420, 80, 70);
 
         btSalvar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Salvar.png"))); // NOI18N
+        btSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/salvar_1.png"))); // NOI18N
         btSalvar.setText("Salvar");
         btSalvar.setContentAreaFilled(false);
         btSalvar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -439,7 +441,7 @@ public class CadastroSupervisor extends javax.swing.JDialog {
         btSalvar.setBounds(610, 420, 80, 70);
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Tela-CadastrarSupervisor.png"))); // NOI18N
-        jLabel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jLabel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         jLabel6.setMaximumSize(new java.awt.Dimension(700, 500));
         jLabel6.setMinimumSize(new java.awt.Dimension(700, 500));
         jLabel6.setPreferredSize(new java.awt.Dimension(700, 500));
