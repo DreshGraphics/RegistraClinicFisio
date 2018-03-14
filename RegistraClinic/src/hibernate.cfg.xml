@@ -18,7 +18,8 @@
         <mapping class="registraclinic.paciente.Paciente"/>
         <mapping class="registraclinic.aluno.Aluno"/>
         <mapping class="registraclinic.supervisor.Supervisor"/>
-
+        <mapping class="registraclinic.vincularpacientealuno.VincularPacienteAluno"/>
+        <mapping class="registraclinic.vincularalunosupervisor.VincularAlunoSupervisor"/>
     </session-factory>
 </hibernate-configuration>
 

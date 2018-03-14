@@ -102,7 +102,7 @@ public class CadastroUsuario extends javax.swing.JDialog {
         jcNivelAcesso.setBounds(90, 350, 190, 30);
 
         jlNomeUsuario.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
-        jlNomeUsuario.setText("Nome Usuário:");
+        jlNomeUsuario.setText("Nome Usuário");
         getContentPane().add(jlNomeUsuario);
         jlNomeUsuario.setBounds(90, 120, 170, 20);
 
