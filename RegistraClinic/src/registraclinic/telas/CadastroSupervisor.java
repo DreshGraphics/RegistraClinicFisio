@@ -112,7 +112,6 @@ public class CadastroSupervisor extends javax.swing.JDialog {
         jLabel2.setBounds(27, 11, 140, 17);
 
         txtNome.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtNome.setForeground(new java.awt.Color(22, 64, 61));
         txtNome.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         txtNome.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         txtNome.setMargin(null);
@@ -145,7 +144,6 @@ public class CadastroSupervisor extends javax.swing.JDialog {
         jLabel7.setBounds(540, 70, 120, 17);
 
         txtEspecializacao.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtEspecializacao.setForeground(new java.awt.Color(22, 64, 61));
         txtEspecializacao.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         txtEspecializacao.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         txtEspecializacao.setMargin(null);
@@ -163,7 +161,6 @@ public class CadastroSupervisor extends javax.swing.JDialog {
         jLabel8.setBounds(30, 130, 110, 17);
 
         txtRg.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtRg.setForeground(new java.awt.Color(22, 64, 61));
         txtRg.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         txtRg.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         txtRg.setMargin(null);
@@ -181,7 +178,6 @@ public class CadastroSupervisor extends javax.swing.JDialog {
         jLabel12.setBounds(540, 130, 69, 17);
 
         txtTurma.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtTurma.setForeground(new java.awt.Color(22, 64, 61));
         txtTurma.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         txtTurma.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         txtTurma.setMargin(null);
@@ -213,7 +209,7 @@ public class CadastroSupervisor extends javax.swing.JDialog {
         jcSexo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jcSexo.setOpaque(false);
         jPanel4.add(jcSexo);
-        jcSexo.setBounds(543, 32, 130, 30);
+        jcSexo.setBounds(540, 30, 130, 30);
 
         txtDataNascimento.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         try {
@@ -485,10 +481,28 @@ public class CadastroSupervisor extends javax.swing.JDialog {
     }//GEN-LAST:event_btExcluirActionPerformed
 
     private void btLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLimparActionPerformed
-        Util.limparCamposGenerico(this);
+        
         btExcluir.setEnabled(false);
+        
+        txtBairro.setText("");
+        txtCidade.setText("");
+        txtComplemento.setText("");
+        txtCpf.setText("");
+        txtDataNascimento.setText("");
+        txtEmail.setText("");
+        txtEndNumero.setText("");
+        txtEndereco.setText("");
+        txtEspecializacao.setText("");
+        txtNome.setText("");
+        txtRg.setText("");
+        txtTelefone.setText("");
+        txtTurma.setText("");
+        
         jcSexo.setSelectedIndex(0);
+        jcEstado.setSelectedIndex(0);
+        
         supervisor = new Supervisor();
+        jTabbedPane1.setSelectedComponent(jPanel4);
     }//GEN-LAST:event_btLimparActionPerformed
 
     private void btSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalvarActionPerformed

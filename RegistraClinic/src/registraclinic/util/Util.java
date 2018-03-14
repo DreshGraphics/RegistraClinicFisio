@@ -284,26 +284,6 @@ public class Util {
         return str_cnpj.equals(cnpj_calc);
     }
 
-    public static void limparCamposLabelGenerico(JLabel label) {
-        for (int i = 0; i < label.getComponentCount(); i++) {
-            Component c = label.getComponent(i);
-            if (c instanceof JComboBox) {
-                JComboBox field = (JComboBox) c;
-                field.setSelectedItem("-----");
-            } else if (c instanceof JTextField) {
-                JTextField field = (JTextField) c;
-                field.setText("");
-            } else if (c instanceof JRadioButton) {
-                JRadioButton field = (JRadioButton) c;
-                field.setSelected(false);
-            } else if (c instanceof JCheckBox) {
-                JCheckBox field = (JCheckBox) c;
-                field.setSelected(false);
-            }
-        }
-
-    }
-
     public static void limparCamposGenerico(JDialog Frame) {
         //limpa os campos     
         for (int i = 0; i < Frame.getContentPane().getComponentCount(); i++) {

@@ -17,7 +17,7 @@ import registraclinic.usuario.Usuario;
 public class PacienteTableModel extends AbstractTableModel {
 
     private List<Paciente> pacientes = new ArrayList<>();
-    private String[] colunas = {"Código", "Prontuário", "Nome", "Endereço", "Telefone"};
+    private String[] colunas = {"Código", "Prontuário", "Nome", "RG", "CPF", "Data Nascimento", "Sexo", "Endereço", "Cidade", "Telefone Paciente", "Nome Responsável", "Telefone Responsável", "Data Cadastro", "Situação", "Tipo"};
 
     public PacienteTableModel(List<Paciente> pacientes) {
         this.pacientes = pacientes;
@@ -44,9 +44,29 @@ public class PacienteTableModel extends AbstractTableModel {
             case 2:
                 return paciente.getNomePaciente();
             case 3:
-                return paciente.getEnderecoPaciente();
+                return paciente.getRgPaciente();
             case 4:
+                return paciente.getCpfPaciente();
+            case 5:
+                return paciente.getDataNascimentoPaciente();
+            case 6:
+                return paciente.getSexoPaciente();
+            case 7:
+                return paciente.getEnderecoPaciente();
+            case 8:
+                return paciente.getCidadePaciente();
+            case 9:
                 return paciente.getTelefonePaciente();
+            case 10:
+                return paciente.getNomeResponsavelPaciente();
+            case 11:
+                return paciente.getTelefoneResponsavelPaciente();
+            case 12:
+                return paciente.getDataCadastroPaciente();
+            case 13:
+                return paciente.getSituacaoPaciente();
+            case 14:
+                return paciente.getTipoPaciente();
         }
         return null;
     }
@@ -63,7 +83,28 @@ public class PacienteTableModel extends AbstractTableModel {
             case 3:
                 return colunas[3];
             case 4:
-                return colunas[3];
+                return colunas[4];
+            case 5:
+                return colunas[5];
+            case 6:
+                return colunas[6];
+            case 7:
+                return colunas[7];
+            case 8:
+                return colunas[8];
+            case 9:
+                return colunas[9];
+            case 10:
+                return colunas[10];
+            case 11:
+                return colunas[11];
+            case 12:
+                return colunas[12];
+            case 13:
+                return colunas[13];
+            case 14:
+                return colunas[14];
+
         }
         return null;
     }

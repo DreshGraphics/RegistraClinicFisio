@@ -116,7 +116,6 @@ public class CadastroPaciente extends javax.swing.JDialog {
         jLabel2.setBounds(27, 11, 130, 19);
 
         txtNome.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtNome.setForeground(new java.awt.Color(22, 64, 61));
         txtNome.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         txtNome.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         txtNome.setMargin(null);
@@ -149,7 +148,6 @@ public class CadastroPaciente extends javax.swing.JDialog {
         jLabel7.setBounds(160, 130, 140, 19);
 
         txtIdade.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtIdade.setForeground(new java.awt.Color(22, 64, 61));
         txtIdade.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         txtIdade.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         txtIdade.setMargin(null);
@@ -167,7 +165,6 @@ public class CadastroPaciente extends javax.swing.JDialog {
         jLabel8.setBounds(450, 70, 43, 19);
 
         txtRg.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtRg.setForeground(new java.awt.Color(22, 64, 61));
         txtRg.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         txtRg.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         txtRg.setMargin(null);
@@ -185,7 +182,6 @@ public class CadastroPaciente extends javax.swing.JDialog {
         jLabel12.setBounds(500, 10, 130, 19);
 
         txtNumeroProntuario.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtNumeroProntuario.setForeground(new java.awt.Color(22, 64, 61));
         txtNumeroProntuario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         txtNumeroProntuario.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         txtNumeroProntuario.setMargin(null);
@@ -532,10 +528,28 @@ public class CadastroPaciente extends javax.swing.JDialog {
     }//GEN-LAST:event_btExcluirActionPerformed
 
     private void btLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLimparActionPerformed
-        Util.limparCamposGenerico(this);
         btExcluir.setEnabled(false);
+        txtBairro.setText("");
+        txtCidade.setText("");
+        txtComplemento.setText("");
+        txtCpf.setText("");
+        txtDataNascimento.setText("");
+        txtEndereco.setText("");
+        txtIdade.setText("");
+        txtNome.setText("");
+        txtNomeResponsavel.setText("");
+        txtNumero.setText("");
+        txtNumeroProntuario.setText("");
+        txtRg.setText("");
+        txtTelefonePaciente.setText("");
+        txtTelefoneResponsavel.setText("");
+        
+        jcEstado.setSelectedIndex(0);
+        jcSituacaoPaciente.setSelectedIndex(0);
+        jcTipoPaciente.setSelectedIndex(0);
         jcSexo.setSelectedIndex(0);
         paciente = new Paciente();
+        jTabbedPane1.setSelectedComponent(jPanel4);
     }//GEN-LAST:event_btLimparActionPerformed
 
     private void btSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalvarActionPerformed

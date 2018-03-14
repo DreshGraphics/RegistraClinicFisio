@@ -66,7 +66,7 @@ public class CadastroAluno extends javax.swing.JDialog {
         jLabel15 = new javax.swing.JLabel();
         jcEstado = new javax.swing.JComboBox<>();
         txtEndereco = new javax.swing.JTextField();
-        tfEndNumero = new javax.swing.JTextField();
+        txtEndNumero = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         txtBairro = new javax.swing.JTextField();
@@ -237,7 +237,7 @@ public class CadastroAluno extends javax.swing.JDialog {
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel11.setText("Endereço");
         jPanel3.add(jLabel11);
-        jLabel11.setBounds(27, 11, 90, 19);
+        jLabel11.setBounds(30, 10, 90, 19);
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel15.setText("N°");
@@ -263,12 +263,12 @@ public class CadastroAluno extends javax.swing.JDialog {
             }
         });
         jPanel3.add(txtEndereco);
-        txtEndereco.setBounds(27, 31, 560, 30);
+        txtEndereco.setBounds(30, 30, 560, 30);
 
-        tfEndNumero.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        tfEndNumero.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jPanel3.add(tfEndNumero);
-        tfEndNumero.setBounds(605, 31, 63, 30);
+        txtEndNumero.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtEndNumero.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jPanel3.add(txtEndNumero);
+        txtEndNumero.setBounds(605, 31, 63, 30);
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel16.setText("Estado");
@@ -457,7 +457,7 @@ public class CadastroAluno extends javax.swing.JDialog {
             txtDataNascimento.setText(alunos.getDataNascimentoAluno());
             txtEndereco.setText(alunos.getEnderecoAluno());
             txtBairro.setText(alunos.getBairroAluno());
-            tfEndNumero.setText(alunos.getEnderecoNumeroAluno());
+            txtEndNumero.setText(alunos.getEnderecoNumeroAluno());
             txtCidade.setText(alunos.getCidadeAluno());
             txtTelefone.setText(alunos.getTelefoneAluno());
             txtEmail.setText(alunos.getEmailAluno());
@@ -476,11 +476,26 @@ public class CadastroAluno extends javax.swing.JDialog {
     }//GEN-LAST:event_btExcluirActionPerformed
 
     private void btLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLimparActionPerformed
-        Util.limparCamposLabelGenerico(labelDadosPessoais);
-        Util.limparCamposLabelGenerico(labelContato);
         btExcluir.setEnabled(false);
+        
+        txtBairro.setText("");
+        txtCidade.setText("");
+        txtComplemento.setText("");
+        txtCpf.setText("");
+        txtDataNascimento.setText("");
+        txtEmail.setText("");
+        txtEndereco.setText("");
+        txtMatricula.setText("");
+        txtNome.setText("");
+        txtRg.setText("");
+        txtTelefone.setText("");
+        txtTurma.setText("");
+        txtEndNumero.setText("");
         jcSexo.setSelectedIndex(0);
+        jcEstado.setSelectedIndex(0);
+        
         alunos = new Aluno();
+        jTabbedPane1.setSelectedComponent(jPanel4);
     }//GEN-LAST:event_btLimparActionPerformed
 
     private void btSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalvarActionPerformed
@@ -496,7 +511,7 @@ public class CadastroAluno extends javax.swing.JDialog {
             alunos.setCpfAluno(txtCpf.getText());
             alunos.setDataNascimentoAluno(txtDataNascimento.getText());
             alunos.setEnderecoAluno(txtEndereco.getText());
-            alunos.setEnderecoNumeroAluno(tfEndNumero.getText());
+            alunos.setEnderecoNumeroAluno(txtEndNumero.getText());
             alunos.setRgAluno(txtRg.getText());
             alunos.setTelefoneAluno(txtTelefone.getText());
             alunos.setSexoAluno(jcSexo.getSelectedItem().toString());
@@ -640,13 +655,13 @@ public class CadastroAluno extends javax.swing.JDialog {
     private javax.swing.JComboBox<String> jcSexo;
     private javax.swing.JLabel labelContato;
     private javax.swing.JLabel labelDadosPessoais;
-    private javax.swing.JTextField tfEndNumero;
     private javax.swing.JTextField txtBairro;
     private javax.swing.JTextField txtCidade;
     private javax.swing.JTextField txtComplemento;
     private javax.swing.JFormattedTextField txtCpf;
     private javax.swing.JFormattedTextField txtDataNascimento;
     private javax.swing.JTextField txtEmail;
+    private javax.swing.JTextField txtEndNumero;
     private javax.swing.JTextField txtEndereco;
     private javax.swing.JTextField txtMatricula;
     private javax.swing.JTextField txtNome;
