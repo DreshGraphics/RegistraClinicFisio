@@ -65,7 +65,7 @@ public class TelaAutenticacao extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btCancelar);
-        btCancelar.setBounds(170, 390, 60, 60);
+        btCancelar.setBounds(220, 370, 60, 60);
 
         btEntrar.setBackground(new java.awt.Color(255, 255, 255));
         btEntrar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -79,30 +79,34 @@ public class TelaAutenticacao extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btEntrar);
-        btEntrar.setBounds(460, 390, 70, 60);
+        btEntrar.setBounds(420, 370, 70, 60);
 
-        jLabel3.setFont(new java.awt.Font("Calibri", 1, 28)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("SENHA");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(190, 280, 120, 30);
+        jLabel3.setBounds(310, 280, 70, 20);
 
-        jLabel2.setFont(new java.awt.Font("Calibri", 1, 28)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("LOGIN");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(190, 170, 110, 30);
+        jLabel2.setBounds(310, 170, 70, 20);
 
+        txtLogin.setBackground(new java.awt.Color(0, 93, 88));
         txtLogin.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
-        txtLogin.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        txtLogin.setBorder(null);
         txtLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtLoginActionPerformed(evt);
             }
         });
         getContentPane().add(txtLogin);
-        txtLogin.setBounds(190, 200, 310, 50);
+        txtLogin.setBounds(270, 210, 200, 40);
 
+        txtSenha.setBackground(new java.awt.Color(0, 93, 88));
         txtSenha.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
-        txtSenha.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        txtSenha.setBorder(null);
         txtSenha.setMinimumSize(new java.awt.Dimension(4, 24));
         txtSenha.setPreferredSize(new java.awt.Dimension(4, 24));
         txtSenha.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -111,9 +115,9 @@ public class TelaAutenticacao extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtSenha);
-        txtSenha.setBounds(190, 310, 310, 50);
+        txtSenha.setBounds(270, 310, 200, 30);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Login3.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/TelaLogin.png"))); // NOI18N
         jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(jLabel1);

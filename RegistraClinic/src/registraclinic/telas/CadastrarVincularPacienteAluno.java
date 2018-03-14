@@ -239,7 +239,7 @@ public class CadastrarVincularPacienteAluno extends javax.swing.JDialog {
         getContentPane().add(btSalvar);
         btSalvar.setBounds(610, 420, 80, 70);
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Tela-CadastrarPaciente.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/VincularPacienteAoAluno.png"))); // NOI18N
         jLabel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         jLabel6.setMaximumSize(new java.awt.Dimension(699, 500));
         jLabel6.setMinimumSize(new java.awt.Dimension(699, 500));
