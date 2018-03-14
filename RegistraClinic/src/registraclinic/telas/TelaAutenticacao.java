@@ -47,13 +47,15 @@ public class TelaAutenticacao extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         btCancelar.setBackground(new java.awt.Color(255, 255, 255));
-        btCancelar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        btCancelar.setForeground(new java.awt.Color(255, 255, 255));
+        btCancelar.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         btCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Sair2.png"))); // NOI18N
+        btCancelar.setText("Sair");
         btCancelar.setBorder(null);
         btCancelar.setBorderPainted(false);
         btCancelar.setContentAreaFilled(false);
         btCancelar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btCancelar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btCancelar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         btCancelar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btCancelarMouseEntered(evt);
@@ -65,33 +67,35 @@ public class TelaAutenticacao extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btCancelar);
-        btCancelar.setBounds(220, 370, 60, 60);
+        btCancelar.setBounds(520, 400, 70, 90);
 
         btEntrar.setBackground(new java.awt.Color(255, 255, 255));
-        btEntrar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        btEntrar.setForeground(new java.awt.Color(255, 255, 255));
+        btEntrar.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         btEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Entrar2.png"))); // NOI18N
+        btEntrar.setText("Entrar");
         btEntrar.setContentAreaFilled(false);
         btEntrar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btEntrar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btEntrar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         btEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btEntrarActionPerformed(evt);
             }
         });
         getContentPane().add(btEntrar);
-        btEntrar.setBounds(420, 370, 70, 60);
+        btEntrar.setBounds(600, 400, 95, 90);
 
         jLabel3.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("SENHA");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(310, 280, 70, 20);
+        jLabel3.setBounds(320, 280, 70, 20);
 
         jLabel2.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("LOGIN");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(310, 170, 70, 20);
+        jLabel2.setBounds(320, 170, 70, 20);
 
         txtLogin.setBackground(new java.awt.Color(0, 93, 88));
         txtLogin.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
