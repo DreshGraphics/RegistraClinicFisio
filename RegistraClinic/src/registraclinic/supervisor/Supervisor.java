@@ -52,19 +52,10 @@ public class Supervisor{
     private String estadoSupervisor;
 
     @Column(length = 50)
-    private String loginSupervisor;
-
-    @Column(length = 50)
-    private String senhaSupervisor;
-
-    @Column(length = 50)
     private String emailSupervisor;
 
     @Column(length = 300)
     private String complementoSupervisor;
-
-    @Column(length = 15)
-    private String nivelAcessoSupervisor;
 
     @Column(length = 40)
     private String turmaSupervisor;
@@ -168,22 +159,6 @@ public class Supervisor{
         this.estadoSupervisor = estadoSupervisor;
     }
 
-    public String getLoginSupervisor() {
-        return loginSupervisor;
-    }
-
-    public void setLoginSupervisor(String loginSupervisor) {
-        this.loginSupervisor = loginSupervisor;
-    }
-
-    public String getSenhaSupervisor() {
-        return senhaSupervisor;
-    }
-
-    public void setSenhaSupervisor(String senhaSupervisor) {
-        this.senhaSupervisor = senhaSupervisor;
-    }
-
     public String getEmailSupervisor() {
         return emailSupervisor;
     }
@@ -200,13 +175,6 @@ public class Supervisor{
         this.complementoSupervisor = complementoSupervisor;
     }
 
-    public String getNivelAcessoSupervisor() {
-        return nivelAcessoSupervisor;
-    }
-
-    public void setNivelAcessoSupervisor(String nivelAcessoSupervisor) {
-        this.nivelAcessoSupervisor = nivelAcessoSupervisor;
-    }
 
     public String getTurmaSupervisor() {
         return turmaSupervisor;

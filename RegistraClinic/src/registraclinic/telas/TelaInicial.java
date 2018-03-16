@@ -117,10 +117,10 @@ public class TelaInicial extends javax.swing.JDialog {
         jPanel1.add(jlNome3);
         jlNome3.setBounds(130, 460, 100, 30);
 
-        jlUsuario.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        jlUsuario.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jlUsuario.setText("???");
         jPanel1.add(jlUsuario);
-        jlUsuario.setBounds(230, 460, 460, 30);
+        jlUsuario.setBounds(230, 460, 430, 30);
 
         btLogout.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btLogout.setForeground(new java.awt.Color(255, 255, 255));

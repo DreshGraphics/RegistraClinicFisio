@@ -60,7 +60,13 @@ public class CadastroSupervisor extends javax.swing.JDialog {
         txtRg = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         txtTurma = new javax.swing.JTextField();
+        jLObrigatorioNome13 = new javax.swing.JLabel();
+        jLObrigatorioNome12 = new javax.swing.JLabel();
+        jLObrigatorioNome11 = new javax.swing.JLabel();
+        jLObrigatorioNome10 = new javax.swing.JLabel();
         txtCpf = new javax.swing.JFormattedTextField();
+        jLObrigatorioNome9 = new javax.swing.JLabel();
+        jLObrigatorioNome14 = new javax.swing.JLabel();
         jcSexo = new javax.swing.JComboBox<>();
         txtDataNascimento = new javax.swing.JFormattedTextField();
         jLabel1 = new javax.swing.JLabel();
@@ -77,9 +83,16 @@ public class CadastroSupervisor extends javax.swing.JDialog {
         txtComplemento = new javax.swing.JTextField();
         txtCidade = new javax.swing.JTextField();
         jLabel19 = new javax.swing.JLabel();
+        jLObrigatorioNome15 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         txtEmail = new javax.swing.JTextField();
+        jLObrigatorioNome19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
+        jLObrigatorioNome21 = new javax.swing.JLabel();
+        jLObrigatorioNome20 = new javax.swing.JLabel();
+        jLObrigatorioNome18 = new javax.swing.JLabel();
+        jLObrigatorioNome16 = new javax.swing.JLabel();
+        jLObrigatorioNome17 = new javax.swing.JLabel();
         txtTelefone = new javax.swing.JFormattedTextField();
         jLabel9 = new javax.swing.JLabel();
         btVoltar = new javax.swing.JButton();
@@ -189,6 +202,30 @@ public class CadastroSupervisor extends javax.swing.JDialog {
         jPanel4.add(txtTurma);
         txtTurma.setBounds(540, 150, 130, 30);
 
+        jLObrigatorioNome13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome13.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome13.setText("*");
+        jPanel4.add(jLObrigatorioNome13);
+        jLObrigatorioNome13.setBounds(660, 20, 10, 10);
+
+        jLObrigatorioNome12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome12.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome12.setText("*");
+        jPanel4.add(jLObrigatorioNome12);
+        jLObrigatorioNome12.setBounds(220, 80, 10, 10);
+
+        jLObrigatorioNome11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome11.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome11.setText("*");
+        jPanel4.add(jLObrigatorioNome11);
+        jLObrigatorioNome11.setBounds(660, 80, 10, 10);
+
+        jLObrigatorioNome10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome10.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome10.setText("*");
+        jPanel4.add(jLObrigatorioNome10);
+        jLObrigatorioNome10.setBounds(510, 20, 10, 10);
+
         txtCpf.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         try {
             txtCpf.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
@@ -203,6 +240,18 @@ public class CadastroSupervisor extends javax.swing.JDialog {
         });
         jPanel4.add(txtCpf);
         txtCpf.setBounds(25, 90, 200, 30);
+
+        jLObrigatorioNome9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome9.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome9.setText("*");
+        jPanel4.add(jLObrigatorioNome9);
+        jLObrigatorioNome9.setBounds(660, 140, 10, 10);
+
+        jLObrigatorioNome14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome14.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome14.setText("*");
+        jPanel4.add(jLObrigatorioNome14);
+        jLObrigatorioNome14.setBounds(510, 140, 10, 10);
 
         jcSexo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jcSexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-----", "Masculino", "Feminino", "Não Definido" }));
@@ -278,7 +327,7 @@ public class CadastroSupervisor extends javax.swing.JDialog {
         jLabel16.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel16.setText("Estado");
         jPanel3.add(jLabel16);
-        jLabel16.setBounds(370, 130, 70, 17);
+        jLabel16.setBounds(370, 130, 50, 17);
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel17.setText("Bairro");
@@ -325,6 +374,12 @@ public class CadastroSupervisor extends javax.swing.JDialog {
         jPanel3.add(jLabel19);
         jLabel19.setBounds(27, 131, 70, 17);
 
+        jLObrigatorioNome15.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome15.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome15.setText("*");
+        jPanel3.add(jLObrigatorioNome15);
+        jLObrigatorioNome15.setBounds(340, 200, 10, 10);
+
         jLabel21.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel21.setText("Email");
         jPanel3.add(jLabel21);
@@ -333,12 +388,48 @@ public class CadastroSupervisor extends javax.swing.JDialog {
         txtEmail.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtEmail.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jPanel3.add(txtEmail);
-        txtEmail.setBounds(30, 210, 325, 30);
+        txtEmail.setBounds(25, 210, 330, 30);
+
+        jLObrigatorioNome19.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome19.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome19.setText("*");
+        jPanel3.add(jLObrigatorioNome19);
+        jLObrigatorioNome19.setBounds(340, 140, 10, 10);
 
         jLabel20.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel20.setText("Telefone");
         jPanel3.add(jLabel20);
         jLabel20.setBounds(460, 130, 70, 17);
+
+        jLObrigatorioNome21.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome21.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome21.setText("*");
+        jPanel3.add(jLObrigatorioNome21);
+        jLObrigatorioNome21.setBounds(660, 140, 10, 10);
+
+        jLObrigatorioNome20.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome20.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome20.setText("*");
+        jPanel3.add(jLObrigatorioNome20);
+        jLObrigatorioNome20.setBounds(430, 140, 10, 10);
+
+        jLObrigatorioNome18.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome18.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome18.setText("*");
+        jPanel3.add(jLObrigatorioNome18);
+        jLObrigatorioNome18.setBounds(340, 80, 10, 10);
+
+        jLObrigatorioNome16.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome16.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome16.setText("*");
+        jPanel3.add(jLObrigatorioNome16);
+        jLObrigatorioNome16.setBounds(580, 20, 10, 10);
+
+        jLObrigatorioNome17.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome17.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome17.setText("*");
+        jPanel3.add(jLObrigatorioNome17);
+        jLObrigatorioNome17.setBounds(660, 20, 10, 10);
 
         txtTelefone.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         try {
@@ -481,9 +572,9 @@ public class CadastroSupervisor extends javax.swing.JDialog {
     }//GEN-LAST:event_btExcluirActionPerformed
 
     private void btLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLimparActionPerformed
-        
+
         btExcluir.setEnabled(false);
-        
+
         txtBairro.setText("");
         txtCidade.setText("");
         txtComplemento.setText("");
@@ -497,10 +588,10 @@ public class CadastroSupervisor extends javax.swing.JDialog {
         txtRg.setText("");
         txtTelefone.setText("");
         txtTurma.setText("");
-        
+
         jcSexo.setSelectedIndex(0);
         jcEstado.setSelectedIndex(0);
-        
+
         supervisor = new Supervisor();
         jTabbedPane1.setSelectedComponent(jPanel4);
     }//GEN-LAST:event_btLimparActionPerformed
@@ -508,10 +599,14 @@ public class CadastroSupervisor extends javax.swing.JDialog {
     private void btSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalvarActionPerformed
 
         if (txtEndereco.getText().equals("") || txtCpf.getText().equals("")
-                || txtDataNascimento.getText().equals("") || txtEndereco.getText().equals("")
-                || txtEndereco.getText().equals("") || jcSexo.getSelectedItem().equals("-------")
-                || txtRg.getText().equals("") || txtTelefone.getText().equals("")) {
-            JOptionPane.showMessageDialog(this, "Prencha todos os campos !!");
+                || txtDataNascimento.getText().equals("")
+                || jcSexo.getSelectedIndex() == 0
+                || txtTelefone.getText().equals("")
+                || txtNome.getText().equals("") || txtBairro.getText().equals("")
+                || txtEndNumero.getText().equals("") || txtCidade.getText().equals("")
+                || jcEstado.getSelectedIndex() == 0 || txtEmail.getText().equals("")
+                || txtTurma.getText().equals("") || txtEspecializacao.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Prencha os campos obrigatórios!!");
         } else {
             supervisor.setNomeSupervisor(txtNome.getText().toUpperCase());
             supervisor.setCpfSupervisor(txtCpf.getText());
@@ -647,6 +742,19 @@ public class CadastroSupervisor extends javax.swing.JDialog {
     private javax.swing.JButton btPesquisar;
     private javax.swing.JButton btSalvar;
     private javax.swing.JButton btVoltar;
+    private javax.swing.JLabel jLObrigatorioNome10;
+    private javax.swing.JLabel jLObrigatorioNome11;
+    private javax.swing.JLabel jLObrigatorioNome12;
+    private javax.swing.JLabel jLObrigatorioNome13;
+    private javax.swing.JLabel jLObrigatorioNome14;
+    private javax.swing.JLabel jLObrigatorioNome15;
+    private javax.swing.JLabel jLObrigatorioNome16;
+    private javax.swing.JLabel jLObrigatorioNome17;
+    private javax.swing.JLabel jLObrigatorioNome18;
+    private javax.swing.JLabel jLObrigatorioNome19;
+    private javax.swing.JLabel jLObrigatorioNome20;
+    private javax.swing.JLabel jLObrigatorioNome21;
+    private javax.swing.JLabel jLObrigatorioNome9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;

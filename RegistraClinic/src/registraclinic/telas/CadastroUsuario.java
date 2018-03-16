@@ -46,9 +46,13 @@ public class CadastroUsuario extends javax.swing.JDialog {
         jLabel10 = new javax.swing.JLabel();
         txtSenha = new javax.swing.JPasswordField();
         jLabel13 = new javax.swing.JLabel();
+        jLObrigatorioNome12 = new javax.swing.JLabel();
+        jLObrigatorioNome13 = new javax.swing.JLabel();
         jcNivelAcesso = new javax.swing.JComboBox<>();
         jlNomeUsuario = new javax.swing.JLabel();
+        jLObrigatorioNome15 = new javax.swing.JLabel();
         txtNomeUsuario = new javax.swing.JTextField();
+        jLObrigatorioNome14 = new javax.swing.JLabel();
         btVoltar = new javax.swing.JButton();
         btPesquisar = new javax.swing.JButton();
         btExcluir = new javax.swing.JButton();
@@ -95,6 +99,18 @@ public class CadastroUsuario extends javax.swing.JDialog {
         getContentPane().add(jLabel13);
         jLabel13.setBounds(90, 330, 120, 17);
 
+        jLObrigatorioNome12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome12.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome12.setText("*");
+        getContentPane().add(jLObrigatorioNome12);
+        jLObrigatorioNome12.setBounds(270, 340, 10, 10);
+
+        jLObrigatorioNome13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome13.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome13.setText("*");
+        getContentPane().add(jLObrigatorioNome13);
+        jLObrigatorioNome13.setBounds(600, 130, 10, 10);
+
         jcNivelAcesso.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jcNivelAcesso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-----", "Administrador", "Funcionário" }));
         jcNivelAcesso.setOpaque(false);
@@ -105,6 +121,12 @@ public class CadastroUsuario extends javax.swing.JDialog {
         jlNomeUsuario.setText("Nome Usuário");
         getContentPane().add(jlNomeUsuario);
         jlNomeUsuario.setBounds(90, 120, 170, 20);
+
+        jLObrigatorioNome15.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome15.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome15.setText("*");
+        getContentPane().add(jLObrigatorioNome15);
+        jLObrigatorioNome15.setBounds(600, 270, 10, 10);
 
         txtNomeUsuario.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtNomeUsuario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
@@ -117,6 +139,12 @@ public class CadastroUsuario extends javax.swing.JDialog {
         });
         getContentPane().add(txtNomeUsuario);
         txtNomeUsuario.setBounds(90, 140, 520, 30);
+
+        jLObrigatorioNome14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome14.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome14.setText("*");
+        getContentPane().add(jLObrigatorioNome14);
+        jLObrigatorioNome14.setBounds(600, 200, 10, 10);
 
         btVoltar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/voltar2.png"))); // NOI18N
@@ -316,6 +344,10 @@ public class CadastroUsuario extends javax.swing.JDialog {
     private javax.swing.JButton btPesquisar;
     private javax.swing.JButton btSalvar;
     private javax.swing.JButton btVoltar;
+    private javax.swing.JLabel jLObrigatorioNome12;
+    private javax.swing.JLabel jLObrigatorioNome13;
+    private javax.swing.JLabel jLObrigatorioNome14;
+    private javax.swing.JLabel jLObrigatorioNome15;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel6;

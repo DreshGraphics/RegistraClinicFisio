@@ -53,7 +53,7 @@ public class TelaAutenticacao extends javax.swing.JFrame {
         btCancelar.setBorder(null);
         btCancelar.setBorderPainted(false);
         btCancelar.setContentAreaFilled(false);
-        btCancelar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btCancelar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btCancelar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btCancelar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         btCancelar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -74,7 +74,7 @@ public class TelaAutenticacao extends javax.swing.JFrame {
         btEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Entrar2.png"))); // NOI18N
         btEntrar.setText("Entrar");
         btEntrar.setContentAreaFilled(false);
-        btEntrar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btEntrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btEntrar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btEntrar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         btEntrar.addActionListener(new java.awt.event.ActionListener() {
@@ -99,6 +99,7 @@ public class TelaAutenticacao extends javax.swing.JFrame {
 
         txtLogin.setBackground(new java.awt.Color(0, 93, 88));
         txtLogin.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
+        txtLogin.setForeground(new java.awt.Color(255, 255, 255));
         txtLogin.setBorder(null);
         txtLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,6 +111,7 @@ public class TelaAutenticacao extends javax.swing.JFrame {
 
         txtSenha.setBackground(new java.awt.Color(0, 93, 88));
         txtSenha.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
+        txtSenha.setForeground(new java.awt.Color(255, 255, 255));
         txtSenha.setBorder(null);
         txtSenha.setMinimumSize(new java.awt.Dimension(4, 24));
         txtSenha.setPreferredSize(new java.awt.Dimension(4, 24));
