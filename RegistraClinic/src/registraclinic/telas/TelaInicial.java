@@ -90,15 +90,15 @@ public class TelaInicial extends javax.swing.JDialog {
         tfSupervisor1.setText("Vincular Paciente/Aluno");
         tfSupervisor1.setContentAreaFilled(false);
         tfSupervisor1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        tfSupervisor1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        tfSupervisor1.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        tfSupervisor1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        tfSupervisor1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         tfSupervisor1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfSupervisor1ActionPerformed(evt);
             }
         });
         jPanel1.add(tfSupervisor1);
-        tfSupervisor1.setBounds(419, 210, 280, 60);
+        tfSupervisor1.setBounds(370, 210, 280, 60);
 
         btnUsuario.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/user.png"))); // NOI18N
@@ -119,15 +119,15 @@ public class TelaInicial extends javax.swing.JDialog {
         tfSupervisor3.setText("Vincular Aluno/Supervisor");
         tfSupervisor3.setContentAreaFilled(false);
         tfSupervisor3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        tfSupervisor3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        tfSupervisor3.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        tfSupervisor3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        tfSupervisor3.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         tfSupervisor3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfSupervisor3ActionPerformed(evt);
             }
         });
         jPanel1.add(tfSupervisor3);
-        tfSupervisor3.setBounds(411, 120, 289, 60);
+        tfSupervisor3.setBounds(380, 120, 289, 60);
 
         jlNome3.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jlNome3.setText("Usuário:");
@@ -217,7 +217,8 @@ public class TelaInicial extends javax.swing.JDialog {
     }//GEN-LAST:event_btLogoutActionPerformed
 
     private void tfSupervisor2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfSupervisor2ActionPerformed
-        // TODO add your handling code here:
+        CadastroSupervisor cadastroSupervisor = new CadastroSupervisor(null, rootPaneCheckingEnabled);
+        cadastroSupervisor.setVisible(true);
     }//GEN-LAST:event_tfSupervisor2ActionPerformed
 
     private void tfSupervisor3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfSupervisor3ActionPerformed

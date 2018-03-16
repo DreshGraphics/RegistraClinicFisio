@@ -48,6 +48,7 @@ public class TelaAutenticacao extends javax.swing.JFrame {
 
         btCancelar.setBackground(new java.awt.Color(255, 255, 255));
         btCancelar.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        btCancelar.setForeground(new java.awt.Color(255, 255, 255));
         btCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Sair2.png"))); // NOI18N
         btCancelar.setText("Sair");
         btCancelar.setBorder(null);
@@ -71,6 +72,7 @@ public class TelaAutenticacao extends javax.swing.JFrame {
 
         btEntrar.setBackground(new java.awt.Color(255, 255, 255));
         btEntrar.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        btEntrar.setForeground(new java.awt.Color(255, 255, 255));
         btEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Entrar2.png"))); // NOI18N
         btEntrar.setText("Entrar");
         btEntrar.setContentAreaFilled(false);
