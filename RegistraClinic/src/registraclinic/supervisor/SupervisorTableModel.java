@@ -50,7 +50,7 @@ public class SupervisorTableModel extends AbstractTableModel {
             case 9:
                 return supervisores.getTurmaSupervisor();
             case 10:
-                return supervisores.getEspecializaçãoSupervisor();
+                return supervisores.getEspecializacaoSupervisor();
         }
         return null;
     }

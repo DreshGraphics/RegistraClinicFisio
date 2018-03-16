@@ -558,7 +558,7 @@ public class CadastroSupervisor extends javax.swing.JDialog {
             txtEmail.setText(supervisor.getEmailSupervisor());
             txtComplemento.setText(supervisor.getComplementoSupervisor());
             txtTurma.setText(supervisor.getTurmaSupervisor());
-            txtEspecializacao.setText(supervisor.getEspecializaçãoSupervisor());
+            txtEspecializacao.setText(supervisor.getEspecializacaoSupervisor());
             jcEstado.setSelectedItem(supervisor.getEstadoSupervisor());
             jcSexo.setSelectedItem(supervisor.getSexoSupervisor());
 
@@ -622,7 +622,7 @@ public class CadastroSupervisor extends javax.swing.JDialog {
             supervisor.setComplementoSupervisor(txtComplemento.getText());
             supervisor.setTurmaSupervisor(txtTurma.getText());
             supervisor.setTelefoneSupervisor(txtTelefone.getText());
-            supervisor.setEspecializaçãoSupervisor(txtEspecializacao.getText());
+            supervisor.setEspecializacaoSupervisor(txtEspecializacao.getText());
 
             supervisorDAO.salvar(supervisor);
             btLimparActionPerformed(null);

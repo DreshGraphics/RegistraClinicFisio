@@ -61,7 +61,7 @@ public class Supervisor{
     private String turmaSupervisor;
 
     @Column(length = 50)
-    private String especializaçãoSupervisor;
+    private String especializacaoSupervisor;
 
     public int getIdSupervisor() {
         return idSupervisor;
@@ -184,12 +184,12 @@ public class Supervisor{
         this.turmaSupervisor = turmaSupervisor;
     }
 
-    public String getEspecializaçãoSupervisor() {
-        return especializaçãoSupervisor;
+    public String getEspecializacaoSupervisor() {
+        return especializacaoSupervisor;
     }
 
-    public void setEspecializaçãoSupervisor(String especializaçãoSupervisor) {
-        this.especializaçãoSupervisor = especializaçãoSupervisor;
+    public void setEspecializacaoSupervisor(String especializacaoSupervisor) {
+        this.especializacaoSupervisor = especializacaoSupervisor;
     }
     
 }
