@@ -46,7 +46,7 @@
               <Font name="Tahoma" size="18" style="0"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/registraclinic/imagens/icons8_Student_Male_50px.png"/>
+              <Image iconType="3" name="/registraclinic/imagens/student_50px.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Aluno"/>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -70,7 +70,7 @@
               <Font name="Tahoma" size="18" style="0"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/registraclinic/imagens/icons8_Cast_50px.png"/>
+              <Image iconType="3" name="/registraclinic/imagens/cast_50px.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Paciente"/>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -95,22 +95,22 @@
               <Font name="Tahoma" size="18" style="0"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/registraclinic/imagens/icons8_Course_50px.png"/>
+              <Image iconType="3" name="/registraclinic/imagens/vincular_paciente.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Supervisor"/>
+            <Property name="text" type="java.lang.String" value="Vincular Paciente/Aluno"/>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Hand Cursor"/>
             </Property>
-            <Property name="horizontalAlignment" type="int" value="4"/>
-            <Property name="horizontalTextPosition" type="int" value="4"/>
+            <Property name="horizontalAlignment" type="int" value="2"/>
+            <Property name="horizontalTextPosition" type="int" value="2"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfSupervisor1ActionPerformed"/>
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="20" y="210" width="170" height="60"/>
+              <AbsoluteConstraints x="419" y="210" width="280" height="60"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -120,7 +120,7 @@
               <Font name="Tahoma" size="18" style="0"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/registraclinic/imagens/icon_func.png"/>
+              <Image iconType="3" name="/registraclinic/imagens/user.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Usu&#xe1;rio"/>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -134,7 +134,32 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="20" y="390" width="150" height="50"/>
+              <AbsoluteConstraints x="25" y="390" width="-1" height="50"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JButton" name="tfSupervisor3">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="18" style="0"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/registraclinic/imagens/vincular_aluno.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Vincular Aluno/Supervisor"/>
+            <Property name="contentAreaFilled" type="boolean" value="false"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="2"/>
+            <Property name="horizontalTextPosition" type="int" value="2"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfSupervisor3ActionPerformed"/>
+          </Events>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="411" y="120" width="-1" height="60"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -148,6 +173,31 @@
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="130" y="460" width="100" height="30"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JButton" name="tfSupervisor2">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="18" style="0"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/registraclinic/imagens/course_50px.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Supervisor"/>
+            <Property name="contentAreaFilled" type="boolean" value="false"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="4"/>
+            <Property name="horizontalTextPosition" type="int" value="4"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfSupervisor2ActionPerformed"/>
+          </Events>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="20" y="210" width="170" height="60"/>
             </Constraint>
           </Constraints>
         </Component>

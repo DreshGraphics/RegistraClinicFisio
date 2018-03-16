@@ -667,6 +667,8 @@ public class CadastroPaciente extends javax.swing.JDialog {
             paciente.setSexoPaciente(jcSexo.getSelectedItem().toString());
             paciente.setEstadoPaciente(jcEstado.getSelectedItem().toString());
             paciente.setSituacaoPaciente(jcSituacaoPaciente.getSelectedItem().toString());
+            paciente.setNomeResponsavelPaciente(txtNomeResponsavel.getText());
+            paciente.setTelefoneResponsavelPaciente(txtTelefoneResponsavel.getText());
             pacienteDAO.salvar(paciente);
             btLimparActionPerformed(null);
 
