@@ -9,7 +9,7 @@ import javax.persistence.Temporal;
 
 /**
  *
- * @author Vinnicius
+ * @author Vinnicius - 
  */
 @Entity
 public class Aluno{
