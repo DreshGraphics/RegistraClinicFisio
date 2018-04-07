@@ -8,7 +8,7 @@ import registraclinic.util.Util;
 public class SupervisorTableModel extends AbstractTableModel {
 
     private List<Supervisor> supervisor = new ArrayList<>();
-    private String[] colunas = {"Código", "Nome", "CPF", "RG", "Telefone", "Nascimento", "Sexo", "Endereço", "Turma", "Especialização"};
+    private String[] colunas = {"Código", "Nome", "Login", "Senha", "CPF", "RG", "Telefone", "Nascimento", "Sexo", "Endereço", "Turma", "Especialização"};
 
     public SupervisorTableModel(List<Supervisor> supervisor) {
         this.supervisor = supervisor;
@@ -34,20 +34,24 @@ public class SupervisorTableModel extends AbstractTableModel {
             case 1:
                 return supervisores.getNomePessoa();
             case 2:
-                return supervisores.getCpfSupervisor();
+                return supervisores.getLoginUsuario();
             case 3:
-                return supervisores.getRgSupervisor();
+                return supervisores.getSenhaUsuario();
             case 4:
-                return supervisores.getTelefonePessoa();
+                return supervisores.getCpfSupervisor();
             case 5:
-                return supervisores.getDataNascimentoPessoa();
+                return supervisores.getRgSupervisor();
             case 6:
-                return supervisores.getSexoPessoa();
+                return supervisores.getTelefonePessoa();
             case 7:
-                return supervisores.getEnderecoPessoa();
+                return supervisores.getDataNascimentoPessoa();
             case 8:
-                return supervisores.getTurmaSupervisor();
+                return supervisores.getSexoPessoa();
             case 9:
+                return supervisores.getEnderecoPessoa();
+            case 10:
+                return supervisores.getTurmaSupervisor();
+            case 11:
                 return supervisores.getEspecializacaoSupervisor();
         }
         return null;
@@ -78,6 +82,8 @@ public class SupervisorTableModel extends AbstractTableModel {
                 return colunas[9];
             case 10:
                 return colunas[10];
+            case 11:
+                return colunas[11];
 
         }
         return null;

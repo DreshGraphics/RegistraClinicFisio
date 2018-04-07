@@ -19,7 +19,7 @@ import registraclinic.usuario.Usuario;
 public class PacienteTableModel extends AbstractTableModel {
 
     private List<Paciente> pacientes = new ArrayList<>();
-    private String[] colunas = {"Código", "Prontuário", "Nome", "RG", "CPF", "Data Nascimento", "Sexo", "Idade", "Endereço", "Cidade", "Telefone Paciente", "Nome Responsável", "Telefone Responsável", "Data Cadastro", "Situação", "Tipo"};
+    private final String[] colunas = {"Código", "Prontuário", "Nome", "Nascimento", "Sexo", "Idade", "Peso (kg)", "Altura", "ESF", "Agente Saúde", "Endereço", "Cidade", "Estado", "Telefone Paciente" };
 
     public PacienteTableModel(List<Paciente> pacientes) {
         this.pacientes = pacientes;
@@ -57,12 +57,20 @@ public class PacienteTableModel extends AbstractTableModel {
             case 5:
                 return paciente.getIdadePessoa();
             case 6:
-                return paciente.getEnderecoPessoa();
+                return paciente.getPesoPaciente();
             case 7:
-                return paciente.getCidadePessoa();
+                return paciente.getAlturaPaciente();
             case 8:
-                return paciente.getTelefonePessoa();
+                return paciente.getPostoDeSaudePaciente();
             case 9:
+                return paciente.getAgenteDeSaudePaciente();
+            case 10:
+                return paciente.getEnderecoPessoa();
+            case 11:
+                return paciente.getCidadePessoa();
+            case 12:
+                return paciente.getEstadoPessoa();
+            case 13:
                 return paciente.getTelefonePessoa();
         }
         return null;
@@ -91,6 +99,14 @@ public class PacienteTableModel extends AbstractTableModel {
                 return colunas[8];
             case 9:
                 return colunas[9];
+            case 10:
+                return colunas[10];
+            case 11:
+                return colunas[11];
+            case 12:
+                return colunas[12];
+            case 13:
+                return colunas[13];
         }
         return null;
     }

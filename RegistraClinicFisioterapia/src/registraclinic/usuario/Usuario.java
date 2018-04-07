@@ -6,9 +6,6 @@
 package registraclinic.usuario;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.PrimaryKeyJoinColumn;
 import registraclinic.pessoa.Pessoa;
 
 /**
@@ -16,7 +13,6 @@ import registraclinic.pessoa.Pessoa;
  * @author Karlos
  */
 @Entity
-@PrimaryKeyJoinColumn(name="idPessoa")
 public abstract class Usuario extends Pessoa{
     
     

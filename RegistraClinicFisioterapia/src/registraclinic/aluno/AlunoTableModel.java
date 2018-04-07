@@ -1,6 +1,8 @@
 package registraclinic.aluno;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
 import registraclinic.util.Util;
@@ -8,7 +10,7 @@ import registraclinic.util.Util;
 public class AlunoTableModel extends AbstractTableModel {
 
     private List<Aluno> aluno = new ArrayList<>();
-    private String[] colunas = {"Código", "Nome", "Matrícula", "CPF", "RG", "Telefone", "Nascimento", "Sexo", "Endereço", "Email", "Turma"};
+    private String[] colunas = {"Código", "Nome", "Login", "Senha", "Matrícula", "Turma", "Nascimento", "Sexo", "Endereço", "Telefone", "Email"};
 
     public AlunoTableModel(List<Aluno> aluno) {
         this.aluno = aluno;
@@ -25,6 +27,11 @@ public class AlunoTableModel extends AbstractTableModel {
         return colunas.length;
     }
 
+    private String converterDataString(Date date) {
+        SimpleDateFormat f = new SimpleDateFormat("dd/MM/yyyy");
+        return f.format(date);
+    }
+
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
         Aluno alunos = aluno.get(rowIndex);
@@ -36,18 +43,22 @@ public class AlunoTableModel extends AbstractTableModel {
             case 2:
                 return alunos.getMatriculaAluno();
             case 3:
-                return alunos.getTurmaAluno();
+                return alunos.getLoginUsuario();
             case 4:
-                return alunos.getDataNascimentoPessoa();
+                return alunos.getSenhaUsuario();
             case 5:
-                return alunos.getSexoPessoa();
+                return alunos.getTurmaAluno();
             case 6:
-                return alunos.getEnderecoPessoa();
+                return converterDataString(alunos.getDataNascimentoPessoa());
             case 7:
-                return alunos.getTelefonePessoa();
+                return alunos.getSexoPessoa();
             case 8:
+                return alunos.getEnderecoPessoa();
+            case 9:
+                return alunos.getTelefonePessoa();
+            case 10:
                 return alunos.getEmailAluno();
-            
+
         }
         return null;
     }

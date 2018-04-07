@@ -123,6 +123,12 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jLObrigatorioNome21 = new javax.swing.JLabel();
         jLObrigatorioNome22 = new javax.swing.JLabel();
         txtEmail = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        txtLoginAluno = new javax.swing.JTextField();
+        jLObrigatorioNome14 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        txtSenhaAluno = new javax.swing.JPasswordField();
+        jLObrigatorioNome17 = new javax.swing.JLabel();
         labelAluno = new javax.swing.JLabel();
         jpFuncionario = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
@@ -134,6 +140,12 @@ public class CadastroPessoa extends javax.swing.JDialog {
         txtCpf = new javax.swing.JFormattedTextField();
         jLabel5 = new javax.swing.JLabel();
         txtRg = new javax.swing.JTextField();
+        jLObrigatorioNome18 = new javax.swing.JLabel();
+        txtSenhaFuncionario = new javax.swing.JPasswordField();
+        jLabel17 = new javax.swing.JLabel();
+        jLObrigatorioNome19 = new javax.swing.JLabel();
+        txtLoginFuncionario = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
         labelFuncionario = new javax.swing.JLabel();
         jpPaciente = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
@@ -153,11 +165,16 @@ public class CadastroPessoa extends javax.swing.JDialog {
         txtPeso = new javax.swing.JTextField();
         labelPaciente = new javax.swing.JLabel();
         jpSupervisor = new javax.swing.JPanel();
+        jLObrigatorioNome23 = new javax.swing.JLabel();
+        txtSenhaSupervisor = new javax.swing.JPasswordField();
+        jLabel19 = new javax.swing.JLabel();
+        jLObrigatorioNome24 = new javax.swing.JLabel();
+        txtLoginSupervisor = new javax.swing.JTextField();
+        jLabel20 = new javax.swing.JLabel();
         jLabel47 = new javax.swing.JLabel();
         jLabel48 = new javax.swing.JLabel();
         txtTurmaSupervisor = new javax.swing.JTextField();
         txtEspecializacao = new javax.swing.JTextField();
-        jLObrigatorioNome52 = new javax.swing.JLabel();
         jLObrigatorioNome54 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         txtCpfSupervisor = new javax.swing.JFormattedTextField();
@@ -483,12 +500,12 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel11.setText("Matricula");
         jpAluno.add(jLabel11);
-        jLabel11.setBounds(30, 10, 90, 19);
+        jLabel11.setBounds(20, 10, 90, 19);
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel15.setText("Turma");
         jpAluno.add(jLabel15);
-        jLabel15.setBounds(170, 10, 60, 19);
+        jLabel15.setBounds(140, 10, 60, 19);
 
         txtMatricula.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtMatricula.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
@@ -498,23 +515,23 @@ public class CadastroPessoa extends javax.swing.JDialog {
             }
         });
         jpAluno.add(txtMatricula);
-        txtMatricula.setBounds(30, 30, 130, 30);
+        txtMatricula.setBounds(20, 30, 110, 30);
 
         txtTurma.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtTurma.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jpAluno.add(txtTurma);
-        txtTurma.setBounds(170, 30, 270, 30);
+        txtTurma.setBounds(140, 30, 310, 30);
 
         jLabel21.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel21.setText("Email");
         jpAluno.add(jLabel21);
-        jLabel21.setBounds(450, 10, 50, 19);
+        jLabel21.setBounds(460, 10, 50, 19);
 
         jLObrigatorioNome20.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome20.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome20.setText("*");
         jpAluno.add(jLObrigatorioNome20);
-        jLObrigatorioNome20.setBounds(150, 20, 10, 10);
+        jLObrigatorioNome20.setBounds(120, 20, 10, 10);
 
         jLObrigatorioNome21.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome21.setForeground(new java.awt.Color(204, 0, 0));
@@ -526,12 +543,52 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jLObrigatorioNome22.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome22.setText("*");
         jpAluno.add(jLObrigatorioNome22);
-        jLObrigatorioNome22.setBounds(430, 20, 10, 10);
+        jLObrigatorioNome22.setBounds(440, 20, 10, 10);
 
         txtEmail.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtEmail.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jpAluno.add(txtEmail);
-        txtEmail.setBounds(450, 30, 280, 30);
+        txtEmail.setBounds(460, 30, 270, 30);
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel10.setText("Login");
+        jpAluno.add(jLabel10);
+        jLabel10.setBounds(20, 70, 70, 17);
+
+        txtLoginAluno.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtLoginAluno.setForeground(new java.awt.Color(22, 64, 61));
+        txtLoginAluno.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        txtLoginAluno.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        txtLoginAluno.setMargin(null);
+        txtLoginAluno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtLoginAlunoActionPerformed(evt);
+            }
+        });
+        jpAluno.add(txtLoginAluno);
+        txtLoginAluno.setBounds(20, 90, 220, 30);
+
+        jLObrigatorioNome14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome14.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome14.setText("*");
+        jpAluno.add(jLObrigatorioNome14);
+        jLObrigatorioNome14.setBounds(440, 80, 10, 10);
+
+        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel16.setText("Senha");
+        jpAluno.add(jLabel16);
+        jLabel16.setBounds(250, 70, 70, 17);
+
+        txtSenhaAluno.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtSenhaAluno.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jpAluno.add(txtSenhaAluno);
+        txtSenhaAluno.setBounds(250, 90, 200, 30);
+
+        jLObrigatorioNome17.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome17.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome17.setText("*");
+        jpAluno.add(jLObrigatorioNome17);
+        jLObrigatorioNome17.setBounds(230, 80, 10, 10);
 
         labelAluno.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         jpAluno.add(labelAluno);
@@ -547,7 +604,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel13.setText("Função");
         jpFuncionario.add(jLabel13);
-        jLabel13.setBounds(30, 10, 90, 19);
+        jLabel13.setBounds(20, 10, 90, 19);
 
         txtFuncao.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtFuncao.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
@@ -557,19 +614,19 @@ public class CadastroPessoa extends javax.swing.JDialog {
             }
         });
         jpFuncionario.add(txtFuncao);
-        txtFuncao.setBounds(30, 30, 360, 30);
+        txtFuncao.setBounds(20, 30, 360, 30);
 
         jLObrigatorioNome38.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome38.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome38.setText("*");
         jpFuncionario.add(jLObrigatorioNome38);
-        jLObrigatorioNome38.setBounds(380, 20, 10, 10);
+        jLObrigatorioNome38.setBounds(370, 20, 10, 10);
 
         jLObrigatorioNome40.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome40.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome40.setText("*");
         jpFuncionario.add(jLObrigatorioNome40);
-        jLObrigatorioNome40.setBounds(710, 20, 10, 10);
+        jLObrigatorioNome40.setBounds(720, 20, 10, 10);
 
         jLObrigatorioNome42.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome42.setForeground(new java.awt.Color(204, 0, 0));
@@ -580,7 +637,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel4.setText("CPF");
         jpFuncionario.add(jLabel4);
-        jLabel4.setBounds(400, 10, 97, 19);
+        jLabel4.setBounds(390, 10, 97, 19);
 
         txtCpf.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         try {
@@ -595,7 +652,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
             }
         });
         jpFuncionario.add(txtCpf);
-        txtCpf.setBounds(400, 30, 140, 30);
+        txtCpf.setBounds(390, 30, 150, 30);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel5.setText("RG");
@@ -611,7 +668,47 @@ public class CadastroPessoa extends javax.swing.JDialog {
             }
         });
         jpFuncionario.add(txtRg);
-        txtRg.setBounds(550, 30, 170, 30);
+        txtRg.setBounds(550, 30, 180, 30);
+
+        jLObrigatorioNome18.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome18.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome18.setText("*");
+        jpFuncionario.add(jLObrigatorioNome18);
+        jLObrigatorioNome18.setBounds(430, 80, 10, 10);
+
+        txtSenhaFuncionario.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtSenhaFuncionario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jpFuncionario.add(txtSenhaFuncionario);
+        txtSenhaFuncionario.setBounds(240, 90, 200, 30);
+
+        jLabel17.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel17.setText("Senha");
+        jpFuncionario.add(jLabel17);
+        jLabel17.setBounds(240, 70, 70, 17);
+
+        jLObrigatorioNome19.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome19.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome19.setText("*");
+        jpFuncionario.add(jLObrigatorioNome19);
+        jLObrigatorioNome19.setBounds(220, 80, 10, 10);
+
+        txtLoginFuncionario.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtLoginFuncionario.setForeground(new java.awt.Color(22, 64, 61));
+        txtLoginFuncionario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        txtLoginFuncionario.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        txtLoginFuncionario.setMargin(null);
+        txtLoginFuncionario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtLoginFuncionarioActionPerformed(evt);
+            }
+        });
+        jpFuncionario.add(txtLoginFuncionario);
+        txtLoginFuncionario.setBounds(20, 90, 210, 30);
+
+        jLabel18.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel18.setText("Login");
+        jpFuncionario.add(jLabel18);
+        jLabel18.setBounds(20, 70, 70, 17);
 
         labelFuncionario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         jpFuncionario.add(labelFuncionario);
@@ -720,6 +817,46 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jpSupervisor.setForeground(new java.awt.Color(22, 64, 61));
         jpSupervisor.setLayout(null);
 
+        jLObrigatorioNome23.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome23.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome23.setText("*");
+        jpSupervisor.add(jLObrigatorioNome23);
+        jLObrigatorioNome23.setBounds(720, 80, 10, 10);
+
+        txtSenhaSupervisor.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtSenhaSupervisor.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jpSupervisor.add(txtSenhaSupervisor);
+        txtSenhaSupervisor.setBounds(550, 90, 180, 30);
+
+        jLabel19.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel19.setText("Senha");
+        jpSupervisor.add(jLabel19);
+        jLabel19.setBounds(550, 70, 70, 17);
+
+        jLObrigatorioNome24.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome24.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome24.setText("*");
+        jpSupervisor.add(jLObrigatorioNome24);
+        jLObrigatorioNome24.setBounds(530, 80, 10, 10);
+
+        txtLoginSupervisor.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtLoginSupervisor.setForeground(new java.awt.Color(22, 64, 61));
+        txtLoginSupervisor.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        txtLoginSupervisor.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        txtLoginSupervisor.setMargin(null);
+        txtLoginSupervisor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtLoginSupervisorActionPerformed(evt);
+            }
+        });
+        jpSupervisor.add(txtLoginSupervisor);
+        txtLoginSupervisor.setBounds(340, 90, 200, 30);
+
+        jLabel20.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel20.setText("Login");
+        jpSupervisor.add(jLabel20);
+        jLabel20.setBounds(340, 70, 70, 17);
+
         jLabel47.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel47.setText("Turma");
         jpSupervisor.add(jLabel47);
@@ -738,18 +875,12 @@ public class CadastroPessoa extends javax.swing.JDialog {
             }
         });
         jpSupervisor.add(txtTurmaSupervisor);
-        txtTurmaSupervisor.setBounds(20, 30, 350, 30);
+        txtTurmaSupervisor.setBounds(20, 30, 360, 30);
 
         txtEspecializacao.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtEspecializacao.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jpSupervisor.add(txtEspecializacao);
         txtEspecializacao.setBounds(388, 31, 340, 30);
-
-        jLObrigatorioNome52.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLObrigatorioNome52.setForeground(new java.awt.Color(204, 0, 0));
-        jLObrigatorioNome52.setText("*");
-        jpSupervisor.add(jLObrigatorioNome52);
-        jLObrigatorioNome52.setBounds(360, 20, 10, 10);
 
         jLObrigatorioNome54.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome54.setForeground(new java.awt.Color(204, 0, 0));
@@ -775,18 +906,18 @@ public class CadastroPessoa extends javax.swing.JDialog {
             }
         });
         jpSupervisor.add(txtCpfSupervisor);
-        txtCpfSupervisor.setBounds(20, 90, 170, 30);
+        txtCpfSupervisor.setBounds(20, 90, 150, 30);
 
         jLObrigatorioNome43.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome43.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome43.setText("*");
         jpSupervisor.add(jLObrigatorioNome43);
-        jLObrigatorioNome43.setBounds(180, 80, 10, 10);
+        jLObrigatorioNome43.setBounds(160, 80, 10, 10);
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel9.setText("RG");
         jpSupervisor.add(jLabel9);
-        jLabel9.setBounds(200, 70, 97, 19);
+        jLabel9.setBounds(180, 70, 97, 19);
 
         txtRgSupervisor.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtRgSupervisor.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
@@ -797,13 +928,13 @@ public class CadastroPessoa extends javax.swing.JDialog {
             }
         });
         jpSupervisor.add(txtRgSupervisor);
-        txtRgSupervisor.setBounds(200, 90, 170, 30);
+        txtRgSupervisor.setBounds(180, 90, 150, 30);
 
         jLObrigatorioNome41.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome41.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome41.setText("*");
         jpSupervisor.add(jLObrigatorioNome41);
-        jLObrigatorioNome41.setBounds(360, 80, 10, 10);
+        jLObrigatorioNome41.setBounds(320, 80, 10, 10);
 
         labelSupervisor.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         jpSupervisor.add(labelSupervisor);
@@ -997,6 +1128,8 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 alunos.setEmailAluno(txtEmail.getText());
                 alunos.setTurmaAluno(txtTurma.getText());
                 alunos.setMatriculaAluno(txtMatricula.getText());
+                alunos.setLoginUsuario(txtLoginAluno.getText());
+                alunos.setSenhaUsuario(txtSenhaAluno.getText());
 
                 alunoDAO.salvar(alunos);
                 btLimparActionPerformed(null);
@@ -1022,7 +1155,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 paciente.setAgenteDeSaudePaciente(txtAgenteDeSaude.getText());
                 paciente.setPesoPaciente(txtPeso.getText());
                 paciente.setAlturaPaciente(txtAltura.getText());
-
+               
                 pacienteDAO.salvar(paciente);
                 btLimparActionPerformed(null);
             }
@@ -1045,7 +1178,9 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 funcionario.setFuncaoFuncionario(txtFuncao.getText());
                 funcionario.setCpfFuncionario(txtCpf.getText());
                 funcionario.setRgFuncionario(txtRg.getText());
-               
+                funcionario.setSenhaUsuario(txtLoginAluno.getText());
+                funcionario.setLoginUsuario(txtSenhaFuncionario.getText());
+                               
                 funcionarioDAO.salvar(funcionario);
                 btLimparActionPerformed(null);
             }
@@ -1069,6 +1204,8 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 supervisor.setEspecializacaoSupervisor(txtEspecializacao.getText());
                 supervisor.setCpfSupervisor(txtCpfSupervisor.getText());
                 supervisor.setRgSupervisor(txtRgSupervisor.getText());
+                supervisor.setSenhaUsuario(txtLoginSupervisor.getText());
+                supervisor.setLoginUsuario(txtSenhaSupervisor.getText());
                
                 funcionarioDAO.salvar(funcionario);
                 btLimparActionPerformed(null);
@@ -1192,6 +1329,18 @@ public class CadastroPessoa extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtRgSupervisorActionPerformed
 
+    private void txtLoginAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLoginAlunoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtLoginAlunoActionPerformed
+
+    private void txtLoginFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLoginFuncionarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtLoginFuncionarioActionPerformed
+
+    private void txtLoginSupervisorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLoginSupervisorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtLoginSupervisorActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1256,11 +1405,17 @@ public class CadastroPessoa extends javax.swing.JDialog {
     private javax.swing.JButton btSalvar;
     private javax.swing.JButton btVoltar;
     private javax.swing.JLabel jLObrigatorioNome12;
+    private javax.swing.JLabel jLObrigatorioNome14;
     private javax.swing.JLabel jLObrigatorioNome15;
     private javax.swing.JLabel jLObrigatorioNome16;
+    private javax.swing.JLabel jLObrigatorioNome17;
+    private javax.swing.JLabel jLObrigatorioNome18;
+    private javax.swing.JLabel jLObrigatorioNome19;
     private javax.swing.JLabel jLObrigatorioNome20;
     private javax.swing.JLabel jLObrigatorioNome21;
     private javax.swing.JLabel jLObrigatorioNome22;
+    private javax.swing.JLabel jLObrigatorioNome23;
+    private javax.swing.JLabel jLObrigatorioNome24;
     private javax.swing.JLabel jLObrigatorioNome26;
     private javax.swing.JLabel jLObrigatorioNome27;
     private javax.swing.JLabel jLObrigatorioNome28;
@@ -1281,14 +1436,19 @@ public class CadastroPessoa extends javax.swing.JDialog {
     private javax.swing.JLabel jLObrigatorioNome47;
     private javax.swing.JLabel jLObrigatorioNome49;
     private javax.swing.JLabel jLObrigatorioNome50;
-    private javax.swing.JLabel jLObrigatorioNome52;
     private javax.swing.JLabel jLObrigatorioNome54;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
@@ -1342,6 +1502,9 @@ public class CadastroPessoa extends javax.swing.JDialog {
     private javax.swing.JTextField txtEndereco;
     private javax.swing.JTextField txtEspecializacao;
     private javax.swing.JTextField txtFuncao;
+    private javax.swing.JTextField txtLoginAluno;
+    private javax.swing.JTextField txtLoginFuncionario;
+    private javax.swing.JTextField txtLoginSupervisor;
     private javax.swing.JTextField txtMatricula;
     private javax.swing.JTextField txtNaturalidade;
     private javax.swing.JTextField txtNome;
@@ -1350,6 +1513,9 @@ public class CadastroPessoa extends javax.swing.JDialog {
     private javax.swing.JTextField txtPeso;
     private javax.swing.JTextField txtRg;
     private javax.swing.JTextField txtRgSupervisor;
+    private javax.swing.JPasswordField txtSenhaAluno;
+    private javax.swing.JPasswordField txtSenhaFuncionario;
+    private javax.swing.JPasswordField txtSenhaSupervisor;
     private javax.swing.JFormattedTextField txtTelefone;
     private javax.swing.JTextField txtTurma;
     private javax.swing.JTextField txtTurmaSupervisor;

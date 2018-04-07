@@ -15,11 +15,11 @@
         <property name="use_sql_coments">true</property>
         <property name="hibernate.hbm2ddl.auto">update</property>
         <mapping class="registraclinic.usuario.Usuario"/>
+        <mapping class="registraclinic.pessoa.Pessoa"/>
         <mapping class="registraclinic.paciente.Paciente"/>
         <mapping class="registraclinic.aluno.Aluno"/>
+        <mapping class="registraclinic.funcionario.Funcionario"/>
         <mapping class="registraclinic.supervisor.Supervisor"/>
-        <mapping class="registraclinic.vincularpacientealuno.VincularPacienteAluno"/>
-        <mapping class="registraclinic.vincularalunosupervisor.VincularAlunoSupervisor"/>
     </session-factory>
 </hibernate-configuration>
 
