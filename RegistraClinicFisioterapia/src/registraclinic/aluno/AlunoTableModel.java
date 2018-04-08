@@ -10,7 +10,7 @@ import registraclinic.util.Util;
 public class AlunoTableModel extends AbstractTableModel {
 
     private List<Aluno> aluno = new ArrayList<>();
-    private String[] colunas = {"Código", "Nome", "Login", "Senha", "Matrícula", "Turma", "Nascimento", "Sexo", "Endereço", "Telefone", "Email"};
+    private String[] colunas = {"Código", "Nome", "Matrícula", "Login", "Senha", "Turma", "Nascimento", "Sexo", "Endereço", "Telefone", "Email"};
 
     public AlunoTableModel(List<Aluno> aluno) {
         this.aluno = aluno;

@@ -6,10 +6,15 @@
 package registraclinic.paciente;
 
 import java.util.Date;
+import javax.persistence.AttributeOverride;
+import javax.persistence.AttributeOverrides;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 import javax.persistence.PrimaryKeyJoinColumn;
 import registraclinic.pessoa.Pessoa;
 
@@ -18,6 +23,23 @@ import registraclinic.pessoa.Pessoa;
  * @author Karlos
  */
 @Entity
+@Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
+@AttributeOverrides(value={
+		@AttributeOverride(name="nome",column=@Column(name="nomePessoa")),
+		@AttributeOverride(name="telefone",column=@Column(name="telefonePessoa")),
+		@AttributeOverride(name="data",column=@Column(name="dataNascimentoPessoa")),
+		@AttributeOverride(name="sexo",column=@Column(name="sexoPessoa")),
+		@AttributeOverride(name="idade",column=@Column(name="idadePessoa")),
+		@AttributeOverride(name="estadoCivil",column=@Column(name="estadoCivilPessoa")),
+		@AttributeOverride(name="endereco",column=@Column(name="enderecoPessoa")),
+		@AttributeOverride(name="bairro",column=@Column(name="bairroPessoa")),
+		@AttributeOverride(name="numero",column=@Column(name="enderecoNumeroPessoa")),
+		@AttributeOverride(name="cidade",column=@Column(name="cidadePessoa")),
+		@AttributeOverride(name="estado",column=@Column(name="estadoPessoa")),
+		@AttributeOverride(name="complemento",column=@Column(name="complementoPessoa")),
+		@AttributeOverride(name="naturalidade",column=@Column(name="naturalidadePessoa")),
+		@AttributeOverride(name="ocupacao",column=@Column(name="ocupacaoPessoa"))
+})
 @PrimaryKeyJoinColumn(name="idPessoa")
 public class Paciente extends Pessoa{
     
