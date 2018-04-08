@@ -21,7 +21,6 @@ import javax.persistence.MappedSuperclass;
  */
 @MappedSuperclass
 @Entity
-@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Pessoa{
     
     @Id
