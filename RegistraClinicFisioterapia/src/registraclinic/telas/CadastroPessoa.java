@@ -1079,7 +1079,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 txtTurma.setText(alunos.getEnderecoNumeroPessoa());
                 txtCidade.setText(alunos.getCidadePessoa());
                 txtTelefone.setText(alunos.getTelefonePessoa());
-                txtEmail.setText(alunos.getEmailAluno());
+                txtEmail.setText(alunos.getEmailUsuario());
                 txtComplemento.setText(alunos.getComplementoPessoa());
                 jcEstado.setSelectedItem(alunos.getEstadoPessoa());
                 jcEstado.setSelectedItem(alunos.getEstadoCivilPessoa());

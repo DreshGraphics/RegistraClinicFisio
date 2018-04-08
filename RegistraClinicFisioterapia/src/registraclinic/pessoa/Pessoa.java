@@ -13,18 +13,17 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
-import javax.persistence.MappedSuperclass;
 
 /**
  *
  * @author Karlos
  */
-@MappedSuperclass
 @Entity
-public abstract class Pessoa{
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+public abstract class Pessoa implements Serializable{
     
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.TABLE)
     private int idPessoa;
     
     private String nomePessoa;

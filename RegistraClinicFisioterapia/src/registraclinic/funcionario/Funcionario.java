@@ -12,6 +12,7 @@ import javax.persistence.AttributeOverrides;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
@@ -23,12 +24,6 @@ import registraclinic.usuario.Usuario;
  * @author Karlos Oliveira
  */
 @Entity
-@Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
-@AttributeOverrides(value={
-		@AttributeOverride(name="login",column=@Column(name="loginUsuario")),
-		@AttributeOverride(name="senha",column=@Column(name="senhaUsuario")),
-		@AttributeOverride(name="tipoUsuario",column=@Column(name="tipoUsuario"))
-})
 public class Funcionario extends Usuario {
     
     private String cpfFuncionario;
