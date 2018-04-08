@@ -20,10 +20,13 @@ import registraclinic.aluno.AlunoDAO;
 import registraclinic.aluno.AlunoTableModel;
 import registraclinic.funcionario.Funcionario;
 import registraclinic.funcionario.FuncionarioDAO;
+import registraclinic.funcionario.FuncionarioTableModel;
 import registraclinic.paciente.Paciente;
 import registraclinic.paciente.PacienteDAO;
+import registraclinic.paciente.PacienteTableModel;
 import registraclinic.supervisor.Supervisor;
 import registraclinic.supervisor.SupervisorDAO;
+import registraclinic.supervisor.SupervisorTableModel;
 
 /**
  *
@@ -1035,7 +1038,11 @@ public class CadastroPessoa extends javax.swing.JDialog {
         SimpleDateFormat f = new SimpleDateFormat("dd/MM/yyyy");
         return f.format(date);
     }
-
+    
+    public JTabbedPane retornarPainel(){
+        return jtGeral;
+    }
+    
     private Date formataData(String data) {
         if (data == null || data.equals("")) {
             return null;
@@ -1051,27 +1058,106 @@ public class CadastroPessoa extends javax.swing.JDialog {
     }
 
     private void btPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPesquisarActionPerformed
-        List<Aluno> lista;
-        lista = (alunoDAO.listar());
-        AlunoTableModel itm = new AlunoTableModel(lista);
-        Object objetoRetorno = PesquisaGenerica.exibeTela(itm, "Aluno");
-        if (objetoRetorno != null) {
-            alunos = alunoDAO.consultarObjetoId("idPessoa", objetoRetorno);
-            txtNome.setText(alunos.getNomePessoa());
-            txtDataNascimento.setText(converterDataString(alunos.getDataNascimentoPessoa()));
-            txtMatricula.setText(alunos.getEnderecoPessoa());
-            txtBairro.setText(alunos.getBairroPessoa());
-            txtTurma.setText(alunos.getEnderecoNumeroPessoa());
-            txtCidade.setText(alunos.getCidadePessoa());
-            txtTelefone.setText(alunos.getTelefonePessoa());
-            txtEmail.setText(alunos.getEmailAluno());
-            txtComplemento.setText(alunos.getComplementoPessoa());
-            jcEstado.setSelectedItem(alunos.getEstadoPessoa());
-            jcEstado.setSelectedItem(alunos.getEstadoCivilPessoa());
-            jcSexo.setSelectedItem(alunos.getSexoPessoa());
 
-            btExcluir.setEnabled(true);
+        TipoUsuario tipoUsuario = new TipoUsuario(true);
+        tipoUsuario.setVisible(true);
+
+        if (tipoUsuario.retornarUsuario().equalsIgnoreCase("Aluno")) {
+            tipoUsuario.dispose();
+            //jtGeral.setEnabledAt(1, true);
+            List<Aluno> lista;
+            lista = (alunoDAO.listar());
+            AlunoTableModel itm = new AlunoTableModel(lista);
+            Object objetoRetorno = PesquisaGenerica.exibeTela(itm, "Aluno");
+            if (objetoRetorno != null) {
+                alunos = alunoDAO.consultarObjetoId("idPessoa", objetoRetorno);
+                txtNome.setText(alunos.getNomePessoa());
+                txtDataNascimento.setText(converterDataString(alunos.getDataNascimentoPessoa()));
+                txtMatricula.setText(alunos.getEnderecoPessoa());
+                txtBairro.setText(alunos.getBairroPessoa());
+                txtTurma.setText(alunos.getEnderecoNumeroPessoa());
+                txtCidade.setText(alunos.getCidadePessoa());
+                txtTelefone.setText(alunos.getTelefonePessoa());
+                txtEmail.setText(alunos.getEmailAluno());
+                txtComplemento.setText(alunos.getComplementoPessoa());
+                jcEstado.setSelectedItem(alunos.getEstadoPessoa());
+                jcEstado.setSelectedItem(alunos.getEstadoCivilPessoa());
+                jcSexo.setSelectedItem(alunos.getSexoPessoa());
+
+                btExcluir.setEnabled(true);
+            }
+        } else if (tipoUsuario.retornarUsuario().equalsIgnoreCase("Funcionário")) {
+            tipoUsuario.dispose();
+            //jtGeral.setEnabledAt(2, true);
+            List<Funcionario> lista;
+            lista = (funcionarioDAO.listar());
+            FuncionarioTableModel itm = new FuncionarioTableModel(lista);
+            Object objetoRetorno = PesquisaGenerica.exibeTela(itm, "Funcionário");
+            if (objetoRetorno != null) {
+                funcionario = funcionarioDAO.consultarObjetoId("idPessoa", objetoRetorno);
+                txtNome.setText(funcionario.getNomePessoa());
+                txtDataNascimento.setText(converterDataString(funcionario.getDataNascimentoPessoa()));
+                txtMatricula.setText(funcionario.getEnderecoPessoa());
+                txtBairro.setText(funcionario.getBairroPessoa());
+                txtTurma.setText(funcionario.getEnderecoNumeroPessoa());
+                txtCidade.setText(funcionario.getCidadePessoa());
+                txtTelefone.setText(funcionario.getTelefonePessoa());
+                txtComplemento.setText(funcionario.getComplementoPessoa());
+                jcEstado.setSelectedItem(funcionario.getEstadoPessoa());
+                jcEstado.setSelectedItem(funcionario.getEstadoCivilPessoa());
+                jcSexo.setSelectedItem(funcionario.getSexoPessoa());
+
+                btExcluir.setEnabled(true);
+            }
+        } else if (tipoUsuario.retornarUsuario().equalsIgnoreCase("Paciente")) {
+            tipoUsuario.dispose();
+            //jtGeral.setEnabledAt(3, true);
+            List<Paciente> lista;
+            lista = (pacienteDAO.listar());
+            PacienteTableModel itm = new PacienteTableModel(lista);
+            Object objetoRetorno = PesquisaGenerica.exibeTela(itm, "Paciente");
+            if (objetoRetorno != null) {
+                paciente = pacienteDAO.consultarObjetoId("idPessoa", objetoRetorno);
+                txtNome.setText(paciente.getNomePessoa());
+                txtDataNascimento.setText(converterDataString(paciente.getDataNascimentoPessoa()));
+                txtMatricula.setText(paciente.getEnderecoPessoa());
+                txtBairro.setText(paciente.getBairroPessoa());
+                txtTurma.setText(paciente.getEnderecoNumeroPessoa());
+                txtCidade.setText(paciente.getCidadePessoa());
+                txtTelefone.setText(paciente.getTelefonePessoa());
+                txtComplemento.setText(paciente.getComplementoPessoa());
+                jcEstado.setSelectedItem(paciente.getEstadoPessoa());
+                jcEstado.setSelectedItem(paciente.getEstadoCivilPessoa());
+                jcSexo.setSelectedItem(paciente.getSexoPessoa());
+
+                btExcluir.setEnabled(true);
+            }
+        } else if (tipoUsuario.retornarUsuario().equalsIgnoreCase("Supervisor")) {
+            tipoUsuario.dispose();
+            //jtGeral.setEnabledAt(4, true);
+            List<Supervisor> lista;
+            lista = (supervisorDAO.listar());
+            SupervisorTableModel itm = new SupervisorTableModel(lista);
+            Object objetoRetorno = PesquisaGenerica.exibeTela(itm, "Supervisor");
+            if (objetoRetorno != null) {
+                supervisor = supervisorDAO.consultarObjetoId("idPessoa", objetoRetorno);
+                txtNome.setText(supervisor.getNomePessoa());
+                txtDataNascimento.setText(converterDataString(supervisor.getDataNascimentoPessoa()));
+                txtMatricula.setText(supervisor.getEnderecoPessoa());
+                txtBairro.setText(supervisor.getBairroPessoa());
+                txtTurma.setText(supervisor.getEnderecoNumeroPessoa());
+                txtCidade.setText(supervisor.getCidadePessoa());
+                txtTelefone.setText(supervisor.getTelefonePessoa());
+                txtComplemento.setText(supervisor.getComplementoPessoa());
+                jcEstado.setSelectedItem(supervisor.getEstadoPessoa());
+                jcEstado.setSelectedItem(supervisor.getEstadoCivilPessoa());
+                jcSexo.setSelectedItem(supervisor.getSexoPessoa());
+
+                btExcluir.setEnabled(true);
+            }
         }
+
+
     }//GEN-LAST:event_btPesquisarActionPerformed
 
     private void btExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExcluirActionPerformed
@@ -1100,13 +1186,13 @@ public class CadastroPessoa extends javax.swing.JDialog {
 
     private void btSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalvarActionPerformed
 
-        if (txtMatricula.getText().equals("")
-                || txtDataNascimento.getText().equals("")
-                || jcSexo.getSelectedIndex() == 0
+        if (txtEndereco.getText().equals("")
+                || txtDataNascimento.getText().equals("") || txtEndNumero.getText().equals("")
+                || jcSexo.getSelectedIndex() == 0 || jcEstadoCivil.getSelectedIndex() == 0
                 || txtTelefone.getText().equals("") || txtNome.getText().equals("")
-                || txtBairro.getText().equals("")
-                || txtTurma.getText().equals("") || txtCidade.getText().equals("")
-                || jcEstado.getSelectedIndex() == 0 || txtEmail.getText().equals("")) {
+                || txtBairro.getText().equals("") || txtCidade.getText().equals("")
+                || jcEstado.getSelectedIndex() == 0 || txtNaturalidade.getText().equals("")
+                || txtOcupacao.getText().equals("") || jcTipoUsuario.getSelectedIndex() == 0) {
             JOptionPane.showMessageDialog(this, "Prencha os campos obrigatórios!!");
         } else {
             if (jcTipoUsuario.getSelectedItem().equals("Aluno")) {
@@ -1155,7 +1241,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 paciente.setAgenteDeSaudePaciente(txtAgenteDeSaude.getText());
                 paciente.setPesoPaciente(txtPeso.getText());
                 paciente.setAlturaPaciente(txtAltura.getText());
-               
+
                 pacienteDAO.salvar(paciente);
                 btLimparActionPerformed(null);
             }
@@ -1180,7 +1266,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 funcionario.setRgFuncionario(txtRg.getText());
                 funcionario.setSenhaUsuario(txtLoginAluno.getText());
                 funcionario.setLoginUsuario(txtSenhaFuncionario.getText());
-                               
+
                 funcionarioDAO.salvar(funcionario);
                 btLimparActionPerformed(null);
             }
@@ -1206,7 +1292,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 supervisor.setRgSupervisor(txtRgSupervisor.getText());
                 supervisor.setSenhaUsuario(txtLoginSupervisor.getText());
                 supervisor.setLoginUsuario(txtSenhaSupervisor.getText());
-               
+
                 funcionarioDAO.salvar(funcionario);
                 btLimparActionPerformed(null);
             }
@@ -1270,30 +1356,35 @@ public class CadastroPessoa extends javax.swing.JDialog {
 
     private void jcTipoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcTipoUsuarioActionPerformed
         if (jcTipoUsuario.getSelectedItem().equals("Aluno")) {
+            jtGeral.setSelectedComponent(jpAluno);
             jtGeral.setEnabledAt(1, true);
             jtGeral.setEnabledAt(2, false);
             jtGeral.setEnabledAt(3, false);
             jtGeral.setEnabledAt(4, false);
         }
         if (jcTipoUsuario.getSelectedItem().equals("Funcionário")) {
+            jtGeral.setSelectedComponent(jpFuncionario);
             jtGeral.setEnabledAt(1, false);
             jtGeral.setEnabledAt(2, true);
             jtGeral.setEnabledAt(3, false);
             jtGeral.setEnabledAt(4, false);
         }
         if (jcTipoUsuario.getSelectedItem().equals("Paciente")) {
+            jtGeral.setSelectedComponent(jpPaciente);
             jtGeral.setEnabledAt(1, false);
             jtGeral.setEnabledAt(2, false);
             jtGeral.setEnabledAt(3, true);
             jtGeral.setEnabledAt(4, false);
         }
         if (jcTipoUsuario.getSelectedItem().equals("Supervisor")) {
+            jtGeral.setSelectedComponent(jpSupervisor);
             jtGeral.setEnabledAt(1, false);
             jtGeral.setEnabledAt(2, false);
             jtGeral.setEnabledAt(3, false);
             jtGeral.setEnabledAt(4, true);
         }
         if (jcTipoUsuario.getSelectedItem().equals("-----")) {
+            jtGeral.setSelectedComponent(jpDadosPessoais);
             jtGeral.setEnabledAt(1, false);
             jtGeral.setEnabledAt(2, false);
             jtGeral.setEnabledAt(3, false);

@@ -10,6 +10,7 @@ import java.awt.Point;
 import java.awt.Rectangle;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import javax.swing.JTabbedPane;
 import javax.swing.JTable;
 import javax.swing.JViewport;
 import javax.swing.table.AbstractTableModel;
@@ -188,7 +189,7 @@ public class PesquisaGenerica extends javax.swing.JDialog {
 
     private void btVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarActionPerformed
         objeto = null;
-        dispose();
+        dispose();        
     }//GEN-LAST:event_btVoltarActionPerformed
 
     private void tbPesquisaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tbPesquisaFocusGained

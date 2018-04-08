@@ -15,16 +15,16 @@ import javax.swing.table.AbstractTableModel;
  */
 public class FuncionarioTableModel extends AbstractTableModel {
 
-    private List<Funcionario> professores = new ArrayList<>();
+    private List<Funcionario> funcionarios = new ArrayList<>();
     private String[] colunas = {"Código", "Nome", "Login", "Senha", "CPF", "Cidade", "Telefone"};
 
     public FuncionarioTableModel(List<Funcionario> professor) {
-        this.professores = professor;
+        this.funcionarios = professor;
     }
 
     @Override
     public int getRowCount() {
-        return professores.size();
+        return funcionarios.size();
     }
 
     @Override
@@ -34,22 +34,22 @@ public class FuncionarioTableModel extends AbstractTableModel {
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        Funcionario professor = professores.get(rowIndex);
+        Funcionario funcionario = funcionarios.get(rowIndex);
         switch (columnIndex) {
             case 0:
-                return professor.getIdPessoa();
+                return funcionario.getIdPessoa();
             case 1:
-                return professor.getNomePessoa();
+                return funcionario.getNomePessoa();
             case 2:
-                return professor.getLoginUsuario();
+                return funcionario.getLoginUsuario();
             case 3:
-                return professor.getSenhaUsuario();
+                return funcionario.getSenhaUsuario();
             case 4:
-                return professor.getCpfFuncionario();
+                return funcionario.getCpfFuncionario();
             case 5:
-                return professor.getCidadePessoa();
+                return funcionario.getCidadePessoa();
             case 6:
-                return professor.getTelefonePessoa();
+                return funcionario.getTelefonePessoa();
         }
         return null;
     }

@@ -14,10 +14,10 @@ import registraclinic.pessoa.Pessoa;
  */
 @Entity
 public abstract class Usuario extends Pessoa{
-    
-    
+        
     private String loginUsuario;
     private String senhaUsuario;
+    private String tipoUsuario;
     
     public String getLoginUsuario() {
         return loginUsuario;
@@ -33,6 +33,14 @@ public abstract class Usuario extends Pessoa{
 
     public void setSenhaUsuario(String senhaUsuario) {
         this.senhaUsuario = senhaUsuario;
+    }
+
+    public String getTipoUsuario() {
+        return tipoUsuario;
+    }
+
+    public void setTipoUsuario(String tipoUsuario) {
+        this.tipoUsuario = tipoUsuario;
     }
     
 }
