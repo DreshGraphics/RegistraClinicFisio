@@ -38,9 +38,9 @@ public class SupervisorTableModel extends AbstractTableModel {
             case 3:
                 return supervisores.getSenhaUsuario();
             case 4:
-                return supervisores.getCpfSupervisor();
+                return supervisores.getCpfPessoa();
             case 5:
-                return supervisores.getRgSupervisor();
+                return supervisores.getRgPessoa();
             case 6:
                 return supervisores.getTelefonePessoa();
             case 7:

@@ -13,6 +13,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import registraclinic.cidade.Cidade;
 
 /**
  *
@@ -31,15 +32,16 @@ public abstract class Pessoa implements Serializable{
     private Date dataNascimentoPessoa;
     private String sexoPessoa;
     private String idadePessoa;
+    private String cpfPessoa;
+    private String rgPessoa;
     private String estadoCivilPessoa;
     private String enderecoPessoa;
     private String bairroPessoa;
     private String enderecoNumeroPessoa;
-    private String cidadePessoa;
-    private String estadoPessoa;
     private String complementoPessoa;
     private String naturalidadePessoa;
     private String ocupacaoPessoa;
+    private Cidade cidade;
 
     public int getIdPessoa() {
         return idPessoa;
@@ -89,6 +91,22 @@ public abstract class Pessoa implements Serializable{
         this.idadePessoa = idadePessoa;
     }
 
+    public String getCpfPessoa() {
+        return cpfPessoa;
+    }
+
+    public void setCpfPessoa(String cpfPessoa) {
+        this.cpfPessoa = cpfPessoa;
+    }
+
+    public String getRgPessoa() {
+        return rgPessoa;
+    }
+
+    public void setRgPessoa(String rgPessoa) {
+        this.rgPessoa = rgPessoa;
+    }
+    
     public String getEstadoCivilPessoa() {
         return estadoCivilPessoa;
     }
@@ -121,22 +139,6 @@ public abstract class Pessoa implements Serializable{
         this.enderecoNumeroPessoa = enderecoNumeroPessoa;
     }
 
-    public String getCidadePessoa() {
-        return cidadePessoa;
-    }
-
-    public void setCidadePessoa(String cidadePessoa) {
-        this.cidadePessoa = cidadePessoa;
-    }
-
-    public String getEstadoPessoa() {
-        return estadoPessoa;
-    }
-
-    public void setEstadoPessoa(String estadoPessoa) {
-        this.estadoPessoa = estadoPessoa;
-    }
-
     public String getComplementoPessoa() {
         return complementoPessoa;
     }
@@ -159,6 +161,14 @@ public abstract class Pessoa implements Serializable{
 
     public void setOcupacaoPessoa(String ocupacaoPessoa) {
         this.ocupacaoPessoa = ocupacaoPessoa;
+    }
+
+    public Cidade getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(Cidade cidade) {
+        this.cidade = cidade;
     }
         
 }

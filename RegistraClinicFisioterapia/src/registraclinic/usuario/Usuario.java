@@ -20,8 +20,8 @@ import registraclinic.pessoa.Pessoa;
  * @author Karlos
  */
 @Entity
-public abstract class Usuario extends Pessoa implements Serializable{
-        
+public abstract class Usuario extends Pessoa implements Serializable {
+
     private String loginUsuario;
     private String senhaUsuario;
     private String tipoUsuario;
@@ -50,7 +50,7 @@ public abstract class Usuario extends Pessoa implements Serializable{
     public void setTipoUsuario(String tipoUsuario) {
         this.tipoUsuario = tipoUsuario;
     }
-    
+
     public String getEmailUsuario() {
         return emailUsuario;
     }
@@ -58,5 +58,5 @@ public abstract class Usuario extends Pessoa implements Serializable{
     public void setEmailAluno(String emailUsuario) {
         this.emailUsuario = emailUsuario;
     }
-    
+
 }

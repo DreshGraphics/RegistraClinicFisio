@@ -19,7 +19,7 @@ import registraclinic.usuario.Usuario;
 public class PacienteTableModel extends AbstractTableModel {
 
     private List<Paciente> pacientes = new ArrayList<>();
-    private final String[] colunas = {"Código", "Prontuário", "Nome", "Nascimento", "Sexo", "Idade", "Peso (kg)", "Altura", "ESF", "Agente Saúde", "Endereço", "Cidade", "Estado", "Telefone Paciente" };
+    private final String[] colunas = {"Código", "Prontuário", "Nome", "Nascimento", "Sexo", "Idade", "Peso(kg)", "Altura(cm)", "ESF", "Agente Saúde", "Endereço", "Cidade", "Telefone"};
 
     public PacienteTableModel(List<Paciente> pacientes) {
         this.pacientes = pacientes;
@@ -67,10 +67,8 @@ public class PacienteTableModel extends AbstractTableModel {
             case 10:
                 return paciente.getEnderecoPessoa();
             case 11:
-                return paciente.getCidadePessoa();
+                return paciente.getCidade().getNomeCidade();
             case 12:
-                return paciente.getEstadoPessoa();
-            case 13:
                 return paciente.getTelefonePessoa();
         }
         return null;
@@ -105,8 +103,6 @@ public class PacienteTableModel extends AbstractTableModel {
                 return colunas[11];
             case 12:
                 return colunas[12];
-            case 13:
-                return colunas[13];
         }
         return null;
     }
