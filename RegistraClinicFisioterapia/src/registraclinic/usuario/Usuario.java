@@ -55,7 +55,7 @@ public abstract class Usuario extends Pessoa implements Serializable {
         return emailUsuario;
     }
 
-    public void setEmailAluno(String emailUsuario) {
+    public void setEmailUsuario(String emailUsuario) {
         this.emailUsuario = emailUsuario;
     }
 

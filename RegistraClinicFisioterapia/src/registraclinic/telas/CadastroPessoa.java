@@ -1047,15 +1047,25 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 alunos = alunoDAO.consultarObjetoId("idPessoa", objetoRetorno);
                 txtNome.setText(alunos.getNomePessoa());
                 txtDataNascimento.setText(converterDataString(alunos.getDataNascimentoPessoa()));
-                txtMatricula.setText(alunos.getEnderecoPessoa());
+                txtCpf.setText(alunos.getCpfPessoa());
+                txtRg.setText(alunos.getRgPessoa());
                 txtBairro.setText(alunos.getBairroPessoa());
-                txtTurma.setText(alunos.getEnderecoNumeroPessoa());
                 txtTelefone.setText(alunos.getTelefonePessoa());
-                txtEmailAluno.setText(alunos.getEmailUsuario());
+                txtEndereco.setText(alunos.getEnderecoPessoa());
+                txtEndNumero.setText(alunos.getEnderecoNumeroPessoa());
                 txtComplemento.setText(alunos.getComplementoPessoa());
+                txtNaturalidade.setText(alunos.getNaturalidadePessoa());
+                txtOcupacao.setText(alunos.getOcupacaoPessoa());
                 txtCidade.setText(alunos.getCidade().getNomeCidade());
                 jcEstadoCivil.setSelectedItem(alunos.getEstadoCivilPessoa());
                 jcSexo.setSelectedItem(alunos.getSexoPessoa());
+                jcTipoUsuario.setSelectedItem(alunos.getTipoUsuario());
+
+                txtMatricula.setText(alunos.getMatriculaAluno());
+                txtTurma.setText(alunos.getTurmaAluno());
+                txtEmailAluno.setText(alunos.getEmailUsuario());
+                txtLoginAluno.setText(alunos.getLoginUsuario());
+                txtSenhaAluno.setText(alunos.getSenhaUsuario());
 
                 btExcluir.setEnabled(true);
             }
@@ -1068,14 +1078,24 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 funcionario = funcionarioDAO.consultarObjetoId("idPessoa", objetoRetorno);
                 txtNome.setText(funcionario.getNomePessoa());
                 txtDataNascimento.setText(converterDataString(funcionario.getDataNascimentoPessoa()));
-                txtMatricula.setText(funcionario.getEnderecoPessoa());
+                txtCpf.setText(funcionario.getCpfPessoa());
+                txtRg.setText(funcionario.getRgPessoa());
                 txtBairro.setText(funcionario.getBairroPessoa());
-                txtTurma.setText(funcionario.getEnderecoNumeroPessoa());
-                txtCidade.setText(funcionario.getCidade().getNomeCidade());
                 txtTelefone.setText(funcionario.getTelefonePessoa());
+                txtEndereco.setText(funcionario.getEnderecoPessoa());
+                txtEndNumero.setText(funcionario.getEnderecoNumeroPessoa());
                 txtComplemento.setText(funcionario.getComplementoPessoa());
+                txtNaturalidade.setText(funcionario.getNaturalidadePessoa());
+                txtOcupacao.setText(funcionario.getOcupacaoPessoa());
+                txtCidade.setText(funcionario.getCidade().getNomeCidade());
                 jcEstadoCivil.setSelectedItem(funcionario.getEstadoCivilPessoa());
                 jcSexo.setSelectedItem(funcionario.getSexoPessoa());
+                jcTipoUsuario.setSelectedItem(funcionario.getTipoUsuario());
+
+                txtFuncao.setText(funcionario.getFuncaoFuncionario());
+                txtEmailFuncionario.setText(funcionario.getEmailUsuario());
+                txtLoginFuncionario.setText(funcionario.getLoginUsuario());
+                txtSenhaFuncionario.setText(funcionario.getSenhaUsuario());
 
                 btExcluir.setEnabled(true);
             }
@@ -1088,14 +1108,24 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 paciente = pacienteDAO.consultarObjetoId("idPessoa", objetoRetorno);
                 txtNome.setText(paciente.getNomePessoa());
                 txtDataNascimento.setText(converterDataString(paciente.getDataNascimentoPessoa()));
-                txtMatricula.setText(paciente.getEnderecoPessoa());
+                txtCpf.setText(paciente.getCpfPessoa());
+                txtRg.setText(paciente.getRgPessoa());
                 txtBairro.setText(paciente.getBairroPessoa());
-                txtTurma.setText(paciente.getEnderecoNumeroPessoa());
-                txtCidade.setText(paciente.getCidade().getNomeCidade());
                 txtTelefone.setText(paciente.getTelefonePessoa());
+                txtEndereco.setText(paciente.getEnderecoPessoa());
+                txtEndNumero.setText(paciente.getEnderecoNumeroPessoa());
                 txtComplemento.setText(paciente.getComplementoPessoa());
+                txtNaturalidade.setText(paciente.getNaturalidadePessoa());
+                txtOcupacao.setText(paciente.getOcupacaoPessoa());
+                txtCidade.setText(paciente.getCidade().getNomeCidade());
                 jcEstadoCivil.setSelectedItem(paciente.getEstadoCivilPessoa());
                 jcSexo.setSelectedItem(paciente.getSexoPessoa());
+
+                txtNumProntuario.setText(paciente.getNumeroProntuarioPaciente());
+                txtESF.setText(paciente.getPostoDeSaudePaciente());
+                txtAgenteDeSaude.setText(paciente.getAgenteDeSaudePaciente());
+                txtPeso.setText(paciente.getPesoPaciente());
+                txtAltura.setText(paciente.getAlturaPaciente());
 
                 btExcluir.setEnabled(true);
             }
@@ -1108,14 +1138,25 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 supervisor = supervisorDAO.consultarObjetoId("idPessoa", objetoRetorno);
                 txtNome.setText(supervisor.getNomePessoa());
                 txtDataNascimento.setText(converterDataString(supervisor.getDataNascimentoPessoa()));
-                txtMatricula.setText(supervisor.getEnderecoPessoa());
+                txtCpf.setText(supervisor.getCpfPessoa());
+                txtRg.setText(supervisor.getRgPessoa());
                 txtBairro.setText(supervisor.getBairroPessoa());
-                txtTurma.setText(supervisor.getEnderecoNumeroPessoa());
-                txtCidade.setText(supervisor.getCidade().getNomeCidade());
                 txtTelefone.setText(supervisor.getTelefonePessoa());
+                txtEndereco.setText(supervisor.getEnderecoPessoa());
+                txtEndNumero.setText(supervisor.getEnderecoNumeroPessoa());
                 txtComplemento.setText(supervisor.getComplementoPessoa());
+                txtNaturalidade.setText(supervisor.getNaturalidadePessoa());
+                txtOcupacao.setText(supervisor.getOcupacaoPessoa());
+                txtCidade.setText(supervisor.getCidade().getNomeCidade());
                 jcEstadoCivil.setSelectedItem(supervisor.getEstadoCivilPessoa());
                 jcSexo.setSelectedItem(supervisor.getSexoPessoa());
+                jcTipoUsuario.setSelectedItem(supervisor.getTipoUsuario());
+
+                txtTurma.setText(supervisor.getTurmaSupervisor());
+                txtEspecializacao.setText(supervisor.getEspecializacaoSupervisor());
+                txtEmailFuncionario.setText(supervisor.getEmailUsuario());
+                txtLoginFuncionario.setText(supervisor.getLoginUsuario());
+                txtSenhaFuncionario.setText(supervisor.getSenhaUsuario());
 
                 btExcluir.setEnabled(true);
             }
@@ -1135,29 +1176,50 @@ public class CadastroPessoa extends javax.swing.JDialog {
     private void btLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLimparActionPerformed
         btExcluir.setEnabled(false);
 
-        txtBairro.setText("");
-        txtCidade.setText("");
-        txtComplemento.setText("");
-        txtDataNascimento.setText("");
-        txtEmailAluno.setText("");
-        txtMatricula.setText("");
         txtNome.setText("");
+        txtDataNascimento.setText("");
+        txtCpf.setText("");
+        txtRg.setText("");
+        txtBairro.setText("");
         txtTelefone.setText("");
+        txtEndereco.setText("");
+        txtEndNumero.setText("");
+        txtComplemento.setText("");
+        txtNaturalidade.setText("");
+        txtOcupacao.setText("");
+        txtCidade.setText("");
+        jcEstadoCivil.setSelectedItem("");
+        jcSexo.setSelectedItem("");
+        jcTipoUsuario.setSelectedItem("");
+
+        txtMatricula.setText("");
         txtTurma.setText("");
-        jcSexo.setSelectedIndex(0);
+        txtEmailAluno.setText("");
         txtLoginAluno.setText("");
-        txtLoginFuncionario.setText("");
-        txtLoginSupervisor.setText("");
         txtSenhaAluno.setText("");
+
+        txtFuncao.setText("");
+        txtEmailFuncionario.setText("");
+        txtLoginFuncionario.setText("");
         txtSenhaFuncionario.setText("");
-        txtSenhaSupervisor.setText("");
-        jcTipoUsuario.setSelectedIndex(0);
+
+        txtNumProntuario.setText("");
+        txtESF.setText("");
+        txtAgenteDeSaude.setText("");
+        txtPeso.setText("");
+        txtAltura.setText("");
+
+        txtTurma.setText("");
+        txtEspecializacao.setText("");
+        txtEmailFuncionario.setText("");
+        txtLoginFuncionario.setText("");
+        txtSenhaFuncionario.setText("");
 
         alunos = new Aluno();
         funcionario = new Funcionario();
         supervisor = new Supervisor();
         paciente = new Paciente();
-        
+
         jtGeral.setSelectedComponent(jpDadosPessoais);
     }//GEN-LAST:event_btLimparActionPerformed
 
@@ -1188,12 +1250,14 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 alunos.setCidade(cidade);
                 alunos.setCpfPessoa(txtCpf.getText());
                 alunos.setRgPessoa(txtRg.getText());
-                
-                alunos.setEmailAluno(txtEmailAluno.getText());
-                alunos.setTurmaAluno(txtTurma.getText());
-                alunos.setMatriculaAluno(txtMatricula.getText());
+
+                alunos.setEmailUsuario(txtEmailAluno.getText());
                 alunos.setLoginUsuario(txtLoginAluno.getText());
                 alunos.setSenhaUsuario(txtSenhaAluno.getText());
+                alunos.setTipoUsuario(jcTipoUsuario.getSelectedItem().toString());
+
+                alunos.setTurmaAluno(txtTurma.getText());
+                alunos.setMatriculaAluno(txtMatricula.getText());
 
                 alunoDAO.salvar(alunos);
                 btLimparActionPerformed(null);
@@ -1241,9 +1305,12 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 funcionario.setCpfPessoa(txtCpf.getText());
                 funcionario.setRgPessoa(txtRg.getText());
 
-                funcionario.setFuncaoFuncionario(txtFuncao.getText());
+                funcionario.setEmailUsuario(txtEmailAluno.getText());
                 funcionario.setSenhaUsuario(txtLoginAluno.getText());
                 funcionario.setLoginUsuario(txtSenhaFuncionario.getText());
+                funcionario.setTipoUsuario(jcTipoUsuario.getSelectedItem().toString());
+
+                funcionario.setFuncaoFuncionario(txtFuncao.getText());
 
                 funcionarioDAO.salvar(funcionario);
                 btLimparActionPerformed(null);
@@ -1265,10 +1332,13 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 supervisor.setCpfPessoa(txtCpf.getText());
                 supervisor.setRgPessoa(txtRg.getText());
 
-                supervisor.setTurmaSupervisor(txtTurmaSupervisor.getText());
-                supervisor.setEspecializacaoSupervisor(txtEspecializacao.getText());
+                supervisor.setEmailUsuario(txtEmailSupervisor.getText());
                 supervisor.setSenhaUsuario(txtLoginSupervisor.getText());
                 supervisor.setLoginUsuario(txtSenhaSupervisor.getText());
+                supervisor.setTipoUsuario(jcTipoUsuario.getSelectedItem().toString());
+
+                supervisor.setTurmaSupervisor(txtTurmaSupervisor.getText());
+                supervisor.setEspecializacaoSupervisor(txtEspecializacao.getText());
 
                 funcionarioDAO.salvar(funcionario);
                 btLimparActionPerformed(null);

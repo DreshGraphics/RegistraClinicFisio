@@ -91,13 +91,13 @@ public class CadastroCidades extends javax.swing.JDialog {
         txtCep.setName(""); // NOI18N
         txtCep.setPreferredSize(new java.awt.Dimension(2, 19));
         getContentPane().add(txtCep);
-        txtCep.setBounds(320, 220, 240, 30);
+        txtCep.setBounds(180, 220, 180, 30);
 
         jLObrigatorioNome3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome3.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome3.setText("*");
         getContentPane().add(jLObrigatorioNome3);
-        jLObrigatorioNome3.setBounds(560, 210, 10, 30);
+        jLObrigatorioNome3.setBounds(350, 210, 10, 10);
 
         btPesquisar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/pesquisa.png"))); // NOI18N
@@ -123,12 +123,12 @@ public class CadastroCidades extends javax.swing.JDialog {
             }
         });
         getContentPane().add(jcEstado);
-        jcEstado.setBounds(50, 220, 150, 30);
+        jcEstado.setBounds(50, 220, 110, 30);
 
         jlNomeUsuario4.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jlNomeUsuario4.setText("CEP:");
         getContentPane().add(jlNomeUsuario4);
-        jlNomeUsuario4.setBounds(320, 200, 70, 20);
+        jlNomeUsuario4.setBounds(180, 200, 70, 20);
 
         btExcluir.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/excluir_1.png"))); // NOI18N
@@ -184,7 +184,7 @@ public class CadastroCidades extends javax.swing.JDialog {
         jLObrigatorioNome1.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome1.setText("*");
         getContentPane().add(jLObrigatorioNome1);
-        jLObrigatorioNome1.setBounds(200, 220, 10, 20);
+        jLObrigatorioNome1.setBounds(150, 203, 10, 17);
 
         txtCidade.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtCidade.setForeground(new java.awt.Color(51, 0, 51));
@@ -208,7 +208,7 @@ public class CadastroCidades extends javax.swing.JDialog {
         jLObrigatorioNome2.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome2.setText("*");
         getContentPane().add(jLObrigatorioNome2);
-        jLObrigatorioNome2.setBounds(560, 140, 10, 30);
+        jLObrigatorioNome2.setBounds(550, 130, 10, 30);
 
         jLabel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         getContentPane().add(jLabel6);
