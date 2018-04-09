@@ -1036,7 +1036,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
         return d;
     }
 
-    private void selecionarAba(){
+    private void selecionarAba() {
         if (jcTipoUsuario.getSelectedItem().equals("Aluno")) {
             jtGeral.setSelectedComponent(jpDadosPessoais);
             jtGeral.setEnabledAt(1, true);
@@ -1051,9 +1051,9 @@ public class CadastroPessoa extends javax.swing.JDialog {
             jtGeral.setEnabledAt(4, true);
         }
     }
-    
+
     private void btPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPesquisarActionPerformed
-                
+
         if (jcTipoUsuario.getSelectedItem().equals("Aluno")) {
             selecionarAba();
             List<Aluno> lista;
@@ -1444,17 +1444,29 @@ public class CadastroPessoa extends javax.swing.JDialog {
         if (jcTipoUsuario.getSelectedItem().equals("Aluno") && !txtNome.getText().equals("")) {
             jtGeral.setSelectedComponent(jpAluno);
             jtGeral.setEnabledAt(1, true);
+            jtGeral.setEnabledAt(2, false);
+            jtGeral.setEnabledAt(3, false);
+            jtGeral.setEnabledAt(4, false);
         }
         if (jcTipoUsuario.getSelectedItem().equals("Funcionário") && !txtNome.getText().equals("")) {
             jtGeral.setSelectedComponent(jpFuncionario);
+            jtGeral.setEnabledAt(1, false);
             jtGeral.setEnabledAt(2, true);
+            jtGeral.setEnabledAt(3, false);
+            jtGeral.setEnabledAt(4, false);
         }
         if (jcTipoUsuario.getSelectedItem().equals("Paciente") && !txtNome.getText().equals("")) {
             jtGeral.setSelectedComponent(jpPaciente);
+            jtGeral.setEnabledAt(1, false);
+            jtGeral.setEnabledAt(2, false);
             jtGeral.setEnabledAt(3, true);
+            jtGeral.setEnabledAt(4, false);
         }
         if (jcTipoUsuario.getSelectedItem().equals("Supervisor") && !txtNome.getText().equals("")) {
             jtGeral.setSelectedComponent(jpSupervisor);
+            jtGeral.setEnabledAt(1, false);
+            jtGeral.setEnabledAt(2, false);
+            jtGeral.setEnabledAt(3, false);
             jtGeral.setEnabledAt(4, true);
         }
         if (jcTipoUsuario.getSelectedItem().equals("-----")) {
