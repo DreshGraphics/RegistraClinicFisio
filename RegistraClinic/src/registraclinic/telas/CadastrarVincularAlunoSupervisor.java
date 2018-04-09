@@ -1,7 +1,7 @@
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
- * and open the template in the editor.,,
+ * and open the template in the editor.,
  */
 package registraclinic.telas;
 
@@ -176,7 +176,7 @@ public class CadastrarVincularAlunoSupervisor extends javax.swing.JDialog {
         txtDataInicioConsulta.setBounds(100, 310, 170, 30);
 
         jlNomeUsuario4.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
-        jlNomeUsuario4.setText("In√≠cio da Supervis√£o");
+        jlNomeUsuario4.setText("InÌcio da Supervis„o");
         getContentPane().add(jlNomeUsuario4);
         jlNomeUsuario4.setBounds(100, 290, 170, 20);
 
@@ -242,7 +242,7 @@ public class CadastrarVincularAlunoSupervisor extends javax.swing.JDialog {
         List<VincularAlunoSupervisor> lista;
         lista = vincularAlunoSupervisorDAO.listar();
         VincularAlunoSupervisorTableModel itm = new VincularAlunoSupervisorTableModel(lista);
-        Object objetoRetorno = PesquisaGenerica.exibeTela(itm, "V√≠nculo Aluno Supervisor");
+        Object objetoRetorno = PesquisaGenerica.exibeTela(itm, "VÌnculo Aluno Supervisor");
         if (objetoRetorno != null) {
             vincularAlunoSupervisor = vincularAlunoSupervisorDAO.consultarObjetoId("idVincularAlunosSupervisor", objetoRetorno);
             txtAluno.setText(vincularAlunoSupervisor.getAluno().getNomeAluno());
