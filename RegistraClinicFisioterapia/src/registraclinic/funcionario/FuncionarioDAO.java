@@ -42,7 +42,7 @@ public class FuncionarioDAO extends GenericDAO<Funcionario> {
                     + "?", "BirdStork", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]) == JOptionPane.YES_OPTION) {
 
                 if (remover(funcionario)) {
-                    JOptionPane.showMessageDialog(null, "Paciente excluído com sucesso!");                    
+                    JOptionPane.showMessageDialog(null, "Funcionário excluído com sucesso!");                    
                 } else {
                     JOptionPane.showMessageDialog(null, "Não foi possível excluir o(a) Funcionário(a) " + funcionario.getNomePessoa(),
                             "Erro ao Excluir", JOptionPane.ERROR_MESSAGE);

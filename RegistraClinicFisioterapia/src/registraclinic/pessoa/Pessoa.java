@@ -41,7 +41,7 @@ public abstract class Pessoa implements Serializable{
     private String complementoPessoa;
     private String naturalidadePessoa;
     private String ocupacaoPessoa;
-    private Cidade cidade;
+    private String cidade;
 
     public int getIdPessoa() {
         return idPessoa;
@@ -163,12 +163,12 @@ public abstract class Pessoa implements Serializable{
         this.ocupacaoPessoa = ocupacaoPessoa;
     }
 
-    public Cidade getCidade() {
+    public String getCidade() {
         return cidade;
     }
 
-    public void setCidade(Cidade cidade) {
+    public void setCidade(String cidade) {
         this.cidade = cidade;
     }
-        
+    
 }

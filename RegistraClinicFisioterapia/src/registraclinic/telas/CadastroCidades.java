@@ -241,6 +241,7 @@ public class CadastroCidades extends javax.swing.JDialog {
 
     private void btLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLimparActionPerformed
         Util.limparCamposGenerico(this);
+        jcEstado.setSelectedIndex(0);
         btExcluir.setEnabled(false);
         cidade = new Cidade();
     }//GEN-LAST:event_btLimparActionPerformed

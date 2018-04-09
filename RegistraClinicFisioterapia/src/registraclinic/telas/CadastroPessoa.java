@@ -66,7 +66,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jtGeral.setEnabledAt(2, false);
         jtGeral.setEnabledAt(3, false);
         jtGeral.setEnabledAt(4, false);
-
+        txtCidade.setEnabled(false);
     }
 
     /**
@@ -130,7 +130,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jLabel11 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         txtMatricula = new javax.swing.JTextField();
-        txtTurma = new javax.swing.JTextField();
+        txtTurmaAluno = new javax.swing.JTextField();
         jLabel21 = new javax.swing.JLabel();
         jLObrigatorioNome20 = new javax.swing.JLabel();
         jLObrigatorioNome21 = new javax.swing.JLabel();
@@ -566,10 +566,10 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jpAluno.add(txtMatricula);
         txtMatricula.setBounds(20, 30, 110, 30);
 
-        txtTurma.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtTurma.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jpAluno.add(txtTurma);
-        txtTurma.setBounds(140, 30, 310, 30);
+        txtTurmaAluno.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtTurmaAluno.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jpAluno.add(txtTurmaAluno);
+        txtTurmaAluno.setBounds(140, 30, 310, 30);
 
         jLabel21.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel21.setText("Email");
@@ -1036,9 +1036,26 @@ public class CadastroPessoa extends javax.swing.JDialog {
         return d;
     }
 
-    private void btPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPesquisarActionPerformed
-        jtGeral.setSelectedComponent(jpDadosPessoais);
+    private void selecionarAba(){
         if (jcTipoUsuario.getSelectedItem().equals("Aluno")) {
+            jtGeral.setSelectedComponent(jpDadosPessoais);
+            jtGeral.setEnabledAt(1, true);
+        } else if (jcTipoUsuario.getSelectedItem().equals("Funcionário")) {
+            jtGeral.setSelectedComponent(jpDadosPessoais);
+            jtGeral.setEnabledAt(2, true);
+        } else if (jcTipoUsuario.getSelectedItem().equals("Paciente")) {
+            jtGeral.setSelectedComponent(jpDadosPessoais);
+            jtGeral.setEnabledAt(3, true);
+        } else if (jcTipoUsuario.getSelectedItem().equals("Supervisor")) {
+            jtGeral.setSelectedComponent(jpDadosPessoais);
+            jtGeral.setEnabledAt(4, true);
+        }
+    }
+    
+    private void btPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPesquisarActionPerformed
+                
+        if (jcTipoUsuario.getSelectedItem().equals("Aluno")) {
+            selecionarAba();
             List<Aluno> lista;
             lista = (alunoDAO.listar());
             AlunoTableModel itm = new AlunoTableModel(lista);
@@ -1056,20 +1073,23 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 txtComplemento.setText(alunos.getComplementoPessoa());
                 txtNaturalidade.setText(alunos.getNaturalidadePessoa());
                 txtOcupacao.setText(alunos.getOcupacaoPessoa());
-                txtCidade.setText(alunos.getCidade().getNomeCidade());
+                txtCidade.setText(alunos.getCidade());
                 jcEstadoCivil.setSelectedItem(alunos.getEstadoCivilPessoa());
                 jcSexo.setSelectedItem(alunos.getSexoPessoa());
                 jcTipoUsuario.setSelectedItem(alunos.getTipoUsuario());
 
                 txtMatricula.setText(alunos.getMatriculaAluno());
-                txtTurma.setText(alunos.getTurmaAluno());
+                txtTurmaAluno.setText(alunos.getTurmaAluno());
                 txtEmailAluno.setText(alunos.getEmailUsuario());
                 txtLoginAluno.setText(alunos.getLoginUsuario());
                 txtSenhaAluno.setText(alunos.getSenhaUsuario());
 
                 btExcluir.setEnabled(true);
+            } else {
+                jtGeral.setEnabledAt(1, false);
             }
         } else if (jcTipoUsuario.getSelectedItem().equals("Funcionário")) {
+            selecionarAba();
             List<Funcionario> lista;
             lista = (funcionarioDAO.listar());
             FuncionarioTableModel itm = new FuncionarioTableModel(lista);
@@ -1087,7 +1107,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 txtComplemento.setText(funcionario.getComplementoPessoa());
                 txtNaturalidade.setText(funcionario.getNaturalidadePessoa());
                 txtOcupacao.setText(funcionario.getOcupacaoPessoa());
-                txtCidade.setText(funcionario.getCidade().getNomeCidade());
+                txtCidade.setText(funcionario.getCidade());
                 jcEstadoCivil.setSelectedItem(funcionario.getEstadoCivilPessoa());
                 jcSexo.setSelectedItem(funcionario.getSexoPessoa());
                 jcTipoUsuario.setSelectedItem(funcionario.getTipoUsuario());
@@ -1098,8 +1118,11 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 txtSenhaFuncionario.setText(funcionario.getSenhaUsuario());
 
                 btExcluir.setEnabled(true);
+            } else {
+                jtGeral.setEnabledAt(2, false);
             }
         } else if (jcTipoUsuario.getSelectedItem().equals("Paciente")) {
+            selecionarAba();
             List<Paciente> lista;
             lista = (pacienteDAO.listar());
             PacienteTableModel itm = new PacienteTableModel(lista);
@@ -1117,7 +1140,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 txtComplemento.setText(paciente.getComplementoPessoa());
                 txtNaturalidade.setText(paciente.getNaturalidadePessoa());
                 txtOcupacao.setText(paciente.getOcupacaoPessoa());
-                txtCidade.setText(paciente.getCidade().getNomeCidade());
+                txtCidade.setText(paciente.getCidade());
                 jcEstadoCivil.setSelectedItem(paciente.getEstadoCivilPessoa());
                 jcSexo.setSelectedItem(paciente.getSexoPessoa());
 
@@ -1128,8 +1151,11 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 txtAltura.setText(paciente.getAlturaPaciente());
 
                 btExcluir.setEnabled(true);
+            } else {
+                jtGeral.setEnabledAt(3, false);
             }
         } else if (jcTipoUsuario.getSelectedItem().equals("Supervisor")) {
+            selecionarAba();
             List<Supervisor> lista;
             lista = (supervisorDAO.listar());
             SupervisorTableModel itm = new SupervisorTableModel(lista);
@@ -1147,18 +1173,20 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 txtComplemento.setText(supervisor.getComplementoPessoa());
                 txtNaturalidade.setText(supervisor.getNaturalidadePessoa());
                 txtOcupacao.setText(supervisor.getOcupacaoPessoa());
-                txtCidade.setText(supervisor.getCidade().getNomeCidade());
+                txtCidade.setText(supervisor.getCidade());
                 jcEstadoCivil.setSelectedItem(supervisor.getEstadoCivilPessoa());
                 jcSexo.setSelectedItem(supervisor.getSexoPessoa());
                 jcTipoUsuario.setSelectedItem(supervisor.getTipoUsuario());
 
-                txtTurma.setText(supervisor.getTurmaSupervisor());
+                txtTurmaSupervisor.setText(supervisor.getTurmaSupervisor());
                 txtEspecializacao.setText(supervisor.getEspecializacaoSupervisor());
-                txtEmailFuncionario.setText(supervisor.getEmailUsuario());
-                txtLoginFuncionario.setText(supervisor.getLoginUsuario());
-                txtSenhaFuncionario.setText(supervisor.getSenhaUsuario());
+                txtEmailSupervisor.setText(supervisor.getEmailUsuario());
+                txtLoginSupervisor.setText(supervisor.getLoginUsuario());
+                txtSenhaSupervisor.setText(supervisor.getSenhaUsuario());
 
                 btExcluir.setEnabled(true);
+            } else {
+                jtGeral.setEnabledAt(4, false);
             }
         } else {
             JOptionPane.showMessageDialog(rootPane, "Selecione o Tipo de Usuário para a pesquisa!",
@@ -1169,7 +1197,20 @@ public class CadastroPessoa extends javax.swing.JDialog {
     }//GEN-LAST:event_btPesquisarActionPerformed
 
     private void btExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExcluirActionPerformed
-        alunoDAO.excluir(alunos);
+        if (jcTipoUsuario.getSelectedItem().equals("Aluno")) {
+            alunoDAO.excluir(alunos);
+            jcTipoUsuario.setSelectedIndex(0);
+        } else if (jcTipoUsuario.getSelectedItem().equals("Funcionário")) {
+            funcionarioDAO.excluir(funcionario);
+            jcTipoUsuario.setSelectedIndex(0);
+        } else if (jcTipoUsuario.getSelectedItem().equals("Paciente")) {
+            pacienteDAO.excluir(paciente);
+            jcTipoUsuario.setSelectedIndex(0);
+        } else if (jcTipoUsuario.getSelectedItem().equals("Supervisor")) {
+            supervisorDAO.excluir(supervisor);
+            jcTipoUsuario.setSelectedIndex(0);
+        }
+
         btLimparActionPerformed(null);
     }//GEN-LAST:event_btExcluirActionPerformed
 
@@ -1188,12 +1229,12 @@ public class CadastroPessoa extends javax.swing.JDialog {
         txtNaturalidade.setText("");
         txtOcupacao.setText("");
         txtCidade.setText("");
-        jcEstadoCivil.setSelectedItem("");
-        jcSexo.setSelectedItem("");
-        jcTipoUsuario.setSelectedItem("");
+        jcEstadoCivil.setSelectedIndex(0);
+        jcSexo.setSelectedIndex(0);
+        jcTipoUsuario.setSelectedIndex(0);
 
         txtMatricula.setText("");
-        txtTurma.setText("");
+        txtTurmaAluno.setText("");
         txtEmailAluno.setText("");
         txtLoginAluno.setText("");
         txtSenhaAluno.setText("");
@@ -1209,7 +1250,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
         txtPeso.setText("");
         txtAltura.setText("");
 
-        txtTurma.setText("");
+        txtTurmaAluno.setText("");
         txtEspecializacao.setText("");
         txtEmailFuncionario.setText("");
         txtLoginFuncionario.setText("");
@@ -1219,7 +1260,11 @@ public class CadastroPessoa extends javax.swing.JDialog {
         funcionario = new Funcionario();
         supervisor = new Supervisor();
         paciente = new Paciente();
-
+        jtGeral.setEnabledAt(0, true);
+        jtGeral.setEnabledAt(1, false);
+        jtGeral.setEnabledAt(2, false);
+        jtGeral.setEnabledAt(3, false);
+        jtGeral.setEnabledAt(4, false);
         jtGeral.setSelectedComponent(jpDadosPessoais);
     }//GEN-LAST:event_btLimparActionPerformed
 
@@ -1238,7 +1283,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 alunos.setNomePessoa(txtNome.getText().toUpperCase());
                 alunos.setDataNascimentoPessoa(formataData(txtDataNascimento.getText()));
                 alunos.setEnderecoPessoa(txtEndereco.getText());
-                alunos.setEnderecoNumeroPessoa(txtTurma.getText());
+                alunos.setEnderecoNumeroPessoa(txtTurmaAluno.getText());
                 alunos.setTelefonePessoa(txtTelefone.getText());
                 alunos.setNaturalidadePessoa(txtNaturalidade.getText());
                 alunos.setSexoPessoa(jcSexo.getSelectedItem().toString());
@@ -1247,7 +1292,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 alunos.setOcupacaoPessoa(txtOcupacao.getText());
                 alunos.setComplementoPessoa(txtComplemento.getText());
                 alunos.setIdadePessoa(getIdade(formataData(txtDataNascimento.getText())));
-                alunos.setCidade(cidade);
+                alunos.setCidade(cidade.getNomeCidade());
                 alunos.setCpfPessoa(txtCpf.getText());
                 alunos.setRgPessoa(txtRg.getText());
 
@@ -1256,22 +1301,23 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 alunos.setSenhaUsuario(txtSenhaAluno.getText());
                 alunos.setTipoUsuario(jcTipoUsuario.getSelectedItem().toString());
 
-                alunos.setTurmaAluno(txtTurma.getText());
+                alunos.setTurmaAluno(txtTurmaAluno.getText());
                 alunos.setMatriculaAluno(txtMatricula.getText());
 
                 alunoDAO.salvar(alunos);
+                jtGeral.setEnabledAt(1, false);
                 btLimparActionPerformed(null);
-            }
-            if (jcTipoUsuario.getSelectedItem().equals("Paciente")) {
+            } else if (jcTipoUsuario.getSelectedItem().equals("Paciente")) {
                 paciente.setNomePessoa(txtNome.getText().toUpperCase());
                 paciente.setDataNascimentoPessoa(formataData(txtDataNascimento.getText()));
                 paciente.setEnderecoPessoa(txtEndereco.getText());
-                paciente.setEnderecoNumeroPessoa(txtTurma.getText());
+                paciente.setEnderecoNumeroPessoa(txtEndNumero.getText());
                 paciente.setTelefonePessoa(txtTelefone.getText());
                 paciente.setNaturalidadePessoa(txtNaturalidade.getText());
                 paciente.setSexoPessoa(jcSexo.getSelectedItem().toString());
                 paciente.setEstadoCivilPessoa(jcEstadoCivil.getSelectedItem().toString());
-                paciente.setCidade(cidade);
+                paciente.setCidade(cidade.getNomeCidade());
+
                 paciente.setBairroPessoa(txtBairro.getText());
                 paciente.setOcupacaoPessoa(txtOcupacao.getText());
                 paciente.setComplementoPessoa(txtComplemento.getText());
@@ -1286,18 +1332,18 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 paciente.setAlturaPaciente(txtAltura.getText());
 
                 pacienteDAO.salvar(paciente);
+                jtGeral.setEnabledAt(2, false);
                 btLimparActionPerformed(null);
-            }
-            if (jcTipoUsuario.getSelectedItem().equals("Funcionário")) {
+            } else if (jcTipoUsuario.getSelectedItem().equals("Funcionário")) {
                 funcionario.setNomePessoa(txtNome.getText().toUpperCase());
                 funcionario.setDataNascimentoPessoa(formataData(txtDataNascimento.getText()));
                 funcionario.setEnderecoPessoa(txtEndereco.getText());
-                funcionario.setEnderecoNumeroPessoa(txtTurma.getText());
+                funcionario.setEnderecoNumeroPessoa(txtEndNumero.getText());
                 funcionario.setTelefonePessoa(txtTelefone.getText());
                 funcionario.setNaturalidadePessoa(txtNaturalidade.getText());
                 funcionario.setSexoPessoa(jcSexo.getSelectedItem().toString());
                 funcionario.setEstadoCivilPessoa(jcEstadoCivil.getSelectedItem().toString());
-                funcionario.setCidade(cidade);
+                funcionario.setCidade(cidade.getNomeCidade());
                 funcionario.setBairroPessoa(txtBairro.getText());
                 funcionario.setOcupacaoPessoa(txtOcupacao.getText());
                 funcionario.setComplementoPessoa(txtComplemento.getText());
@@ -1305,26 +1351,26 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 funcionario.setCpfPessoa(txtCpf.getText());
                 funcionario.setRgPessoa(txtRg.getText());
 
-                funcionario.setEmailUsuario(txtEmailAluno.getText());
-                funcionario.setSenhaUsuario(txtLoginAluno.getText());
-                funcionario.setLoginUsuario(txtSenhaFuncionario.getText());
+                funcionario.setEmailUsuario(txtEmailFuncionario.getText());
+                funcionario.setSenhaUsuario(txtSenhaFuncionario.getText());
+                funcionario.setLoginUsuario(txtLoginFuncionario.getText());
                 funcionario.setTipoUsuario(jcTipoUsuario.getSelectedItem().toString());
 
                 funcionario.setFuncaoFuncionario(txtFuncao.getText());
 
                 funcionarioDAO.salvar(funcionario);
+                jtGeral.setEnabledAt(3, false);
                 btLimparActionPerformed(null);
-            }
-            if (jcTipoUsuario.getSelectedItem().equals("Supervisor")) {
+            } else if (jcTipoUsuario.getSelectedItem().equals("Supervisor")) {
                 supervisor.setNomePessoa(txtNome.getText().toUpperCase());
                 supervisor.setDataNascimentoPessoa(formataData(txtDataNascimento.getText()));
                 supervisor.setEnderecoPessoa(txtEndereco.getText());
-                supervisor.setEnderecoNumeroPessoa(txtTurma.getText());
+                supervisor.setEnderecoNumeroPessoa(txtEndNumero.getText());
                 supervisor.setTelefonePessoa(txtTelefone.getText());
                 supervisor.setNaturalidadePessoa(txtNaturalidade.getText());
                 supervisor.setSexoPessoa(jcSexo.getSelectedItem().toString());
                 supervisor.setEstadoCivilPessoa(jcEstadoCivil.getSelectedItem().toString());
-                supervisor.setCidade(cidade);
+                supervisor.setCidade(cidade.getNomeCidade());
                 supervisor.setBairroPessoa(txtBairro.getText());
                 supervisor.setOcupacaoPessoa(txtOcupacao.getText());
                 supervisor.setComplementoPessoa(txtComplemento.getText());
@@ -1333,14 +1379,15 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 supervisor.setRgPessoa(txtRg.getText());
 
                 supervisor.setEmailUsuario(txtEmailSupervisor.getText());
-                supervisor.setSenhaUsuario(txtLoginSupervisor.getText());
-                supervisor.setLoginUsuario(txtSenhaSupervisor.getText());
+                supervisor.setSenhaUsuario(txtSenhaSupervisor.getText());
+                supervisor.setLoginUsuario(txtLoginSupervisor.getText());
                 supervisor.setTipoUsuario(jcTipoUsuario.getSelectedItem().toString());
 
                 supervisor.setTurmaSupervisor(txtTurmaSupervisor.getText());
                 supervisor.setEspecializacaoSupervisor(txtEspecializacao.getText());
 
-                funcionarioDAO.salvar(funcionario);
+                supervisorDAO.salvar(supervisor);
+                jtGeral.setEnabledAt(4, false);
                 btLimparActionPerformed(null);
             }
         }
@@ -1397,29 +1444,17 @@ public class CadastroPessoa extends javax.swing.JDialog {
         if (jcTipoUsuario.getSelectedItem().equals("Aluno") && !txtNome.getText().equals("")) {
             jtGeral.setSelectedComponent(jpAluno);
             jtGeral.setEnabledAt(1, true);
-            jtGeral.setEnabledAt(2, false);
-            jtGeral.setEnabledAt(3, false);
-            jtGeral.setEnabledAt(4, false);
         }
         if (jcTipoUsuario.getSelectedItem().equals("Funcionário") && !txtNome.getText().equals("")) {
             jtGeral.setSelectedComponent(jpFuncionario);
-            jtGeral.setEnabledAt(1, false);
             jtGeral.setEnabledAt(2, true);
-            jtGeral.setEnabledAt(3, false);
-            jtGeral.setEnabledAt(4, false);
         }
         if (jcTipoUsuario.getSelectedItem().equals("Paciente") && !txtNome.getText().equals("")) {
             jtGeral.setSelectedComponent(jpPaciente);
-            jtGeral.setEnabledAt(1, false);
-            jtGeral.setEnabledAt(2, false);
             jtGeral.setEnabledAt(3, true);
-            jtGeral.setEnabledAt(4, false);
         }
         if (jcTipoUsuario.getSelectedItem().equals("Supervisor") && !txtNome.getText().equals("")) {
             jtGeral.setSelectedComponent(jpSupervisor);
-            jtGeral.setEnabledAt(1, false);
-            jtGeral.setEnabledAt(2, false);
-            jtGeral.setEnabledAt(3, false);
             jtGeral.setEnabledAt(4, true);
         }
         if (jcTipoUsuario.getSelectedItem().equals("-----")) {
@@ -1655,7 +1690,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
     private javax.swing.JPasswordField txtSenhaFuncionario;
     private javax.swing.JPasswordField txtSenhaSupervisor;
     private javax.swing.JFormattedTextField txtTelefone;
-    private javax.swing.JTextField txtTurma;
+    private javax.swing.JTextField txtTurmaAluno;
     private javax.swing.JTextField txtTurmaSupervisor;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,6 +1,8 @@
 package registraclinic.supervisor;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
 import registraclinic.util.Util;
@@ -25,6 +27,11 @@ public class SupervisorTableModel extends AbstractTableModel {
         return colunas.length;
     }
 
+    private String converterDataString(Date date) {
+        SimpleDateFormat f = new SimpleDateFormat("dd/MM/yyyy");
+        return f.format(date);
+    }
+    
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
         Supervisor supervisores = supervisor.get(rowIndex);
@@ -44,7 +51,7 @@ public class SupervisorTableModel extends AbstractTableModel {
             case 6:
                 return supervisores.getTelefonePessoa();
             case 7:
-                return supervisores.getDataNascimentoPessoa();
+                return converterDataString(supervisores.getDataNascimentoPessoa());
             case 8:
                 return supervisores.getSexoPessoa();
             case 9:

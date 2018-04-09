@@ -53,7 +53,7 @@ public class AlunoTableModel extends AbstractTableModel {
             case 7:
                 return alunos.getSexoPessoa();
             case 8:
-                return alunos.getCidade().getNomeCidade();
+                return alunos.getCidade();
             case 9:
                 return alunos.getEnderecoPessoa();
             case 10:
