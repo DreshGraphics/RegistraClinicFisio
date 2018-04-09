@@ -60,7 +60,7 @@ public class TelaInicial extends javax.swing.JDialog {
         tfAluno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/student_50px.png"))); // NOI18N
         tfAluno.setText("Aluno");
         tfAluno.setContentAreaFilled(false);
-        tfAluno.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        tfAluno.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         tfAluno.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         tfAluno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,7 +74,7 @@ public class TelaInicial extends javax.swing.JDialog {
         tfPaciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/cast_50px.png"))); // NOI18N
         tfPaciente.setText("Paciente");
         tfPaciente.setContentAreaFilled(false);
-        tfPaciente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        tfPaciente.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         tfPaciente.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         tfPaciente.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         tfPaciente.addActionListener(new java.awt.event.ActionListener() {
@@ -89,7 +89,7 @@ public class TelaInicial extends javax.swing.JDialog {
         tfSupervisor1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/vincular_paciente.png"))); // NOI18N
         tfSupervisor1.setText("Vincular Paciente/Aluno");
         tfSupervisor1.setContentAreaFilled(false);
-        tfSupervisor1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        tfSupervisor1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         tfSupervisor1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         tfSupervisor1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         tfSupervisor1.addActionListener(new java.awt.event.ActionListener() {
@@ -104,7 +104,7 @@ public class TelaInicial extends javax.swing.JDialog {
         btnUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/user.png"))); // NOI18N
         btnUsuario.setText("Usuário");
         btnUsuario.setContentAreaFilled(false);
-        btnUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnUsuario.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         btnUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,7 +118,7 @@ public class TelaInicial extends javax.swing.JDialog {
         tfSupervisor3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/vincular_aluno.png"))); // NOI18N
         tfSupervisor3.setText("Vincular Aluno/Supervisor");
         tfSupervisor3.setContentAreaFilled(false);
-        tfSupervisor3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        tfSupervisor3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         tfSupervisor3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         tfSupervisor3.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         tfSupervisor3.addActionListener(new java.awt.event.ActionListener() {
@@ -132,13 +132,13 @@ public class TelaInicial extends javax.swing.JDialog {
         jlNome3.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jlNome3.setText("Usuário:");
         jPanel1.add(jlNome3);
-        jlNome3.setBounds(130, 460, 100, 30);
+        jlNome3.setBounds(410, 460, 100, 30);
 
         tfSupervisor2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tfSupervisor2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/course_50px.png"))); // NOI18N
         tfSupervisor2.setText("Supervisor");
         tfSupervisor2.setContentAreaFilled(false);
-        tfSupervisor2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        tfSupervisor2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         tfSupervisor2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         tfSupervisor2.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         tfSupervisor2.addActionListener(new java.awt.event.ActionListener() {
@@ -152,14 +152,14 @@ public class TelaInicial extends javax.swing.JDialog {
         jlUsuario.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jlUsuario.setText("???");
         jPanel1.add(jlUsuario);
-        jlUsuario.setBounds(230, 460, 430, 30);
+        jlUsuario.setBounds(520, 460, 170, 30);
 
         btLogout.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btLogout.setForeground(new java.awt.Color(255, 255, 255));
         btLogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/icons8_Delete_26px_2.png"))); // NOI18N
         btLogout.setToolTipText("Sair");
         btLogout.setContentAreaFilled(false);
-        btLogout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btLogout.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btLogout.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btLogout.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         btLogout.addActionListener(new java.awt.event.ActionListener() {
@@ -170,7 +170,7 @@ public class TelaInicial extends javax.swing.JDialog {
         jPanel1.add(btLogout);
         btLogout.setBounds(650, 0, 50, 40);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/TelaPrincipal.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Tela-Fisioterapia.png"))); // NOI18N
         jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         jPanel1.add(jLabel1);
         jLabel1.setBounds(0, 0, 700, 500);
