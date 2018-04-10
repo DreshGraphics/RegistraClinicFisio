@@ -1346,7 +1346,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 funcionario.setBairroPessoa(txtBairro.getText());
                 funcionario.setOcupacaoPessoa(txtOcupacao.getText());
                 funcionario.setComplementoPessoa(txtComplemento.getText());
-//ERROR                funcionario.setIdadePessoa(getIdade(formataData(txtDataNascimento.getText())));
+              funcionario.setIdadePessoa(getIdade(formataData(txtDataNascimento.getText())));
 //
                 funcionario.setCpfPessoa(txtCpf.getText());
                 funcionario.setRgPessoa(txtRg.getText());
@@ -1395,10 +1395,10 @@ public class CadastroPessoa extends javax.swing.JDialog {
 
     private String getIdade(Date data) {
         Calendar dataNascimento = Calendar.getInstance();
-// //       dataNascimento.setTime(data);
+        dataNascimento.setTime(data);
         Calendar dataAtual = Calendar.getInstance();
-        Integer diferencaMes = dataAtual.get(Calendar.MONTH) - dataNascimento.get(Calendar.MONTH);
-        Integer diferencaDia = dataAtual.get(Calendar.DAY_OF_MONTH) - dataNascimento.get(Calendar.DAY_OF_MONTH);
+        Integer diferencaMes = Math.abs(dataAtual.get(Calendar.MONTH) - dataNascimento.get(Calendar.MONTH));
+        Integer diferencaDia = Math.abs(dataAtual.get(Calendar.DAY_OF_MONTH) - dataNascimento.get(Calendar.DAY_OF_MONTH));
         Integer idade = (dataAtual.get(Calendar.YEAR) - dataNascimento.get(Calendar.YEAR));
         if (diferencaMes < 0 || (diferencaMes == 0 && diferencaDia < 0)) {
             idade--;
