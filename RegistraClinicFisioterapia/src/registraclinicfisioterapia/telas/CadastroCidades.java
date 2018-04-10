@@ -136,6 +136,7 @@ public class CadastroCidades extends javax.swing.JDialog {
         jLObrigatorioNome2.setBounds(550, 130, 10, 30);
 
         btSalvar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinicfisioterapia/imagens/A_salvar_7.png"))); // NOI18N
         btSalvar.setText("Salvar");
         btSalvar.setContentAreaFilled(false);
         btSalvar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -150,6 +151,7 @@ public class CadastroCidades extends javax.swing.JDialog {
         btSalvar.setBounds(500, 340, 80, 70);
 
         btExcluir.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinicfisioterapia/imagens/A_excluir_7.png"))); // NOI18N
         btExcluir.setText("Excluir");
         btExcluir.setContentAreaFilled(false);
         btExcluir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -164,6 +166,7 @@ public class CadastroCidades extends javax.swing.JDialog {
         btExcluir.setBounds(380, 340, 80, 70);
 
         btPesquisar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinicfisioterapia/imagens/A_pesquisa_7.png"))); // NOI18N
         btPesquisar.setText("Pesquisar");
         btPesquisar.setContentAreaFilled(false);
         btPesquisar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -178,6 +181,7 @@ public class CadastroCidades extends javax.swing.JDialog {
         btPesquisar.setBounds(270, 340, 100, 70);
 
         btLimpar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinicfisioterapia/imagens/A_limpar_7.png"))); // NOI18N
         btLimpar.setText("Limpar");
         btLimpar.setContentAreaFilled(false);
         btLimpar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -192,6 +196,7 @@ public class CadastroCidades extends javax.swing.JDialog {
         btLimpar.setBounds(160, 340, 80, 70);
 
         btVoltar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinicfisioterapia/imagens/A_voltar_7.png"))); // NOI18N
         btVoltar.setText("Voltar");
         btVoltar.setContentAreaFilled(false);
         btVoltar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -223,10 +228,10 @@ public class CadastroCidades extends javax.swing.JDialog {
 
     private void btSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalvarActionPerformed
 
-        if (cidadeDAO.consultarValorRepetido("cepCidade", txtCep.getText()) && cidade.getIdCidade() == 0) {
-            JOptionPane.showMessageDialog(rootPane, "O CEP '" + txtCep.getText() + "' já está cadastrado!",
-                "Erro ao salvar", JOptionPane.ERROR_MESSAGE);
-        } else {
+//        if (cidadeDAO.consultarValorRepetido("cepCidade", txtCep.getText()) && cidade.getIdCidade() == 0) {
+//            JOptionPane.showMessageDialog(rootPane, "O CEP '" + txtCep.getText() + "' já está cadastrado!",
+//                "Erro ao salvar", JOptionPane.ERROR_MESSAGE);
+//        } else {
             if (Util.chkVazio(txtCep.getText(), txtCidade.getText(), String.valueOf(jcEstado.getSelectedItem()))) {
                 cidade.setNomeCidade(txtCidade.getText().toUpperCase());
                 cidade.setEstadoCidade(String.valueOf(jcEstado.getSelectedItem()));
@@ -235,7 +240,7 @@ public class CadastroCidades extends javax.swing.JDialog {
                 btLimparActionPerformed(null);
                 jcEstado.setSelectedIndex(0);
             }
-        }
+//        }
     }//GEN-LAST:event_btSalvarActionPerformed
 
     private void btExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExcluirActionPerformed

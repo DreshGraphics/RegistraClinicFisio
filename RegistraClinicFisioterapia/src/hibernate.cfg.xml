@@ -14,11 +14,11 @@
         <property name="generate_statistics">true</property>
         <property name="use_sql_coments">true</property>
         <property name="hibernate.hbm2ddl.auto">update</property>
-        <mapping class="registraclinic.paciente.Paciente"/>
-        <mapping class="registraclinic.aluno.Aluno"/>
-        <mapping class="registraclinic.funcionario.Funcionario"/>
-        <mapping class="registraclinic.supervisor.Supervisor"/>
-        <mapping class="registraclinic.cidade.Cidade"/>
+        <mapping class="registraclinicfisioterapia.paciente.Paciente"/>
+        <mapping class="registraclinicfisioterapia.aluno.Aluno"/>
+        <mapping class="registraclinicfisioterapia.funcionario.Funcionario"/>
+        <mapping class="registraclinicfisioterapia.supervisor.Supervisor"/>
+        <mapping class="registraclinicfisioterapia.cidade.Cidade"/>
     </session-factory>
 </hibernate-configuration>
 
