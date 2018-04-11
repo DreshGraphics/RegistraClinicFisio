@@ -1002,6 +1002,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
         getContentPane().add(btSalvar);
         btSalvar.setBounds(660, 480, 80, 70);
 
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/CadastroPessoa.png"))); // NOI18N
         jLabel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         jLabel6.setMaximumSize(new java.awt.Dimension(700, 500));
         jLabel6.setMinimumSize(new java.awt.Dimension(700, 500));
