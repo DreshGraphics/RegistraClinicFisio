@@ -24,8 +24,8 @@ public class CadastroAtendimento extends javax.swing.JDialog {
 
     public CadastroAtendimento(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
-
         initComponents();
+        btExcluir.setEnabled(false);
         atendimentoDAO = new AtendimentoDAO();
     }
 
@@ -222,7 +222,7 @@ public class CadastroAtendimento extends javax.swing.JDialog {
             JOptionPane.showMessageDialog(rootPane, "O Atendimento '" + txtAtendimento.getText() + "' já está cadastrado!",
                     "Erro ao salvar", JOptionPane.ERROR_MESSAGE);
         } else {
-            if (Util.chkVazio(txtAtendimento.getText(), txtAtendimento.getText())){
+            if (Util.chkVazio(txtAtendimento.getText(), txtAtendimento.getText())) {
                 atendimento.setNomeAtendimento(txtAtendimento.getText().toUpperCase());
                 atendimentoDAO.salvar(atendimento);
                 btLimparActionPerformed(null);

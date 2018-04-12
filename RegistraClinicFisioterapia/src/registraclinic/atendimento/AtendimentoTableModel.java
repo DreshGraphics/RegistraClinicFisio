@@ -11,7 +11,7 @@ import javax.swing.table.AbstractTableModel;
 
 /**
  *
- * @author 
+ * @author root 
  */
 public class AtendimentoTableModel extends AbstractTableModel {
 
