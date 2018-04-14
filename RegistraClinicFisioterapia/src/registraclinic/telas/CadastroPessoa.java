@@ -1398,8 +1398,8 @@ public class CadastroPessoa extends javax.swing.JDialog {
         Calendar dataNascimento = Calendar.getInstance();
         dataNascimento.setTime(data);
         Calendar dataAtual = Calendar.getInstance();
-        Integer diferencaMes = Math.abs(dataAtual.get(Calendar.MONTH) - dataNascimento.get(Calendar.MONTH));
-        Integer diferencaDia = Math.abs(dataAtual.get(Calendar.DAY_OF_MONTH) - dataNascimento.get(Calendar.DAY_OF_MONTH));
+        Integer diferencaMes = dataAtual.get(Calendar.MONTH) - dataNascimento.get(Calendar.MONTH);
+        Integer diferencaDia = dataAtual.get(Calendar.DAY_OF_MONTH) - dataNascimento.get(Calendar.DAY_OF_MONTH);
         Integer idade = (dataAtual.get(Calendar.YEAR) - dataNascimento.get(Calendar.YEAR));
         if (diferencaMes < 0 || (diferencaMes == 0 && diferencaDia < 0)) {
             idade--;
@@ -1407,6 +1407,8 @@ public class CadastroPessoa extends javax.swing.JDialog {
         return idade.toString();
 
     }
+    
+    
 
     private void btVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarActionPerformed
 

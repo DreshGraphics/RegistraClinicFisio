@@ -2,8 +2,11 @@ package registraclinic.atendimento;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import registraclinic.paciente.Paciente;
 
 /**
  *
@@ -18,7 +21,7 @@ public class Atendimento {
     private int idAtendimento;
     @Column(length = 50, nullable = false)
     private String nomeAtendimento;
-
+    
     public int getIdAtendimento() {
         return idAtendimento;
     }
@@ -34,5 +37,5 @@ public class Atendimento {
     public void setNomeAtendimento(String nomeAtendimento) {
         this.nomeAtendimento = nomeAtendimento;
     }
-
+    
 }

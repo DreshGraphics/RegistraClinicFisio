@@ -11,20 +11,20 @@ import javax.swing.table.AbstractTableModel;
 
 /**
  *
- * @author root 
+ * @author Karlos Oliveira
  */
-public class AtendimentoTableModel extends AbstractTableModel {
+public class AtendimentoCadastroTableModel extends AbstractTableModel {
 
-    private List<Atendimento> atendimento = new ArrayList<>();
-    private String[] colunas = {"Código", "Atendimento"};
+    private List<Atendimento> atendimentos = new ArrayList<>();
+    private String[] colunas = {"Atendimento"};
 
-    public AtendimentoTableModel(List<Atendimento> atendimento) {
-        this.atendimento = atendimento;
+    public AtendimentoCadastroTableModel(List<Atendimento> atendimentos) {
+        this.atendimentos = atendimentos;
     }
 
     @Override
     public int getRowCount() {
-        return atendimento.size();
+        return atendimentos.size();
     }
 
     @Override
@@ -34,13 +34,10 @@ public class AtendimentoTableModel extends AbstractTableModel {
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        Atendimento cidade = atendimento.get(rowIndex);
+        Atendimento atendimento = atendimentos.get(rowIndex);
         switch (columnIndex) {
             case 0:
-                return cidade.getIdAtendimento();
-            case 1:
-                return cidade.getNomeAtendimento();
-            
+                return atendimento.getNomeAtendimento();
 
         }
         return null;
@@ -51,11 +48,8 @@ public class AtendimentoTableModel extends AbstractTableModel {
         switch (index) {
             case 0:
                 return colunas[0];
-            case 1:
-                return colunas[1];
         }
         return null;
     }
 
 }
-

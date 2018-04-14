@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package registraclinic.atendimento;
+package registraclinic.prioridadeatendimento;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,20 +11,20 @@ import javax.swing.table.AbstractTableModel;
 
 /**
  *
- * @author root 
+ * @author Karlos Oliveira
  */
-public class AtendimentoTableModel extends AbstractTableModel {
+public class PrioridadeAtendimentoTableModel extends AbstractTableModel{
+    
+    private List<PrioridadeAtendimento> prioridadeAtendimento = new ArrayList<>();
+    private String[] colunas = {"Código", "Atendimento", "Paciente"};
 
-    private List<Atendimento> atendimento = new ArrayList<>();
-    private String[] colunas = {"Código", "Atendimento"};
-
-    public AtendimentoTableModel(List<Atendimento> atendimento) {
-        this.atendimento = atendimento;
+    public PrioridadeAtendimentoTableModel(List<PrioridadeAtendimento> prioridadeAtendimento) {
+        this.prioridadeAtendimento = prioridadeAtendimento;
     }
 
     @Override
     public int getRowCount() {
-        return atendimento.size();
+        return prioridadeAtendimento.size();
     }
 
     @Override
@@ -34,12 +34,14 @@ public class AtendimentoTableModel extends AbstractTableModel {
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        Atendimento cidade = atendimento.get(rowIndex);
+        PrioridadeAtendimento cidade = prioridadeAtendimento.get(rowIndex);
         switch (columnIndex) {
             case 0:
-                return cidade.getIdAtendimento();
+                return cidade.getIdPrioridadeAtendimento();
             case 1:
-                return cidade.getNomeAtendimento();
+                return cidade.getPaciente().getNomePessoa();
+            case 2:
+                return cidade.getAtendimento().getNomeAtendimento();
             
 
         }
@@ -53,9 +55,10 @@ public class AtendimentoTableModel extends AbstractTableModel {
                 return colunas[0];
             case 1:
                 return colunas[1];
+            case 2:
+                return colunas[2];
         }
         return null;
     }
-
+    
 }
-

@@ -6,7 +6,7 @@
     <session-factory>
         <property name="dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="connection.url">jdbc:mysql://localhost/fisio</property>
+        <property name="connection.url">jdbc:mysql://localhost/registraclinicfisioterapia</property>       
         <property name="connection.username">root</property>
         <property name="connection.password"></property>
         <property name="show_sql">true</property>
@@ -20,6 +20,7 @@
         <mapping class="registraclinic.supervisor.Supervisor"/>
         <mapping class="registraclinic.cidade.Cidade"/>
         <mapping class="registraclinic.atendimento.Atendimento"/>
+        <mapping class="registraclinic.prioridadeatendimento.PrioridadeAtendimento"/>
     </session-factory>
 </hibernate-configuration>
 
