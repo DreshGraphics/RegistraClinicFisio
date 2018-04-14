@@ -44,9 +44,9 @@ public class CadastroAtendimento extends javax.swing.JDialog {
         btPesquisar = new javax.swing.JButton();
         btExcluir = new javax.swing.JButton();
         btSalvar = new javax.swing.JButton();
-        jlNomeUsuario3 = new javax.swing.JLabel();
+        jlTipoAtendimento = new javax.swing.JLabel();
         txtAtendimento = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
+        jLFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setLocationByPlatform(true);
@@ -132,10 +132,10 @@ public class CadastroAtendimento extends javax.swing.JDialog {
         jPanel1.add(btSalvar);
         btSalvar.setBounds(490, 310, 90, 83);
 
-        jlNomeUsuario3.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
-        jlNomeUsuario3.setText("Tipo de Atendimento:");
-        jPanel1.add(jlNomeUsuario3);
-        jlNomeUsuario3.setBounds(20, 60, 175, 18);
+        jlTipoAtendimento.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jlTipoAtendimento.setText("Tipo de Atendimento:");
+        jPanel1.add(jlTipoAtendimento);
+        jlTipoAtendimento.setBounds(20, 60, 175, 18);
 
         txtAtendimento.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtAtendimento.setForeground(new java.awt.Color(51, 0, 51));
@@ -150,10 +150,10 @@ public class CadastroAtendimento extends javax.swing.JDialog {
         jPanel1.add(txtAtendimento);
         txtAtendimento.setBounds(20, 90, 560, 30);
 
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jPanel1.add(jLabel6);
-        jLabel6.setBounds(0, 0, 600, 400);
+        jLFundo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLFundo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jPanel1.add(jLFundo);
+        jLFundo.setBounds(0, 0, 600, 400);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -266,9 +266,9 @@ public class CadastroAtendimento extends javax.swing.JDialog {
     private javax.swing.JButton btPesquisar;
     private javax.swing.JButton btSalvar;
     private javax.swing.JButton btVoltar;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLFundo;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel jlNomeUsuario3;
+    private javax.swing.JLabel jlTipoAtendimento;
     private javax.swing.JTextField txtAtendimento;
     // End of variables declaration//GEN-END:variables
 }
