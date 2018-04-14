@@ -48,10 +48,6 @@ public class CadastroPrioridadeAtendimento extends javax.swing.JDialog {
         txtAtendimento.setEnabled(false);
     }
 
-    public void atualizarTabelaAtendimento() {
-        AtendimentoCadastroTableModel tbCadastroTableModel = new AtendimentoCadastroTableModel(atendimentos);
-        tbAtendimento.setModel(tbCadastroTableModel);
-    }
 
     public void addPrioridade() {
 
@@ -59,7 +55,7 @@ public class CadastroPrioridadeAtendimento extends javax.swing.JDialog {
             prioridadeAtendimento = new PrioridadeAtendimento();
             prioridadeAtendimento.setAtendimento(atendimento);
             prioridadeAtendimento.setPaciente(paciente);
-            atualizarTabelaAtendimento();
+            listaAtendimentos.add(prioridadeAtendimento);
         } else {
             System.out.println("Selecione um atendimento!");
         }
@@ -84,9 +80,6 @@ public class CadastroPrioridadeAtendimento extends javax.swing.JDialog {
         btExcluir = new javax.swing.JButton();
         btLimpar = new javax.swing.JButton();
         btSalvar = new javax.swing.JButton();
-        addProdutos = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tbAtendimento = new javax.swing.JTable();
         jlNomeUsuario5 = new javax.swing.JLabel();
         txtPaciente = new javax.swing.JTextField();
         btnPaciente = new javax.swing.JButton();
@@ -208,43 +201,6 @@ public class CadastroPrioridadeAtendimento extends javax.swing.JDialog {
         getContentPane().add(btSalvar);
         btSalvar.setBounds(670, 430, 80, 70);
 
-        addProdutos.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        addProdutos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/add40-40.png"))); // NOI18N
-        addProdutos.setText("Adicionar");
-        addProdutos.setToolTipText("Clique aqui para adicionar um novo estoque do produto selecionado.");
-        addProdutos.setContentAreaFilled(false);
-        addProdutos.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        addProdutos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        addProdutos.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        addProdutos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addProdutosActionPerformed(evt);
-            }
-        });
-        getContentPane().add(addProdutos);
-        addProdutos.setBounds(660, 160, 100, 80);
-
-        tbAtendimento.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        tbAtendimento.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tbAtendimentoMouseClicked(evt);
-            }
-        });
-        jScrollPane1.setViewportView(tbAtendimento);
-
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(50, 160, 620, 250);
-
         jlNomeUsuario5.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jlNomeUsuario5.setText("Paciente");
         getContentPane().add(jlNomeUsuario5);
@@ -296,13 +252,12 @@ public class CadastroPrioridadeAtendimento extends javax.swing.JDialog {
     private void btPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPesquisarActionPerformed
 
         if (prioridadeAtendimento.getIdPrioridadeAtendimento() != 0) {
-            //listaEstoqueCadastro = new ArrayList<>();
             listaAtendimentos = prioridadeAtendimentoDAO.checkExistseq("idPrioridadeAtendimento", prioridadeAtendimento.getIdPrioridadeAtendimento());
             if (listaAtendimentos != null) {
                 atualizarTabelaAtendimento();
             }
         } else {
-            JOptionPane.showMessageDialog(rootPane, "Selecione o produto!");
+            JOptionPane.showMessageDialog(rootPane, "Selecione um paciente!");
         }
 
     }//GEN-LAST:event_btPesquisarActionPerformed
@@ -324,17 +279,18 @@ public class CadastroPrioridadeAtendimento extends javax.swing.JDialog {
 
     private void btSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalvarActionPerformed
         String atendimentosSalvos = "";
-        for (PrioridadeAtendimento atendimento : listaAtendimentos) {
-            if (atendimento.getIdPrioridadeAtendimento() == 0) {
-                if (prioridadeAtendimentoDAO.salvar(atendimento)) {
-                    atendimentosSalvos = "ATENDIMENTO: " + atendimento.getAtendimento().getNomeAtendimento();
+        for (PrioridadeAtendimento atendi : listaAtendimentos) {
+            if (atendi.getIdPrioridadeAtendimento() == 0) {
+                if (prioridadeAtendimentoDAO.salvar(atendi)) {
+                    atendimentosSalvos = "ATENDIMENTO: " + atendi.getAtendimento().getNomeAtendimento();
                     prioridadeAtendimento = new PrioridadeAtendimento();
                 }
             }
         }
-        JOptionPane.showMessageDialog(this, "Lista de atendimentos do Paciente : " + txtPaciente.getText() + "\n\n" + atendimentosSalvos);
+        JOptionPane.showMessageDialog(this, "Lista de atendimento de : " + txtPaciente.getText() + "\n\n" + atendimentosSalvos);
         btLimparActionPerformed(null);
     }//GEN-LAST:event_btSalvarActionPerformed
+
 
     private void btVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarActionPerformed
         dispose();
@@ -376,34 +332,26 @@ public class CadastroPrioridadeAtendimento extends javax.swing.JDialog {
             txtAtendimento.setText(atendimento.getNomeAtendimento());
             txtPaciente.setEnabled(false);
             atendimentos = atendimentoDAO.checkExistseq("idAtendimento", atendimento.getIdAtendimento());
-            
+
         }
         //addPrioridade();
     }//GEN-LAST:event_btnAtendimentoActionPerformed
-
-    private void tbAtendimentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbAtendimentoMouseClicked
-        if (evt.getClickCount() == 1) {
-            btExcluir.setEnabled(true);
-        }
-    }//GEN-LAST:event_tbAtendimentoMouseClicked
 
     private void txtAtendimentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAtendimentoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtAtendimentoActionPerformed
 
-    private void addProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addProdutosActionPerformed
-        
-        if (txtAtendimento.getText().equals("") || txtPaciente.getText().equals("")) {
-            JOptionPane.showMessageDialog(rootPane, "Selecione um Paciente e um Atendimento!",
-                    "ERRO", JOptionPane.ERROR_MESSAGE);
-        } else {
+    public void addAPorraToda() {
+        if (paciente != null || atendimento != null) {
+            prioridadeAtendimento = new PrioridadeAtendimento();
+            prioridadeAtendimento.setPaciente(paciente);
+            prioridadeAtendimento.setAtendimento(atendimento);
+            listaAtendimentos.add(prioridadeAtendimento);
             atualizarTabelaAtendimento();
+        } else {
+            System.out.println("Selecione um paciente!");
         }
-            
-        
-        
-        //addPrioridade();
-    }//GEN-LAST:event_addProdutosActionPerformed
+    }
 
     /**
      * @param args the command line arguments
@@ -567,7 +515,6 @@ public class CadastroPrioridadeAtendimento extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton addProdutos;
     private javax.swing.JButton btExcluir;
     private javax.swing.JButton btLimpar;
     private javax.swing.JButton btPesquisar;
@@ -579,10 +526,8 @@ public class CadastroPrioridadeAtendimento extends javax.swing.JDialog {
     private javax.swing.JLabel jLObrigatorioNome3;
     private javax.swing.JLabel jLObrigatorioNome4;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel jlNomeUsuario5;
     private javax.swing.JLabel jlNomeUsuario6;
-    private javax.swing.JTable tbAtendimento;
     private javax.swing.JTextField txtAtendimento;
     private javax.swing.JTextField txtPaciente;
     // End of variables declaration//GEN-END:variables

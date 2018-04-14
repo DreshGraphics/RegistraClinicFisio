@@ -5,6 +5,7 @@
  */
 package registraclinic.prioridadeatendimento;
 
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -26,8 +27,11 @@ public class PrioridadeAtendimento {
     @GeneratedValue
     private int idPrioridadeAtendimento;
     
+    @Column(length = 100)
+    private String prioridade;
+    
     @ManyToOne(fetch = FetchType.EAGER)
-    private Atendimento atendimento;
+    private Atendimento tipoAtendimento;
     
     @OneToOne
     private Paciente paciente;
@@ -39,21 +43,41 @@ public class PrioridadeAtendimento {
     public void setIdPrioridadeAtendimento(int idPrioridadeAtendimento) {
         this.idPrioridadeAtendimento = idPrioridadeAtendimento;
     }
-
-    public Atendimento getAtendimento() {
-        return atendimento;
-    }
-
-    public void setAtendimento(Atendimento atendimento) {
-        this.atendimento = atendimento;
-    }
-
+    
     public Paciente getPaciente() {
         return paciente;
     }
 
     public void setPaciente(Paciente paciente) {
         this.paciente = paciente;
+    }
+
+    /**
+     * @return the atendimento
+     */
+    public Atendimento getAtendimento() {
+        return atendimento;
+    }
+
+    /**
+     * @param atendimento the atendimento to set
+     */
+    public void setAtendimento(Atendimento atendimento) {
+        this.atendimento = atendimento;
+    }
+
+    /**
+     * @return the prioridade
+     */
+    public String getPrioridade() {
+        return prioridade;
+    }
+
+    /**
+     * @param prioridade the prioridade to set
+     */
+    public void setPrioridade(String prioridade) {
+        this.prioridade = prioridade;
     }
     
 }

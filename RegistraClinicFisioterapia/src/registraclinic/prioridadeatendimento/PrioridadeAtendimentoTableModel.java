@@ -16,8 +16,8 @@ import javax.swing.table.AbstractTableModel;
 public class PrioridadeAtendimentoTableModel extends AbstractTableModel{
     
     private List<PrioridadeAtendimento> prioridadeAtendimento = new ArrayList<>();
-    private String[] colunas = {"Código", "Atendimento", "Paciente"};
-
+    private String[] colunas = {"Código", "Paciente"};
+    
     public PrioridadeAtendimentoTableModel(List<PrioridadeAtendimento> prioridadeAtendimento) {
         this.prioridadeAtendimento = prioridadeAtendimento;
     }
@@ -40,8 +40,6 @@ public class PrioridadeAtendimentoTableModel extends AbstractTableModel{
                 return cidade.getIdPrioridadeAtendimento();
             case 1:
                 return cidade.getPaciente().getNomePessoa();
-            case 2:
-                return cidade.getAtendimento().getNomeAtendimento();
             
 
         }
@@ -55,8 +53,6 @@ public class PrioridadeAtendimentoTableModel extends AbstractTableModel{
                 return colunas[0];
             case 1:
                 return colunas[1];
-            case 2:
-                return colunas[2];
         }
         return null;
     }
