@@ -38,22 +38,24 @@ public class CadastroAtendimento extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel6 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         btVoltar = new javax.swing.JButton();
         btLimpar = new javax.swing.JButton();
         btPesquisar = new javax.swing.JButton();
         btExcluir = new javax.swing.JButton();
         btSalvar = new javax.swing.JButton();
-        jlNomeUsuario3 = new javax.swing.JLabel();
+        jlTipoAtendimento = new javax.swing.JLabel();
         txtAtendimento = new javax.swing.JTextField();
+        jLFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setLocationByPlatform(true);
         setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(600, 400));
         setResizable(false);
 
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jPanel1.setPreferredSize(new java.awt.Dimension(600, 400));
+        jPanel1.setLayout(null);
 
         btVoltar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/voltar_1.png"))); // NOI18N
@@ -67,6 +69,8 @@ public class CadastroAtendimento extends javax.swing.JDialog {
                 btVoltarActionPerformed(evt);
             }
         });
+        jPanel1.add(btVoltar);
+        btVoltar.setBounds(20, 310, 90, 83);
 
         btLimpar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/limpar_1.png"))); // NOI18N
@@ -80,6 +84,8 @@ public class CadastroAtendimento extends javax.swing.JDialog {
                 btLimparActionPerformed(evt);
             }
         });
+        jPanel1.add(btLimpar);
+        btLimpar.setBounds(130, 310, 90, 84);
 
         btPesquisar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/pesquisa.png"))); // NOI18N
@@ -93,6 +99,8 @@ public class CadastroAtendimento extends javax.swing.JDialog {
                 btPesquisarActionPerformed(evt);
             }
         });
+        jPanel1.add(btPesquisar);
+        btPesquisar.setBounds(240, 310, 120, 85);
 
         btExcluir.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/excluir_1.png"))); // NOI18N
@@ -106,6 +114,8 @@ public class CadastroAtendimento extends javax.swing.JDialog {
                 btExcluirActionPerformed(evt);
             }
         });
+        jPanel1.add(btExcluir);
+        btExcluir.setBounds(380, 310, 90, 85);
 
         btSalvar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/salvar_1.png"))); // NOI18N
@@ -119,9 +129,13 @@ public class CadastroAtendimento extends javax.swing.JDialog {
                 btSalvarActionPerformed(evt);
             }
         });
+        jPanel1.add(btSalvar);
+        btSalvar.setBounds(490, 310, 90, 83);
 
-        jlNomeUsuario3.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
-        jlNomeUsuario3.setText("Tipo de Atendimento:");
+        jlTipoAtendimento.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jlTipoAtendimento.setText("Tipo de Atendimento:");
+        jPanel1.add(jlTipoAtendimento);
+        jlTipoAtendimento.setBounds(20, 60, 175, 18);
 
         txtAtendimento.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtAtendimento.setForeground(new java.awt.Color(51, 0, 51));
@@ -133,58 +147,32 @@ public class CadastroAtendimento extends javax.swing.JDialog {
                 txtAtendimentoActionPerformed(evt);
             }
         });
+        jPanel1.add(txtAtendimento);
+        txtAtendimento.setBounds(20, 90, 560, 30);
+
+        jLFundo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLFundo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jPanel1.add(jLFundo);
+        jLFundo.setBounds(0, 0, 600, 400);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(28, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtAtendimento, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(50, 50, 50)
-                        .addComponent(btLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30)
-                        .addComponent(btPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(btExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(40, 40, 40)
-                        .addComponent(btSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jlNomeUsuario3))
-                .addContainerGap())
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(106, 106, 106)
-                .addComponent(jlNomeUsuario3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(txtAtendimento, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 183, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtAtendimentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAtendimentoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAtendimentoActionPerformed
 
     private void btVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarActionPerformed
         dispose();
@@ -230,10 +218,6 @@ public class CadastroAtendimento extends javax.swing.JDialog {
         }
     }//GEN-LAST:event_btSalvarActionPerformed
 
-    private void txtAtendimentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAtendimentoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtAtendimentoActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -241,7 +225,7 @@ public class CadastroAtendimento extends javax.swing.JDialog {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -282,8 +266,9 @@ public class CadastroAtendimento extends javax.swing.JDialog {
     private javax.swing.JButton btPesquisar;
     private javax.swing.JButton btSalvar;
     private javax.swing.JButton btVoltar;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jlNomeUsuario3;
+    private javax.swing.JLabel jLFundo;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jlTipoAtendimento;
     private javax.swing.JTextField txtAtendimento;
     // End of variables declaration//GEN-END:variables
 }
