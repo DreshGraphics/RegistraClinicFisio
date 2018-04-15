@@ -3,9 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package registraclinic.triagem;
+package registraclinic.prioridadeatendimento;
 
-import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -21,27 +20,27 @@ import registraclinic.paciente.Paciente;
  * @author Karlos Oliveira
  */
 @Entity
-public class Triagem {
+public class PrioridadeAtendimento {
     
     @Id
     @GeneratedValue
-    private int idTriagem;
+    private int idPrioridadeAtendimento;
     
     @Column(length = 100)
     private String prioridade;
     
-    @OneToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     private Atendimento tipoAtendimento;
     
     @OneToOne
     private Paciente paciente;
 
-    public int getIdTriagem() {
-        return idTriagem;
+    public int getIdPrioridadeAtendimento() {
+        return idPrioridadeAtendimento;
     }
 
-    public void setIdTriagem(int idTriagem) {
-        this.idTriagem = idTriagem;
+    public void setIdPrioridadeAtendimento(int idPrioridadeAtendimento) {
+        this.idPrioridadeAtendimento = idPrioridadeAtendimento;
     }
     
     public Paciente getPaciente() {
@@ -67,5 +66,5 @@ public class Triagem {
     public void setTipoAtendimento(Atendimento tipoAtendimento) {
         this.tipoAtendimento = tipoAtendimento;
     }
-        
+    
 }

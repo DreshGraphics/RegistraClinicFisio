@@ -67,7 +67,7 @@ public class PacienteTableModel extends AbstractTableModel {
             case 10:
                 return paciente.getEnderecoPessoa();
             case 11:
-                return paciente.getCidade();
+                return paciente.getCidade().getNomeCidade();
             case 12:
                 return paciente.getTelefonePessoa();
         }

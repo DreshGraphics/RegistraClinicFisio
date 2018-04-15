@@ -51,7 +51,7 @@ public class FuncionarioTableModel extends AbstractTableModel {
             case 6:
                 return funcionario.getCpfPessoa();
             case 7:
-                return funcionario.getCidade();
+                return funcionario.getCidade().getNomeCidade();
             case 8:
                 return funcionario.getTelefonePessoa();
         }

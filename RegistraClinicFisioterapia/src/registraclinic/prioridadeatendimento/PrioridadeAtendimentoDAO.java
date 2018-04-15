@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package registraclinic.triagem;
+package registraclinic.prioridadeatendimento;
 
 import javax.swing.JOptionPane;
 import registraclinic.atendimento.Atendimento;
@@ -13,22 +13,22 @@ import registraclinic.util.GenericDAO;
  *
  * @author Karlos Oliveira
  */
-public class TriagemDAO extends GenericDAO<Triagem>{
+public class PrioridadeAtendimentoDAO extends GenericDAO<PrioridadeAtendimento>{
     
-    public TriagemDAO() {
-        super(Triagem.class);
+    public PrioridadeAtendimentoDAO() {
+        super(PrioridadeAtendimento.class);
     }
     
-     public boolean salvar(Triagem triagem) {
+     public boolean salvar(PrioridadeAtendimento prioridadeAtendimento) {
         Object[] options = {"Sim", "Não"};
-        if (triagem.getIdTriagem() == 0) {
-            if (adicionar(triagem)) {
+        if (prioridadeAtendimento.getIdPrioridadeAtendimento() == 0) {
+            if (adicionar(prioridadeAtendimento)) {
                 JOptionPane.showMessageDialog(null, "Triagem cadastrada com sucesso!");
                 return true;
             }
         } else if (JOptionPane.showOptionDialog(null, "Deseja mesmo realizar essa edição"
                 + "?", "", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]) == JOptionPane.YES_OPTION) {
-            if (atualizar(triagem)) {
+            if (atualizar(prioridadeAtendimento)) {
                 JOptionPane.showMessageDialog(null, "Triagem editada com sucesso!");
                 return true;
             }
@@ -38,12 +38,12 @@ public class TriagemDAO extends GenericDAO<Triagem>{
         }
         return false;
     }
-     public boolean excluir(Triagem Triagem) {
+     public boolean excluir(PrioridadeAtendimento prioridadeAtendimento) {
         Object[] options = {"Sim", "Não"};
-        if (Triagem.getIdTriagem() != 0) {
-            if (JOptionPane.showOptionDialog(null, "Deseja excluir a Triagem? "
+        if (prioridadeAtendimento.getIdPrioridadeAtendimento() != 0) {
+            if (JOptionPane.showOptionDialog(null, "Deseja excluír a Triagem? "
                     + "?", "", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]) == JOptionPane.YES_OPTION) {
-                if (remover(Triagem)) {
+                if (remover(prioridadeAtendimento)) {
                     JOptionPane.showMessageDialog(null, "Triagem excluída com sucesso!");
                 } else {
                     JOptionPane.showMessageDialog(null, "Não foi possível excluir a Triagem!",

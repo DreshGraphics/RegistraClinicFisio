@@ -40,8 +40,6 @@ public class AtendimentoTableModel extends AbstractTableModel {
                 return cidade.getIdAtendimento();
             case 1:
                 return cidade.getNomeAtendimento();
-            
-
         }
         return null;
     }

@@ -1074,7 +1074,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 txtComplemento.setText(alunos.getComplementoPessoa());
                 txtNaturalidade.setText(alunos.getNaturalidadePessoa());
                 txtOcupacao.setText(alunos.getOcupacaoPessoa());
-                txtCidade.setText(alunos.getCidade());
+                txtCidade.setText(alunos.getCidade().getNomeCidade());
                 jcEstadoCivil.setSelectedItem(alunos.getEstadoCivilPessoa());
                 jcSexo.setSelectedItem(alunos.getSexoPessoa());
                 jcTipoUsuario.setSelectedItem(alunos.getTipoUsuario());
@@ -1085,6 +1085,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 txtLoginAluno.setText(alunos.getLoginUsuario());
                 txtSenhaAluno.setText(alunos.getSenhaUsuario());
 
+                cidade = alunos.getCidade();
                 btExcluir.setEnabled(true);
             } else {
                 jtGeral.setEnabledAt(1, false);
@@ -1108,7 +1109,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 txtComplemento.setText(funcionario.getComplementoPessoa());
                 txtNaturalidade.setText(funcionario.getNaturalidadePessoa());
                 txtOcupacao.setText(funcionario.getOcupacaoPessoa());
-                txtCidade.setText(funcionario.getCidade());
+                txtCidade.setText(funcionario.getCidade().getNomeCidade());
                 jcEstadoCivil.setSelectedItem(funcionario.getEstadoCivilPessoa());
                 jcSexo.setSelectedItem(funcionario.getSexoPessoa());
                 jcTipoUsuario.setSelectedItem(funcionario.getTipoUsuario());
@@ -1118,6 +1119,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 txtLoginFuncionario.setText(funcionario.getLoginUsuario());
                 txtSenhaFuncionario.setText(funcionario.getSenhaUsuario());
 
+                cidade = funcionario.getCidade();
                 btExcluir.setEnabled(true);
             } else {
                 jtGeral.setEnabledAt(2, false);
@@ -1141,7 +1143,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 txtComplemento.setText(paciente.getComplementoPessoa());
                 txtNaturalidade.setText(paciente.getNaturalidadePessoa());
                 txtOcupacao.setText(paciente.getOcupacaoPessoa());
-                txtCidade.setText(paciente.getCidade());
+                txtCidade.setText(paciente.getCidade().getNomeCidade());
                 jcEstadoCivil.setSelectedItem(paciente.getEstadoCivilPessoa());
                 jcSexo.setSelectedItem(paciente.getSexoPessoa());
 
@@ -1151,6 +1153,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 txtPeso.setText(paciente.getPesoPaciente());
                 txtAltura.setText(paciente.getAlturaPaciente());
 
+                cidade = paciente.getCidade();
                 btExcluir.setEnabled(true);
             } else {
                 jtGeral.setEnabledAt(3, false);
@@ -1174,7 +1177,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 txtComplemento.setText(supervisor.getComplementoPessoa());
                 txtNaturalidade.setText(supervisor.getNaturalidadePessoa());
                 txtOcupacao.setText(supervisor.getOcupacaoPessoa());
-                txtCidade.setText(supervisor.getCidade());
+                txtCidade.setText(supervisor.getCidade().getNomeCidade());
                 jcEstadoCivil.setSelectedItem(supervisor.getEstadoCivilPessoa());
                 jcSexo.setSelectedItem(supervisor.getSexoPessoa());
                 jcTipoUsuario.setSelectedItem(supervisor.getTipoUsuario());
@@ -1185,6 +1188,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 txtLoginSupervisor.setText(supervisor.getLoginUsuario());
                 txtSenhaSupervisor.setText(supervisor.getSenhaUsuario());
 
+                cidade = supervisor.getCidade();
                 btExcluir.setEnabled(true);
             } else {
                 jtGeral.setEnabledAt(4, false);
@@ -1193,7 +1197,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
             JOptionPane.showMessageDialog(rootPane, "Selecione o Tipo de Usuário para a pesquisa!",
                     "ERRO", JOptionPane.ERROR_MESSAGE);
         }
-
+        
     }//GEN-LAST:event_btPesquisarActionPerformed
 
     private void btExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExcluirActionPerformed
@@ -1292,7 +1296,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 alunos.setOcupacaoPessoa(txtOcupacao.getText());
                 alunos.setComplementoPessoa(txtComplemento.getText());
                 alunos.setIdadePessoa(getIdade(formataData(txtDataNascimento.getText())));
-                alunos.setCidade(cidade.getNomeCidade());
+                alunos.setCidade(cidade);
                 alunos.setCpfPessoa(txtCpf.getText());
                 alunos.setRgPessoa(txtRg.getText());
 
@@ -1316,7 +1320,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 paciente.setNaturalidadePessoa(txtNaturalidade.getText());
                 paciente.setSexoPessoa(jcSexo.getSelectedItem().toString());
                 paciente.setEstadoCivilPessoa(jcEstadoCivil.getSelectedItem().toString());
-                paciente.setCidade(cidade.getNomeCidade());
+                paciente.setCidade(cidade);
 
                 paciente.setBairroPessoa(txtBairro.getText());
                 paciente.setOcupacaoPessoa(txtOcupacao.getText());
@@ -1343,7 +1347,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 funcionario.setNaturalidadePessoa(txtNaturalidade.getText());
                 funcionario.setSexoPessoa(jcSexo.getSelectedItem().toString());
                 funcionario.setEstadoCivilPessoa(jcEstadoCivil.getSelectedItem().toString());
-                funcionario.setCidade(cidade.getNomeCidade());
+                funcionario.setCidade(cidade);
                 funcionario.setBairroPessoa(txtBairro.getText());
                 funcionario.setOcupacaoPessoa(txtOcupacao.getText());
                 funcionario.setComplementoPessoa(txtComplemento.getText());
@@ -1371,7 +1375,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 supervisor.setNaturalidadePessoa(txtNaturalidade.getText());
                 supervisor.setSexoPessoa(jcSexo.getSelectedItem().toString());
                 supervisor.setEstadoCivilPessoa(jcEstadoCivil.getSelectedItem().toString());
-                supervisor.setCidade(cidade.getNomeCidade());
+                supervisor.setCidade(cidade);
                 supervisor.setBairroPessoa(txtBairro.getText());
                 supervisor.setOcupacaoPessoa(txtOcupacao.getText());
                 supervisor.setComplementoPessoa(txtComplemento.getText());
