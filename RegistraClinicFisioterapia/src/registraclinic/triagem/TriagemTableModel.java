@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package registraclinic.prioridadeatendimento;
+package registraclinic.triagem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,12 +13,12 @@ import javax.swing.table.AbstractTableModel;
  *
  * @author Karlos Oliveira
  */
-public class PrioridadeAtendimentoTableModel extends AbstractTableModel{
+public class TriagemTableModel extends AbstractTableModel{
     
-    private List<PrioridadeAtendimento> prioridadeAtendimento = new ArrayList<>();
+    private List<Triagem> prioridadeAtendimento = new ArrayList<>();
     private String[] colunas = {"Código", "Paciente"};
     
-    public PrioridadeAtendimentoTableModel(List<PrioridadeAtendimento> prioridadeAtendimento) {
+    public TriagemTableModel(List<Triagem> prioridadeAtendimento) {
         this.prioridadeAtendimento = prioridadeAtendimento;
     }
 
@@ -34,10 +34,10 @@ public class PrioridadeAtendimentoTableModel extends AbstractTableModel{
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        PrioridadeAtendimento cidade = prioridadeAtendimento.get(rowIndex);
+        Triagem cidade = prioridadeAtendimento.get(rowIndex);
         switch (columnIndex) {
             case 0:
-                return cidade.getIdPrioridadeAtendimento();
+                return cidade.getIdTriagem();
             case 1:
                 return cidade.getPaciente().getNomePessoa();
             

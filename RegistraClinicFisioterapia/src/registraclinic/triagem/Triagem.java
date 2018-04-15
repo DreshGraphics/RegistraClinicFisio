@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package registraclinic.prioridadeatendimento;
+package registraclinic.triagem;
 
 import java.util.List;
 import javax.persistence.Column;
@@ -21,27 +21,27 @@ import registraclinic.paciente.Paciente;
  * @author Karlos Oliveira
  */
 @Entity
-public class PrioridadeAtendimento {
+public class Triagem {
     
     @Id
     @GeneratedValue
-    private int idPrioridadeAtendimento;
+    private int idTriagem;
     
     @Column(length = 100)
     private String prioridade;
     
-    @ManyToOne(fetch = FetchType.EAGER)
+    @OneToOne
     private Atendimento tipoAtendimento;
     
     @OneToOne
     private Paciente paciente;
 
-    public int getIdPrioridadeAtendimento() {
-        return idPrioridadeAtendimento;
+    public int getIdTriagem() {
+        return idTriagem;
     }
 
-    public void setIdPrioridadeAtendimento(int idPrioridadeAtendimento) {
-        this.idPrioridadeAtendimento = idPrioridadeAtendimento;
+    public void setIdTriagem(int idTriagem) {
+        this.idTriagem = idTriagem;
     }
     
     public Paciente getPaciente() {
@@ -52,32 +52,20 @@ public class PrioridadeAtendimento {
         this.paciente = paciente;
     }
 
-    /**
-     * @return the atendimento
-     */
-    public Atendimento getAtendimento() {
-        return atendimento;
-    }
-
-    /**
-     * @param atendimento the atendimento to set
-     */
-    public void setAtendimento(Atendimento atendimento) {
-        this.atendimento = atendimento;
-    }
-
-    /**
-     * @return the prioridade
-     */
     public String getPrioridade() {
         return prioridade;
     }
 
-    /**
-     * @param prioridade the prioridade to set
-     */
     public void setPrioridade(String prioridade) {
         this.prioridade = prioridade;
     }
-    
+
+    public Atendimento getTipoAtendimento() {
+        return tipoAtendimento;
+    }
+
+    public void setTipoAtendimento(Atendimento tipoAtendimento) {
+        this.tipoAtendimento = tipoAtendimento;
+    }
+        
 }

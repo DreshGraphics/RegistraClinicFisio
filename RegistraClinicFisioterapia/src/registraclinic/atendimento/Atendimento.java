@@ -17,7 +17,6 @@ public class Atendimento {
 
     @Id
     @GeneratedValue
-
     private int idAtendimento;
     @Column(length = 50, nullable = false)
     private String nomeAtendimento;

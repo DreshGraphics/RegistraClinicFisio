@@ -213,9 +213,10 @@ public class CadastroAtendimento extends javax.swing.JDialog {
             if (Util.chkVazio(txtAtendimento.getText(), txtAtendimento.getText())) {
                 atendimento.setNomeAtendimento(txtAtendimento.getText().toUpperCase());
                 atendimentoDAO.salvar(atendimento);
-                btLimparActionPerformed(null);
+                
             }
         }
+        btLimparActionPerformed(null);
     }//GEN-LAST:event_btSalvarActionPerformed
 
     /**

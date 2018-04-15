@@ -20,6 +20,7 @@
         <mapping class="registraclinic.supervisor.Supervisor"/>
         <mapping class="registraclinic.cidade.Cidade"/>
         <mapping class="registraclinic.atendimento.Atendimento"/>
+        <mapping class="registraclinic.prioridadeatendimento.PrioridadeAtendimento"/>
     </session-factory>
 </hibernate-configuration>
 

@@ -6,40 +6,32 @@
 package registraclinic.telas;
 
 import registraclinic.util.Util;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import javax.swing.JOptionPane;
 import registraclinic.atendimento.Atendimento;
-import registraclinic.atendimento.AtendimentoCadastroTableModel;
 import registraclinic.atendimento.AtendimentoDAO;
 import registraclinic.atendimento.AtendimentoTableModel;
 import registraclinic.paciente.Paciente;
 import registraclinic.paciente.PacienteDAO;
 import registraclinic.paciente.PacienteTableModel;
-import registraclinic.prioridadeatendimento.PrioridadeAtendimento;
-import registraclinic.prioridadeatendimento.PrioridadeAtendimentoDAO;
-import registraclinic.prioridadeatendimento.PrioridadeAtendimentoTableModel;
+import registraclinic.triagem.Triagem;
+import registraclinic.triagem.TriagemDAO;
+import registraclinic.triagem.TriagemTableModel;
 
 /**
  *
  * @author Karlos Oliveira
  */
-public class CadastroPrioridadeAtendimento extends javax.swing.JDialog {
+public class CadastroTriagem extends javax.swing.JDialog {
 
     Paciente paciente = new Paciente();
     PacienteDAO pacienteDAO = new PacienteDAO();
     Atendimento atendimento = new Atendimento();
     AtendimentoDAO atendimentoDAO = new AtendimentoDAO();
-    PrioridadeAtendimento prioridadeAtendimento = new PrioridadeAtendimento();
-    PrioridadeAtendimentoDAO prioridadeAtendimentoDAO = new PrioridadeAtendimentoDAO();
-    List<PrioridadeAtendimento> listaAtendimentos = new ArrayList<>();
-    List<Paciente> pacientes = new ArrayList<>();
-    List<Atendimento> atendimentos = new ArrayList<>();
-    SimpleDateFormat formatarData = new SimpleDateFormat("dd/MM/yyyy");
+    Triagem prioridadeAtendimento = new Triagem();
+    TriagemDAO prioridadeAtendimentoDAO = new TriagemDAO();
 
-    public CadastroPrioridadeAtendimento(java.awt.Frame parent, boolean modal) {
+    public CadastroTriagem(java.awt.Frame parent, boolean modal) {
         initComponents();
         getRootPane().setDefaultButton(btSalvar);
         btLimparActionPerformed(null);
@@ -48,18 +40,7 @@ public class CadastroPrioridadeAtendimento extends javax.swing.JDialog {
         txtAtendimento.setEnabled(false);
     }
 
-
-    public void addPrioridade() {
-
-        if (prioridadeAtendimento != null) {
-            prioridadeAtendimento = new PrioridadeAtendimento();
-            prioridadeAtendimento.setAtendimento(atendimento);
-            prioridadeAtendimento.setPaciente(paciente);
-            listaAtendimentos.add(prioridadeAtendimento);
-        } else {
-            System.out.println("Selecione um atendimento!");
-        }
-    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -70,7 +51,7 @@ public class CadastroPrioridadeAtendimento extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        grupoDestino = new javax.swing.ButtonGroup();
+        grupoPrioridade = new javax.swing.ButtonGroup();
         btVoltar = new javax.swing.JButton();
         btPesquisar = new javax.swing.JButton();
         btnAtendimento = new javax.swing.JButton();
@@ -80,19 +61,37 @@ public class CadastroPrioridadeAtendimento extends javax.swing.JDialog {
         btExcluir = new javax.swing.JButton();
         btLimpar = new javax.swing.JButton();
         btSalvar = new javax.swing.JButton();
+        jrAzul = new javax.swing.JRadioButton();
+        verde1 = new javax.swing.JLabel();
         jlNomeUsuario5 = new javax.swing.JLabel();
+        jrAmarelo = new javax.swing.JRadioButton();
+        jrLaranja = new javax.swing.JRadioButton();
+        jLabel7 = new javax.swing.JLabel();
         txtPaciente = new javax.swing.JTextField();
+        verde = new javax.swing.JLabel();
+        jrVerde = new javax.swing.JRadioButton();
+        amarelo = new javax.swing.JLabel();
+        laranja = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+        jSeparator3 = new javax.swing.JSeparator();
         btnPaciente = new javax.swing.JButton();
+        jSeparator4 = new javax.swing.JSeparator();
         jLObrigatorioNome3 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(773, 521));
+        setMinimumSize(new java.awt.Dimension(810, 521));
         setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(null);
 
         btVoltar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/voltar_1.png"))); // NOI18N
         btVoltar.setText("Voltar");
         btVoltar.setContentAreaFilled(false);
         btVoltar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -105,9 +104,10 @@ public class CadastroPrioridadeAtendimento extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btVoltar);
-        btVoltar.setBounds(30, 430, 90, 70);
+        btVoltar.setBounds(30, 440, 90, 70);
 
         btPesquisar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/pesquisa.png"))); // NOI18N
         btPesquisar.setText("Pesquisar");
         btPesquisar.setContentAreaFilled(false);
         btPesquisar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -119,7 +119,7 @@ public class CadastroPrioridadeAtendimento extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btPesquisar);
-        btPesquisar.setBounds(340, 430, 100, 70);
+        btPesquisar.setBounds(360, 440, 100, 70);
 
         btnAtendimento.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnAtendimento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/add-20-20.png"))); // NOI18N
@@ -134,7 +134,7 @@ public class CadastroPrioridadeAtendimento extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btnAtendimento);
-        btnAtendimento.setBounds(430, 110, 30, 30);
+        btnAtendimento.setBounds(770, 90, 30, 30);
 
         txtAtendimento.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtAtendimento.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(100, 44, 143), 1, true));
@@ -146,20 +146,21 @@ public class CadastroPrioridadeAtendimento extends javax.swing.JDialog {
             }
         });
         getContentPane().add(txtAtendimento);
-        txtAtendimento.setBounds(50, 110, 370, 30);
+        txtAtendimento.setBounds(430, 90, 340, 30);
 
         jlNomeUsuario6.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jlNomeUsuario6.setText("Atendimento");
         getContentPane().add(jlNomeUsuario6);
-        jlNomeUsuario6.setBounds(50, 90, 120, 20);
+        jlNomeUsuario6.setBounds(430, 70, 120, 20);
 
         jLObrigatorioNome4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome4.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome4.setText("*");
         getContentPane().add(jLObrigatorioNome4);
-        jLObrigatorioNome4.setBounds(420, 100, 10, 30);
+        jLObrigatorioNome4.setBounds(760, 80, 9, 10);
 
         btExcluir.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/excluir_1.png"))); // NOI18N
         btExcluir.setText("Excluir");
         btExcluir.setContentAreaFilled(false);
         btExcluir.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -171,9 +172,10 @@ public class CadastroPrioridadeAtendimento extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btExcluir);
-        btExcluir.setBounds(450, 430, 80, 70);
+        btExcluir.setBounds(500, 440, 80, 70);
 
         btLimpar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/limpar_1.png"))); // NOI18N
         btLimpar.setText("Limpar");
         btLimpar.setContentAreaFilled(false);
         btLimpar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -185,9 +187,10 @@ public class CadastroPrioridadeAtendimento extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btLimpar);
-        btLimpar.setBounds(240, 430, 80, 70);
+        btLimpar.setBounds(240, 440, 80, 70);
 
         btSalvar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/salvar_1.png"))); // NOI18N
         btSalvar.setText("Salvar");
         btSalvar.setContentAreaFilled(false);
         btSalvar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -199,12 +202,44 @@ public class CadastroPrioridadeAtendimento extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btSalvar);
-        btSalvar.setBounds(670, 430, 80, 70);
+        btSalvar.setBounds(720, 440, 80, 70);
+
+        grupoPrioridade.add(jrAzul);
+        jrAzul.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jrAzul.setText("Azul");
+        jrAzul.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrAzulActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jrAzul);
+        jrAzul.setBounds(60, 390, 70, 23);
+
+        verde1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/azul.png"))); // NOI18N
+        getContentPane().add(verde1);
+        verde1.setBounds(20, 380, 40, 40);
 
         jlNomeUsuario5.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jlNomeUsuario5.setText("Paciente");
         getContentPane().add(jlNomeUsuario5);
-        jlNomeUsuario5.setBounds(50, 20, 70, 20);
+        jlNomeUsuario5.setBounds(20, 70, 70, 20);
+
+        grupoPrioridade.add(jrAmarelo);
+        jrAmarelo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jrAmarelo.setText("Amarelo");
+        getContentPane().add(jrAmarelo);
+        jrAmarelo.setBounds(60, 250, 90, 23);
+
+        grupoPrioridade.add(jrLaranja);
+        jrLaranja.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jrLaranja.setText("Laranja");
+        getContentPane().add(jrLaranja);
+        jrLaranja.setBounds(60, 180, 80, 25);
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 21)); // NOI18N
+        jLabel7.setText("Prioridade de Atendimento");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(250, 130, 300, 30);
 
         txtPaciente.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtPaciente.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(100, 44, 143), 1, true));
@@ -216,7 +251,58 @@ public class CadastroPrioridadeAtendimento extends javax.swing.JDialog {
             }
         });
         getContentPane().add(txtPaciente);
-        txtPaciente.setBounds(50, 40, 370, 30);
+        txtPaciente.setBounds(20, 90, 340, 30);
+
+        verde.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/verde.png"))); // NOI18N
+        getContentPane().add(verde);
+        verde.setBounds(20, 310, 40, 40);
+
+        grupoPrioridade.add(jrVerde);
+        jrVerde.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jrVerde.setText("Verde");
+        jrVerde.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrVerdeActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jrVerde);
+        jrVerde.setBounds(60, 320, 70, 23);
+
+        amarelo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/amarelo.png"))); // NOI18N
+        getContentPane().add(amarelo);
+        amarelo.setBounds(20, 240, 40, 40);
+
+        laranja.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/laranja.png"))); // NOI18N
+        getContentPane().add(laranja);
+        laranja.setBounds(20, 170, 40, 40);
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel1.setText("Paciente com patologia crônica não agudizada que pode aguardar - encaixar quando possível");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(160, 380, 640, 40);
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setText("Paciente necessita de atendimento o mais protamente possível - encaixá-lo no máximo em 7 dias");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(160, 170, 650, 40);
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel4.setText("Paciente com patologia crônica que pode aguardar, mas sem tanta espera - encaixar dentro de 1 mês");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(160, 310, 630, 40);
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel3.setText("Paciente necessita iniciar a fisioterapia nos próximos 15 dias");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(160, 240, 440, 40);
+        getContentPane().add(jSeparator1);
+        jSeparator1.setBounds(0, 430, 810, 10);
+        getContentPane().add(jSeparator2);
+        jSeparator2.setBounds(0, 130, 810, 10);
+
+        jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        getContentPane().add(jSeparator3);
+        jSeparator3.setBounds(150, 160, 10, 270);
 
         btnPaciente.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnPaciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/add-20-20.png"))); // NOI18N
@@ -230,65 +316,81 @@ public class CadastroPrioridadeAtendimento extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btnPaciente);
-        btnPaciente.setBounds(430, 40, 30, 30);
+        btnPaciente.setBounds(360, 90, 30, 30);
+        getContentPane().add(jSeparator4);
+        jSeparator4.setBounds(0, 160, 810, 10);
 
         jLObrigatorioNome3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome3.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome3.setText("*");
         getContentPane().add(jLObrigatorioNome3);
-        jLObrigatorioNome3.setBounds(420, 30, 10, 30);
+        jLObrigatorioNome3.setBounds(350, 70, 10, 30);
 
         jLabel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jLabel6.setMaximumSize(new java.awt.Dimension(773, 520));
-        jLabel6.setMinimumSize(new java.awt.Dimension(773, 520));
-        jLabel6.setPreferredSize(new java.awt.Dimension(773, 520));
+        jLabel6.setMaximumSize(new java.awt.Dimension(810, 521));
+        jLabel6.setMinimumSize(new java.awt.Dimension(810, 521));
+        jLabel6.setPreferredSize(new java.awt.Dimension(810, 521));
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(2, 0, 770, 520);
+        jLabel6.setBounds(2, 0, 810, 521);
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPesquisarActionPerformed
-
-        if (prioridadeAtendimento.getIdPrioridadeAtendimento() != 0) {
-            listaAtendimentos = prioridadeAtendimentoDAO.checkExistseq("idPrioridadeAtendimento", prioridadeAtendimento.getIdPrioridadeAtendimento());
-            if (listaAtendimentos != null) {
-                atualizarTabelaAtendimento();
+        List<Triagem> lista;
+        lista = (prioridadeAtendimentoDAO.listar());
+        TriagemTableModel itm = new TriagemTableModel(lista);
+        Object objetoRetorno = PesquisaGenerica.exibeTela(itm, "Prioridade Atendimento");
+        if (objetoRetorno != null) {
+            prioridadeAtendimento = prioridadeAtendimentoDAO.consultarObjetoId("idPrioridadeAtendimento", objetoRetorno);
+            txtPaciente.setText(prioridadeAtendimento.getPaciente().getNomePessoa());
+            txtAtendimento.setText(prioridadeAtendimento.getTipoAtendimento().getNomeAtendimento());
+            if (prioridadeAtendimento.getPrioridade().equalsIgnoreCase(jrAzul.getText())) {
+                jrAzul.setSelected(true);
             }
-        } else {
-            JOptionPane.showMessageDialog(rootPane, "Selecione um paciente!");
+            if (prioridadeAtendimento.getPrioridade().equalsIgnoreCase(jrAmarelo.getText())) {
+                jrAmarelo.setSelected(true);
+            }
+            if (prioridadeAtendimento.getPrioridade().equalsIgnoreCase(jrLaranja.getText())) {
+                jrLaranja.setSelected(true);
+            }
+            if (prioridadeAtendimento.getPrioridade().equalsIgnoreCase(jrVerde.getText())) {
+                jrVerde.setSelected(true);
+            }
+            btExcluir.setEnabled(true);
         }
-
     }//GEN-LAST:event_btPesquisarActionPerformed
 
     private void btExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExcluirActionPerformed
-        if (tbAtendimento.getSelectedRow() > -1) {
-            if (listaAtendimentos.get(tbAtendimento.getSelectedRow()).getIdPrioridadeAtendimento() != 0) {
-                prioridadeAtendimentoDAO.excluir(listaAtendimentos.get(tbAtendimento.getSelectedRow()));
-            }
-            listaAtendimentos.remove(tbAtendimento.getSelectedRow());
-            atualizarTabelaAtendimento();
-        } else {
-            JOptionPane.showMessageDialog(rootPane, "Selecione um produto!",
-                    "ERRO", JOptionPane.ERROR_MESSAGE);
-        }
-
+        prioridadeAtendimentoDAO.excluir(prioridadeAtendimento);
+        btLimparActionPerformed(null);
     }//GEN-LAST:event_btExcluirActionPerformed
 
 
     private void btSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalvarActionPerformed
-        String atendimentosSalvos = "";
-        for (PrioridadeAtendimento atendi : listaAtendimentos) {
-            if (atendi.getIdPrioridadeAtendimento() == 0) {
-                if (prioridadeAtendimentoDAO.salvar(atendi)) {
-                    atendimentosSalvos = "ATENDIMENTO: " + atendi.getAtendimento().getNomeAtendimento();
-                    prioridadeAtendimento = new PrioridadeAtendimento();
-                }
+        if (txtAtendimento.getText().equals("") || txtPaciente.getText().equals("")
+                || !(jrAmarelo.isSelected() || jrAzul.isSelected() || jrLaranja.isSelected() || jrVerde.isSelected())) {
+            JOptionPane.showMessageDialog(this, "Prencha todos os campos !!");
+        } else {
+            if (jrAzul.isSelected()) {
+                prioridadeAtendimento.setPrioridade(jrAzul.getText());
+            } else if (jrLaranja.isSelected()) {
+                prioridadeAtendimento.setPrioridade(jrLaranja.getText());
+            } else if (jrVerde.isSelected()) {
+                prioridadeAtendimento.setPrioridade(jrVerde.getText());
+            } else if (jrAmarelo.isSelected()) {
+                prioridadeAtendimento.setPrioridade(jrAmarelo.getText());
             }
+            prioridadeAtendimento.setPaciente(paciente);
+            prioridadeAtendimento.setTipoAtendimento(atendimento);
+
+            prioridadeAtendimentoDAO.salvar(prioridadeAtendimento);
+            grupoPrioridade.clearSelection();
+            btLimparActionPerformed(null);
+            prioridadeAtendimento = new Triagem();
+
         }
-        JOptionPane.showMessageDialog(this, "Lista de atendimento de : " + txtPaciente.getText() + "\n\n" + atendimentosSalvos);
-        btLimparActionPerformed(null);
     }//GEN-LAST:event_btSalvarActionPerformed
 
 
@@ -304,21 +406,16 @@ public class CadastroPrioridadeAtendimento extends javax.swing.JDialog {
         List<Paciente> lista;
         lista = (pacienteDAO.listar());
         PacienteTableModel itm = new PacienteTableModel(lista);
-        Object objetoRetorno = PesquisaGenerica.exibeTela(itm, "Paciente");
+        Object objetoRetorno = PesquisaGenerica.exibeTela(itm, "Pacinte");
         if (objetoRetorno != null) {
             paciente = pacienteDAO.consultarObjetoId("idPessoa", objetoRetorno);
             txtPaciente.setText(paciente.getNomePessoa());
-            txtPaciente.setEnabled(false);
-            pacientes = pacienteDAO.checkExistseq("idPessoa", paciente.getIdPessoa());
-            //atualizarTabelaAtendimento();
         }
     }//GEN-LAST:event_btnPacienteActionPerformed
 
 
     private void btLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLimparActionPerformed
         Util.limparCamposGenerico(this);
-        listaAtendimentos = new ArrayList<>();
-        atualizarTabelaAtendimento();
         atendimento = new Atendimento();
     }//GEN-LAST:event_btLimparActionPerformed
 
@@ -330,24 +427,26 @@ public class CadastroPrioridadeAtendimento extends javax.swing.JDialog {
         if (objetoRetorno != null) {
             atendimento = atendimentoDAO.consultarObjetoId("idAtendimento", objetoRetorno);
             txtAtendimento.setText(atendimento.getNomeAtendimento());
-            txtPaciente.setEnabled(false);
-            atendimentos = atendimentoDAO.checkExistseq("idAtendimento", atendimento.getIdAtendimento());
-
         }
-        //addPrioridade();
     }//GEN-LAST:event_btnAtendimentoActionPerformed
 
     private void txtAtendimentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAtendimentoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtAtendimentoActionPerformed
 
+    private void jrVerdeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrVerdeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jrVerdeActionPerformed
+
+    private void jrAzulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrAzulActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jrAzulActionPerformed
+
     public void addAPorraToda() {
         if (paciente != null || atendimento != null) {
-            prioridadeAtendimento = new PrioridadeAtendimento();
+            prioridadeAtendimento = new Triagem();
             prioridadeAtendimento.setPaciente(paciente);
-            prioridadeAtendimento.setAtendimento(atendimento);
-            listaAtendimentos.add(prioridadeAtendimento);
-            atualizarTabelaAtendimento();
+            //prioridadeAtendimento.setAtendimento(atendimento);
         } else {
             System.out.println("Selecione um paciente!");
         }
@@ -370,14 +469,134 @@ public class CadastroPrioridadeAtendimento extends javax.swing.JDialog {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CadastroPrioridadeAtendimento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CadastroTriagem.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CadastroPrioridadeAtendimento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CadastroTriagem.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CadastroPrioridadeAtendimento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CadastroTriagem.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CadastroPrioridadeAtendimento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CadastroTriagem.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -502,7 +721,7 @@ public class CadastroPrioridadeAtendimento extends javax.swing.JDialog {
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                CadastroPrioridadeAtendimento dialog = new CadastroPrioridadeAtendimento(new javax.swing.JFrame(), true);
+                CadastroTriagem dialog = new CadastroTriagem(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
@@ -515,6 +734,7 @@ public class CadastroPrioridadeAtendimento extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel amarelo;
     private javax.swing.JButton btExcluir;
     private javax.swing.JButton btLimpar;
     private javax.swing.JButton btPesquisar;
@@ -522,13 +742,29 @@ public class CadastroPrioridadeAtendimento extends javax.swing.JDialog {
     private javax.swing.JButton btVoltar;
     private javax.swing.JButton btnAtendimento;
     private javax.swing.JButton btnPaciente;
-    private javax.swing.ButtonGroup grupoDestino;
+    private javax.swing.ButtonGroup grupoPrioridade;
     private javax.swing.JLabel jLObrigatorioNome3;
     private javax.swing.JLabel jLObrigatorioNome4;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
     private javax.swing.JLabel jlNomeUsuario5;
     private javax.swing.JLabel jlNomeUsuario6;
+    private javax.swing.JRadioButton jrAmarelo;
+    private javax.swing.JRadioButton jrAzul;
+    private javax.swing.JRadioButton jrLaranja;
+    private javax.swing.JRadioButton jrVerde;
+    private javax.swing.JLabel laranja;
     private javax.swing.JTextField txtAtendimento;
     private javax.swing.JTextField txtPaciente;
+    private javax.swing.JLabel verde;
+    private javax.swing.JLabel verde1;
     // End of variables declaration//GEN-END:variables
 }
