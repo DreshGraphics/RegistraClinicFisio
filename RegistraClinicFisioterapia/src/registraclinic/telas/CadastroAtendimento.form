@@ -52,8 +52,11 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="3e" green="64" red="38" type="rgb"/>
+            </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/registraclinic/imagens/voltar_1.png"/>
+              <Image iconType="3" name="/registraclinic/imagens/voltar_fisio.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Voltar"/>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -77,8 +80,11 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="3e" green="64" red="38" type="rgb"/>
+            </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/registraclinic/imagens/limpar_1.png"/>
+              <Image iconType="3" name="/registraclinic/imagens/limpar_fisio.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Limpar"/>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -102,8 +108,11 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="3e" green="64" red="38" type="rgb"/>
+            </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/registraclinic/imagens/pesquisa.png"/>
+              <Image iconType="3" name="/registraclinic/imagens/pesquisar_fisio.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Pesquisar"/>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -118,7 +127,7 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="240" y="310" width="120" height="-1"/>
+              <AbsoluteConstraints x="250" y="310" width="100" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -127,8 +136,11 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="3e" green="64" red="38" type="rgb"/>
+            </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/registraclinic/imagens/excluir_1.png"/>
+              <Image iconType="3" name="/registraclinic/imagens/excluir_fisio.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Excluir"/>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -152,8 +164,11 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="3e" green="64" red="38" type="rgb"/>
+            </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/registraclinic/imagens/salvar_1.png"/>
+              <Image iconType="3" name="/registraclinic/imagens/save_fisio.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Salvar"/>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -172,16 +187,35 @@
             </Constraint>
           </Constraints>
         </Component>
+        <Component class="javax.swing.JLabel" name="jLObrigatorioNome24">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="14" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="cc" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="*"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="550" y="140" width="10" height="10"/>
+            </Constraint>
+          </Constraints>
+        </Component>
         <Component class="javax.swing.JLabel" name="jlTipoAtendimento">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="15" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Tipo de Atendimento:"/>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="3e" green="64" red="3a" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Tipo de Atendimento"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="20" y="60" width="-1" height="-1"/>
+              <AbsoluteConstraints x="40" y="130" width="-1" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -191,12 +225,12 @@
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="33" green="0" red="33" type="rgb"/>
+              <Color blue="3e" green="64" red="3a" type="rgb"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                 <LineBorder roundedCorners="true">
-                  <Color PropertyName="color" blue="8f" green="2c" red="64" type="rgb"/>
+                  <Color PropertyName="color" blue="3e" green="64" red="3a" type="rgb"/>
                 </LineBorder>
               </Border>
             </Property>
@@ -212,13 +246,16 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="20" y="90" width="560" height="30"/>
+              <AbsoluteConstraints x="40" y="150" width="520" height="30"/>
             </Constraint>
           </Constraints>
         </Component>
         <Component class="javax.swing.JLabel" name="jLFundo">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/registraclinic/imagens/TIPOS DE ATENDIMENTO.png"/>
+            </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                 <LineBorder roundedCorners="true"/>

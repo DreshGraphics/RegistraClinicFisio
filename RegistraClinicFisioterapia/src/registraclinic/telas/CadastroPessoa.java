@@ -198,34 +198,37 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(750, 570));
+        setMinimumSize(new java.awt.Dimension(750, 500));
         setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(null);
 
-        jtGeral.setBackground(new java.awt.Color(65, 191, 182));
+        jtGeral.setBackground(new java.awt.Color(255, 255, 255));
         jtGeral.setForeground(new java.awt.Color(22, 64, 61));
         jtGeral.setToolTipText("");
         jtGeral.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         jtGeral.setVerifyInputWhenFocusTarget(false);
 
-        jpDadosPessoais.setBackground(new java.awt.Color(65, 191, 182));
+        jpDadosPessoais.setBackground(new java.awt.Color(255, 255, 255));
         jpDadosPessoais.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jpDadosPessoais.setForeground(new java.awt.Color(22, 64, 61));
         jpDadosPessoais.setLayout(null);
 
         jLabel35.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel35.setForeground(new java.awt.Color(58, 100, 62));
         jLabel35.setText("RG");
         jpDadosPessoais.add(jLabel35);
-        jLabel35.setBounds(180, 70, 97, 18);
+        jLabel35.setBounds(180, 70, 97, 19);
 
         jlNomeUsuario2.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jlNomeUsuario2.setForeground(new java.awt.Color(58, 100, 62));
         jlNomeUsuario2.setText("Cidade:");
         jpDadosPessoais.add(jlNomeUsuario2);
         jlNomeUsuario2.setBounds(440, 130, 70, 20);
 
         txtCidade.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtCidade.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(100, 44, 143), 1, true));
+        txtCidade.setForeground(new java.awt.Color(58, 100, 62));
+        txtCidade.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         txtCidade.setMaximumSize(new java.awt.Dimension(8, 200));
         txtCidade.setMinimumSize(new java.awt.Dimension(8, 200));
         txtCidade.addActionListener(new java.awt.event.ActionListener() {
@@ -243,7 +246,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jLObrigatorioNome3.setBounds(690, 140, 10, 10);
 
         btnProduto2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnProduto2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/add-20-20.png"))); // NOI18N
+        btnProduto2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/add_20-20_fisio.png"))); // NOI18N
         btnProduto2.setContentAreaFilled(false);
         btnProduto2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnProduto2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -257,7 +260,8 @@ public class CadastroPessoa extends javax.swing.JDialog {
         btnProduto2.setBounds(700, 150, 30, 30);
 
         txtRg.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtRg.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        txtRg.setForeground(new java.awt.Color(58, 100, 62));
+        txtRg.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         txtRg.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         txtRg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -274,11 +278,13 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jLObrigatorioNome48.setBounds(340, 80, 10, 10);
 
         jLabel33.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel33.setForeground(new java.awt.Color(58, 100, 62));
         jLabel33.setText("CPF");
         jpDadosPessoais.add(jLabel33);
-        jLabel33.setBounds(20, 70, 97, 18);
+        jLabel33.setBounds(20, 70, 97, 19);
 
-        txtCpf.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        txtCpf.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        txtCpf.setForeground(new java.awt.Color(58, 100, 62));
         try {
             txtCpf.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
         } catch (java.text.ParseException ex) {
@@ -300,12 +306,14 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jLObrigatorioNome46.setBounds(160, 80, 10, 10);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(58, 100, 62));
         jLabel2.setText("Nome Completo");
         jpDadosPessoais.add(jLabel2);
-        jLabel2.setBounds(20, 10, 130, 18);
+        jLabel2.setBounds(20, 10, 130, 19);
 
         txtNome.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtNome.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        txtNome.setForeground(new java.awt.Color(58, 100, 62));
+        txtNome.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         txtNome.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         txtNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -316,14 +324,16 @@ public class CadastroPessoa extends javax.swing.JDialog {
         txtNome.setBounds(20, 30, 410, 29);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(58, 100, 62));
         jLabel3.setText("Sexo");
         jpDadosPessoais.add(jLabel3);
-        jLabel3.setBounds(440, 10, 50, 18);
+        jLabel3.setBounds(440, 10, 50, 19);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(58, 100, 62));
         jLabel7.setText("Data Nascimento");
         jpDadosPessoais.add(jLabel7);
-        jLabel7.setBounds(580, 10, 130, 18);
+        jLabel7.setBounds(580, 10, 130, 19);
 
         jLObrigatorioNome15.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome15.setForeground(new java.awt.Color(204, 0, 0));
@@ -344,8 +354,9 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jLObrigatorioNome16.setBounds(420, 20, 10, 10);
 
         jcSexo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jcSexo.setForeground(new java.awt.Color(58, 100, 62));
         jcSexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-----", "Masculino", "Feminino", "Não Definido" }));
-        jcSexo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jcSexo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         jcSexo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcSexoActionPerformed(evt);
@@ -354,7 +365,8 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jpDadosPessoais.add(jcSexo);
         jcSexo.setBounds(440, 30, 130, 30);
 
-        txtDataNascimento.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        txtDataNascimento.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        txtDataNascimento.setForeground(new java.awt.Color(58, 100, 62));
         try {
             txtDataNascimento.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
         } catch (java.text.ParseException ex) {
@@ -365,12 +377,14 @@ public class CadastroPessoa extends javax.swing.JDialog {
         txtDataNascimento.setBounds(580, 30, 140, 30);
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(58, 100, 62));
         jLabel12.setText("Endereço");
         jpDadosPessoais.add(jLabel12);
-        jLabel12.setBounds(20, 130, 90, 18);
+        jLabel12.setBounds(20, 130, 90, 19);
 
         txtEndereco.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtEndereco.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        txtEndereco.setForeground(new java.awt.Color(58, 100, 62));
+        txtEndereco.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         txtEndereco.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtEnderecoActionPerformed(evt);
@@ -386,9 +400,10 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jLObrigatorioNome26.setBounds(340, 140, 10, 10);
 
         jLabel22.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(58, 100, 62));
         jLabel22.setText("N°");
         jpDadosPessoais.add(jLabel22);
-        jLabel22.setBounds(360, 130, 20, 18);
+        jLabel22.setBounds(360, 130, 20, 19);
 
         jLObrigatorioNome27.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome27.setForeground(new java.awt.Color(204, 0, 0));
@@ -397,17 +412,20 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jLObrigatorioNome27.setBounds(420, 140, 10, 10);
 
         txtEndNumero.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtEndNumero.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        txtEndNumero.setForeground(new java.awt.Color(58, 100, 62));
+        txtEndNumero.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         jpDadosPessoais.add(txtEndNumero);
         txtEndNumero.setBounds(360, 150, 70, 30);
 
         jLabel23.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(58, 100, 62));
         jLabel23.setText("Bairro");
         jpDadosPessoais.add(jLabel23);
-        jLabel23.setBounds(20, 190, 80, 18);
+        jLabel23.setBounds(20, 190, 80, 19);
 
         txtBairro.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtBairro.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        txtBairro.setForeground(new java.awt.Color(58, 100, 62));
+        txtBairro.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         txtBairro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtBairroActionPerformed(evt);
@@ -423,12 +441,14 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jLObrigatorioNome28.setBounds(380, 200, 10, 10);
 
         jLabel24.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(58, 100, 62));
         jLabel24.setText("Complemento");
         jpDadosPessoais.add(jLabel24);
-        jLabel24.setBounds(400, 190, 130, 18);
+        jLabel24.setBounds(400, 190, 130, 19);
 
         txtComplemento.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtComplemento.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        txtComplemento.setForeground(new java.awt.Color(58, 100, 62));
+        txtComplemento.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         txtComplemento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtComplementoActionPerformed(evt);
@@ -438,16 +458,19 @@ public class CadastroPessoa extends javax.swing.JDialog {
         txtComplemento.setBounds(400, 210, 320, 30);
 
         txtNaturalidade.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtNaturalidade.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        txtNaturalidade.setForeground(new java.awt.Color(58, 100, 62));
+        txtNaturalidade.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         jpDadosPessoais.add(txtNaturalidade);
         txtNaturalidade.setBounds(20, 270, 190, 30);
 
         jLabel28.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel28.setForeground(new java.awt.Color(58, 100, 62));
         jLabel28.setText("Telefone");
         jpDadosPessoais.add(jLabel28);
-        jLabel28.setBounds(530, 70, 71, 18);
+        jLabel28.setBounds(530, 70, 65, 19);
 
-        txtTelefone.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        txtTelefone.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        txtTelefone.setForeground(new java.awt.Color(58, 100, 62));
         try {
             txtTelefone.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) # ####-####")));
         } catch (java.text.ParseException ex) {
@@ -465,13 +488,15 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jLObrigatorioNome32.setBounds(710, 80, 10, 10);
 
         jLabel29.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel29.setForeground(new java.awt.Color(58, 100, 62));
         jLabel29.setText("Estado Civil");
         jpDadosPessoais.add(jLabel29);
-        jLabel29.setBounds(360, 70, 100, 18);
+        jLabel29.setBounds(360, 70, 100, 19);
 
         jcEstadoCivil.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jcEstadoCivil.setForeground(new java.awt.Color(58, 100, 62));
         jcEstadoCivil.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-----", "Solteiro(a)", "Casado(a)", "Divorciado(a)", "Viúvo(a)" }));
-        jcEstadoCivil.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jcEstadoCivil.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         jcEstadoCivil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcEstadoCivilActionPerformed(evt);
@@ -487,9 +512,10 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jLObrigatorioNome33.setBounds(510, 80, 10, 10);
 
         jLabel30.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel30.setForeground(new java.awt.Color(58, 100, 62));
         jLabel30.setText("Naturalidade");
         jpDadosPessoais.add(jLabel30);
-        jLabel30.setBounds(20, 250, 110, 18);
+        jLabel30.setBounds(20, 250, 110, 19);
 
         jLObrigatorioNome34.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome34.setForeground(new java.awt.Color(204, 0, 0));
@@ -498,14 +524,16 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jLObrigatorioNome34.setBounds(200, 260, 10, 10);
 
         txtOcupacao.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtOcupacao.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        txtOcupacao.setForeground(new java.awt.Color(58, 100, 62));
+        txtOcupacao.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         jpDadosPessoais.add(txtOcupacao);
         txtOcupacao.setBounds(220, 270, 220, 30);
 
         jLabel31.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel31.setForeground(new java.awt.Color(58, 100, 62));
         jLabel31.setText("Ocupação");
         jpDadosPessoais.add(jLabel31);
-        jLabel31.setBounds(220, 250, 110, 18);
+        jLabel31.setBounds(220, 250, 110, 19);
 
         jLObrigatorioNome35.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome35.setForeground(new java.awt.Color(204, 0, 0));
@@ -514,13 +542,15 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jLObrigatorioNome35.setBounds(430, 260, 10, 10);
 
         jLabel32.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel32.setForeground(new java.awt.Color(58, 100, 62));
         jLabel32.setText("Tipo de Usuário");
         jpDadosPessoais.add(jLabel32);
-        jLabel32.setBounds(450, 250, 130, 18);
+        jLabel32.setBounds(450, 250, 130, 19);
 
         jcTipoUsuario.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jcTipoUsuario.setForeground(new java.awt.Color(58, 100, 62));
         jcTipoUsuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-----", "Aluno", "Funcionário", "Paciente", "Supervisor" }));
-        jcTipoUsuario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jcTipoUsuario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         jcTipoUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcTipoUsuarioActionPerformed(evt);
@@ -541,23 +571,26 @@ public class CadastroPessoa extends javax.swing.JDialog {
 
         jtGeral.addTab("Dados Pessoais", jpDadosPessoais);
 
-        jpAluno.setBackground(new java.awt.Color(65, 191, 182));
+        jpAluno.setBackground(new java.awt.Color(255, 255, 255));
         jpAluno.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jpAluno.setForeground(new java.awt.Color(22, 64, 61));
         jpAluno.setLayout(null);
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(58, 100, 62));
         jLabel11.setText("Matricula");
         jpAluno.add(jLabel11);
-        jLabel11.setBounds(20, 10, 90, 18);
+        jLabel11.setBounds(20, 10, 90, 19);
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(58, 100, 62));
         jLabel15.setText("Turma");
         jpAluno.add(jLabel15);
-        jLabel15.setBounds(140, 10, 60, 18);
+        jLabel15.setBounds(140, 10, 60, 19);
 
         txtMatricula.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtMatricula.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        txtMatricula.setForeground(new java.awt.Color(58, 100, 62));
+        txtMatricula.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         txtMatricula.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMatriculaActionPerformed(evt);
@@ -567,14 +600,16 @@ public class CadastroPessoa extends javax.swing.JDialog {
         txtMatricula.setBounds(20, 30, 110, 30);
 
         txtTurmaAluno.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtTurmaAluno.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        txtTurmaAluno.setForeground(new java.awt.Color(58, 100, 62));
+        txtTurmaAluno.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         jpAluno.add(txtTurmaAluno);
         txtTurmaAluno.setBounds(140, 30, 310, 30);
 
         jLabel21.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(58, 100, 62));
         jLabel21.setText("Email");
         jpAluno.add(jLabel21);
-        jLabel21.setBounds(460, 10, 50, 18);
+        jLabel21.setBounds(460, 10, 50, 19);
 
         jLObrigatorioNome20.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome20.setForeground(new java.awt.Color(204, 0, 0));
@@ -595,18 +630,20 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jLObrigatorioNome22.setBounds(440, 20, 10, 10);
 
         txtEmailAluno.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtEmailAluno.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        txtEmailAluno.setForeground(new java.awt.Color(58, 100, 62));
+        txtEmailAluno.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         jpAluno.add(txtEmailAluno);
         txtEmailAluno.setBounds(460, 30, 270, 30);
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(58, 100, 62));
         jLabel10.setText("Login");
         jpAluno.add(jLabel10);
         jLabel10.setBounds(20, 70, 70, 17);
 
         txtLoginAluno.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtLoginAluno.setForeground(new java.awt.Color(22, 64, 61));
-        txtLoginAluno.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        txtLoginAluno.setForeground(new java.awt.Color(58, 100, 62));
+        txtLoginAluno.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         txtLoginAluno.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         txtLoginAluno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -623,12 +660,14 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jLObrigatorioNome14.setBounds(440, 80, 10, 10);
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(58, 100, 62));
         jLabel16.setText("Senha");
         jpAluno.add(jLabel16);
         jLabel16.setBounds(250, 70, 70, 17);
 
         txtSenhaAluno.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtSenhaAluno.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        txtSenhaAluno.setForeground(new java.awt.Color(58, 100, 62));
+        txtSenhaAluno.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         jpAluno.add(txtSenhaAluno);
         txtSenhaAluno.setBounds(250, 90, 200, 30);
 
@@ -644,20 +683,22 @@ public class CadastroPessoa extends javax.swing.JDialog {
 
         jtGeral.addTab("Aluno", jpAluno);
 
-        jpFuncionario.setBackground(new java.awt.Color(65, 191, 182));
+        jpFuncionario.setBackground(new java.awt.Color(255, 255, 255));
         jpFuncionario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jpFuncionario.setForeground(new java.awt.Color(22, 64, 61));
         jpFuncionario.setLayout(null);
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(58, 100, 62));
         jLabel13.setText("Função");
         jpFuncionario.add(jLabel13);
-        jLabel13.setBounds(20, 10, 90, 18);
+        jLabel13.setBounds(20, 10, 90, 19);
 
         jLabel26.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(58, 100, 62));
         jLabel26.setText("Email");
         jpFuncionario.add(jLabel26);
-        jLabel26.setBounds(420, 10, 50, 18);
+        jLabel26.setBounds(420, 10, 50, 19);
 
         jLObrigatorioNome25.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome25.setForeground(new java.awt.Color(204, 0, 0));
@@ -666,12 +707,14 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jLObrigatorioNome25.setBounds(720, 20, 10, 10);
 
         txtEmailFuncionario.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtEmailFuncionario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        txtEmailFuncionario.setForeground(new java.awt.Color(58, 100, 62));
+        txtEmailFuncionario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         jpFuncionario.add(txtEmailFuncionario);
         txtEmailFuncionario.setBounds(410, 30, 320, 30);
 
         txtFuncao.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtFuncao.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        txtFuncao.setForeground(new java.awt.Color(58, 100, 62));
+        txtFuncao.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         txtFuncao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtFuncaoActionPerformed(evt);
@@ -693,11 +736,13 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jLObrigatorioNome18.setBounds(390, 80, 10, 10);
 
         txtSenhaFuncionario.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtSenhaFuncionario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        txtSenhaFuncionario.setForeground(new java.awt.Color(58, 100, 62));
+        txtSenhaFuncionario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         jpFuncionario.add(txtSenhaFuncionario);
         txtSenhaFuncionario.setBounds(210, 90, 190, 30);
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(58, 100, 62));
         jLabel17.setText("Senha");
         jpFuncionario.add(jLabel17);
         jLabel17.setBounds(210, 70, 70, 17);
@@ -709,8 +754,8 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jLObrigatorioNome19.setBounds(190, 80, 10, 10);
 
         txtLoginFuncionario.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtLoginFuncionario.setForeground(new java.awt.Color(22, 64, 61));
-        txtLoginFuncionario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        txtLoginFuncionario.setForeground(new java.awt.Color(58, 100, 62));
+        txtLoginFuncionario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         txtLoginFuncionario.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         txtLoginFuncionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -721,6 +766,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
         txtLoginFuncionario.setBounds(20, 90, 180, 30);
 
         jLabel18.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(58, 100, 62));
         jLabel18.setText("Login");
         jpFuncionario.add(jLabel18);
         jLabel18.setBounds(20, 70, 70, 17);
@@ -731,15 +777,16 @@ public class CadastroPessoa extends javax.swing.JDialog {
 
         jtGeral.addTab("Funcionário", jpFuncionario);
 
-        jpPaciente.setBackground(new java.awt.Color(65, 191, 182));
+        jpPaciente.setBackground(new java.awt.Color(255, 255, 255));
         jpPaciente.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jpPaciente.setForeground(new java.awt.Color(22, 64, 61));
         jpPaciente.setLayout(null);
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(58, 100, 62));
         jLabel14.setText("Nº Prontuário");
         jpPaciente.add(jLabel14);
-        jLabel14.setBounds(20, 10, 110, 18);
+        jLabel14.setBounds(20, 10, 110, 19);
 
         jLObrigatorioNome44.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome44.setForeground(new java.awt.Color(204, 0, 0));
@@ -748,12 +795,14 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jLObrigatorioNome44.setBounds(720, 80, 10, 10);
 
         jLabel40.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel40.setForeground(new java.awt.Color(58, 100, 62));
         jLabel40.setText("ESF");
         jpPaciente.add(jLabel40);
-        jLabel40.setBounds(230, 10, 50, 18);
+        jLabel40.setBounds(230, 10, 50, 19);
 
         txtNumProntuario.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtNumProntuario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        txtNumProntuario.setForeground(new java.awt.Color(58, 100, 62));
+        txtNumProntuario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         txtNumProntuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNumProntuarioActionPerformed(evt);
@@ -763,24 +812,28 @@ public class CadastroPessoa extends javax.swing.JDialog {
         txtNumProntuario.setBounds(20, 30, 200, 30);
 
         txtAltura.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtAltura.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        txtAltura.setForeground(new java.awt.Color(58, 100, 62));
+        txtAltura.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         jpPaciente.add(txtAltura);
         txtAltura.setBounds(610, 90, 120, 30);
 
         jLabel42.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel42.setForeground(new java.awt.Color(58, 100, 62));
         jLabel42.setText("Agente de Saúde");
         jpPaciente.add(jLabel42);
-        jLabel42.setBounds(20, 70, 150, 18);
+        jLabel42.setBounds(20, 70, 150, 19);
 
         jLabel43.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel43.setForeground(new java.awt.Color(58, 100, 62));
         jLabel43.setText("Peso (kg)");
         jpPaciente.add(jLabel43);
-        jLabel43.setBounds(490, 70, 90, 18);
+        jLabel43.setBounds(490, 70, 90, 19);
 
         jLabel44.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel44.setForeground(new java.awt.Color(58, 100, 62));
         jLabel44.setText("Altura (cm)");
         jpPaciente.add(jLabel44);
-        jLabel44.setBounds(610, 70, 90, 18);
+        jLabel44.setBounds(610, 70, 90, 19);
 
         jLObrigatorioNome45.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome45.setForeground(new java.awt.Color(204, 0, 0));
@@ -807,17 +860,20 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jLObrigatorioNome50.setBounds(590, 80, 10, 10);
 
         txtESF.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtESF.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        txtESF.setForeground(new java.awt.Color(58, 100, 62));
+        txtESF.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         jpPaciente.add(txtESF);
         txtESF.setBounds(230, 30, 500, 30);
 
         txtAgenteDeSaude.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtAgenteDeSaude.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        txtAgenteDeSaude.setForeground(new java.awt.Color(58, 100, 62));
+        txtAgenteDeSaude.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         jpPaciente.add(txtAgenteDeSaude);
         txtAgenteDeSaude.setBounds(20, 90, 460, 30);
 
         txtPeso.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtPeso.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        txtPeso.setForeground(new java.awt.Color(58, 100, 62));
+        txtPeso.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         jpPaciente.add(txtPeso);
         txtPeso.setBounds(490, 90, 110, 30);
 
@@ -827,7 +883,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
 
         jtGeral.addTab("Paciente", jpPaciente);
 
-        jpSupervisor.setBackground(new java.awt.Color(65, 191, 182));
+        jpSupervisor.setBackground(new java.awt.Color(255, 255, 255));
         jpSupervisor.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jpSupervisor.setForeground(new java.awt.Color(22, 64, 61));
         jpSupervisor.setLayout(null);
@@ -839,11 +895,13 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jLObrigatorioNome23.setBounds(720, 80, 10, 10);
 
         txtSenhaSupervisor.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtSenhaSupervisor.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        txtSenhaSupervisor.setForeground(new java.awt.Color(58, 100, 62));
+        txtSenhaSupervisor.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         jpSupervisor.add(txtSenhaSupervisor);
         txtSenhaSupervisor.setBounds(550, 90, 180, 30);
 
         jLabel19.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(58, 100, 62));
         jLabel19.setText("Senha");
         jpSupervisor.add(jLabel19);
         jLabel19.setBounds(550, 70, 70, 17);
@@ -855,8 +913,8 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jLObrigatorioNome24.setBounds(530, 80, 10, 10);
 
         txtLoginSupervisor.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtLoginSupervisor.setForeground(new java.awt.Color(22, 64, 61));
-        txtLoginSupervisor.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        txtLoginSupervisor.setForeground(new java.awt.Color(58, 100, 62));
+        txtLoginSupervisor.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         txtLoginSupervisor.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         txtLoginSupervisor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -867,22 +925,26 @@ public class CadastroPessoa extends javax.swing.JDialog {
         txtLoginSupervisor.setBounds(340, 90, 200, 30);
 
         jLabel20.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(58, 100, 62));
         jLabel20.setText("Login");
         jpSupervisor.add(jLabel20);
         jLabel20.setBounds(340, 70, 70, 17);
 
         jLabel47.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel47.setForeground(new java.awt.Color(58, 100, 62));
         jLabel47.setText("Turma");
         jpSupervisor.add(jLabel47);
-        jLabel47.setBounds(20, 10, 90, 18);
+        jLabel47.setBounds(20, 10, 90, 19);
 
         jLabel48.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel48.setForeground(new java.awt.Color(58, 100, 62));
         jLabel48.setText("Especialização");
         jpSupervisor.add(jLabel48);
-        jLabel48.setBounds(390, 10, 130, 18);
+        jLabel48.setBounds(390, 10, 130, 19);
 
         txtTurmaSupervisor.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtTurmaSupervisor.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        txtTurmaSupervisor.setForeground(new java.awt.Color(58, 100, 62));
+        txtTurmaSupervisor.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         txtTurmaSupervisor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtTurmaSupervisorActionPerformed(evt);
@@ -892,7 +954,8 @@ public class CadastroPessoa extends javax.swing.JDialog {
         txtTurmaSupervisor.setBounds(20, 30, 360, 30);
 
         txtEspecializacao.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtEspecializacao.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        txtEspecializacao.setForeground(new java.awt.Color(58, 100, 62));
+        txtEspecializacao.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         jpSupervisor.add(txtEspecializacao);
         txtEspecializacao.setBounds(388, 31, 340, 30);
 
@@ -909,14 +972,16 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jLObrigatorioNome37.setBounds(320, 80, 10, 10);
 
         txtEmailSupervisor.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtEmailSupervisor.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        txtEmailSupervisor.setForeground(new java.awt.Color(58, 100, 62));
+        txtEmailSupervisor.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         jpSupervisor.add(txtEmailSupervisor);
         txtEmailSupervisor.setBounds(20, 90, 310, 30);
 
         jLabel34.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel34.setForeground(new java.awt.Color(58, 100, 62));
         jLabel34.setText("Email");
         jpSupervisor.add(jLabel34);
-        jLabel34.setBounds(20, 70, 50, 18);
+        jLabel34.setBounds(20, 70, 50, 19);
 
         labelSupervisor.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         jpSupervisor.add(labelSupervisor);
@@ -925,10 +990,11 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jtGeral.addTab("Supervisor", jpSupervisor);
 
         getContentPane().add(jtGeral);
-        jtGeral.setBounds(0, 120, 750, 340);
+        jtGeral.setBounds(0, 60, 750, 340);
 
         btVoltar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/voltar2.png"))); // NOI18N
+        btVoltar.setForeground(new java.awt.Color(58, 100, 62));
+        btVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/voltar_fisio.png"))); // NOI18N
         btVoltar.setText("Voltar");
         btVoltar.setContentAreaFilled(false);
         btVoltar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -940,10 +1006,11 @@ public class CadastroPessoa extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btVoltar);
-        btVoltar.setBounds(140, 480, 90, 70);
+        btVoltar.setBounds(140, 410, 90, 70);
 
         btPesquisar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/pesquisa.png"))); // NOI18N
+        btPesquisar.setForeground(new java.awt.Color(58, 100, 62));
+        btPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/pesquisar_fisio.png"))); // NOI18N
         btPesquisar.setText("Pesquisar");
         btPesquisar.setContentAreaFilled(false);
         btPesquisar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -955,10 +1022,11 @@ public class CadastroPessoa extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btPesquisar);
-        btPesquisar.setBounds(390, 480, 120, 70);
+        btPesquisar.setBounds(400, 410, 100, 70);
 
         btExcluir.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/excluir_1.png"))); // NOI18N
+        btExcluir.setForeground(new java.awt.Color(58, 100, 62));
+        btExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/excluir_fisio.png"))); // NOI18N
         btExcluir.setText("Excluir");
         btExcluir.setContentAreaFilled(false);
         btExcluir.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -970,10 +1038,11 @@ public class CadastroPessoa extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btExcluir);
-        btExcluir.setBounds(540, 480, 90, 70);
+        btExcluir.setBounds(540, 410, 90, 70);
 
         btLimpar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/limpar_1.png"))); // NOI18N
+        btLimpar.setForeground(new java.awt.Color(58, 100, 62));
+        btLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/limpar_fisio.png"))); // NOI18N
         btLimpar.setText("Limpar");
         btLimpar.setContentAreaFilled(false);
         btLimpar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -985,10 +1054,11 @@ public class CadastroPessoa extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btLimpar);
-        btLimpar.setBounds(270, 480, 90, 70);
+        btLimpar.setBounds(270, 410, 90, 70);
 
         btSalvar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/salvar_1.png"))); // NOI18N
+        btSalvar.setForeground(new java.awt.Color(58, 100, 62));
+        btSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/save_fisio.png"))); // NOI18N
         btSalvar.setText("Salvar");
         btSalvar.setContentAreaFilled(false);
         btSalvar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -1000,15 +1070,15 @@ public class CadastroPessoa extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btSalvar);
-        btSalvar.setBounds(650, 480, 90, 70);
+        btSalvar.setBounds(650, 410, 90, 70);
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/CadastroPessoa.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/CADASTRO DE USUÁRIO_2.png"))); // NOI18N
         jLabel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         jLabel6.setMaximumSize(new java.awt.Dimension(700, 500));
         jLabel6.setMinimumSize(new java.awt.Dimension(700, 500));
-        jLabel6.setPreferredSize(new java.awt.Dimension(700, 570));
+        jLabel6.setPreferredSize(new java.awt.Dimension(700, 500));
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(0, 0, 750, 570);
+        jLabel6.setBounds(0, 0, 750, 500);
 
         pack();
         setLocationRelativeTo(null);

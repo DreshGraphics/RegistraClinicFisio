@@ -89,11 +89,12 @@ public class PesquisaGenerica extends javax.swing.JDialog {
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(58, 100, 62));
         jLabel1.setText("Pesquisar");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(30, 120, 90, 20);
 
-        tbPesquisa.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        tbPesquisa.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         tbPesquisa.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         tbPesquisa.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -124,10 +125,11 @@ public class PesquisaGenerica extends javax.swing.JDialog {
         jScrollPane1.setViewportView(tbPesquisa);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(60, 160, 620, 250);
+        jScrollPane1.setBounds(30, 160, 640, 250);
 
         btEditar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/selecionar2.png"))); // NOI18N
+        btEditar.setForeground(new java.awt.Color(58, 100, 62));
+        btEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/editar_fisio.png"))); // NOI18N
         btEditar.setText("Selecionar");
         btEditar.setContentAreaFilled(false);
         btEditar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -142,7 +144,8 @@ public class PesquisaGenerica extends javax.swing.JDialog {
         btEditar.setBounds(590, 420, 103, 70);
 
         btVoltar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/voltar2.png"))); // NOI18N
+        btVoltar.setForeground(new java.awt.Color(58, 100, 62));
+        btVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/voltar_fisio.png"))); // NOI18N
         btVoltar.setText("Voltar");
         btVoltar.setContentAreaFilled(false);
         btVoltar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -154,10 +157,11 @@ public class PesquisaGenerica extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btVoltar);
-        btVoltar.setBounds(130, 420, 80, 70);
+        btVoltar.setBounds(10, 420, 80, 70);
 
         tfPesquisa.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        tfPesquisa.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        tfPesquisa.setForeground(new java.awt.Color(58, 100, 62));
+        tfPesquisa.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         tfPesquisa.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 tfPesquisaKeyPressed(evt);
@@ -167,7 +171,7 @@ public class PesquisaGenerica extends javax.swing.JDialog {
         tfPesquisa.setBounds(120, 110, 340, 30);
 
         jlPesquisar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jlPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Pesquisa.png"))); // NOI18N
+        jlPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/PESQUISA_1.png"))); // NOI18N
         jlPesquisar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         getContentPane().add(jlPesquisar);
         jlPesquisar.setBounds(0, 0, 700, 500);

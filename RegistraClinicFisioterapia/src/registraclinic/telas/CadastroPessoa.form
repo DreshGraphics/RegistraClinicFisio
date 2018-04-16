@@ -4,7 +4,7 @@
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="2"/>
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[750, 570]"/>
+      <Dimension value="[750, 500]"/>
     </Property>
     <Property name="undecorated" type="boolean" value="true"/>
     <Property name="resizable" type="boolean" value="false"/>
@@ -23,7 +23,7 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
-    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,58,0,0,2,-18"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,-12,0,0,2,-18"/>
   </AuxValues>
 
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
@@ -33,7 +33,7 @@
     <Container class="javax.swing.JTabbedPane" name="jtGeral">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="b6" green="bf" red="41" type="rgb"/>
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="3d" green="40" red="16" type="rgb"/>
@@ -46,7 +46,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="0" y="120" width="750" height="340"/>
+          <AbsoluteConstraints x="0" y="60" width="750" height="340"/>
         </Constraint>
       </Constraints>
 
@@ -55,7 +55,7 @@
         <Container class="javax.swing.JPanel" name="jpDadosPessoais">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="b6" green="bf" red="41" type="rgb"/>
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -83,6 +83,9 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="15" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="RG"/>
               </Properties>
               <Constraints>
@@ -95,6 +98,9 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="15" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Cidade:"/>
               </Properties>
@@ -109,10 +115,13 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                     <LineBorder roundedCorners="true">
-                      <Color PropertyName="color" blue="8f" green="2c" red="64" type="rgb"/>
+                      <Color PropertyName="color" blue="3e" green="64" red="3a" type="rgb"/>
                     </LineBorder>
                   </Border>
                 </Property>
@@ -154,7 +163,7 @@
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/registraclinic/imagens/add-20-20.png"/>
+                  <Image iconType="3" name="/registraclinic/imagens/add_20-20_fisio.png"/>
                 </Property>
                 <Property name="contentAreaFilled" type="boolean" value="false"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
@@ -177,9 +186,14 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder roundedCorners="true"/>
+                    <LineBorder roundedCorners="true">
+                      <Color PropertyName="color" blue="3e" green="64" red="3a" type="rgb"/>
+                    </LineBorder>
                   </Border>
                 </Property>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
@@ -216,6 +230,9 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="15" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="CPF"/>
               </Properties>
               <Constraints>
@@ -228,8 +245,13 @@
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder roundedCorners="true"/>
+                    <LineBorder roundedCorners="true">
+                      <Color PropertyName="color" blue="3e" green="64" red="3a" type="rgb"/>
+                    </LineBorder>
                   </Border>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
                 </Property>
                 <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
                   <Format format="###.###.###-##" subtype="-1" type="5"/>
@@ -268,6 +290,9 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="15" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Nome Completo"/>
               </Properties>
               <Constraints>
@@ -281,9 +306,14 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder roundedCorners="true"/>
+                    <LineBorder roundedCorners="true">
+                      <Color PropertyName="color" blue="3e" green="64" red="3a" type="rgb"/>
+                    </LineBorder>
                   </Border>
                 </Property>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
@@ -304,6 +334,9 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="15" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Sexo"/>
               </Properties>
               <Constraints>
@@ -316,6 +349,9 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="15" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Data Nascimento"/>
               </Properties>
@@ -378,6 +414,9 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="4">
                     <StringItem index="0" value="-----"/>
@@ -388,7 +427,9 @@
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder roundedCorners="true"/>
+                    <LineBorder roundedCorners="true">
+                      <Color PropertyName="color" blue="3e" green="64" red="3a" type="rgb"/>
+                    </LineBorder>
                   </Border>
                 </Property>
               </Properties>
@@ -408,8 +449,13 @@
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder roundedCorners="true"/>
+                    <LineBorder roundedCorners="true">
+                      <Color PropertyName="color" blue="3e" green="64" red="3a" type="rgb"/>
+                    </LineBorder>
                   </Border>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
                 </Property>
                 <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
                   <Format format="##/##/####" subtype="-1" type="5"/>
@@ -429,6 +475,9 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="15" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Endere&#xe7;o"/>
               </Properties>
               <Constraints>
@@ -442,9 +491,14 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder roundedCorners="true"/>
+                    <LineBorder roundedCorners="true">
+                      <Color PropertyName="color" blue="3e" green="64" red="3a" type="rgb"/>
+                    </LineBorder>
                   </Border>
                 </Property>
               </Properties>
@@ -478,6 +532,9 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="15" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="N&#xb0;"/>
               </Properties>
               <Constraints>
@@ -507,9 +564,14 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder roundedCorners="true"/>
+                    <LineBorder roundedCorners="true">
+                      <Color PropertyName="color" blue="3e" green="64" red="3a" type="rgb"/>
+                    </LineBorder>
                   </Border>
                 </Property>
               </Properties>
@@ -524,6 +586,9 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="15" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Bairro"/>
               </Properties>
               <Constraints>
@@ -537,9 +602,14 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder roundedCorners="true"/>
+                    <LineBorder roundedCorners="true">
+                      <Color PropertyName="color" blue="3e" green="64" red="3a" type="rgb"/>
+                    </LineBorder>
                   </Border>
                 </Property>
               </Properties>
@@ -573,6 +643,9 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="15" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Complemento"/>
               </Properties>
               <Constraints>
@@ -586,9 +659,14 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder roundedCorners="true"/>
+                    <LineBorder roundedCorners="true">
+                      <Color PropertyName="color" blue="3e" green="64" red="3a" type="rgb"/>
+                    </LineBorder>
                   </Border>
                 </Property>
               </Properties>
@@ -606,9 +684,14 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder roundedCorners="true"/>
+                    <LineBorder roundedCorners="true">
+                      <Color PropertyName="color" blue="3e" green="64" red="3a" type="rgb"/>
+                    </LineBorder>
                   </Border>
                 </Property>
               </Properties>
@@ -623,6 +706,9 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="15" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Telefone"/>
               </Properties>
               <Constraints>
@@ -635,8 +721,13 @@
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder roundedCorners="true"/>
+                    <LineBorder roundedCorners="true">
+                      <Color PropertyName="color" blue="3e" green="64" red="3a" type="rgb"/>
+                    </LineBorder>
                   </Border>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
                 </Property>
                 <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
                   <Format format="(##) # ####-####" subtype="-1" type="5"/>
@@ -673,6 +764,9 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="15" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Estado Civil"/>
               </Properties>
               <Constraints>
@@ -686,6 +780,9 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="5">
                     <StringItem index="0" value="-----"/>
@@ -697,7 +794,9 @@
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder roundedCorners="true"/>
+                    <LineBorder roundedCorners="true">
+                      <Color PropertyName="color" blue="3e" green="64" red="3a" type="rgb"/>
+                    </LineBorder>
                   </Border>
                 </Property>
               </Properties>
@@ -734,6 +833,9 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="15" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Naturalidade"/>
               </Properties>
               <Constraints>
@@ -763,9 +865,14 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder roundedCorners="true"/>
+                    <LineBorder roundedCorners="true">
+                      <Color PropertyName="color" blue="3e" green="64" red="3a" type="rgb"/>
+                    </LineBorder>
                   </Border>
                 </Property>
               </Properties>
@@ -779,6 +886,9 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="15" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ocupa&#xe7;&#xe3;o"/>
               </Properties>
@@ -809,6 +919,9 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="15" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Tipo de Usu&#xe1;rio"/>
               </Properties>
               <Constraints>
@@ -822,6 +935,9 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="5">
                     <StringItem index="0" value="-----"/>
@@ -833,7 +949,9 @@
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder roundedCorners="true"/>
+                    <LineBorder roundedCorners="true">
+                      <Color PropertyName="color" blue="3e" green="64" red="3a" type="rgb"/>
+                    </LineBorder>
                   </Border>
                 </Property>
               </Properties>
@@ -884,7 +1002,7 @@
         <Container class="javax.swing.JPanel" name="jpAluno">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="b6" green="bf" red="41" type="rgb"/>
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -912,6 +1030,9 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="15" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Matricula"/>
               </Properties>
               <Constraints>
@@ -924,6 +1045,9 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="15" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Turma"/>
               </Properties>
@@ -938,9 +1062,14 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder roundedCorners="true"/>
+                    <LineBorder roundedCorners="true">
+                      <Color PropertyName="color" blue="3e" green="64" red="3a" type="rgb"/>
+                    </LineBorder>
                   </Border>
                 </Property>
               </Properties>
@@ -958,9 +1087,14 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder roundedCorners="true"/>
+                    <LineBorder roundedCorners="true">
+                      <Color PropertyName="color" blue="3e" green="64" red="3a" type="rgb"/>
+                    </LineBorder>
                   </Border>
                 </Property>
               </Properties>
@@ -974,6 +1108,9 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="15" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Email"/>
               </Properties>
@@ -1036,9 +1173,14 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder roundedCorners="true"/>
+                    <LineBorder roundedCorners="true">
+                      <Color PropertyName="color" blue="3e" green="64" red="3a" type="rgb"/>
+                    </LineBorder>
                   </Border>
                 </Property>
               </Properties>
@@ -1052,6 +1194,9 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Login"/>
               </Properties>
@@ -1067,11 +1212,13 @@
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="3d" green="40" red="16" type="rgb"/>
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder roundedCorners="true"/>
+                    <LineBorder roundedCorners="true">
+                      <Color PropertyName="color" blue="3e" green="64" red="3a" type="rgb"/>
+                    </LineBorder>
                   </Border>
                 </Property>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
@@ -1108,6 +1255,9 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Senha"/>
               </Properties>
               <Constraints>
@@ -1121,9 +1271,14 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder roundedCorners="true"/>
+                    <LineBorder roundedCorners="true">
+                      <Color PropertyName="color" blue="3e" green="64" red="3a" type="rgb"/>
+                    </LineBorder>
                   </Border>
                 </Property>
               </Properties>
@@ -1168,7 +1323,7 @@
         <Container class="javax.swing.JPanel" name="jpFuncionario">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="b6" green="bf" red="41" type="rgb"/>
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -1196,6 +1351,9 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="15" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Fun&#xe7;&#xe3;o"/>
               </Properties>
               <Constraints>
@@ -1208,6 +1366,9 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="15" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Email"/>
               </Properties>
@@ -1238,9 +1399,14 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder roundedCorners="true"/>
+                    <LineBorder roundedCorners="true">
+                      <Color PropertyName="color" blue="3e" green="64" red="3a" type="rgb"/>
+                    </LineBorder>
                   </Border>
                 </Property>
               </Properties>
@@ -1255,9 +1421,14 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder roundedCorners="true"/>
+                    <LineBorder roundedCorners="true">
+                      <Color PropertyName="color" blue="3e" green="64" red="3a" type="rgb"/>
+                    </LineBorder>
                   </Border>
                 </Property>
               </Properties>
@@ -1307,9 +1478,14 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder roundedCorners="true"/>
+                    <LineBorder roundedCorners="true">
+                      <Color PropertyName="color" blue="3e" green="64" red="3a" type="rgb"/>
+                    </LineBorder>
                   </Border>
                 </Property>
               </Properties>
@@ -1323,6 +1499,9 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Senha"/>
               </Properties>
@@ -1354,11 +1533,13 @@
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="3d" green="40" red="16" type="rgb"/>
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder roundedCorners="true"/>
+                    <LineBorder roundedCorners="true">
+                      <Color PropertyName="color" blue="3e" green="64" red="3a" type="rgb"/>
+                    </LineBorder>
                   </Border>
                 </Property>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
@@ -1378,6 +1559,9 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Login"/>
               </Properties>
@@ -1406,7 +1590,7 @@
         <Container class="javax.swing.JPanel" name="jpPaciente">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="b6" green="bf" red="41" type="rgb"/>
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -1433,6 +1617,9 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="15" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="N&#xba; Prontu&#xe1;rio"/>
               </Properties>
@@ -1463,6 +1650,9 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="15" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="ESF"/>
               </Properties>
               <Constraints>
@@ -1476,9 +1666,14 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder roundedCorners="true"/>
+                    <LineBorder roundedCorners="true">
+                      <Color PropertyName="color" blue="3e" green="64" red="3a" type="rgb"/>
+                    </LineBorder>
                   </Border>
                 </Property>
               </Properties>
@@ -1496,9 +1691,14 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder roundedCorners="true"/>
+                    <LineBorder roundedCorners="true">
+                      <Color PropertyName="color" blue="3e" green="64" red="3a" type="rgb"/>
+                    </LineBorder>
                   </Border>
                 </Property>
               </Properties>
@@ -1513,6 +1713,9 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="15" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Agente de Sa&#xfa;de"/>
               </Properties>
               <Constraints>
@@ -1526,6 +1729,9 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="15" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Peso (kg)"/>
               </Properties>
               <Constraints>
@@ -1538,6 +1744,9 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="15" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Altura (cm)"/>
               </Properties>
@@ -1616,9 +1825,14 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder roundedCorners="true"/>
+                    <LineBorder roundedCorners="true">
+                      <Color PropertyName="color" blue="3e" green="64" red="3a" type="rgb"/>
+                    </LineBorder>
                   </Border>
                 </Property>
               </Properties>
@@ -1633,9 +1847,14 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder roundedCorners="true"/>
+                    <LineBorder roundedCorners="true">
+                      <Color PropertyName="color" blue="3e" green="64" red="3a" type="rgb"/>
+                    </LineBorder>
                   </Border>
                 </Property>
               </Properties>
@@ -1650,9 +1869,14 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder roundedCorners="true"/>
+                    <LineBorder roundedCorners="true">
+                      <Color PropertyName="color" blue="3e" green="64" red="3a" type="rgb"/>
+                    </LineBorder>
                   </Border>
                 </Property>
               </Properties>
@@ -1681,7 +1905,7 @@
         <Container class="javax.swing.JPanel" name="jpSupervisor">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="b6" green="bf" red="41" type="rgb"/>
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -1725,9 +1949,14 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder roundedCorners="true"/>
+                    <LineBorder roundedCorners="true">
+                      <Color PropertyName="color" blue="3e" green="64" red="3a" type="rgb"/>
+                    </LineBorder>
                   </Border>
                 </Property>
               </Properties>
@@ -1741,6 +1970,9 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Senha"/>
               </Properties>
@@ -1772,11 +2004,13 @@
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="3d" green="40" red="16" type="rgb"/>
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder roundedCorners="true"/>
+                    <LineBorder roundedCorners="true">
+                      <Color PropertyName="color" blue="3e" green="64" red="3a" type="rgb"/>
+                    </LineBorder>
                   </Border>
                 </Property>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
@@ -1797,6 +2031,9 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Login"/>
               </Properties>
               <Constraints>
@@ -1809,6 +2046,9 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="15" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Turma"/>
               </Properties>
@@ -1823,6 +2063,9 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="15" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Especializa&#xe7;&#xe3;o"/>
               </Properties>
               <Constraints>
@@ -1836,9 +2079,14 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder roundedCorners="true"/>
+                    <LineBorder roundedCorners="true">
+                      <Color PropertyName="color" blue="3e" green="64" red="3a" type="rgb"/>
+                    </LineBorder>
                   </Border>
                 </Property>
               </Properties>
@@ -1856,9 +2104,14 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder roundedCorners="true"/>
+                    <LineBorder roundedCorners="true">
+                      <Color PropertyName="color" blue="3e" green="64" red="3a" type="rgb"/>
+                    </LineBorder>
                   </Border>
                 </Property>
               </Properties>
@@ -1905,9 +2158,14 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
+                </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder roundedCorners="true"/>
+                    <LineBorder roundedCorners="true">
+                      <Color PropertyName="color" blue="3e" green="64" red="3a" type="rgb"/>
+                    </LineBorder>
                   </Border>
                 </Property>
               </Properties>
@@ -1921,6 +2179,9 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="15" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="64" red="3a" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Email"/>
               </Properties>
@@ -1953,8 +2214,11 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="1"/>
         </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="3e" green="64" red="3a" type="rgb"/>
+        </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/registraclinic/imagens/voltar2.png"/>
+          <Image iconType="3" name="/registraclinic/imagens/voltar_fisio.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Voltar"/>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -1969,7 +2233,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="140" y="480" width="90" height="70"/>
+          <AbsoluteConstraints x="140" y="410" width="90" height="70"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -1978,8 +2242,11 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="1"/>
         </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="3e" green="64" red="3a" type="rgb"/>
+        </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/registraclinic/imagens/pesquisa.png"/>
+          <Image iconType="3" name="/registraclinic/imagens/pesquisar_fisio.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Pesquisar"/>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -1994,7 +2261,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="390" y="480" width="120" height="70"/>
+          <AbsoluteConstraints x="400" y="410" width="100" height="70"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -2003,8 +2270,11 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="1"/>
         </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="3e" green="64" red="3a" type="rgb"/>
+        </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/registraclinic/imagens/excluir_1.png"/>
+          <Image iconType="3" name="/registraclinic/imagens/excluir_fisio.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Excluir"/>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -2019,7 +2289,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="540" y="480" width="90" height="70"/>
+          <AbsoluteConstraints x="540" y="410" width="90" height="70"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -2028,8 +2298,11 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="1"/>
         </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="3e" green="64" red="3a" type="rgb"/>
+        </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/registraclinic/imagens/limpar_1.png"/>
+          <Image iconType="3" name="/registraclinic/imagens/limpar_fisio.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Limpar"/>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -2044,7 +2317,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="270" y="480" width="90" height="70"/>
+          <AbsoluteConstraints x="270" y="410" width="90" height="70"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -2053,8 +2326,11 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="1"/>
         </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="3e" green="64" red="3a" type="rgb"/>
+        </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/registraclinic/imagens/salvar_1.png"/>
+          <Image iconType="3" name="/registraclinic/imagens/save_fisio.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Salvar"/>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -2069,14 +2345,14 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="650" y="480" width="90" height="70"/>
+          <AbsoluteConstraints x="650" y="410" width="90" height="70"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/registraclinic/imagens/CadastroPessoa.png"/>
+          <Image iconType="3" name="/registraclinic/imagens/CADASTRO DE USU&#xc1;RIO_2.png"/>
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -2090,12 +2366,12 @@
           <Dimension value="[700, 500]"/>
         </Property>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[700, 570]"/>
+          <Dimension value="[700, 500]"/>
         </Property>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="0" y="0" width="750" height="570"/>
+          <AbsoluteConstraints x="0" y="0" width="750" height="500"/>
         </Constraint>
       </Constraints>
     </Component>

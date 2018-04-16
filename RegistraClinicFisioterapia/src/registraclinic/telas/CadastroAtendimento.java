@@ -44,6 +44,7 @@ public class CadastroAtendimento extends javax.swing.JDialog {
         btPesquisar = new javax.swing.JButton();
         btExcluir = new javax.swing.JButton();
         btSalvar = new javax.swing.JButton();
+        jLObrigatorioNome24 = new javax.swing.JLabel();
         jlTipoAtendimento = new javax.swing.JLabel();
         txtAtendimento = new javax.swing.JTextField();
         jLFundo = new javax.swing.JLabel();
@@ -51,14 +52,14 @@ public class CadastroAtendimento extends javax.swing.JDialog {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setLocationByPlatform(true);
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(600, 400));
         setResizable(false);
 
         jPanel1.setPreferredSize(new java.awt.Dimension(600, 400));
         jPanel1.setLayout(null);
 
         btVoltar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/voltar_1.png"))); // NOI18N
+        btVoltar.setForeground(new java.awt.Color(56, 100, 62));
+        btVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/voltar_fisio.png"))); // NOI18N
         btVoltar.setText("Voltar");
         btVoltar.setContentAreaFilled(false);
         btVoltar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -70,10 +71,11 @@ public class CadastroAtendimento extends javax.swing.JDialog {
             }
         });
         jPanel1.add(btVoltar);
-        btVoltar.setBounds(20, 310, 90, 83);
+        btVoltar.setBounds(20, 310, 90, 75);
 
         btLimpar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/limpar_1.png"))); // NOI18N
+        btLimpar.setForeground(new java.awt.Color(56, 100, 62));
+        btLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/limpar_fisio.png"))); // NOI18N
         btLimpar.setText("Limpar");
         btLimpar.setContentAreaFilled(false);
         btLimpar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -85,10 +87,11 @@ public class CadastroAtendimento extends javax.swing.JDialog {
             }
         });
         jPanel1.add(btLimpar);
-        btLimpar.setBounds(130, 310, 90, 84);
+        btLimpar.setBounds(130, 310, 90, 77);
 
         btPesquisar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/pesquisa.png"))); // NOI18N
+        btPesquisar.setForeground(new java.awt.Color(56, 100, 62));
+        btPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/pesquisar_fisio.png"))); // NOI18N
         btPesquisar.setText("Pesquisar");
         btPesquisar.setContentAreaFilled(false);
         btPesquisar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -100,10 +103,11 @@ public class CadastroAtendimento extends javax.swing.JDialog {
             }
         });
         jPanel1.add(btPesquisar);
-        btPesquisar.setBounds(240, 310, 120, 85);
+        btPesquisar.setBounds(250, 310, 100, 77);
 
         btExcluir.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/excluir_1.png"))); // NOI18N
+        btExcluir.setForeground(new java.awt.Color(56, 100, 62));
+        btExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/excluir_fisio.png"))); // NOI18N
         btExcluir.setText("Excluir");
         btExcluir.setContentAreaFilled(false);
         btExcluir.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -115,10 +119,11 @@ public class CadastroAtendimento extends javax.swing.JDialog {
             }
         });
         jPanel1.add(btExcluir);
-        btExcluir.setBounds(380, 310, 90, 85);
+        btExcluir.setBounds(380, 310, 90, 75);
 
         btSalvar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/salvar_1.png"))); // NOI18N
+        btSalvar.setForeground(new java.awt.Color(56, 100, 62));
+        btSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/save_fisio.png"))); // NOI18N
         btSalvar.setText("Salvar");
         btSalvar.setContentAreaFilled(false);
         btSalvar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -130,16 +135,23 @@ public class CadastroAtendimento extends javax.swing.JDialog {
             }
         });
         jPanel1.add(btSalvar);
-        btSalvar.setBounds(490, 310, 90, 83);
+        btSalvar.setBounds(490, 310, 90, 75);
+
+        jLObrigatorioNome24.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome24.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome24.setText("*");
+        jPanel1.add(jLObrigatorioNome24);
+        jLObrigatorioNome24.setBounds(550, 140, 10, 10);
 
         jlTipoAtendimento.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
-        jlTipoAtendimento.setText("Tipo de Atendimento:");
+        jlTipoAtendimento.setForeground(new java.awt.Color(58, 100, 62));
+        jlTipoAtendimento.setText("Tipo de Atendimento");
         jPanel1.add(jlTipoAtendimento);
-        jlTipoAtendimento.setBounds(20, 60, 175, 18);
+        jlTipoAtendimento.setBounds(40, 130, 152, 19);
 
         txtAtendimento.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtAtendimento.setForeground(new java.awt.Color(51, 0, 51));
-        txtAtendimento.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(100, 44, 143), 1, true));
+        txtAtendimento.setForeground(new java.awt.Color(58, 100, 62));
+        txtAtendimento.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         txtAtendimento.setMaximumSize(new java.awt.Dimension(8, 200));
         txtAtendimento.setMinimumSize(new java.awt.Dimension(8, 200));
         txtAtendimento.addActionListener(new java.awt.event.ActionListener() {
@@ -148,9 +160,10 @@ public class CadastroAtendimento extends javax.swing.JDialog {
             }
         });
         jPanel1.add(txtAtendimento);
-        txtAtendimento.setBounds(20, 90, 560, 30);
+        txtAtendimento.setBounds(40, 150, 520, 30);
 
         jLFundo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/TIPOS DE ATENDIMENTO.png"))); // NOI18N
         jLFundo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jPanel1.add(jLFundo);
         jLFundo.setBounds(0, 0, 600, 400);
@@ -268,6 +281,7 @@ public class CadastroAtendimento extends javax.swing.JDialog {
     private javax.swing.JButton btSalvar;
     private javax.swing.JButton btVoltar;
     private javax.swing.JLabel jLFundo;
+    private javax.swing.JLabel jLObrigatorioNome24;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel jlTipoAtendimento;
     private javax.swing.JTextField txtAtendimento;
