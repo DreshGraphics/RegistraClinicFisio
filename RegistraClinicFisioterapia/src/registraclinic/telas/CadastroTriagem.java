@@ -200,7 +200,7 @@ public class CadastroTriagem extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btSalvar);
-        btSalvar.setBounds(720, 440, 80, 70);
+        btSalvar.setBounds(710, 440, 80, 70);
 
         grupoPrioridade.add(jrAzul);
         jrAzul.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
