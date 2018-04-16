@@ -432,7 +432,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="12" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Paciente necessita de atendimento o mais protamente poss&#xed;vel - encaix&#xe1;-lo no m&#xe1;ximo em 7 dias"/>
+        <Property name="text" type="java.lang.String" value="Paciente necessita de atendimento o mais prontamente poss&#xed;vel - encaix&#xe1;-lo no m&#xe1;ximo em 7 dias"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

@@ -280,7 +280,7 @@ public class CadastroTriagem extends javax.swing.JDialog {
         jLabel1.setBounds(160, 380, 640, 40);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel2.setText("Paciente necessita de atendimento o mais protamente possível - encaixá-lo no máximo em 7 dias");
+        jLabel2.setText("Paciente necessita de atendimento o mais prontamente possível - encaixá-lo no máximo em 7 dias");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(160, 170, 650, 40);
 

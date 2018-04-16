@@ -15,16 +15,16 @@ import javax.swing.table.AbstractTableModel;
  */
 public class AtendimentoTableModel extends AbstractTableModel {
 
-    private List<Atendimento> atendimento = new ArrayList<>();
+    private List<Atendimento> atendimentos = new ArrayList<>();
     private String[] colunas = {"Código", "Atendimento"};
 
-    public AtendimentoTableModel(List<Atendimento> atendimento) {
-        this.atendimento = atendimento;
+    public AtendimentoTableModel(List<Atendimento> atendimentos) {
+        this.atendimentos = atendimentos;
     }
 
     @Override
     public int getRowCount() {
-        return atendimento.size();
+        return atendimentos.size();
     }
 
     @Override
@@ -34,12 +34,12 @@ public class AtendimentoTableModel extends AbstractTableModel {
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        Atendimento cidade = atendimento.get(rowIndex);
+        Atendimento atendimento = atendimentos.get(rowIndex);
         switch (columnIndex) {
             case 0:
-                return cidade.getIdAtendimento();
+                return atendimento.getIdAtendimento();
             case 1:
-                return cidade.getNomeAtendimento();
+                return atendimento.getNomeAtendimento();
         }
         return null;
     }
