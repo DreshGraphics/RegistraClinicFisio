@@ -4,6 +4,7 @@ import java.util.List;
 import javax.swing.JOptionPane;
 import org.hibernate.Criteria;
 import org.hibernate.criterion.Restrictions;
+import registraclinic.usuario.Usuario;
 import registraclinic.util.GenericDAO;
 import registraclinic.util.HibernateUtil;
 
@@ -31,6 +32,19 @@ public class AlunoDAO extends GenericDAO<Aluno> {
         } else {
             JOptionPane.showMessageDialog(null, "A edição foi cancelada!");
         }
+    }
+    
+    public Aluno autenticarUsuario(String login, String senha) {
+        sessao = HibernateUtil.getSessionFactory().openSession();
+        transacao = sessao.beginTransaction();
+        Aluno aluno = (Aluno) sessao.createCriteria(Aluno.class).add(Restrictions.eq("senhaUsuario", senha)).add(Restrictions.eq("loginUsuario", login)).uniqueResult();
+        if (aluno == null) {
+            JOptionPane.showMessageDialog(null, "Usuário ou Senha Inválidos!");
+        } else {
+            sessao.close();
+            return aluno;
+        }
+        return aluno;
     }
     
     public boolean excluir(Aluno aluno) {

@@ -6,14 +6,11 @@
 package registraclinic.usuario;
 
 import java.io.Serializable;
-import javax.persistence.AttributeOverride;
-import javax.persistence.AttributeOverrides;
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
-import javax.persistence.MappedSuperclass;
+import javax.swing.JOptionPane;
+import org.hibernate.criterion.Restrictions;
 import registraclinic.pessoa.Pessoa;
+import registraclinic.util.HibernateUtil;
 
 /**
  *
@@ -25,7 +22,7 @@ public abstract class Usuario extends Pessoa implements Serializable {
     private String loginUsuario;
     private String senhaUsuario;
     private String tipoUsuario;
-    private String emailUsuario;
+    private String emailUsuario;   
     
     public String getLoginUsuario() {
         return loginUsuario;

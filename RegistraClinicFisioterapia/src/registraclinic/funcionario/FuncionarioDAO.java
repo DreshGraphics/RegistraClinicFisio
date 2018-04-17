@@ -7,7 +7,10 @@ package registraclinic.funcionario;
 
 import registraclinic.util.GenericDAO;
 import javax.swing.JOptionPane;
+import org.hibernate.criterion.Restrictions;
+import registraclinic.aluno.Aluno;
 import registraclinic.paciente.Paciente;
+import registraclinic.util.HibernateUtil;
 
 /**
  *
@@ -35,6 +38,19 @@ public class FuncionarioDAO extends GenericDAO<Funcionario> {
         }
     }
 
+    public Funcionario autenticarUsuario(String login, String senha) {
+        sessao = HibernateUtil.getSessionFactory().openSession();
+        transacao = sessao.beginTransaction();
+        Funcionario funcionario = (Funcionario) sessao.createCriteria(Funcionario.class).add(Restrictions.eq("senhaUsuario", senha)).add(Restrictions.eq("loginUsuario", login)).uniqueResult();
+        if (funcionario == null) {
+            JOptionPane.showMessageDialog(null, "Usuário ou Senha Inválidos!");
+        } else {
+            sessao.close();
+            return funcionario;
+        }
+        return funcionario;
+    }
+    
     public boolean excluir(Funcionario funcionario) {
         Object[] options = {"Sim", "Não"};
         if (funcionario.getIdPessoa() != 0) {

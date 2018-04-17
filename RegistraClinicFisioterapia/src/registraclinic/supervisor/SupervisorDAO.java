@@ -29,6 +29,19 @@ public class SupervisorDAO extends GenericDAO<Supervisor> {
         }
     }
     
+    public Supervisor autenticarUsuario(String login, String senha) {
+        sessao = HibernateUtil.getSessionFactory().openSession();
+        transacao = sessao.beginTransaction();
+        Supervisor supervisor = (Supervisor) sessao.createCriteria(Supervisor.class).add(Restrictions.eq("senhaUsuario", senha)).add(Restrictions.eq("loginUsuario", login)).uniqueResult();
+        if (supervisor == null) {
+            JOptionPane.showMessageDialog(null, "Usuário ou Senha Inválidos!");
+        } else {
+            sessao.close();
+            return supervisor;
+        }
+        return supervisor;
+    }
+    
     public boolean excluir(Supervisor supervisor) {
         Object[] options = {"Sim", "Não"};
         if (supervisor.getIdPessoa() != 0) {
