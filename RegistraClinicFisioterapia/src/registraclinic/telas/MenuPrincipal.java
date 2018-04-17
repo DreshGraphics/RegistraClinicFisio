@@ -276,8 +276,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btLogoutActionPerformed
 
     private void subUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subUsuarioActionPerformed
-        
-
+        CadastroPessoa cp = new CadastroPessoa(this, rootPaneCheckingEnabled);
+        cp.setVisible(true);
     }//GEN-LAST:event_subUsuarioActionPerformed
 
     private void subProdutoConsumoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subProdutoConsumoActionPerformed
@@ -285,7 +285,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_subProdutoConsumoActionPerformed
 
     private void subTriagemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subTriagemActionPerformed
-        
+        CadastroTriagem ct = new CadastroTriagem(this, rootPaneCheckingEnabled);
+        ct.setVisible(true);
     }//GEN-LAST:event_subTriagemActionPerformed
 
     private void menuRelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuRelatorioActionPerformed
@@ -305,7 +306,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_subProdutoPermanenteActionPerformed
 
     private void subAtendimentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subAtendimentoActionPerformed
-       
+        CadastroAtendimento ca = new CadastroAtendimento(this, rootPaneCheckingEnabled);
+        ca.setVisible(true);
     }//GEN-LAST:event_subAtendimentoActionPerformed
 
     private void subDevolverEstoqueConsumoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subDevolverEstoqueConsumoActionPerformed
@@ -325,7 +327,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_subDevolverEstoquePermanenteActionPerformed
 
     private void subCidadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subCidadesActionPerformed
-       
+        CadastroCidades cc = new CadastroCidades(this, rootPaneCheckingEnabled);
+        cc.setVisible(true);
     }//GEN-LAST:event_subCidadesActionPerformed
 
     /**

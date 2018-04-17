@@ -59,7 +59,7 @@ public class TelaAutenticacao extends javax.swing.JFrame {
 
         btCancelar.setBackground(new java.awt.Color(0, 102, 0));
         btCancelar.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        btCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Sair_1.png"))); // NOI18N
+        btCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Sair_80-80.png"))); // NOI18N
         btCancelar.setText("Sair");
         btCancelar.setBorder(null);
         btCancelar.setBorderPainted(false);
@@ -79,11 +79,11 @@ public class TelaAutenticacao extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btCancelar);
-        btCancelar.setBounds(710, 418, 110, 130);
+        btCancelar.setBounds(780, 430, 90, 110);
 
         btEntrar.setBackground(new java.awt.Color(255, 255, 255));
         btEntrar.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        btEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Entrar_1.png"))); // NOI18N
+        btEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Entrar_80-80.png"))); // NOI18N
         btEntrar.setText("Entrar");
         btEntrar.setContentAreaFilled(false);
         btEntrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -96,7 +96,7 @@ public class TelaAutenticacao extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btEntrar);
-        btEntrar.setBounds(860, 415, 120, 135);
+        btEntrar.setBounds(890, 430, 90, 113);
 
         jLabel3.setFont(new java.awt.Font("Calibri", 1, 28)); // NOI18N
         jLabel3.setText("TIPO DE USUÁRIO");
