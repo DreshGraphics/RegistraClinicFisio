@@ -73,6 +73,7 @@ public class PesquisaGenerica extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jSeparator4 = new javax.swing.JSeparator();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbPesquisa = new javax.swing.JTable();
@@ -88,8 +89,11 @@ public class PesquisaGenerica extends javax.swing.JDialog {
         setUndecorated(true);
         getContentPane().setLayout(null);
 
+        jSeparator4.setForeground(new java.awt.Color(58, 100, 62));
+        getContentPane().add(jSeparator4);
+        jSeparator4.setBounds(0, 410, 700, 10);
+
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(58, 100, 62));
         jLabel1.setText("Pesquisar");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(30, 120, 90, 20);
@@ -125,10 +129,9 @@ public class PesquisaGenerica extends javax.swing.JDialog {
         jScrollPane1.setViewportView(tbPesquisa);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(30, 160, 640, 250);
+        jScrollPane1.setBounds(30, 150, 640, 250);
 
         btEditar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btEditar.setForeground(new java.awt.Color(58, 100, 62));
         btEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/editar_fisio.png"))); // NOI18N
         btEditar.setText("Selecionar");
         btEditar.setContentAreaFilled(false);
@@ -144,7 +147,6 @@ public class PesquisaGenerica extends javax.swing.JDialog {
         btEditar.setBounds(590, 420, 103, 70);
 
         btVoltar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btVoltar.setForeground(new java.awt.Color(58, 100, 62));
         btVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/voltar_fisio.png"))); // NOI18N
         btVoltar.setText("Voltar");
         btVoltar.setContentAreaFilled(false);
@@ -160,7 +162,6 @@ public class PesquisaGenerica extends javax.swing.JDialog {
         btVoltar.setBounds(10, 420, 80, 70);
 
         tfPesquisa.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        tfPesquisa.setForeground(new java.awt.Color(58, 100, 62));
         tfPesquisa.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         tfPesquisa.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -277,6 +278,7 @@ public class PesquisaGenerica extends javax.swing.JDialog {
     private javax.swing.JButton btVoltar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSeparator jSeparator4;
     private javax.swing.JLabel jlPesquisar;
     private javax.swing.JTable tbPesquisa;
     private javax.swing.JTextField tfPesquisa;

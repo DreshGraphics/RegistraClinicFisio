@@ -66,7 +66,6 @@ public class CadastroCidades extends javax.swing.JDialog {
         getContentPane().setLayout(null);
 
         btVoltar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btVoltar.setForeground(new java.awt.Color(58, 100, 62));
         btVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/voltar_fisio.png"))); // NOI18N
         btVoltar.setText("Voltar");
         btVoltar.setContentAreaFilled(false);
@@ -79,10 +78,9 @@ public class CadastroCidades extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btVoltar);
-        btVoltar.setBounds(20, 340, 90, 70);
+        btVoltar.setBounds(10, 340, 80, 70);
 
         txtCep.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
-        txtCep.setForeground(new java.awt.Color(58, 100, 62));
         try {
             txtCep.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("#####-###")));
         } catch (java.text.ParseException ex) {
@@ -102,7 +100,6 @@ public class CadastroCidades extends javax.swing.JDialog {
         jLObrigatorioNome3.setBounds(350, 210, 10, 10);
 
         btPesquisar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btPesquisar.setForeground(new java.awt.Color(58, 100, 62));
         btPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/pesquisar_fisio.png"))); // NOI18N
         btPesquisar.setText("Pesquisar");
         btPesquisar.setContentAreaFilled(false);
@@ -115,10 +112,9 @@ public class CadastroCidades extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btPesquisar);
-        btPesquisar.setBounds(270, 340, 100, 70);
+        btPesquisar.setBounds(260, 340, 100, 70);
 
         jcEstado.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jcEstado.setForeground(new java.awt.Color(58, 100, 62));
         jcEstado.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "-------", "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO" }));
         jcEstado.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         jcEstado.addActionListener(new java.awt.event.ActionListener() {
@@ -130,13 +126,11 @@ public class CadastroCidades extends javax.swing.JDialog {
         jcEstado.setBounds(50, 220, 110, 30);
 
         jlNomeUsuario4.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
-        jlNomeUsuario4.setForeground(new java.awt.Color(58, 100, 62));
-        jlNomeUsuario4.setText("CEP:");
+        jlNomeUsuario4.setText("CEP");
         getContentPane().add(jlNomeUsuario4);
         jlNomeUsuario4.setBounds(180, 200, 70, 20);
 
         btExcluir.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btExcluir.setForeground(new java.awt.Color(58, 100, 62));
         btExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/excluir_fisio.png"))); // NOI18N
         btExcluir.setText("Excluir");
         btExcluir.setContentAreaFilled(false);
@@ -149,10 +143,9 @@ public class CadastroCidades extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btExcluir);
-        btExcluir.setBounds(380, 340, 80, 70);
+        btExcluir.setBounds(370, 340, 80, 70);
 
         btLimpar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btLimpar.setForeground(new java.awt.Color(58, 100, 62));
         btLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/limpar_fisio.png"))); // NOI18N
         btLimpar.setText("Limpar");
         btLimpar.setContentAreaFilled(false);
@@ -165,10 +158,9 @@ public class CadastroCidades extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btLimpar);
-        btLimpar.setBounds(160, 340, 80, 70);
+        btLimpar.setBounds(150, 340, 80, 70);
 
         btSalvar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btSalvar.setForeground(new java.awt.Color(58, 100, 62));
         btSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/save_fisio.png"))); // NOI18N
         btSalvar.setText("Salvar");
         btSalvar.setContentAreaFilled(false);
@@ -184,8 +176,7 @@ public class CadastroCidades extends javax.swing.JDialog {
         btSalvar.setBounds(500, 340, 80, 70);
 
         jlNomeUsuario2.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
-        jlNomeUsuario2.setForeground(new java.awt.Color(58, 100, 62));
-        jlNomeUsuario2.setText("Estado:");
+        jlNomeUsuario2.setText("Estado");
         getContentPane().add(jlNomeUsuario2);
         jlNomeUsuario2.setBounds(50, 200, 70, 20);
 
@@ -196,7 +187,6 @@ public class CadastroCidades extends javax.swing.JDialog {
         jLObrigatorioNome1.setBounds(150, 210, 10, 10);
 
         txtCidade.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtCidade.setForeground(new java.awt.Color(58, 100, 62));
         txtCidade.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         txtCidade.setMaximumSize(new java.awt.Dimension(8, 200));
         txtCidade.setMinimumSize(new java.awt.Dimension(8, 200));
@@ -209,8 +199,7 @@ public class CadastroCidades extends javax.swing.JDialog {
         txtCidade.setBounds(50, 150, 510, 30);
 
         jlNomeUsuario3.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
-        jlNomeUsuario3.setForeground(new java.awt.Color(58, 100, 62));
-        jlNomeUsuario3.setText("Cidade:");
+        jlNomeUsuario3.setText("Cidade");
         getContentPane().add(jlNomeUsuario3);
         jlNomeUsuario3.setBounds(50, 130, 90, 20);
 

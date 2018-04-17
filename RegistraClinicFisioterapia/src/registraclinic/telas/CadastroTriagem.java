@@ -89,7 +89,6 @@ public class CadastroTriagem extends javax.swing.JDialog {
         getContentPane().setLayout(null);
 
         btVoltar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btVoltar.setForeground(new java.awt.Color(58, 100, 62));
         btVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/voltar_fisio.png"))); // NOI18N
         btVoltar.setText("Voltar");
         btVoltar.setContentAreaFilled(false);
@@ -103,10 +102,9 @@ public class CadastroTriagem extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btVoltar);
-        btVoltar.setBounds(30, 440, 90, 70);
+        btVoltar.setBounds(20, 440, 80, 70);
 
         btPesquisar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btPesquisar.setForeground(new java.awt.Color(58, 100, 62));
         btPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/pesquisar_fisio.png"))); // NOI18N
         btPesquisar.setText("Pesquisar");
         btPesquisar.setContentAreaFilled(false);
@@ -137,7 +135,6 @@ public class CadastroTriagem extends javax.swing.JDialog {
         btnAtendimento.setBounds(770, 90, 30, 30);
 
         txtAtendimento.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtAtendimento.setForeground(new java.awt.Color(58, 100, 62));
         txtAtendimento.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         txtAtendimento.setMaximumSize(new java.awt.Dimension(8, 200));
         txtAtendimento.setMinimumSize(new java.awt.Dimension(8, 200));
@@ -150,7 +147,6 @@ public class CadastroTriagem extends javax.swing.JDialog {
         txtAtendimento.setBounds(430, 90, 340, 30);
 
         jlNomeUsuario6.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
-        jlNomeUsuario6.setForeground(new java.awt.Color(58, 100, 62));
         jlNomeUsuario6.setText("Atendimento");
         getContentPane().add(jlNomeUsuario6);
         jlNomeUsuario6.setBounds(430, 70, 120, 20);
@@ -162,7 +158,6 @@ public class CadastroTriagem extends javax.swing.JDialog {
         jLObrigatorioNome4.setBounds(760, 80, 9, 10);
 
         btExcluir.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btExcluir.setForeground(new java.awt.Color(58, 100, 62));
         btExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/excluir_fisio.png"))); // NOI18N
         btExcluir.setText("Excluir");
         btExcluir.setContentAreaFilled(false);
@@ -178,7 +173,6 @@ public class CadastroTriagem extends javax.swing.JDialog {
         btExcluir.setBounds(500, 440, 80, 70);
 
         btLimpar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btLimpar.setForeground(new java.awt.Color(58, 100, 62));
         btLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/limpar_fisio.png"))); // NOI18N
         btLimpar.setText("Limpar");
         btLimpar.setContentAreaFilled(false);
@@ -194,7 +188,6 @@ public class CadastroTriagem extends javax.swing.JDialog {
         btLimpar.setBounds(240, 440, 80, 70);
 
         btSalvar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btSalvar.setForeground(new java.awt.Color(58, 100, 62));
         btSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/save_fisio.png"))); // NOI18N
         btSalvar.setText("Salvar");
         btSalvar.setContentAreaFilled(false);
@@ -207,12 +200,11 @@ public class CadastroTriagem extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btSalvar);
-        btSalvar.setBounds(710, 440, 80, 70);
+        btSalvar.setBounds(720, 440, 80, 70);
 
         jrAzul.setBackground(new java.awt.Color(255, 255, 255));
         grupoPrioridade.add(jrAzul);
         jrAzul.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jrAzul.setForeground(new java.awt.Color(58, 100, 62));
         jrAzul.setText("Azul");
         jrAzul.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -227,7 +219,6 @@ public class CadastroTriagem extends javax.swing.JDialog {
         verde1.setBounds(20, 380, 40, 40);
 
         jlNomeUsuario5.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
-        jlNomeUsuario5.setForeground(new java.awt.Color(58, 100, 62));
         jlNomeUsuario5.setText("Paciente");
         getContentPane().add(jlNomeUsuario5);
         jlNomeUsuario5.setBounds(20, 70, 70, 20);
@@ -235,7 +226,6 @@ public class CadastroTriagem extends javax.swing.JDialog {
         jrAmarelo.setBackground(new java.awt.Color(255, 255, 255));
         grupoPrioridade.add(jrAmarelo);
         jrAmarelo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jrAmarelo.setForeground(new java.awt.Color(58, 100, 62));
         jrAmarelo.setText("Amarelo");
         getContentPane().add(jrAmarelo);
         jrAmarelo.setBounds(60, 250, 90, 23);
@@ -243,19 +233,16 @@ public class CadastroTriagem extends javax.swing.JDialog {
         jrLaranja.setBackground(new java.awt.Color(255, 255, 255));
         grupoPrioridade.add(jrLaranja);
         jrLaranja.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jrLaranja.setForeground(new java.awt.Color(58, 100, 62));
         jrLaranja.setText("Laranja");
         getContentPane().add(jrLaranja);
         jrLaranja.setBounds(60, 180, 80, 25);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 21)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(58, 100, 62));
         jLabel7.setText("Prioridade de Atendimento");
         getContentPane().add(jLabel7);
         jLabel7.setBounds(250, 130, 300, 30);
 
         txtPaciente.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtPaciente.setForeground(new java.awt.Color(58, 100, 62));
         txtPaciente.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         txtPaciente.setMaximumSize(new java.awt.Dimension(8, 200));
         txtPaciente.setMinimumSize(new java.awt.Dimension(8, 200));
@@ -274,7 +261,6 @@ public class CadastroTriagem extends javax.swing.JDialog {
         jrVerde.setBackground(new java.awt.Color(255, 255, 255));
         grupoPrioridade.add(jrVerde);
         jrVerde.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jrVerde.setForeground(new java.awt.Color(58, 100, 62));
         jrVerde.setText("Verde");
         jrVerde.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -293,25 +279,21 @@ public class CadastroTriagem extends javax.swing.JDialog {
         laranja.setBounds(20, 170, 40, 40);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(58, 100, 62));
         jLabel1.setText("Paciente com patologia crônica não agudizada que pode aguardar - encaixar quando possível");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(160, 380, 640, 40);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(58, 100, 62));
         jLabel2.setText("Paciente necessita de atendimento o mais prontamente possível - encaixá-lo no máximo em 7 dias");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(160, 170, 650, 40);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(58, 100, 62));
         jLabel4.setText("Paciente com patologia crônica que pode aguardar, mas sem tanta espera - encaixar dentro de 1 mês");
         getContentPane().add(jLabel4);
         jLabel4.setBounds(160, 310, 630, 40);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(58, 100, 62));
         jLabel3.setText("Paciente necessita iniciar a fisioterapia nos próximos 15 dias");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(160, 240, 440, 40);

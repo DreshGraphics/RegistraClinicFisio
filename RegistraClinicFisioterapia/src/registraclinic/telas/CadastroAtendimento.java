@@ -58,7 +58,6 @@ public class CadastroAtendimento extends javax.swing.JDialog {
         jPanel1.setLayout(null);
 
         btVoltar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btVoltar.setForeground(new java.awt.Color(56, 100, 62));
         btVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/voltar_fisio.png"))); // NOI18N
         btVoltar.setText("Voltar");
         btVoltar.setContentAreaFilled(false);
@@ -74,7 +73,6 @@ public class CadastroAtendimento extends javax.swing.JDialog {
         btVoltar.setBounds(20, 310, 90, 75);
 
         btLimpar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btLimpar.setForeground(new java.awt.Color(56, 100, 62));
         btLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/limpar_fisio.png"))); // NOI18N
         btLimpar.setText("Limpar");
         btLimpar.setContentAreaFilled(false);
@@ -90,7 +88,6 @@ public class CadastroAtendimento extends javax.swing.JDialog {
         btLimpar.setBounds(130, 310, 90, 77);
 
         btPesquisar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btPesquisar.setForeground(new java.awt.Color(56, 100, 62));
         btPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/pesquisar_fisio.png"))); // NOI18N
         btPesquisar.setText("Pesquisar");
         btPesquisar.setContentAreaFilled(false);
@@ -106,7 +103,6 @@ public class CadastroAtendimento extends javax.swing.JDialog {
         btPesquisar.setBounds(250, 310, 100, 77);
 
         btExcluir.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btExcluir.setForeground(new java.awt.Color(56, 100, 62));
         btExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/excluir_fisio.png"))); // NOI18N
         btExcluir.setText("Excluir");
         btExcluir.setContentAreaFilled(false);
@@ -122,7 +118,6 @@ public class CadastroAtendimento extends javax.swing.JDialog {
         btExcluir.setBounds(380, 310, 90, 75);
 
         btSalvar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btSalvar.setForeground(new java.awt.Color(56, 100, 62));
         btSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/save_fisio.png"))); // NOI18N
         btSalvar.setText("Salvar");
         btSalvar.setContentAreaFilled(false);
@@ -144,13 +139,11 @@ public class CadastroAtendimento extends javax.swing.JDialog {
         jLObrigatorioNome24.setBounds(550, 140, 10, 10);
 
         jlTipoAtendimento.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
-        jlTipoAtendimento.setForeground(new java.awt.Color(58, 100, 62));
         jlTipoAtendimento.setText("Tipo de Atendimento");
         jPanel1.add(jlTipoAtendimento);
         jlTipoAtendimento.setBounds(40, 130, 152, 19);
 
         txtAtendimento.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtAtendimento.setForeground(new java.awt.Color(58, 100, 62));
         txtAtendimento.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         txtAtendimento.setMaximumSize(new java.awt.Dimension(8, 200));
         txtAtendimento.setMinimumSize(new java.awt.Dimension(8, 200));
