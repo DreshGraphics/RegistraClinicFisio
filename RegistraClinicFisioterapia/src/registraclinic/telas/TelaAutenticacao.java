@@ -58,13 +58,16 @@ public class TelaAutenticacao extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         btCancelar.setBackground(new java.awt.Color(0, 102, 0));
-        btCancelar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        btCancelar.setForeground(new java.awt.Color(51, 102, 0));
+        btCancelar.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Sair_1.png"))); // NOI18N
         btCancelar.setText("Sair");
         btCancelar.setBorder(null);
         btCancelar.setBorderPainted(false);
         btCancelar.setContentAreaFilled(false);
         btCancelar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btCancelar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btCancelar.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        btCancelar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         btCancelar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btCancelarMouseEntered(evt);
@@ -76,64 +79,64 @@ public class TelaAutenticacao extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btCancelar);
-        btCancelar.setBounds(641, 440, 110, 110);
+        btCancelar.setBounds(710, 418, 110, 130);
 
         btEntrar.setBackground(new java.awt.Color(255, 255, 255));
-        btEntrar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        btEntrar.setForeground(new java.awt.Color(51, 153, 0));
+        btEntrar.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Entrar_1.png"))); // NOI18N
         btEntrar.setText("Entrar");
         btEntrar.setContentAreaFilled(false);
-        btEntrar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btEntrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btEntrar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btEntrar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btEntrar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         btEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btEntrarActionPerformed(evt);
             }
         });
         getContentPane().add(btEntrar);
-        btEntrar.setBounds(880, 440, 100, 110);
+        btEntrar.setBounds(860, 415, 120, 135);
 
         jLabel3.setFont(new java.awt.Font("Calibri", 1, 28)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(100, 44, 143));
         jLabel3.setText("TIPO DE USUÁRIO");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(530, 280, 220, 30);
+        jLabel3.setBounds(460, 290, 220, 30);
 
         jLabel2.setFont(new java.awt.Font("Calibri", 1, 28)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(100, 44, 143));
         jLabel2.setText("LOGIN");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(530, 80, 110, 30);
+        jLabel2.setBounds(460, 90, 110, 30);
 
         jcTipoUsuario.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
         jcTipoUsuario.setForeground(new java.awt.Color(58, 100, 62));
         jcTipoUsuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-----", "Aluno", "Funcionário", "Supervisor" }));
-        jcTipoUsuario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        jcTipoUsuario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 2, true));
         jcTipoUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcTipoUsuarioActionPerformed(evt);
             }
         });
         getContentPane().add(jcTipoUsuario);
-        jcTipoUsuario.setBounds(530, 310, 340, 50);
+        jcTipoUsuario.setBounds(460, 320, 340, 50);
 
         txtLogin.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
-        txtLogin.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(100, 44, 143), 2, true));
+        txtLogin.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(56, 100, 62), 2, true));
         txtLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtLoginActionPerformed(evt);
             }
         });
         getContentPane().add(txtLogin);
-        txtLogin.setBounds(530, 110, 340, 50);
+        txtLogin.setBounds(460, 120, 340, 50);
 
         jLabel4.setFont(new java.awt.Font("Calibri", 1, 28)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(100, 44, 143));
         jLabel4.setText("SENHA");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(530, 180, 120, 30);
+        jLabel4.setBounds(460, 190, 120, 30);
 
         txtSenha.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
-        txtSenha.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(100, 44, 143), 2, true));
+        txtSenha.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(56, 100, 62), 2, true));
         txtSenha.setMinimumSize(new java.awt.Dimension(4, 24));
         txtSenha.setPreferredSize(new java.awt.Dimension(4, 24));
         txtSenha.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -142,8 +145,9 @@ public class TelaAutenticacao extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtSenha);
-        txtSenha.setBounds(530, 210, 340, 50);
+        txtSenha.setBounds(460, 220, 340, 50);
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Login_2.png"))); // NOI18N
         jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel1.setMaximumSize(new java.awt.Dimension(1000, 570));
         jLabel1.setMinimumSize(new java.awt.Dimension(1000, 570));

@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Adriano Lima
+ * @author Karlos Oliveira
  */
 public class MenuPrincipal extends javax.swing.JFrame {
 
@@ -20,11 +20,16 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     public MenuPrincipal(Usuario usuario) {
         initComponents();
+        menuRelatorio.setVisible(false);
+        menuSaida.setVisible(false);
+        menuSaida1.setVisible(false);
         this.usuario = usuario;
         jlUsuario.setText(usuario.getLoginUsuario());
-        if (usuario.getTipoUsuario().equalsIgnoreCase("Funcionário")) {
+        if (usuario.getTipoUsuario().equalsIgnoreCase("Aluno")) {
             subUsuario.setVisible(false);
+            
         }
+        
     }
 
     /**
@@ -42,11 +47,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jlHome = new javax.swing.JLabel();
         jMenu = new javax.swing.JMenuBar();
         menuCadastros = new javax.swing.JMenu();
-        subTipoProduto = new javax.swing.JMenuItem();
-        subCidade = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        subSetor = new javax.swing.JMenuItem();
-        subCurso = new javax.swing.JMenuItem();
+        subTriagem = new javax.swing.JMenuItem();
+        subAtendimento = new javax.swing.JMenuItem();
+        subCidades = new javax.swing.JMenuItem();
         subUsuario = new javax.swing.JMenuItem();
         menuSaida = new javax.swing.JMenu();
         subProdutoConsumo = new javax.swing.JMenuItem();
@@ -61,15 +64,16 @@ public class MenuPrincipal extends javax.swing.JFrame {
         menuRelatorio = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(900, 559));
+        setMinimumSize(new java.awt.Dimension(1020, 623));
         setUndecorated(true);
         getContentPane().setLayout(null);
 
-        btLogout.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btLogout.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
+        btLogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Logoff_2.png"))); // NOI18N
         btLogout.setText("Sair");
         btLogout.setToolTipText("Sair");
         btLogout.setContentAreaFilled(false);
-        btLogout.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btLogout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btLogout.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btLogout.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         btLogout.addActionListener(new java.awt.event.ActionListener() {
@@ -78,19 +82,24 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btLogout);
-        btLogout.setBounds(810, 360, 80, 25);
+        btLogout.setBounds(910, 470, 100, 120);
 
-        jlUsuario.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        jlUsuario.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jlUsuario.setText("???");
         getContentPane().add(jlUsuario);
-        jlUsuario.setBounds(340, 400, 480, 30);
+        jlUsuario.setBounds(120, 510, 670, 30);
 
-        jlNome3.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jlNome3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jlNome3.setText("Usuário:");
         getContentPane().add(jlNome3);
-        jlNome3.setBounds(240, 400, 100, 30);
+        jlNome3.setBounds(10, 510, 110, 30);
+
+        jlHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/TELA_INICIAL_3.png"))); // NOI18N
+        jlHome.setMaximumSize(new java.awt.Dimension(1020, 620));
+        jlHome.setMinimumSize(new java.awt.Dimension(1020, 620));
+        jlHome.setPreferredSize(new java.awt.Dimension(1020, 620));
         getContentPane().add(jlHome);
-        jlHome.setBounds(0, 0, 900, 0);
+        jlHome.setBounds(0, 0, 1020, 620);
 
         jMenu.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jMenu.setForeground(new java.awt.Color(51, 204, 0));
@@ -104,50 +113,32 @@ public class MenuPrincipal extends javax.swing.JFrame {
         menuCadastros.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         menuCadastros.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
-        subTipoProduto.setText("Tipo de Produto");
-        subTipoProduto.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        subTipoProduto.addActionListener(new java.awt.event.ActionListener() {
+        subTriagem.setText("Triagem");
+        subTriagem.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        subTriagem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                subTipoProdutoActionPerformed(evt);
+                subTriagemActionPerformed(evt);
             }
         });
-        menuCadastros.add(subTipoProduto);
+        menuCadastros.add(subTriagem);
 
-        subCidade.setText("Cidade");
-        subCidade.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        subCidade.addActionListener(new java.awt.event.ActionListener() {
+        subAtendimento.setText("Atendimento");
+        subAtendimento.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        subAtendimento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                subCidadeActionPerformed(evt);
+                subAtendimentoActionPerformed(evt);
             }
         });
-        menuCadastros.add(subCidade);
+        menuCadastros.add(subAtendimento);
 
-        jMenuItem3.setText("Destino");
-        jMenuItem3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        subCidades.setText("Cidades");
+        subCidades.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        subCidades.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                subCidadesActionPerformed(evt);
             }
         });
-        menuCadastros.add(jMenuItem3);
-
-        subSetor.setText("Setor");
-        subSetor.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        subSetor.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                subSetorActionPerformed(evt);
-            }
-        });
-        menuCadastros.add(subSetor);
-
-        subCurso.setText("Curso");
-        subCurso.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        subCurso.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                subCursoActionPerformed(evt);
-            }
-        });
-        menuCadastros.add(subCurso);
+        menuCadastros.add(subCidades);
 
         subUsuario.setText("Usuário");
         subUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -283,9 +274,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
        
     }//GEN-LAST:event_subProdutoConsumoActionPerformed
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+    private void subTriagemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subTriagemActionPerformed
         
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    }//GEN-LAST:event_subTriagemActionPerformed
 
     private void menuRelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuRelatorioActionPerformed
         // TODO add your handling code here:
@@ -299,21 +290,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
        
     }//GEN-LAST:event_saidaProdutoDeConsumoActionPerformed
 
-    private void subCidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subCidadeActionPerformed
-      
-    }//GEN-LAST:event_subCidadeActionPerformed
-
     private void subProdutoPermanenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subProdutoPermanenteActionPerformed
         
     }//GEN-LAST:event_subProdutoPermanenteActionPerformed
 
-    private void subSetorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subSetorActionPerformed
+    private void subAtendimentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subAtendimentoActionPerformed
        
-    }//GEN-LAST:event_subSetorActionPerformed
-
-    private void subTipoProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subTipoProdutoActionPerformed
-        
-    }//GEN-LAST:event_subTipoProdutoActionPerformed
+    }//GEN-LAST:event_subAtendimentoActionPerformed
 
     private void subDevolverEstoqueConsumoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subDevolverEstoqueConsumoActionPerformed
        
@@ -331,9 +314,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
         
     }//GEN-LAST:event_subDevolverEstoquePermanenteActionPerformed
 
-    private void subCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subCursoActionPerformed
+    private void subCidadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subCidadesActionPerformed
        
-    }//GEN-LAST:event_subCursoActionPerformed
+    }//GEN-LAST:event_subCidadesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -376,7 +359,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btLogout;
     private javax.swing.JMenuBar jMenu;
-    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JLabel jlHome;
     private javax.swing.JLabel jlNome3;
     private javax.swing.JLabel jlUsuario;
@@ -386,15 +368,14 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu menuSaida1;
     private javax.swing.JMenuItem saidaProdutoDeConsumo;
     private javax.swing.JMenuItem saidaProdutoPermanente1;
-    private javax.swing.JMenuItem subCidade;
-    private javax.swing.JMenuItem subCurso;
+    private javax.swing.JMenuItem subAtendimento;
+    private javax.swing.JMenuItem subCidades;
     private javax.swing.JMenuItem subDevolverEstoqueConsumo;
     private javax.swing.JMenuItem subDevolverEstoquePermanente;
     private javax.swing.JMenuItem subEstoquePermanente3;
     private javax.swing.JMenuItem subProdutoConsumo;
     private javax.swing.JMenuItem subProdutoPermanente;
-    private javax.swing.JMenuItem subSetor;
-    private javax.swing.JMenuItem subTipoProduto;
+    private javax.swing.JMenuItem subTriagem;
     private javax.swing.JMenuItem subUsuario;
     private javax.swing.JMenuItem subUsuario2;
     // End of variables declaration//GEN-END:variables
