@@ -69,7 +69,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         btLogout.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
-        btLogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Logoff_2.png"))); // NOI18N
+        btLogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Logoff_3.png"))); // NOI18N
         btLogout.setText("Sair");
         btLogout.setToolTipText("Sair");
         btLogout.setContentAreaFilled(false);
@@ -82,37 +82,41 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btLogout);
-        btLogout.setBounds(910, 470, 100, 120);
+        btLogout.setBounds(930, 400, 80, 100);
 
         jlUsuario.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jlUsuario.setText("???");
         getContentPane().add(jlUsuario);
-        jlUsuario.setBounds(120, 510, 670, 30);
+        jlUsuario.setBounds(120, 470, 670, 30);
 
         jlNome3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jlNome3.setText("Usuário:");
         getContentPane().add(jlNome3);
-        jlNome3.setBounds(10, 510, 110, 30);
+        jlNome3.setBounds(10, 470, 110, 30);
 
-        jlHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/TELA_INICIAL_3.png"))); // NOI18N
-        jlHome.setMaximumSize(new java.awt.Dimension(1020, 620));
-        jlHome.setMinimumSize(new java.awt.Dimension(1020, 620));
-        jlHome.setPreferredSize(new java.awt.Dimension(1020, 620));
+        jlHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/TELA_INICIAL_5.png"))); // NOI18N
+        jlHome.setMaximumSize(new java.awt.Dimension(1020, 540));
+        jlHome.setMinimumSize(new java.awt.Dimension(1020, 540));
+        jlHome.setPreferredSize(new java.awt.Dimension(1020, 540));
         getContentPane().add(jlHome);
-        jlHome.setBounds(0, 0, 1020, 620);
+        jlHome.setBounds(0, 0, 1020, 509);
 
+        jMenu.setBackground(new java.awt.Color(255, 255, 255));
         jMenu.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jMenu.setForeground(new java.awt.Color(51, 204, 0));
         jMenu.setBorderPainted(false);
         jMenu.setMaximumSize(new java.awt.Dimension(900, 200));
         jMenu.setMinimumSize(new java.awt.Dimension(900, 200));
 
+        menuCadastros.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/add_cad_3.png"))); // NOI18N
         menuCadastros.setText("Cadastro");
         menuCadastros.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         menuCadastros.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         menuCadastros.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         menuCadastros.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
+        subTriagem.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
+        subTriagem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/add_sub_14-14.png"))); // NOI18N
         subTriagem.setText("Triagem");
         subTriagem.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         subTriagem.addActionListener(new java.awt.event.ActionListener() {
@@ -122,6 +126,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
         });
         menuCadastros.add(subTriagem);
 
+        subAtendimento.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
+        subAtendimento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/add_sub_14-14.png"))); // NOI18N
         subAtendimento.setText("Atendimento");
         subAtendimento.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         subAtendimento.addActionListener(new java.awt.event.ActionListener() {
@@ -131,6 +137,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
         });
         menuCadastros.add(subAtendimento);
 
+        subCidades.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
+        subCidades.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/add_sub_14-14.png"))); // NOI18N
         subCidades.setText("Cidades");
         subCidades.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         subCidades.addActionListener(new java.awt.event.ActionListener() {
@@ -140,6 +148,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
         });
         menuCadastros.add(subCidades);
 
+        subUsuario.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
+        subUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/add_sub_14-14.png"))); // NOI18N
         subUsuario.setText("Usuário");
         subUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         subUsuario.addActionListener(new java.awt.event.ActionListener() {
