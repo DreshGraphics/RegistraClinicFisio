@@ -27,7 +27,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jlUsuario.setText(usuario.getLoginUsuario());
         if (usuario.getTipoUsuario().equalsIgnoreCase("Aluno")) {
             subUsuario.setVisible(false);
-            
+            subAtendimento.setVisible(false);
+            subTriagem.setVisible(false);
+            subCidades.setVisible(false);
         }
         
     }

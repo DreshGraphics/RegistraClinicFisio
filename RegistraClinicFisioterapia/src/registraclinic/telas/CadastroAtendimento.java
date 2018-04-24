@@ -85,7 +85,7 @@ public class CadastroAtendimento extends javax.swing.JDialog {
             }
         });
         jPanel1.add(btLimpar);
-        btLimpar.setBounds(130, 310, 90, 77);
+        btLimpar.setBounds(142, 313, 80, 70);
 
         btPesquisar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/pesquisar_fisio.png"))); // NOI18N
@@ -184,13 +184,6 @@ public class CadastroAtendimento extends javax.swing.JDialog {
         dispose();
     }//GEN-LAST:event_btVoltarActionPerformed
 
-    private void btLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLimparActionPerformed
-        Util.limparCamposGenerico(this);
-
-        btExcluir.setEnabled(false);
-        atendimento = new Atendimento();
-    }//GEN-LAST:event_btLimparActionPerformed
-
     private void btPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPesquisarActionPerformed
         List<Atendimento> lista;
         lista = atendimentoDAO.listar();
@@ -224,6 +217,13 @@ public class CadastroAtendimento extends javax.swing.JDialog {
         }
         btLimparActionPerformed(null);
     }//GEN-LAST:event_btSalvarActionPerformed
+
+    private void btLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLimparActionPerformed
+        Util.limparCamposGenerico(this);
+        btExcluir.setEnabled(false);
+        txtAtendimento.setText("");
+        atendimento = new Atendimento();
+    }//GEN-LAST:event_btLimparActionPerformed
 
     /**
      * @param args the command line arguments

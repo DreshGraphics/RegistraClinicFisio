@@ -24,11 +24,11 @@ import registraclinic.prioridadeatendimento.PrioridadeAtendimentoTableModel;
  */
 public class CadastroTriagem extends javax.swing.JDialog {
 
-    Paciente paciente = new Paciente();
+    Paciente paciente;
     PacienteDAO pacienteDAO = new PacienteDAO();
-    Atendimento atendimento = new Atendimento();
+    Atendimento atendimento;
     AtendimentoDAO atendimentoDAO = new AtendimentoDAO();
-    PrioridadeAtendimento prioridadeAtendimento = new PrioridadeAtendimento();
+    PrioridadeAtendimento prioridadeAtendimento;
     PrioridadeAtendimentoDAO prioridadeAtendimentoDAO = new PrioridadeAtendimentoDAO();
 
     public CadastroTriagem(java.awt.Frame parent, boolean modal) {

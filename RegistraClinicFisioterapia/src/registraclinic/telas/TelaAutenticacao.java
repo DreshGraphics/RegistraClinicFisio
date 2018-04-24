@@ -19,11 +19,11 @@ import registraclinic.supervisor.SupervisorDAO;
 
 public class TelaAutenticacao extends javax.swing.JFrame {
 
-    Usuario aluno = new Aluno();
+    Usuario aluno;
     AlunoDAO alunoDAO = new AlunoDAO();
-    Usuario funcionario = new Funcionario();
+    Usuario funcionario;
     FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
-    Usuario supervisor = new Supervisor();
+    Usuario supervisor;
     SupervisorDAO supervisorDAO = new SupervisorDAO();
 
     /**
@@ -186,35 +186,29 @@ public class TelaAutenticacao extends javax.swing.JFrame {
         if (txtLogin.getText().equals("") || txtSenha.getText().equals("")) {
             JOptionPane.showMessageDialog(this, "Prencha todos os campos !!");
         } else {
-
-            
-            
-
             if (jcTipoUsuario.getSelectedItem().equals("Aluno")) {
+                aluno = alunoDAO.autenticarUsuario(txtLogin.getText(), txtSenha.getText());
                 if (aluno != null) {
-                    aluno = alunoDAO.autenticarUsuario(txtLogin.getText(), txtSenha.getText());
                     MenuPrincipal menu = new MenuPrincipal(aluno);
                     dispose();
                     menu.setVisible(true);
                 }
-
             }
             if (jcTipoUsuario.getSelectedItem().equals("Supervisor")) {
+                supervisor = supervisorDAO.autenticarUsuario(txtLogin.getText(), txtSenha.getText());
                 if (supervisor != null) {
-                    supervisor = supervisorDAO.autenticarUsuario(txtLogin.getText(), txtSenha.getText());
                     MenuPrincipal menu = new MenuPrincipal(supervisor);
                     dispose();
                     menu.setVisible(true);
                 }
             }
-            if (jcTipoUsuario.getSelectedItem().equals("Funcionario")) {
+            if (jcTipoUsuario.getSelectedItem().equals("Funcionário")) {
+                funcionario = funcionarioDAO.autenticarUsuario(txtLogin.getText(), txtSenha.getText());
                 if (funcionario != null) {
-                    funcionario = funcionarioDAO.autenticarUsuario(txtLogin.getText(), txtSenha.getText());
                     MenuPrincipal menu = new MenuPrincipal(funcionario);
                     dispose();
                     menu.setVisible(true);
                 }
-
             }
         }
 

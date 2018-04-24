@@ -21,6 +21,7 @@
         <mapping class="registraclinic.cidade.Cidade"/>
         <mapping class="registraclinic.atendimento.Atendimento"/>
         <mapping class="registraclinic.triagem.Triagem"/>
+        <mapping class="registraclinic.prioridadeAtendimento.PrioridadeAtendimento"/>
     </session-factory>
 </hibernate-configuration>
 

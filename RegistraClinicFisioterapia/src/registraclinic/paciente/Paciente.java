@@ -6,6 +6,7 @@
 package registraclinic.paciente;
 
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import registraclinic.pessoa.Pessoa;
 
@@ -21,6 +22,13 @@ public class Paciente extends Pessoa{
     private String agenteDeSaudePaciente;
     private String pesoPaciente;
     private String alturaPaciente;
+    private String situacaoDeAtendimento = "Aguardando atendimento";
+    //Aguardando triagem
+    //Aguardando atendimento <- já fica nesse
+    //Em atendimento
+    
+    @Column(length = 100)
+    private String queixaDoPaciente;
 
     public String getNumeroProntuarioPaciente() {
         return numeroProntuarioPaciente;
@@ -60,6 +68,22 @@ public class Paciente extends Pessoa{
 
     public void setAlturaPaciente(String alturaPaciente) {
         this.alturaPaciente = alturaPaciente;
+    }
+
+    public String getSituacaoDeAtendimento() {
+        return situacaoDeAtendimento;
+    }
+
+    public void setSituacaoDeAtendimento(String situacaoDeAtendimento) {
+        this.situacaoDeAtendimento = situacaoDeAtendimento;
+    }
+
+    public String getQueixaDoPaciente() {
+        return queixaDoPaciente;
+    }
+
+    public void setQueixaDoPaciente(String queixaDoPaciente) {
+        this.queixaDoPaciente = queixaDoPaciente;
     }
 
     
