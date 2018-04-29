@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package registraclinic.prioridadeatendimento;
+package registraclinic.triagem;
 
+import java.io.Serializable;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -24,11 +25,11 @@ import registraclinic.paciente.Paciente;
  * @author Karlos Oliveira
  */
 @Entity
-public class PrioridadeAtendimento {
+public class Triagem implements Serializable {
     
     @Id
     @GeneratedValue
-    private int idPrioridadeAtendimento;
+    private int idTriagem;
     
     @Column(length = 100)
     private String prioridadeDoAtendimento;
@@ -41,13 +42,14 @@ public class PrioridadeAtendimento {
     @JoinColumn(name="idPaciente")
     private Paciente paciente;
 
-    public int getIdPrioridadeAtendimento() {
-        return idPrioridadeAtendimento;
+    public int getIdTriagem() {
+        return idTriagem;
     }
 
-    public void setIdPrioridadeAtendimento(int idPrioridadeAtendimento) {
-        this.idPrioridadeAtendimento = idPrioridadeAtendimento;
+    public void setIdTriagem(int idTriagem) {
+        this.idTriagem = idTriagem;
     }
+
     
     public Paciente getPaciente() {
         return paciente;

@@ -14,9 +14,9 @@ import registraclinic.atendimento.AtendimentoTableModel;
 import registraclinic.paciente.Paciente;
 import registraclinic.paciente.PacienteDAO;
 import registraclinic.paciente.PacienteTableModel;
-import registraclinic.prioridadeatendimento.PrioridadeAtendimento;
-import registraclinic.prioridadeatendimento.PrioridadeAtendimentoDAO;
-import registraclinic.prioridadeatendimento.PrioridadeAtendimentoTableModel;
+import registraclinic.triagem.Triagem;
+import registraclinic.triagem.TriagemDAO;
+import registraclinic.triagem.TriagemTableModel;
 
 /**
  *
@@ -28,8 +28,8 @@ public class CadastroTriagem extends javax.swing.JDialog {
     PacienteDAO pacienteDAO = new PacienteDAO();
     Atendimento atendimento;
     AtendimentoDAO atendimentoDAO = new AtendimentoDAO();
-    PrioridadeAtendimento prioridadeAtendimento;
-    PrioridadeAtendimentoDAO prioridadeAtendimentoDAO = new PrioridadeAtendimentoDAO();
+    Triagem triagem;
+    TriagemDAO triagemDAO = new TriagemDAO();
 
     public CadastroTriagem(java.awt.Frame parent, boolean modal) {
         initComponents();
@@ -40,6 +40,7 @@ public class CadastroTriagem extends javax.swing.JDialog {
         txtAtendimento.setEnabled(false);
         paciente = new Paciente();
         atendimento = new Atendimento();
+        triagem = new Triagem();
     }
 
     /**
@@ -350,34 +351,34 @@ public class CadastroTriagem extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPesquisarActionPerformed
-        List<PrioridadeAtendimento> lista;
-        lista = (prioridadeAtendimentoDAO.listar());
-        PrioridadeAtendimentoTableModel itm = new PrioridadeAtendimentoTableModel(lista);
-        Object objetoRetorno = PesquisaGenerica.exibeTela(itm, "Prioridade Atendimento");
+        List<Triagem> lista;
+        lista = (triagemDAO.listar());
+        TriagemTableModel itm = new TriagemTableModel(lista);
+        Object objetoRetorno = PesquisaGenerica.exibeTela(itm, "Triagem");
         if (objetoRetorno != null) {
-            prioridadeAtendimento = prioridadeAtendimentoDAO.consultarObjetoId("idPrioridadeAtendimento", objetoRetorno);
-            txtPaciente.setText(prioridadeAtendimento.getPaciente().getNomePessoa());
-            txtAtendimento.setText(prioridadeAtendimento.getTipoAtendimento().getNomeAtendimento());
-            if (prioridadeAtendimento.getPrioridadeDoAtendimento().equalsIgnoreCase(jrAzul.getText())) {
+            triagem = triagemDAO.consultarObjetoId("idTriagem", objetoRetorno);
+            txtPaciente.setText(triagem.getPaciente().getNomePessoa());
+            txtAtendimento.setText(triagem.getTipoAtendimento().getNomeAtendimento());
+            if (triagem.getPrioridadeDoAtendimento().equalsIgnoreCase(jrAzul.getText())) {
                 jrAzul.setSelected(true);
             }
-            if (prioridadeAtendimento.getPrioridadeDoAtendimento().equalsIgnoreCase(jrAmarelo.getText())) {
+            if (triagem.getPrioridadeDoAtendimento().equalsIgnoreCase(jrAmarelo.getText())) {
                 jrAmarelo.setSelected(true);
             }
-            if (prioridadeAtendimento.getPrioridadeDoAtendimento().equalsIgnoreCase(jrLaranja.getText())) {
+            if (triagem.getPrioridadeDoAtendimento().equalsIgnoreCase(jrLaranja.getText())) {
                 jrLaranja.setSelected(true);
             }
-            if (prioridadeAtendimento.getPrioridadeDoAtendimento().equalsIgnoreCase(jrVerde.getText())) {
+            if (triagem.getPrioridadeDoAtendimento().equalsIgnoreCase(jrVerde.getText())) {
                 jrVerde.setSelected(true);
             }
-            atendimento = prioridadeAtendimento.getTipoAtendimento();
-            paciente = prioridadeAtendimento.getPaciente();
+            atendimento = triagem.getTipoAtendimento();
+            paciente = triagem.getPaciente();
             btExcluir.setEnabled(true);
         }
     }//GEN-LAST:event_btPesquisarActionPerformed
 
     private void btExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExcluirActionPerformed
-        prioridadeAtendimentoDAO.excluir(prioridadeAtendimento);
+        triagemDAO.excluir(triagem);
         atendimento = new Atendimento();
         paciente = new Paciente();
         btLimparActionPerformed(null);
@@ -390,21 +391,21 @@ public class CadastroTriagem extends javax.swing.JDialog {
             JOptionPane.showMessageDialog(this, "Prencha todos os campos !!");
         } else {
             if (jrAzul.isSelected()) {
-                prioridadeAtendimento.setPrioridadeDoAtendimento(jrAzul.getText());
+                triagem.setPrioridadeDoAtendimento(jrAzul.getText());
             } else if (jrLaranja.isSelected()) {
-                prioridadeAtendimento.setPrioridadeDoAtendimento(jrLaranja.getText());
+                triagem.setPrioridadeDoAtendimento(jrLaranja.getText());
             } else if (jrVerde.isSelected()) {
-                prioridadeAtendimento.setPrioridadeDoAtendimento(jrVerde.getText());
+                triagem.setPrioridadeDoAtendimento(jrVerde.getText());
             } else if (jrAmarelo.isSelected()) {
-                prioridadeAtendimento.setPrioridadeDoAtendimento(jrAmarelo.getText());
+                triagem.setPrioridadeDoAtendimento(jrAmarelo.getText());
             }
-            prioridadeAtendimento.setPaciente(paciente);
-            prioridadeAtendimento.setTipoAtendimento(atendimento);
+            triagem.setPaciente(paciente);
+            triagem.setTipoAtendimento(atendimento);
 
-            prioridadeAtendimentoDAO.salvar(prioridadeAtendimento);
+            triagemDAO.salvar(triagem);
             grupoPrioridade.clearSelection();
             btLimparActionPerformed(null);
-            prioridadeAtendimento = new PrioridadeAtendimento();
+            triagem = new Triagem();
 
         }
     }//GEN-LAST:event_btSalvarActionPerformed
@@ -432,7 +433,11 @@ public class CadastroTriagem extends javax.swing.JDialog {
 
     private void btLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLimparActionPerformed
         Util.limparCamposGenerico(this);
+        grupoPrioridade.clearSelection();
+        triagem = new Triagem();
+        paciente = new Paciente();
         atendimento = new Atendimento();
+
     }//GEN-LAST:event_btLimparActionPerformed
 
     private void btnAtendimentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtendimentoActionPerformed
@@ -460,8 +465,8 @@ public class CadastroTriagem extends javax.swing.JDialog {
 
     public void addAPorraToda() {
         if (paciente != null || atendimento != null) {
-            prioridadeAtendimento = new PrioridadeAtendimento();
-            prioridadeAtendimento.setPaciente(paciente);
+            triagem = new Triagem();
+            triagem.setPaciente(paciente);
             //prioridadeAtendimento.setAtendimento(atendimento);
         } else {
             System.out.println("Selecione um paciente!");

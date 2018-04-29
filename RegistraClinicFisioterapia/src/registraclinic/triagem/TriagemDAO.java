@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package registraclinic.prioridadeatendimento;
+package registraclinic.triagem;
 
 import javax.swing.JOptionPane;
 import registraclinic.atendimento.Atendimento;
@@ -13,15 +13,15 @@ import registraclinic.util.GenericDAO;
  *
  * @author Karlos Oliveira
  */
-public class PrioridadeAtendimentoDAO extends GenericDAO<PrioridadeAtendimento>{
+public class TriagemDAO extends GenericDAO<Triagem>{
     
-    public PrioridadeAtendimentoDAO() {
-        super(PrioridadeAtendimento.class);
+    public TriagemDAO() {
+        super(Triagem.class);
     }
     
-     public boolean salvar(PrioridadeAtendimento prioridadeAtendimento) {
+     public boolean salvar(Triagem prioridadeAtendimento) {
         Object[] options = {"Sim", "Não"};
-        if (prioridadeAtendimento.getIdPrioridadeAtendimento() == 0) {
+        if (prioridadeAtendimento.getIdTriagem() == 0) {
             if (adicionar(prioridadeAtendimento)) {
                 JOptionPane.showMessageDialog(null, "Triagem cadastrada com sucesso!");
                 return true;
@@ -38,9 +38,9 @@ public class PrioridadeAtendimentoDAO extends GenericDAO<PrioridadeAtendimento>{
         }
         return false;
     }
-     public boolean excluir(PrioridadeAtendimento prioridadeAtendimento) {
+     public boolean excluir(Triagem prioridadeAtendimento) {
         Object[] options = {"Sim", "Não"};
-        if (prioridadeAtendimento.getIdPrioridadeAtendimento() != 0) {
+        if (prioridadeAtendimento.getIdTriagem() != 0) {
             if (JOptionPane.showOptionDialog(null, "Deseja excluír a Triagem? "
                     + "?", "", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]) == JOptionPane.YES_OPTION) {
                 if (remover(prioridadeAtendimento)) {

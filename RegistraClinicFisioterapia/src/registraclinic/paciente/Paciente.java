@@ -11,7 +11,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import registraclinic.pessoa.Pessoa;
-import registraclinic.prioridadeatendimento.PrioridadeAtendimento;
+import registraclinic.triagem.Triagem;
 
 /**
  *
