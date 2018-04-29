@@ -6,9 +6,12 @@
 package registraclinic.paciente;
 
 
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import registraclinic.pessoa.Pessoa;
+import registraclinic.prioridadeatendimento.PrioridadeAtendimento;
 
 /**
  *
@@ -16,6 +19,9 @@ import registraclinic.pessoa.Pessoa;
  */
 @Entity
 public class Paciente extends Pessoa{
+
+//    @OneToMany(mappedBy = "paciente")
+//    private List<PrioridadeAtendimento> prioridadeAtendimentos;
     
     private String numeroProntuarioPaciente;
     private String postoDeSaudePaciente;

@@ -38,6 +38,8 @@ public class CadastroTriagem extends javax.swing.JDialog {
         setModal(true);
         txtPaciente.setEnabled(false);
         txtAtendimento.setEnabled(false);
+        paciente = new Paciente();
+        atendimento = new Atendimento();
     }
 
     /**
@@ -356,16 +358,16 @@ public class CadastroTriagem extends javax.swing.JDialog {
             prioridadeAtendimento = prioridadeAtendimentoDAO.consultarObjetoId("idPrioridadeAtendimento", objetoRetorno);
             txtPaciente.setText(prioridadeAtendimento.getPaciente().getNomePessoa());
             txtAtendimento.setText(prioridadeAtendimento.getTipoAtendimento().getNomeAtendimento());
-            if (prioridadeAtendimento.getPrioridade().equalsIgnoreCase(jrAzul.getText())) {
+            if (prioridadeAtendimento.getPrioridadeDoAtendimento().equalsIgnoreCase(jrAzul.getText())) {
                 jrAzul.setSelected(true);
             }
-            if (prioridadeAtendimento.getPrioridade().equalsIgnoreCase(jrAmarelo.getText())) {
+            if (prioridadeAtendimento.getPrioridadeDoAtendimento().equalsIgnoreCase(jrAmarelo.getText())) {
                 jrAmarelo.setSelected(true);
             }
-            if (prioridadeAtendimento.getPrioridade().equalsIgnoreCase(jrLaranja.getText())) {
+            if (prioridadeAtendimento.getPrioridadeDoAtendimento().equalsIgnoreCase(jrLaranja.getText())) {
                 jrLaranja.setSelected(true);
             }
-            if (prioridadeAtendimento.getPrioridade().equalsIgnoreCase(jrVerde.getText())) {
+            if (prioridadeAtendimento.getPrioridadeDoAtendimento().equalsIgnoreCase(jrVerde.getText())) {
                 jrVerde.setSelected(true);
             }
             atendimento = prioridadeAtendimento.getTipoAtendimento();
@@ -388,13 +390,13 @@ public class CadastroTriagem extends javax.swing.JDialog {
             JOptionPane.showMessageDialog(this, "Prencha todos os campos !!");
         } else {
             if (jrAzul.isSelected()) {
-                prioridadeAtendimento.setPrioridade(jrAzul.getText());
+                prioridadeAtendimento.setPrioridadeDoAtendimento(jrAzul.getText());
             } else if (jrLaranja.isSelected()) {
-                prioridadeAtendimento.setPrioridade(jrLaranja.getText());
+                prioridadeAtendimento.setPrioridadeDoAtendimento(jrLaranja.getText());
             } else if (jrVerde.isSelected()) {
-                prioridadeAtendimento.setPrioridade(jrVerde.getText());
+                prioridadeAtendimento.setPrioridadeDoAtendimento(jrVerde.getText());
             } else if (jrAmarelo.isSelected()) {
-                prioridadeAtendimento.setPrioridade(jrAmarelo.getText());
+                prioridadeAtendimento.setPrioridadeDoAtendimento(jrAmarelo.getText());
             }
             prioridadeAtendimento.setPaciente(paciente);
             prioridadeAtendimento.setTipoAtendimento(atendimento);

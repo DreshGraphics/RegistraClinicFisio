@@ -43,7 +43,7 @@ public class PrioridadeAtendimentoTableModel extends AbstractTableModel{
             case 2:
                 return prioridadeatendimento.getTipoAtendimento().getNomeAtendimento();
             case 3:
-                return prioridadeatendimento.getPrioridade();
+                return prioridadeatendimento.getPrioridadeDoAtendimento();
             
 
         }

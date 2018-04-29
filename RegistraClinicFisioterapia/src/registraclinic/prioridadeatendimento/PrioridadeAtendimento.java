@@ -31,7 +31,7 @@ public class PrioridadeAtendimento {
     private int idPrioridadeAtendimento;
     
     @Column(length = 100)
-    private String prioridade;
+    private String prioridadeDoAtendimento;
     
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="idAtendimento")
@@ -57,14 +57,14 @@ public class PrioridadeAtendimento {
         this.paciente = paciente;
     }
 
-    public String getPrioridade() {
-        return prioridade;
+    public String getPrioridadeDoAtendimento() {
+        return prioridadeDoAtendimento;
     }
 
-    public void setPrioridade(String prioridade) {
-        this.prioridade = prioridade;
+    public void setPrioridadeDoAtendimento(String prioridadeDoAtendimento) {
+        this.prioridadeDoAtendimento = prioridadeDoAtendimento;
     }
-
+    
     public Atendimento getTipoAtendimento() {
         return tipoAtendimento;
     }
