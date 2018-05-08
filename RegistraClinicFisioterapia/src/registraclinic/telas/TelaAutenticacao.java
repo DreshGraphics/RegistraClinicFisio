@@ -183,7 +183,7 @@ public class TelaAutenticacao extends javax.swing.JFrame {
     }//GEN-LAST:event_btCancelarActionPerformed
 
     private void btEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEntrarActionPerformed
-        if (txtLogin.getText().equals("") || txtSenha.getText().equals("")) {
+        if (txtLogin.getText().equals("") || txtSenha.getText().equals("") || jcTipoUsuario.getSelectedIndex() == 0) {
             JOptionPane.showMessageDialog(this, "Prencha todos os campos !!");
         } else {
             if (jcTipoUsuario.getSelectedItem().equals("Aluno")) {
