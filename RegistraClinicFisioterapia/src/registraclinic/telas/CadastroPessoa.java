@@ -1185,6 +1185,8 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 txtAgenteDeSaude.setText(paciente.getAgenteDeSaudePaciente());
                 txtPeso.setText(paciente.getPesoPaciente());
                 txtAltura.setText(paciente.getAlturaPaciente());
+                jcSituacaoAtendimento.setSelectedItem(paciente.getSituacaoDeAtendimento());
+                jtQueixaPaciente.setText(paciente.getQueixaDoPaciente());
 
                 cidade = paciente.getCidade();
                 btExcluir.setEnabled(true);
