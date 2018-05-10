@@ -5,9 +5,11 @@
  */
 package registraclinic.telas;
 
+import java.awt.Color;
 import registraclinic.util.Util;
 import java.util.List;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
 import registraclinic.atendimento.Atendimento;
 import registraclinic.atendimento.AtendimentoDAO;
 import registraclinic.atendimento.AtendimentoTableModel;

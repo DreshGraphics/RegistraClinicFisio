@@ -10,7 +10,7 @@ import registraclinic.util.Util;
 public class SupervisorTableModel extends AbstractTableModel {
 
     private List<Supervisor> supervisor = new ArrayList<>();
-    private String[] colunas = {"Código", "Nome", "Login", "Senha", "CPF", "RG", "Telefone", "Nascimento", "Sexo", "Cidade", "Endereço", "Turma", "Especialização"};
+    private String[] colunas = {"Código", "Nome", "Login", "Senha", "CPF", "RG", "Telefone", "Nascimento", "Sexo", "Cidade", "Endereço", "Especialização"};
 
     public SupervisorTableModel(List<Supervisor> supervisor) {
         this.supervisor = supervisor;
@@ -59,8 +59,6 @@ public class SupervisorTableModel extends AbstractTableModel {
             case 10:
                 return supervisores.getEnderecoPessoa();
             case 11:
-                return supervisores.getTurmaSupervisor();
-            case 12:
                 return supervisores.getEspecializacaoSupervisor();
         }
         return null;
@@ -93,8 +91,6 @@ public class SupervisorTableModel extends AbstractTableModel {
                 return colunas[10];
             case 11:
                 return colunas[11];
-            case 12:
-                return colunas[12];
 
         }
         return null;

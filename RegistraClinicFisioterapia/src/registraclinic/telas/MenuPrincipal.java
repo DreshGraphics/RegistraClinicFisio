@@ -26,7 +26,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         this.usuario = usuario;
         jlUsuario.setText(usuario.getLoginUsuario());
         if (usuario.getTipoUsuario().equalsIgnoreCase("Aluno")) {
-            subUsuario.setVisible(false);
+            subPessoa.setVisible(false);
             subAtendimento.setVisible(false);
             subTriagem.setVisible(false);
             subCidades.setVisible(false);
@@ -52,7 +52,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         subTriagem = new javax.swing.JMenuItem();
         subAtendimento = new javax.swing.JMenuItem();
         subCidades = new javax.swing.JMenuItem();
-        subUsuario = new javax.swing.JMenuItem();
+        subPessoa = new javax.swing.JMenuItem();
         menuSaida = new javax.swing.JMenu();
         subProdutoConsumo = new javax.swing.JMenuItem();
         subUsuario2 = new javax.swing.JMenuItem();
@@ -150,16 +150,16 @@ public class MenuPrincipal extends javax.swing.JFrame {
         });
         menuCadastros.add(subCidades);
 
-        subUsuario.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
-        subUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/add_sub_14-14.png"))); // NOI18N
-        subUsuario.setText("Usuário");
-        subUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        subUsuario.addActionListener(new java.awt.event.ActionListener() {
+        subPessoa.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
+        subPessoa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/add_sub_14-14.png"))); // NOI18N
+        subPessoa.setText("Pessoa");
+        subPessoa.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        subPessoa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                subUsuarioActionPerformed(evt);
+                subPessoaActionPerformed(evt);
             }
         });
-        menuCadastros.add(subUsuario);
+        menuCadastros.add(subPessoa);
 
         jMenu.add(menuCadastros);
 
@@ -277,10 +277,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btLogoutActionPerformed
 
-    private void subUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subUsuarioActionPerformed
+    private void subPessoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subPessoaActionPerformed
         CadastroPessoa cp = new CadastroPessoa(this, rootPaneCheckingEnabled);
         cp.setVisible(true);
-    }//GEN-LAST:event_subUsuarioActionPerformed
+    }//GEN-LAST:event_subPessoaActionPerformed
 
     private void subProdutoConsumoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subProdutoConsumoActionPerformed
        
@@ -388,10 +388,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem subDevolverEstoqueConsumo;
     private javax.swing.JMenuItem subDevolverEstoquePermanente;
     private javax.swing.JMenuItem subEstoquePermanente3;
+    private javax.swing.JMenuItem subPessoa;
     private javax.swing.JMenuItem subProdutoConsumo;
     private javax.swing.JMenuItem subProdutoPermanente;
     private javax.swing.JMenuItem subTriagem;
-    private javax.swing.JMenuItem subUsuario;
     private javax.swing.JMenuItem subUsuario2;
     // End of variables declaration//GEN-END:variables
 }

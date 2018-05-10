@@ -10,16 +10,7 @@ import registraclinic.usuario.Usuario;
 @Entity
 public class Supervisor extends Usuario {
 
-    private String turmaSupervisor;
     private String especializacaoSupervisor;
-
-    public String getTurmaSupervisor() {
-        return turmaSupervisor;
-    }
-
-    public void setTurmaSupervisor(String turmaSupervisor) {
-        this.turmaSupervisor = turmaSupervisor;
-    }
 
     public String getEspecializacaoSupervisor() {
         return especializacaoSupervisor;

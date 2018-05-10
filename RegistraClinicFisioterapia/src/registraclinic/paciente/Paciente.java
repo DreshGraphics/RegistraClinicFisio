@@ -28,10 +28,6 @@ public class Paciente extends Pessoa{
     private String agenteDeSaudePaciente;
     private String pesoPaciente;
     private String alturaPaciente;
-    private String situacaoDeAtendimento = "Aguardando atendimento";
-    //Aguardando triagem
-    //Aguardando atendimento <- já fica nesse
-    //Em atendimento
     
     @Column(length = 100)
     private String queixaDoPaciente;
@@ -74,14 +70,6 @@ public class Paciente extends Pessoa{
 
     public void setAlturaPaciente(String alturaPaciente) {
         this.alturaPaciente = alturaPaciente;
-    }
-
-    public String getSituacaoDeAtendimento() {
-        return situacaoDeAtendimento;
-    }
-
-    public void setSituacaoDeAtendimento(String situacaoDeAtendimento) {
-        this.situacaoDeAtendimento = situacaoDeAtendimento;
     }
 
     public String getQueixaDoPaciente() {

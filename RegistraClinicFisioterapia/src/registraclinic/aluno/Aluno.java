@@ -22,7 +22,6 @@ import registraclinic.usuario.Usuario;
 public class Aluno extends Usuario {
     
     private String matriculaAluno;
-    private String turmaAluno;
 
     public String getMatriculaAluno() {
         return matriculaAluno;
@@ -30,14 +29,6 @@ public class Aluno extends Usuario {
 
     public void setMatriculaAluno(String matriculaAluno) {
         this.matriculaAluno = matriculaAluno;
-    }
-
-    public String getTurmaAluno() {
-        return turmaAluno;
-    }
-
-    public void setTurmaAluno(String turmaAluno) {
-        this.turmaAluno = turmaAluno;
     }
 
 }
