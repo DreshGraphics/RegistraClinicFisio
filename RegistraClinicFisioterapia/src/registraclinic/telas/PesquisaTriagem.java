@@ -23,6 +23,7 @@ import registraclinic.triagem.TriagemCellRenderer;
 public class PesquisaTriagem extends javax.swing.JDialog {
 
     private static Object objeto;
+    private TriagemCellRenderer tcr = new TriagemCellRenderer();
 
     public static Object exibeTela(AbstractTableModel atm, String pesquisa) {
         PesquisaTriagem tp = new PesquisaTriagem(atm, pesquisa);
@@ -42,7 +43,7 @@ public class PesquisaTriagem extends javax.swing.JDialog {
         FormataTamanhoColunasJTable.packColumns(tbPesquisa, 1);
         tfPesquisa.grabFocus();
         btEditar.setEnabled(false);
-         tbPesquisa.setDefaultRenderer(Object.class, new TriagemCellRenderer());
+        tbPesquisa.setDefaultRenderer(Object.class, tcr);
         //this.setIconImage(new ImageIcon(getClass().getResource("/birdpoint/imagens/logo-1.png")).getImage());
         setModal(true);
     }
@@ -77,9 +78,9 @@ public class PesquisaTriagem extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jSeparator4 = new javax.swing.JSeparator();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbPesquisa = new javax.swing.JTable();
-        jSeparator4 = new javax.swing.JSeparator();
         jLabel1 = new javax.swing.JLabel();
         btEditar = new javax.swing.JButton();
         btVoltar = new javax.swing.JButton();
@@ -91,6 +92,10 @@ public class PesquisaTriagem extends javax.swing.JDialog {
         setModal(true);
         setUndecorated(true);
         getContentPane().setLayout(null);
+
+        jSeparator4.setForeground(new java.awt.Color(58, 100, 62));
+        getContentPane().add(jSeparator4);
+        jSeparator4.setBounds(0, 410, 700, 10);
 
         tbPesquisa.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         tbPesquisa.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -105,8 +110,7 @@ public class PesquisaTriagem extends javax.swing.JDialog {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        tbPesquisa.setGridColor(new java.awt.Color(255, 255, 255));
-        tbPesquisa.setSelectionBackground(new java.awt.Color(255, 255, 255));
+        tbPesquisa.setSelectionBackground(new java.awt.Color(204, 204, 204));
         tbPesquisa.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 tbPesquisaFocusGained(evt);
@@ -126,10 +130,6 @@ public class PesquisaTriagem extends javax.swing.JDialog {
 
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(30, 150, 640, 250);
-
-        jSeparator4.setForeground(new java.awt.Color(58, 100, 62));
-        getContentPane().add(jSeparator4);
-        jSeparator4.setBounds(0, 410, 700, 10);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel1.setText("Pesquisar");

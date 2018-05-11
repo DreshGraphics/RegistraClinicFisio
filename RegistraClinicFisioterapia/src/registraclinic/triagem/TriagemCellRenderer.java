@@ -21,34 +21,96 @@ public class TriagemCellRenderer extends DefaultTableCellRenderer {
         super();
     }
 
+//    //Fundo colorido
+//    @Override
+//    public Component getTableCellRendererComponent(JTable table,
+//            Object value, boolean isSelected, boolean hasFocus, int row, int column) {
+//        JLabel label = (JLabel) super.getTableCellRendererComponent(table, value, isSelected, hasFocus,
+//                row, column);
+//        if (isSelected) {
+////            label.setForeground(Color.BLACK);
+////            label.setBackground(Color.WHITE);
+//            if (value.toString().equals("Verde")) {
+//                label.setBackground(Color.GREEN);
+//            }
+//            if (value.toString().equals("Azul")) {
+//                label.setBackground(new Color(30,144,255));;
+//            }
+//            if (value.toString().equals("Laranja")) {
+//                label.setBackground(Color.ORANGE);
+//            }
+//            if (value.toString().equals("Amarelo")) {
+//                label.setBackground(Color.YELLOW);
+//            }
+//        } else {
+////            label.setForeground(Color.BLACK);
+////            label.setBackground(Color.WHITE);
+//            if (value.toString().equals("Verde")) {
+//                label.setBackground(Color.GREEN);
+//            }
+//            if (value.toString().equals("Azul")) {
+//                label.setBackground(new Color(30,144,255));
+//            }
+//            if (value.toString().equals("Laranja")) {
+//                label.setBackground(Color.ORANGE);
+//            }
+//            if (value.toString().equals("Amarelo")) {
+//                label.setBackground(Color.YELLOW);
+//            }
+//        }
+//        //obter o objeto da linhas correspondente
+//        //Triagem triagem = ((TriagemTableModel) table.getModel()).getValoresTriagem(row);
+//        //e fazer os if's direto nos valores do objeto, nesse caso para colorir a linha inteira - Só que não sei kkkk
+//        return label;
+//    }
+    //Letras coloridas
     @Override
     public Component getTableCellRendererComponent(JTable table,
             Object value, boolean isSelected, boolean hasFocus, int row, int column) {
         JLabel label = (JLabel) super.getTableCellRendererComponent(table, value, isSelected, hasFocus,
                 row, column);
         if (isSelected) {
-            label.setForeground(Color.BLACK);
-            label.setBackground(Color.WHITE);
+            label.setForeground(Color.WHITE);
+            label.setBackground(Color.GRAY);
+            switch (value.toString()) {
+                case "Verde":
+                    label.setForeground(Color.GREEN);
+                    break;
+                case "Azul":
+                    label.setForeground(new Color(30, 144, 255));
+                    break;
+                case "Laranja":
+                    label.setForeground(Color.ORANGE);
+                    break;
+                case "Amarelo":
+                    label.setForeground(Color.YELLOW);
+                    break;
+                default:
+                    break;
+            }
         } else {
             label.setForeground(Color.BLACK);
-            label.setBackground(Color.WHITE);
-            //aqui vc pode fazer o seu if tipo if(value.toString.equals("seila")) label.setbackgrund...
-            if(value.toString().equals("Verde")){
-                label.setBackground(Color.GREEN);
-            }
-            if(value.toString().equals("Azul")){
-                label.setBackground(Color.BLUE);
-            }
-            if(value.toString().equals("Laranja")){
-                label.setBackground(Color.ORANGE);
-            }
-            if(value.toString().equals("Amarelo")){
-                label.setBackground(Color.YELLOW);
+            label.setBackground(new Color(245,245,245));
+            switch (value.toString()) {
+                case "Verde":
+                    label.setForeground(Color.GREEN);
+                    break;
+                case "Azul":
+                    label.setForeground(new Color(30, 144, 255));
+                    break;
+                case "Laranja":
+                    label.setForeground(Color.ORANGE);
+                    break;
+                case "Amarelo":
+                    label.setForeground(Color.YELLOW);
+                    break;
+                default:
+                    break;
             }
         }
-        //lembrando que vc pode obter o objeto da linhas correspondente assim
-        //Triagem triagem = ((TriagemTableModel) table.getModel()).getValoresTriagem(row);
-        //e fazer os if's direto nos valores do objeto, nesse caso para colorir a linha inteira!!
+        //obter o objeto da linhas correspondente
+        //Triagem triagem = ((TriagemTableModel)table.getModel()).getValoresTriagem(row);
+        //e fazer os if's direto nos valores do objeto, nesse caso para colorir a linha inteira - Só que não sei kkkk
         return label;
     }
 
