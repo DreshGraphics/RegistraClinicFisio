@@ -22,6 +22,10 @@ public class TriagemTableModel extends AbstractTableModel{
         this.prioridadeAtendimento = prioridadeAtendimento;
     }
 
+    public Triagem getValoresTriagem(int rowIndex){
+        return prioridadeAtendimento.get(rowIndex);
+    }
+    
     @Override
     public int getRowCount() {
         return prioridadeAtendimento.size();

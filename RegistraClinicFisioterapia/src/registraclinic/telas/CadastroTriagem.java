@@ -356,7 +356,7 @@ public class CadastroTriagem extends javax.swing.JDialog {
         List<Triagem> lista;
         lista = (triagemDAO.listar());
         TriagemTableModel itm = new TriagemTableModel(lista);
-        Object objetoRetorno = PesquisaGenerica.exibeTela(itm, "Triagem");
+        Object objetoRetorno = PesquisaTriagem.exibeTela(itm, "Triagem");
         if (objetoRetorno != null) {
             triagem = triagemDAO.consultarObjetoId("idTriagem", objetoRetorno);
             txtPaciente.setText(triagem.getPaciente().getNomePessoa());
