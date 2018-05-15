@@ -51,7 +51,6 @@ public class CadastroPessoa extends javax.swing.JDialog {
 
     SimpleDateFormat formatarData = new SimpleDateFormat("dd/MM/yyyy");
     Date date;
-    private javax.swing.JPanel[] paineis;
 
     /**
      * Creates new form TelaCadastroUsuario
