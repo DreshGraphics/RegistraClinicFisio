@@ -8,9 +8,7 @@ package registraclinic.telas;
 import registraclinic.util.FormataTamanhoColunasJTable;
 import java.awt.Point;
 import java.awt.Rectangle;
-import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
-import javax.swing.JTabbedPane;
 import javax.swing.JTable;
 import javax.swing.JViewport;
 import javax.swing.table.AbstractTableModel;
@@ -18,24 +16,21 @@ import registraclinic.triagem.TriagemCellRenderer;
 
 /**
  *
- * @author Adriano Lima
+ * @author Karlos Oliveira
  */
 public class PesquisaTriagem extends javax.swing.JDialog {
 
     private static Object objeto;
-    private TriagemCellRenderer tcr = new TriagemCellRenderer();
+    private final TriagemCellRenderer tcr = new TriagemCellRenderer();
 
     public static Object exibeTela(AbstractTableModel atm, String pesquisa) {
         PesquisaTriagem tp = new PesquisaTriagem(atm, pesquisa);
         tp.setVisible(true);
-       
         return objeto;
-
     }
 
     private PesquisaTriagem(AbstractTableModel atm, String pesquisa) {
         initComponents();
-        //this.setIconImage(new ImageIcon(getClass().getResource("/birdpoint/imagens/logo-1.png")).getImage());
         tbPesquisa.setAutoCreateRowSorter(true);
         tbPesquisa.setModel(atm);
         setLocationRelativeTo(null);
@@ -44,13 +39,11 @@ public class PesquisaTriagem extends javax.swing.JDialog {
         tfPesquisa.grabFocus();
         btEditar.setEnabled(false);
         tbPesquisa.setDefaultRenderer(Object.class, tcr);
-        //this.setIconImage(new ImageIcon(getClass().getResource("/birdpoint/imagens/logo-1.png")).getImage());
         setModal(true);
     }
 
     public PesquisaTriagem(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
-        
         initComponents();
     }
 
@@ -204,7 +197,6 @@ public class PesquisaTriagem extends javax.swing.JDialog {
 
     private void tfPesquisaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfPesquisaKeyPressed
         procuraTable(tfPesquisa.getText());
-
     }//GEN-LAST:event_tfPesquisaKeyPressed
 
     private void tbPesquisaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tbPesquisaFocusGained
