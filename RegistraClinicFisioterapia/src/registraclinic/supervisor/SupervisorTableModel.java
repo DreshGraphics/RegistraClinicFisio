@@ -10,7 +10,7 @@ import registraclinic.util.Util;
 public class SupervisorTableModel extends AbstractTableModel {
 
     private List<Supervisor> supervisor = new ArrayList<>();
-    private String[] colunas = {"Código", "Nome", "Login", "Senha", "CPF", "RG", "Telefone", "Nascimento", "Sexo", "Cidade", "Endereço", "Especialização"};
+    private String[] colunas = {"Código", "Nome", "Login", "Senha", "CPF", "RG", "Telefone", "Sexo", "Cidade", "Endereço", "Especialização"};
 
     public SupervisorTableModel(List<Supervisor> supervisor) {
         this.supervisor = supervisor;
@@ -27,10 +27,10 @@ public class SupervisorTableModel extends AbstractTableModel {
         return colunas.length;
     }
 
-    private String converterDataString(Date date) {
-        SimpleDateFormat f = new SimpleDateFormat("dd/MM/yyyy");
-        return f.format(date);
-    }
+//    private String converterDataString(Date date) {
+//        SimpleDateFormat f = new SimpleDateFormat("dd/MM/yyyy");
+//        return f.format(date);
+//    }
     
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
@@ -51,14 +51,12 @@ public class SupervisorTableModel extends AbstractTableModel {
             case 6:
                 return supervisores.getTelefonePessoa();
             case 7:
-                return converterDataString(supervisores.getDataNascimentoPessoa());
-            case 8:
                 return supervisores.getSexoPessoa();
-            case 9:
+            case 8:
                 return supervisores.getCidade().getNomeCidade();
-            case 10:
+            case 9:
                 return supervisores.getEnderecoPessoa();
-            case 11:
+            case 10:
                 return supervisores.getEspecializacaoSupervisor();
         }
         return null;
@@ -89,8 +87,6 @@ public class SupervisorTableModel extends AbstractTableModel {
                 return colunas[9];
             case 10:
                 return colunas[10];
-            case 11:
-                return colunas[11];
 
         }
         return null;

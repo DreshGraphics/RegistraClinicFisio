@@ -555,18 +555,18 @@ public class CadastroPessoa extends javax.swing.JDialog {
             }
         });
         jpAluno.add(txtMatricula);
-        txtMatricula.setBounds(20, 30, 110, 30);
+        txtMatricula.setBounds(20, 30, 140, 30);
 
         jLabel21.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel21.setText("Email");
         jpAluno.add(jLabel21);
-        jLabel21.setBounds(460, 10, 50, 19);
+        jLabel21.setBounds(170, 10, 50, 19);
 
         jLObrigatorioNome20.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome20.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome20.setText("*");
         jpAluno.add(jLObrigatorioNome20);
-        jLObrigatorioNome20.setBounds(120, 20, 10, 10);
+        jLObrigatorioNome20.setBounds(150, 20, 10, 10);
 
         jLObrigatorioNome21.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome21.setForeground(new java.awt.Color(204, 0, 0));
@@ -577,7 +577,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
         txtEmailAluno.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtEmailAluno.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         jpAluno.add(txtEmailAluno);
-        txtEmailAluno.setBounds(460, 30, 270, 30);
+        txtEmailAluno.setBounds(170, 30, 560, 30);
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel10.setText("Login");
@@ -593,29 +593,29 @@ public class CadastroPessoa extends javax.swing.JDialog {
             }
         });
         jpAluno.add(txtLoginAluno);
-        txtLoginAluno.setBounds(20, 90, 220, 30);
+        txtLoginAluno.setBounds(20, 90, 280, 30);
 
         jLObrigatorioNome14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome14.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome14.setText("*");
         jpAluno.add(jLObrigatorioNome14);
-        jLObrigatorioNome14.setBounds(440, 80, 10, 10);
+        jLObrigatorioNome14.setBounds(580, 80, 10, 10);
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel16.setText("Senha");
         jpAluno.add(jLabel16);
-        jLabel16.setBounds(250, 70, 70, 17);
+        jLabel16.setBounds(310, 70, 70, 17);
 
         txtSenhaAluno.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtSenhaAluno.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         jpAluno.add(txtSenhaAluno);
-        txtSenhaAluno.setBounds(250, 90, 200, 30);
+        txtSenhaAluno.setBounds(310, 90, 280, 30);
 
         jLObrigatorioNome17.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome17.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome17.setText("*");
         jpAluno.add(jLObrigatorioNome17);
-        jLObrigatorioNome17.setBounds(230, 80, 10, 10);
+        jLObrigatorioNome17.setBounds(290, 80, 10, 10);
 
         labelAluno.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         jpAluno.add(labelAluno);
@@ -860,34 +860,34 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jLabel48.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel48.setText("Especialização");
         jpSupervisor.add(jLabel48);
-        jLabel48.setBounds(390, 10, 130, 19);
+        jLabel48.setBounds(20, 10, 130, 19);
 
         txtEspecializacao.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtEspecializacao.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         jpSupervisor.add(txtEspecializacao);
-        txtEspecializacao.setBounds(388, 31, 340, 30);
+        txtEspecializacao.setBounds(20, 30, 370, 30);
 
         jLObrigatorioNome54.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome54.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome54.setText("*");
         jpSupervisor.add(jLObrigatorioNome54);
-        jLObrigatorioNome54.setBounds(720, 20, 10, 10);
+        jLObrigatorioNome54.setBounds(400, 20, 10, 10);
 
         jLObrigatorioNome37.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome37.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome37.setText("*");
         jpSupervisor.add(jLObrigatorioNome37);
-        jLObrigatorioNome37.setBounds(320, 80, 10, 10);
+        jLObrigatorioNome37.setBounds(720, 20, 10, 10);
 
         txtEmailSupervisor.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtEmailSupervisor.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         jpSupervisor.add(txtEmailSupervisor);
-        txtEmailSupervisor.setBounds(20, 90, 310, 30);
+        txtEmailSupervisor.setBounds(420, 30, 310, 30);
 
         jLabel34.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel34.setText("Email");
         jpSupervisor.add(jLabel34);
-        jLabel34.setBounds(20, 70, 50, 19);
+        jLabel34.setBounds(420, 10, 50, 19);
 
         labelSupervisor.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         jpSupervisor.add(labelSupervisor);
@@ -1222,6 +1222,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
         txtAgenteDeSaude.setText("");
         txtPeso.setText("");
         txtAltura.setText("");
+        jtQueixaPaciente.setText("");
 
         txtEspecializacao.setText("");
         txtEmailFuncionario.setText("");
@@ -1242,13 +1243,46 @@ public class CadastroPessoa extends javax.swing.JDialog {
 
     private void btSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalvarActionPerformed
 
-        if (txtEndereco.getText().equals("")
-                || txtDataNascimento.getText().equals("") || txtEndNumero.getText().equals("")
-                || jcSexo.getSelectedIndex() == 0 || jcEstadoCivil.getSelectedIndex() == 0
-                || txtTelefone.getText().equals("") || txtNome.getText().equals("")
-                || txtBairro.getText().equals("") || txtCidade.getText().equals("")
-                || txtNaturalidade.getText().equals("")
-                || txtOcupacao.getText().equals("") || jcTipoUsuario.getSelectedIndex() == 0) {
+        if (jcTipoUsuario.getSelectedItem().equals("Paciente")) {
+            if (txtNome.getText().equals("")) {
+                JOptionPane.showMessageDialog(this, "Prencha os campos obrigatórios!!");
+            } else {
+                paciente.setNomePessoa(txtNome.getText().toUpperCase());
+                paciente.setDataNascimentoPessoa(formataData(txtDataNascimento.getText()));
+                paciente.setEnderecoPessoa(txtEndereco.getText());
+                paciente.setEnderecoNumeroPessoa(txtEndNumero.getText());
+                paciente.setTelefonePessoa(txtTelefone.getText());
+                paciente.setNaturalidadePessoa(txtNaturalidade.getText());
+                paciente.setSexoPessoa(jcSexo.getSelectedItem().toString());
+                paciente.setEstadoCivilPessoa(jcEstadoCivil.getSelectedItem().toString());
+                paciente.setCidade(cidade);
+
+                paciente.setBairroPessoa(txtBairro.getText());
+                paciente.setOcupacaoPessoa(txtOcupacao.getText());
+                paciente.setComplementoPessoa(txtComplemento.getText());
+                paciente.setIdadePessoa(getIdade(formataData(txtDataNascimento.getText())));
+                paciente.setCpfPessoa(txtCpf.getText());
+                paciente.setRgPessoa(txtRg.getText());
+
+                paciente.setNumeroProntuarioPaciente(txtNumProntuario.getText());
+                paciente.setPostoDeSaudePaciente(txtESF.getText());
+                paciente.setAgenteDeSaudePaciente(txtAgenteDeSaude.getText());
+                paciente.setPesoPaciente(txtPeso.getText());
+                paciente.setAlturaPaciente(txtAltura.getText());
+                paciente.setQueixaDoPaciente(jtQueixaPaciente.getText());
+
+                pacienteDAO.salvar(paciente);
+                jtGeral.setEnabledAt(2, false);
+                btLimparActionPerformed(null);
+                return;
+            }
+        } else if (txtNome.getText().equals("") || txtDataNascimento.getText().equals("") || jcSexo.getSelectedIndex() == 0
+                || txtCpf.getText().equals("   .   .   -  ") || txtRg.getText().equals("")
+                || jcEstadoCivil.getSelectedIndex() == 0 || txtTelefone.getText().equals("")
+                || txtEndereco.getText().equals("") || txtEndNumero.getText().equals("")
+                || txtCidade.getText().equals("") || txtBairro.getText().equals("")
+                || txtNaturalidade.getText().equals("") || txtOcupacao.getText().equals("")
+                || jcTipoUsuario.getSelectedIndex() == 0) {
             JOptionPane.showMessageDialog(this, "Prencha os campos obrigatórios!!");
         } else {
             if (jcTipoUsuario.getSelectedItem().equals("Aluno")) {
@@ -1276,34 +1310,6 @@ public class CadastroPessoa extends javax.swing.JDialog {
 
                 alunoDAO.salvar(alunos);
                 jtGeral.setEnabledAt(1, false);
-                btLimparActionPerformed(null);
-            } else if (jcTipoUsuario.getSelectedItem().equals("Paciente")) {
-                paciente.setNomePessoa(txtNome.getText().toUpperCase());
-                paciente.setDataNascimentoPessoa(formataData(txtDataNascimento.getText()));
-                paciente.setEnderecoPessoa(txtEndereco.getText());
-                paciente.setEnderecoNumeroPessoa(txtEndNumero.getText());
-                paciente.setTelefonePessoa(txtTelefone.getText());
-                paciente.setNaturalidadePessoa(txtNaturalidade.getText());
-                paciente.setSexoPessoa(jcSexo.getSelectedItem().toString());
-                paciente.setEstadoCivilPessoa(jcEstadoCivil.getSelectedItem().toString());
-                paciente.setCidade(cidade);
-
-                paciente.setBairroPessoa(txtBairro.getText());
-                paciente.setOcupacaoPessoa(txtOcupacao.getText());
-                paciente.setComplementoPessoa(txtComplemento.getText());
-                paciente.setIdadePessoa(getIdade(formataData(txtDataNascimento.getText())));
-                paciente.setCpfPessoa(txtCpf.getText());
-                paciente.setRgPessoa(txtRg.getText());
-
-                paciente.setNumeroProntuarioPaciente(txtNumProntuario.getText());
-                paciente.setPostoDeSaudePaciente(txtESF.getText());
-                paciente.setAgenteDeSaudePaciente(txtAgenteDeSaude.getText());
-                paciente.setPesoPaciente(txtPeso.getText());
-                paciente.setAlturaPaciente(txtAltura.getText());
-                paciente.setQueixaDoPaciente(jtQueixaPaciente.getText());
-                
-                pacienteDAO.salvar(paciente);
-                jtGeral.setEnabledAt(2, false);
                 btLimparActionPerformed(null);
             } else if (jcTipoUsuario.getSelectedItem().equals("Funcionário")) {
                 funcionario.setNomePessoa(txtNome.getText().toUpperCase());
@@ -1365,7 +1371,10 @@ public class CadastroPessoa extends javax.swing.JDialog {
 
     private String getIdade(Date data) {
         Calendar dataNascimento = Calendar.getInstance();
-        dataNascimento.setTime(data);
+        if (data != null) {
+
+        }
+        //dataNascimento.setTime(data);
         Calendar dataAtual = Calendar.getInstance();
         Integer diferencaMes = dataAtual.get(Calendar.MONTH) - dataNascimento.get(Calendar.MONTH);
         Integer diferencaDia = dataAtual.get(Calendar.DAY_OF_MONTH) - dataNascimento.get(Calendar.DAY_OF_MONTH);
