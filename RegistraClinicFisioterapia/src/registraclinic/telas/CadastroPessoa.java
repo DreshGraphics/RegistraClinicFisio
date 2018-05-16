@@ -555,18 +555,18 @@ public class CadastroPessoa extends javax.swing.JDialog {
             }
         });
         jpAluno.add(txtMatricula);
-        txtMatricula.setBounds(20, 30, 140, 30);
+        txtMatricula.setBounds(20, 30, 280, 30);
 
         jLabel21.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel21.setText("Email");
         jpAluno.add(jLabel21);
-        jLabel21.setBounds(170, 10, 50, 19);
+        jLabel21.setBounds(310, 10, 50, 19);
 
         jLObrigatorioNome20.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome20.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome20.setText("*");
         jpAluno.add(jLObrigatorioNome20);
-        jLObrigatorioNome20.setBounds(150, 20, 10, 10);
+        jLObrigatorioNome20.setBounds(290, 20, 10, 10);
 
         jLObrigatorioNome21.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome21.setForeground(new java.awt.Color(204, 0, 0));
@@ -577,7 +577,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
         txtEmailAluno.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtEmailAluno.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         jpAluno.add(txtEmailAluno);
-        txtEmailAluno.setBounds(170, 30, 560, 30);
+        txtEmailAluno.setBounds(310, 30, 420, 30);
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel10.setText("Login");
@@ -636,7 +636,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jLabel26.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel26.setText("Email");
         jpFuncionario.add(jLabel26);
-        jLabel26.setBounds(420, 10, 50, 19);
+        jLabel26.setBounds(410, 10, 50, 19);
 
         jLObrigatorioNome25.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome25.setForeground(new java.awt.Color(204, 0, 0));
@@ -669,23 +669,23 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jLObrigatorioNome18.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome18.setText("*");
         jpFuncionario.add(jLObrigatorioNome18);
-        jLObrigatorioNome18.setBounds(390, 80, 10, 10);
+        jLObrigatorioNome18.setBounds(520, 80, 10, 10);
 
         txtSenhaFuncionario.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtSenhaFuncionario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         jpFuncionario.add(txtSenhaFuncionario);
-        txtSenhaFuncionario.setBounds(210, 90, 190, 30);
+        txtSenhaFuncionario.setBounds(280, 90, 250, 30);
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel17.setText("Senha");
         jpFuncionario.add(jLabel17);
-        jLabel17.setBounds(210, 70, 70, 17);
+        jLabel17.setBounds(280, 70, 70, 17);
 
         jLObrigatorioNome19.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome19.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome19.setText("*");
         jpFuncionario.add(jLObrigatorioNome19);
-        jLObrigatorioNome19.setBounds(190, 80, 10, 10);
+        jLObrigatorioNome19.setBounds(260, 80, 10, 10);
 
         txtLoginFuncionario.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtLoginFuncionario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
@@ -696,7 +696,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
             }
         });
         jpFuncionario.add(txtLoginFuncionario);
-        txtLoginFuncionario.setBounds(20, 90, 180, 30);
+        txtLoginFuncionario.setBounds(20, 90, 250, 30);
 
         jLabel18.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel18.setText("Login");
@@ -823,23 +823,23 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jLObrigatorioNome23.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome23.setText("*");
         jpSupervisor.add(jLObrigatorioNome23);
-        jLObrigatorioNome23.setBounds(720, 80, 10, 10);
+        jLObrigatorioNome23.setBounds(590, 80, 10, 10);
 
         txtSenhaSupervisor.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtSenhaSupervisor.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         jpSupervisor.add(txtSenhaSupervisor);
-        txtSenhaSupervisor.setBounds(550, 90, 180, 30);
+        txtSenhaSupervisor.setBounds(320, 90, 280, 30);
 
         jLabel19.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel19.setText("Senha");
         jpSupervisor.add(jLabel19);
-        jLabel19.setBounds(550, 70, 70, 17);
+        jLabel19.setBounds(320, 70, 70, 17);
 
         jLObrigatorioNome24.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome24.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome24.setText("*");
         jpSupervisor.add(jLObrigatorioNome24);
-        jLObrigatorioNome24.setBounds(530, 80, 10, 10);
+        jLObrigatorioNome24.setBounds(290, 80, 10, 10);
 
         txtLoginSupervisor.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtLoginSupervisor.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
@@ -850,12 +850,12 @@ public class CadastroPessoa extends javax.swing.JDialog {
             }
         });
         jpSupervisor.add(txtLoginSupervisor);
-        txtLoginSupervisor.setBounds(340, 90, 200, 30);
+        txtLoginSupervisor.setBounds(20, 90, 280, 30);
 
         jLabel20.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel20.setText("Login");
         jpSupervisor.add(jLabel20);
-        jLabel20.setBounds(340, 70, 70, 17);
+        jLabel20.setBounds(20, 70, 70, 17);
 
         jLabel48.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel48.setText("Especialização");
@@ -865,7 +865,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
         txtEspecializacao.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtEspecializacao.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         jpSupervisor.add(txtEspecializacao);
-        txtEspecializacao.setBounds(20, 30, 370, 30);
+        txtEspecializacao.setBounds(20, 30, 390, 30);
 
         jLObrigatorioNome54.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome54.setForeground(new java.awt.Color(204, 0, 0));
