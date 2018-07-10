@@ -6,6 +6,7 @@
 package registraclinic.triagem;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -41,7 +42,9 @@ public class Triagem implements Serializable {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="idPaciente")
     private Paciente paciente;
-
+    
+    private Date dataTriagem;
+    
     public int getIdTriagem() {
         return idTriagem;
     }
@@ -74,5 +77,12 @@ public class Triagem implements Serializable {
     public void setTipoAtendimento(Atendimento tipoAtendimento) {
         this.tipoAtendimento = tipoAtendimento;
     }
-    
+
+    public Date getDataTriagem() {
+        return dataTriagem;
+    }
+
+    public void setDataTriagem(Date dataTriagem) {
+        this.dataTriagem = dataTriagem;
+    }
 }

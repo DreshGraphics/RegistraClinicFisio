@@ -6,6 +6,8 @@
 package registraclinic.telas;
 
 import java.awt.Color;
+import java.time.Instant;
+import java.util.Date;
 import registraclinic.util.Util;
 import java.util.List;
 import javax.swing.JOptionPane;
@@ -403,7 +405,7 @@ public class CadastroTriagem extends javax.swing.JDialog {
             }
             triagem.setPaciente(paciente);
             triagem.setTipoAtendimento(atendimento);
-
+            triagem.setDataTriagem(Date.from(Instant.now()));
             triagemDAO.salvar(triagem);
             grupoPrioridade.clearSelection();
             btLimparActionPerformed(null);

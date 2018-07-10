@@ -10,6 +10,7 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import registraclinic.atendimento.Atendimento;
 import registraclinic.pessoa.Pessoa;
 import registraclinic.triagem.Triagem;
 
@@ -28,7 +29,13 @@ public class Paciente extends Pessoa{
     private String agenteDeSaudePaciente;
     private String pesoPaciente;
     private String alturaPaciente;
-    
+    private String tipoPaciente;
+    private String cpfResponsavelPaciente;
+    private String rgResponsavelPaciente;
+    private String registroNascimentoPaciente;
+    private String nomeResponsavelPaciente;
+    private String situacaoPaciente;
+    private Atendimento atendimento;
     @Column(length = 100)
     private String queixaDoPaciente;
 
@@ -80,7 +87,60 @@ public class Paciente extends Pessoa{
         this.queixaDoPaciente = queixaDoPaciente;
     }
 
-    
-        
+    public String getTipoPaciente() {
+        return tipoPaciente;
+    }
+
+    public void setTipoPaciente(String tipoPaciente) {
+        this.tipoPaciente = tipoPaciente;
+    }
+
+    public String getCpfResponsavelPaciente() {
+        return cpfResponsavelPaciente;
+    }
+
+    public void setCpfResponsavelPaciente(String cpfResponsavelPaciente) {
+        this.cpfResponsavelPaciente = cpfResponsavelPaciente;
+    }
+
+    public String getRgResponsavelPaciente() {
+        return rgResponsavelPaciente;
+    }
+
+    public void setRgResponsavelPaciente(String rgResponsavelPaciente) {
+        this.rgResponsavelPaciente = rgResponsavelPaciente;
+    }
+
+    public String getRegistroNascimentoPaciente() {
+        return registroNascimentoPaciente;
+    }
+
+    public void setRegistroNascimentoPaciente(String registroNascimentoPaciente) {
+        this.registroNascimentoPaciente = registroNascimentoPaciente;
+    }
+
+    public String getNomeResponsavelPaciente() {
+        return nomeResponsavelPaciente;
+    }
+
+    public void setNomeResponsavelPaciente(String nomeResponsavelPaciente) {
+        this.nomeResponsavelPaciente = nomeResponsavelPaciente;
+    }
+
+    public String getSituacaoPaciente() {
+        return situacaoPaciente;
+    }
+
+    public void setSituacaoPaciente(String situacaoPaciente) {
+        this.situacaoPaciente = situacaoPaciente;
+    }
+
+    public Atendimento getAtendimento() {
+        return atendimento;
+    }
+
+    public void setAtendimento(Atendimento atendimento) {
+        this.atendimento = atendimento;
+    }
     
 }
