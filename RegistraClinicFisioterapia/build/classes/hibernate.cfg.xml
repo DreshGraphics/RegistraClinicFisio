@@ -6,9 +6,10 @@
     <session-factory>
         <property name="dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="connection.url">jdbc:mysql://localhost/registraclinicfisioterapia</property>       
+        <!--<property name="connection.url">jdbc:mysql://localhost/registraclinicfisioterapia</property>-->
+        <property name="connection.url">jdbc:mysql://192.168.3.38:1892/registraclinicfisioterapia</property>       
         <property name="connection.username">root</property>
-        <property name="connection.password"></property>
+        <property name="connection.password">ads20161</property>
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
         <property name="generate_statistics">true</property>
