@@ -184,6 +184,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
         txtRegistroNasc = new javax.swing.JTextField();
         jLabel41 = new javax.swing.JLabel();
         txtNomeResponsavel = new javax.swing.JTextField();
+        jLObrigatorioNome5 = new javax.swing.JLabel();
         jLabel45 = new javax.swing.JLabel();
         jcTipoPaciente = new javax.swing.JComboBox<>();
         jLabel27 = new javax.swing.JLabel();
@@ -256,7 +257,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jLObrigatorioNome3.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome3.setText("*");
         jpDadosPessoais.add(jLObrigatorioNome3);
-        jLObrigatorioNome3.setBounds(690, 140, 10, 10);
+        jLObrigatorioNome3.setBounds(700, 140, 10, 10);
 
         btnCidade.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnCidade.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/add_20-20_fisio.png"))); // NOI18N
@@ -750,7 +751,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
             }
         });
         jpPaciente.add(txtNumProntuario);
-        txtNumProntuario.setBounds(20, 30, 140, 30);
+        txtNumProntuario.setBounds(20, 30, 130, 30);
 
         txtAltura.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtAltura.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
@@ -840,7 +841,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jLObrigatorioNome4.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome4.setText("*");
         jpPaciente.add(jLObrigatorioNome4);
-        jLObrigatorioNome4.setBounds(720, 200, 10, 10);
+        jLObrigatorioNome4.setBounds(690, 140, 10, 10);
 
         txtCpfResponsavel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         try {
@@ -899,6 +900,12 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jpPaciente.add(txtNomeResponsavel);
         txtNomeResponsavel.setBounds(20, 90, 340, 30);
 
+        jLObrigatorioNome5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome5.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome5.setText("*");
+        jpPaciente.add(jLObrigatorioNome5);
+        jLObrigatorioNome5.setBounds(720, 200, 10, 10);
+
         jLabel45.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel45.setText("Nome(Responsável)");
         jpPaciente.add(jLabel45);
@@ -913,12 +920,12 @@ public class CadastroPessoa extends javax.swing.JDialog {
             }
         });
         jpPaciente.add(jcTipoPaciente);
-        jcTipoPaciente.setBounds(170, 30, 112, 30);
+        jcTipoPaciente.setBounds(162, 30, 120, 30);
 
         jLabel27.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel27.setText("Tipo Paciente");
         jpPaciente.add(jLabel27);
-        jLabel27.setBounds(170, 10, 110, 19);
+        jLabel27.setBounds(160, 10, 110, 19);
 
         jLObrigatorioNome8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome8.setForeground(new java.awt.Color(204, 0, 0));
@@ -1264,8 +1271,8 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 txtRegistroNasc.setText(paciente.getRegistroNascimentoPaciente());
                 jcTipoPaciente.setSelectedItem(paciente.getTipoPaciente());
                 jcSituacaoPaciente.setSelectedItem(paciente.getSituacaoPaciente());
-//                txtAtendimento.setText(paciente.getTipoAtendimento().getNomeAtendimento());
-//                atendimento = paciente.getTipoAtendimento();
+                txtAtendimento.setText(paciente.getTipoAtendimento().getNomeAtendimento());
+                atendimento = paciente.getTipoAtendimento();
                 cidade = paciente.getCidade();
                 btExcluir.setEnabled(true);
             } else {
@@ -1404,44 +1411,154 @@ public class CadastroPessoa extends javax.swing.JDialog {
                     || jcTipoPaciente.getSelectedIndex() == 0 || jtQueixaPaciente.getText().equals("")) {
                 JOptionPane.showMessageDialog(this, "Prencha os campos obrigatórios!!");
             } else {
-                
-                paciente.setNomePessoa(txtNome.getText().toUpperCase());
-                paciente.setDataNascimentoPessoa(formataData(txtDataNascimento.getText()));
-                paciente.setEnderecoPessoa(txtEndereco.getText());
-                paciente.setEnderecoNumeroPessoa(txtEndNumero.getText());
-                paciente.setTelefonePessoa(txtTelefone.getText());
-                paciente.setTelefoneOcionalPessoa(txtTelefoneOpcional.getText());
-                paciente.setNaturalidadePessoa(txtNaturalidade.getText());
-                paciente.setSexoPessoa(jcSexo.getSelectedItem().toString());
-                paciente.setEstadoCivilPessoa(jcEstadoCivil.getSelectedItem().toString());
-                paciente.setCidade(cidade);
 
-                paciente.setBairroPessoa(txtBairro.getText());
-                paciente.setOcupacaoPessoa(txtOcupacao.getText());
-                paciente.setComplementoPessoa(txtComplemento.getText());
-                paciente.setIdadePessoa(getIdade(formataData(txtDataNascimento.getText())));
-                paciente.setCpfPessoa(txtCpf.getText());
-                paciente.setRgPessoa(txtRg.getText());
+                //Com o campo preenchido tá tudo certo. Agora falta quando o campo cpf tá em branco
+                if (txtCpf.getText().equals("   .   .   -  ") && (jcSituacaoPaciente.getSelectedIndex() == 3)) {
+                    paciente.setNomePessoa(txtNome.getText().toUpperCase());
+                    paciente.setDataNascimentoPessoa(formataData(txtDataNascimento.getText()));
+                    paciente.setEnderecoPessoa(txtEndereco.getText());
+                    paciente.setEnderecoNumeroPessoa(txtEndNumero.getText());
+                    paciente.setTelefonePessoa(txtTelefone.getText());
+                    paciente.setTelefoneOcionalPessoa(txtTelefoneOpcional.getText());
+                    paciente.setNaturalidadePessoa(txtNaturalidade.getText());
+                    paciente.setSexoPessoa(jcSexo.getSelectedItem().toString());
+                    paciente.setEstadoCivilPessoa(jcEstadoCivil.getSelectedItem().toString());
+                    paciente.setCidade(cidade);
 
-                paciente.setNumeroProntuarioPaciente(txtNumProntuario.getText());
-                paciente.setPostoDeSaudePaciente(txtESF.getText());
-                paciente.setAgenteDeSaudePaciente(txtAgenteDeSaude.getText());
-                paciente.setPesoPaciente(txtPeso.getText());
-                paciente.setAlturaPaciente(txtAltura.getText());
-                paciente.setQueixaDoPaciente(jtQueixaPaciente.getText());
-                paciente.setSituacaoPaciente(jcSituacaoPaciente.getSelectedItem().toString());
-                paciente.setTipoAtendimento(atendimento);
+                    paciente.setBairroPessoa(txtBairro.getText());
+                    paciente.setOcupacaoPessoa(txtOcupacao.getText());
+                    paciente.setComplementoPessoa(txtComplemento.getText());
+                    paciente.setIdadePessoa(getIdade(formataData(txtDataNascimento.getText())));
+                    paciente.setCpfPessoa(txtCpf.getText());
+                    paciente.setRgPessoa(txtRg.getText());
 
-                paciente.setTipoPaciente(jcTipoPaciente.getSelectedItem().toString());
+                    paciente.setNumeroProntuarioPaciente(txtNumProntuario.getText());
+                    paciente.setPostoDeSaudePaciente(txtESF.getText());
+                    paciente.setAgenteDeSaudePaciente(txtAgenteDeSaude.getText());
+                    paciente.setPesoPaciente(txtPeso.getText());
+                    paciente.setAlturaPaciente(txtAltura.getText());
+                    paciente.setQueixaDoPaciente(jtQueixaPaciente.getText());
+                    paciente.setSituacaoPaciente(jcSituacaoPaciente.getSelectedItem().toString());
+                    paciente.setTipoAtendimento(atendimento);
 
-                pacienteDAO.salvar(paciente);
-                jtGeral.setEnabledAt(2, false);
-                btLimparActionPerformed(null);
+                    paciente.setTipoPaciente(jcTipoPaciente.getSelectedItem().toString());
+
+                    pacienteDAO.salvar(paciente);
+                    jtGeral.setEnabledAt(2, false);
+                    btLimparActionPerformed(null);
+                } else {
+                    if (!(jcTipoPaciente.getSelectedItem().equals("Criança") || jcTipoPaciente.getSelectedItem().equals("Adolescente"))) {
+                        if (txtCpf.getText().equals("   .   .   -  ") || txtDataNascimento.getText().equals("")
+                                || txtEndereco.getText().equals("") || jcSexo.getSelectedItem().equals("-------")
+                                || txtTelefone.getText().equals("")
+                                || txtNome.getText().equals("") || txtEndNumero.getText().equals("")
+                                || txtBairro.getText().equals("") || txtCidade.getText().equals("")
+                                || jcSituacaoPaciente.getSelectedIndex() == 0
+                                || jcTipoPaciente.getSelectedIndex() == 0
+                                || jtQueixaPaciente.getText().equalsIgnoreCase("")) {
+                            JOptionPane.showMessageDialog(this, "Prencha os campos obrigatórios!!");
+
+                        } else {
+                            if (pacienteDAO.consultarValorRepetido("cpfPessoa", txtCpf.getText()) && paciente.getIdPessoa() == 0) {
+                                JOptionPane.showMessageDialog(this, "CPF do paciente já cadastrado!!");
+                                txtCpf.requestFocus();
+                                jtGeral.setSelectedComponent(jpDadosPessoais);
+                                jtGeral.setEnabledAt(0, true);
+                            } else {
+                                paciente.setNomePessoa(txtNome.getText().toUpperCase());
+                                paciente.setDataNascimentoPessoa(formataData(txtDataNascimento.getText()));
+                                paciente.setEnderecoPessoa(txtEndereco.getText());
+                                paciente.setEnderecoNumeroPessoa(txtEndNumero.getText());
+                                paciente.setTelefonePessoa(txtTelefone.getText());
+                                paciente.setTelefoneOcionalPessoa(txtTelefoneOpcional.getText());
+                                paciente.setNaturalidadePessoa(txtNaturalidade.getText());
+                                paciente.setSexoPessoa(jcSexo.getSelectedItem().toString());
+                                paciente.setEstadoCivilPessoa(jcEstadoCivil.getSelectedItem().toString());
+                                paciente.setCidade(cidade);
+
+                                paciente.setBairroPessoa(txtBairro.getText());
+                                paciente.setOcupacaoPessoa(txtOcupacao.getText());
+                                paciente.setComplementoPessoa(txtComplemento.getText());
+                                paciente.setIdadePessoa(getIdade(formataData(txtDataNascimento.getText())));
+                                paciente.setCpfPessoa(txtCpf.getText());
+                                paciente.setRgPessoa(txtRg.getText());
+
+                                paciente.setNumeroProntuarioPaciente(txtNumProntuario.getText());
+                                paciente.setPostoDeSaudePaciente(txtESF.getText());
+                                paciente.setAgenteDeSaudePaciente(txtAgenteDeSaude.getText());
+                                paciente.setPesoPaciente(txtPeso.getText());
+                                paciente.setAlturaPaciente(txtAltura.getText());
+                                paciente.setQueixaDoPaciente(jtQueixaPaciente.getText());
+                                paciente.setSituacaoPaciente(jcSituacaoPaciente.getSelectedItem().toString());
+                                paciente.setTipoAtendimento(atendimento);
+
+                                paciente.setTipoPaciente(jcTipoPaciente.getSelectedItem().toString());
+
+                                pacienteDAO.salvar(paciente);
+                                jtGeral.setEnabledAt(2, false);
+                                btLimparActionPerformed(null);
+                            }
+                        }
+                    } else {
+                        if (txtDataNascimento.getText().equals("")
+                                || txtEndereco.getText().equals("") || jcSexo.getSelectedItem().equals("-------")
+                                || txtTelefone.getText().equals("")
+                                || txtNome.getText().equals("") || txtEndNumero.getText().equals("")
+                                || txtBairro.getText().equals("") || txtCidade.getText().equals("")
+                                || jcSituacaoPaciente.getSelectedIndex() == 0
+                                || jcTipoPaciente.getSelectedIndex() == 0
+                                || jtQueixaPaciente.getText().equalsIgnoreCase("")) {
+                            JOptionPane.showMessageDialog(this, "Prencha os campos obrigatórios!!");
+
+                        } else {
+//                            if (pacienteDAO.consultarValorRepetido("cpfPessoa", txtCpf.getText()) && paciente.getIdPessoa() == 0) {
+//                                JOptionPane.showMessageDialog(this, "CPF do paciente já cadastrado!!");
+//                                txtCpf.requestFocus();
+//                                jtGeral.setSelectedComponent(jpDadosPessoais);
+//                                jtGeral.setEnabledAt(0, true);
+//                            } else {
+                                paciente.setNomePessoa(txtNome.getText().toUpperCase());
+                                paciente.setDataNascimentoPessoa(formataData(txtDataNascimento.getText()));
+                                paciente.setEnderecoPessoa(txtEndereco.getText());
+                                paciente.setEnderecoNumeroPessoa(txtEndNumero.getText());
+                                paciente.setTelefonePessoa(txtTelefone.getText());
+                                paciente.setTelefoneOcionalPessoa(txtTelefoneOpcional.getText());
+                                paciente.setNaturalidadePessoa(txtNaturalidade.getText());
+                                paciente.setSexoPessoa(jcSexo.getSelectedItem().toString());
+                                paciente.setEstadoCivilPessoa(jcEstadoCivil.getSelectedItem().toString());
+                                paciente.setCidade(cidade);
+
+                                paciente.setBairroPessoa(txtBairro.getText());
+                                paciente.setOcupacaoPessoa(txtOcupacao.getText());
+                                paciente.setComplementoPessoa(txtComplemento.getText());
+                                paciente.setIdadePessoa(getIdade(formataData(txtDataNascimento.getText())));
+                                paciente.setCpfPessoa(txtCpf.getText());
+                                paciente.setRgPessoa(txtRg.getText());
+
+                                paciente.setNumeroProntuarioPaciente(txtNumProntuario.getText());
+                                paciente.setPostoDeSaudePaciente(txtESF.getText());
+                                paciente.setAgenteDeSaudePaciente(txtAgenteDeSaude.getText());
+                                paciente.setPesoPaciente(txtPeso.getText());
+                                paciente.setAlturaPaciente(txtAltura.getText());
+                                paciente.setQueixaDoPaciente(jtQueixaPaciente.getText());
+                                paciente.setSituacaoPaciente(jcSituacaoPaciente.getSelectedItem().toString());
+                                paciente.setTipoAtendimento(atendimento);
+
+                                paciente.setTipoPaciente(jcTipoPaciente.getSelectedItem().toString());
+
+                                pacienteDAO.salvar(paciente);
+                                jtGeral.setEnabledAt(2, false);
+                                btLimparActionPerformed(null);
+//                            }
+                        }
+                    }
+
+                }
                 return;
             }
         } else if (txtNome.getText().equals("") || txtDataNascimento.getText().equals("")
                 || jcSexo.getSelectedIndex() == 0
-                || txtTelefoneOpcional.getText().equals("")
+                || txtTelefone.getText().equals("")
                 || txtEndereco.getText().equals("") || txtEndNumero.getText().equals("")
                 || txtCidade.getText().equals("") || txtBairro.getText().equals("")
                 || txtNaturalidade.getText().equals("") || txtOcupacao.getText().equals("")
@@ -1537,10 +1654,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
 
     private String getIdade(Date data) {
         Calendar dataNascimento = Calendar.getInstance();
-        if (data != null) {
-
-        }
-        //dataNascimento.setTime(data);
+        dataNascimento.setTime(data);
         Calendar dataAtual = Calendar.getInstance();
         Integer diferencaMes = dataAtual.get(Calendar.MONTH) - dataNascimento.get(Calendar.MONTH);
         Integer diferencaDia = dataAtual.get(Calendar.DAY_OF_MONTH) - dataNascimento.get(Calendar.DAY_OF_MONTH);
@@ -1671,7 +1785,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
     }//GEN-LAST:event_btnCidadeActionPerformed
 
     private void jcTipoPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcTipoPacienteActionPerformed
-        if (!jcTipoPaciente.getSelectedItem().equals("Criança")) {
+        if (!(jcTipoPaciente.getSelectedItem().equals("Criança") || jcTipoPaciente.getSelectedItem().equals("Adolescente"))) {
             txtNomeResponsavel.setEnabled(false);
             txtCpfResponsavel.setEnabled(false);
             txtRgResponsavel.setEnabled(false);
@@ -1804,6 +1918,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
     private javax.swing.JLabel jLObrigatorioNome38;
     private javax.swing.JLabel jLObrigatorioNome4;
     private javax.swing.JLabel jLObrigatorioNome40;
+    private javax.swing.JLabel jLObrigatorioNome5;
     private javax.swing.JLabel jLObrigatorioNome54;
     private javax.swing.JLabel jLObrigatorioNome8;
     private javax.swing.JLabel jLabel10;
