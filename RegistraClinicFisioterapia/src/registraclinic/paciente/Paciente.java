@@ -6,6 +6,7 @@
 package registraclinic.paciente;
 
 
+import java.util.Date;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -39,6 +40,7 @@ public class Paciente extends Pessoa{
     private String registroNascimentoPaciente;
     private String nomeResponsavelPaciente;
     private String situacaoPaciente;
+    private Date dataCadastroPaciente;
     
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="idAtendimento")
@@ -148,6 +150,14 @@ public class Paciente extends Pessoa{
 
     public void setTipoAtendimento(Atendimento tipoAtendimento) {
         this.tipoAtendimento = tipoAtendimento;
+    }
+
+    public Date getDataCadastroPaciente() {
+        return dataCadastroPaciente;
+    }
+
+    public void setDataCadastroPaciente(Date dataCadastroPaciente) {
+        this.dataCadastroPaciente = dataCadastroPaciente;
     }
     
 }

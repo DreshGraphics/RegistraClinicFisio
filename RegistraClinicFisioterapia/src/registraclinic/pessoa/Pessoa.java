@@ -43,7 +43,7 @@ public abstract class Pessoa implements Serializable{
     private String naturalidadePessoa;
     private String ocupacaoPessoa;
     private Cidade cidade;
-    private Date dataCadastroPessoa;
+    
 
     public int getIdPessoa() {
         return idPessoa;
@@ -181,12 +181,4 @@ public abstract class Pessoa implements Serializable{
         this.cidade = cidade;
     }
 
-    public Date getDataCadastroPessoa() {
-        return dataCadastroPessoa;
-    }
-
-    public void setDataCadastroPessoa(Date dataCadastroPessoa) {
-        this.dataCadastroPessoa = dataCadastroPessoa;
-    }
-        
 }
