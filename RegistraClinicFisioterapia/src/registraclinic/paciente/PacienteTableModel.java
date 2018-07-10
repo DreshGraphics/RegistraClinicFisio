@@ -68,7 +68,7 @@ public class PacienteTableModel extends AbstractTableModel {
             case 11:
                 return paciente.getSituacaoPaciente();
             case 12:
-                return paciente.getAtendimento();
+                return paciente.getTipoAtendimento().getNomeAtendimento();
         }
         return null;
     }

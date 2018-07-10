@@ -72,6 +72,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jtGeral.setEnabledAt(4, false);
         txtCidade.setEnabled(false);
         txtRegistroNasc.setEnabled(false);
+        txtAtendimento.setEnabled(false);
     }
 
     /**
@@ -89,7 +90,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jlNomeUsuario2 = new javax.swing.JLabel();
         txtCidade = new javax.swing.JTextField();
         jLObrigatorioNome3 = new javax.swing.JLabel();
-        btnProduto2 = new javax.swing.JButton();
+        btnCidade = new javax.swing.JButton();
         txtRg = new javax.swing.JTextField();
         jLabel33 = new javax.swing.JLabel();
         txtCpf = new javax.swing.JFormattedTextField();
@@ -115,11 +116,11 @@ public class CadastroPessoa extends javax.swing.JDialog {
         txtComplemento = new javax.swing.JTextField();
         txtNaturalidade = new javax.swing.JTextField();
         jLabel28 = new javax.swing.JLabel();
-        txtTelefone = new javax.swing.JFormattedTextField();
+        txtTelefoneOpcional = new javax.swing.JFormattedTextField();
         jLabel29 = new javax.swing.JLabel();
         jcEstadoCivil = new javax.swing.JComboBox<>();
         jLabel30 = new javax.swing.JLabel();
-        txtTelefone1 = new javax.swing.JFormattedTextField();
+        txtTelefone = new javax.swing.JFormattedTextField();
         jLabel46 = new javax.swing.JLabel();
         jLObrigatorioNome33 = new javax.swing.JLabel();
         jLObrigatorioNome34 = new javax.swing.JLabel();
@@ -176,15 +177,15 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jcSituacaoPaciente = new javax.swing.JComboBox<>();
         jLabel25 = new javax.swing.JLabel();
         jLObrigatorioNome4 = new javax.swing.JLabel();
-        txtCpf1 = new javax.swing.JFormattedTextField();
+        txtCpfResponsavel = new javax.swing.JFormattedTextField();
         jLabel38 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
-        txtRg1 = new javax.swing.JTextField();
+        txtRgResponsavel = new javax.swing.JTextField();
         txtRegistroNasc = new javax.swing.JTextField();
         jLabel41 = new javax.swing.JLabel();
-        txtESF1 = new javax.swing.JTextField();
+        txtNomeResponsavel = new javax.swing.JTextField();
         jLabel45 = new javax.swing.JLabel();
-        jcTipoPaciente1 = new javax.swing.JComboBox<>();
+        jcTipoPaciente = new javax.swing.JComboBox<>();
         jLabel27 = new javax.swing.JLabel();
         jLObrigatorioNome8 = new javax.swing.JLabel();
         txtESF = new javax.swing.JTextField();
@@ -257,19 +258,19 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jpDadosPessoais.add(jLObrigatorioNome3);
         jLObrigatorioNome3.setBounds(690, 140, 10, 10);
 
-        btnProduto2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnProduto2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/add_20-20_fisio.png"))); // NOI18N
-        btnProduto2.setContentAreaFilled(false);
-        btnProduto2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btnProduto2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnProduto2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnProduto2.addActionListener(new java.awt.event.ActionListener() {
+        btnCidade.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnCidade.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/add_20-20_fisio.png"))); // NOI18N
+        btnCidade.setContentAreaFilled(false);
+        btnCidade.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnCidade.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnCidade.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnCidade.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnProduto2ActionPerformed(evt);
+                btnCidadeActionPerformed(evt);
             }
         });
-        jpDadosPessoais.add(btnProduto2);
-        btnProduto2.setBounds(710, 150, 30, 30);
+        jpDadosPessoais.add(btnCidade);
+        btnCidade.setBounds(710, 150, 30, 30);
 
         txtRg.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtRg.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
@@ -450,16 +451,16 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jpDadosPessoais.add(jLabel28);
         jLabel28.setBounds(560, 70, 150, 19);
 
-        txtTelefone.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        txtTelefoneOpcional.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         try {
-            txtTelefone.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) # ####-####")));
+            txtTelefoneOpcional.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) # ####-####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        txtTelefone.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        txtTelefone.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jpDadosPessoais.add(txtTelefone);
-        txtTelefone.setBounds(560, 90, 170, 30);
+        txtTelefoneOpcional.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        txtTelefoneOpcional.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jpDadosPessoais.add(txtTelefoneOpcional);
+        txtTelefoneOpcional.setBounds(560, 90, 170, 30);
 
         jLabel29.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel29.setText("Estado Civil");
@@ -482,16 +483,16 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jpDadosPessoais.add(jLabel30);
         jLabel30.setBounds(20, 250, 110, 19);
 
-        txtTelefone1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        txtTelefone.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         try {
-            txtTelefone1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) # ####-####")));
+            txtTelefone.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) # ####-####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        txtTelefone1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        txtTelefone1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jpDadosPessoais.add(txtTelefone1);
-        txtTelefone1.setBounds(390, 90, 160, 30);
+        txtTelefone.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        txtTelefone.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jpDadosPessoais.add(txtTelefone);
+        txtTelefone.setBounds(390, 90, 160, 30);
 
         jLabel46.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel46.setText("Telefone");
@@ -841,20 +842,20 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jpPaciente.add(jLObrigatorioNome4);
         jLObrigatorioNome4.setBounds(720, 200, 10, 10);
 
-        txtCpf1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        txtCpfResponsavel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         try {
-            txtCpf1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
+            txtCpfResponsavel.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        txtCpf1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtCpf1.addActionListener(new java.awt.event.ActionListener() {
+        txtCpfResponsavel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtCpfResponsavel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCpf1ActionPerformed(evt);
+                txtCpfResponsavelActionPerformed(evt);
             }
         });
-        jpPaciente.add(txtCpf1);
-        txtCpf1.setBounds(290, 30, 140, 30);
+        jpPaciente.add(txtCpfResponsavel);
+        txtCpfResponsavel.setBounds(290, 30, 140, 30);
 
         jLabel38.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel38.setText("CPF(Responsável)");
@@ -866,16 +867,16 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jpPaciente.add(jLabel39);
         jLabel39.setBounds(440, 10, 140, 19);
 
-        txtRg1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtRg1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
-        txtRg1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        txtRg1.addActionListener(new java.awt.event.ActionListener() {
+        txtRgResponsavel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtRgResponsavel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        txtRgResponsavel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        txtRgResponsavel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtRg1ActionPerformed(evt);
+                txtRgResponsavelActionPerformed(evt);
             }
         });
-        jpPaciente.add(txtRg1);
-        txtRg1.setBounds(440, 30, 140, 30);
+        jpPaciente.add(txtRgResponsavel);
+        txtRgResponsavel.setBounds(440, 30, 140, 30);
 
         txtRegistroNasc.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtRegistroNasc.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
@@ -893,26 +894,26 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jpPaciente.add(jLabel41);
         jLabel41.setBounds(590, 10, 120, 19);
 
-        txtESF1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtESF1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
-        jpPaciente.add(txtESF1);
-        txtESF1.setBounds(20, 90, 340, 30);
+        txtNomeResponsavel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtNomeResponsavel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        jpPaciente.add(txtNomeResponsavel);
+        txtNomeResponsavel.setBounds(20, 90, 340, 30);
 
         jLabel45.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel45.setText("Nome(Responsável)");
         jpPaciente.add(jLabel45);
         jLabel45.setBounds(20, 70, 160, 19);
 
-        jcTipoPaciente1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jcTipoPaciente1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "------", "Criança", "Adolescente", "Adulto" }));
-        jcTipoPaciente1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jcTipoPaciente1.addActionListener(new java.awt.event.ActionListener() {
+        jcTipoPaciente.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jcTipoPaciente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "------", "Criança", "Adolescente", "Adulto" }));
+        jcTipoPaciente.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jcTipoPaciente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jcTipoPaciente1ActionPerformed(evt);
+                jcTipoPacienteActionPerformed(evt);
             }
         });
-        jpPaciente.add(jcTipoPaciente1);
-        jcTipoPaciente1.setBounds(170, 30, 112, 30);
+        jpPaciente.add(jcTipoPaciente);
+        jcTipoPaciente.setBounds(170, 30, 112, 30);
 
         jLabel27.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel27.setText("Tipo Paciente");
@@ -1172,6 +1173,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 txtRg.setText(alunos.getRgPessoa());
                 txtBairro.setText(alunos.getBairroPessoa());
                 txtTelefone.setText(alunos.getTelefonePessoa());
+                txtTelefoneOpcional.setText(alunos.getTelefoneOcionalPessoa());
                 txtEndereco.setText(alunos.getEnderecoPessoa());
                 txtEndNumero.setText(alunos.getEnderecoNumeroPessoa());
                 txtComplemento.setText(alunos.getComplementoPessoa());
@@ -1206,6 +1208,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 txtRg.setText(funcionario.getRgPessoa());
                 txtBairro.setText(funcionario.getBairroPessoa());
                 txtTelefone.setText(funcionario.getTelefonePessoa());
+                txtTelefoneOpcional.setText(funcionario.getTelefoneOcionalPessoa());
                 txtEndereco.setText(funcionario.getEnderecoPessoa());
                 txtEndNumero.setText(funcionario.getEnderecoNumeroPessoa());
                 txtComplemento.setText(funcionario.getComplementoPessoa());
@@ -1239,7 +1242,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 txtCpf.setText(paciente.getCpfPessoa());
                 txtRg.setText(paciente.getRgPessoa());
                 txtBairro.setText(paciente.getBairroPessoa());
-                txtTelefone.setText(paciente.getTelefonePessoa());
+                txtTelefoneOpcional.setText(paciente.getTelefonePessoa());
                 txtEndereco.setText(paciente.getEnderecoPessoa());
                 txtEndNumero.setText(paciente.getEnderecoNumeroPessoa());
                 txtComplemento.setText(paciente.getComplementoPessoa());
@@ -1255,7 +1258,14 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 txtPeso.setText(paciente.getPesoPaciente());
                 txtAltura.setText(paciente.getAlturaPaciente());
                 jtQueixaPaciente.setText(paciente.getQueixaDoPaciente());
-
+                txtCpfResponsavel.setText(paciente.getCpfResponsavelPaciente());
+                txtRgResponsavel.setText(paciente.getRgResponsavelPaciente());
+                txtNomeResponsavel.setText(paciente.getNomeResponsavelPaciente());
+                txtRegistroNasc.setText(paciente.getRegistroNascimentoPaciente());
+                jcTipoPaciente.setSelectedItem(paciente.getTipoPaciente());
+                jcSituacaoPaciente.setSelectedItem(paciente.getSituacaoPaciente());
+//                txtAtendimento.setText(paciente.getTipoAtendimento().getNomeAtendimento());
+//                atendimento = paciente.getTipoAtendimento();
                 cidade = paciente.getCidade();
                 btExcluir.setEnabled(true);
             } else {
@@ -1275,6 +1285,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 txtRg.setText(supervisor.getRgPessoa());
                 txtBairro.setText(supervisor.getBairroPessoa());
                 txtTelefone.setText(supervisor.getTelefonePessoa());
+                txtTelefoneOpcional.setText(supervisor.getTelefoneOcionalPessoa());
                 txtEndereco.setText(supervisor.getEnderecoPessoa());
                 txtEndNumero.setText(supervisor.getEnderecoNumeroPessoa());
                 txtComplemento.setText(supervisor.getComplementoPessoa());
@@ -1329,6 +1340,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
         txtRg.setText("");
         txtBairro.setText("");
         txtTelefone.setText("");
+        txtTelefoneOpcional.setText("");
         txtEndereco.setText("");
         txtEndNumero.setText("");
         txtComplemento.setText("");
@@ -1355,6 +1367,13 @@ public class CadastroPessoa extends javax.swing.JDialog {
         txtPeso.setText("");
         txtAltura.setText("");
         jtQueixaPaciente.setText("");
+        jcSituacaoPaciente.setSelectedIndex(0);
+        jcTipoPaciente.setSelectedIndex(0);
+        txtAtendimento.setText("");
+        txtCpfResponsavel.setText("");
+        txtRgResponsavel.setText("");
+        txtRegistroNasc.setText("");
+        txtNomeResponsavel.setText("");
 
         txtEspecializacao.setText("");
         txtEmailFuncionario.setText("");
@@ -1376,14 +1395,22 @@ public class CadastroPessoa extends javax.swing.JDialog {
     private void btSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalvarActionPerformed
 
         if (jcTipoUsuario.getSelectedItem().equals("Paciente")) {
-            if (txtNome.getText().equals("")) {
+            if (txtDataNascimento.getText().equals("")
+                    || txtEndereco.getText().equals("") || jcSexo.getSelectedItem().equals("-------")
+                    || txtTelefone.getText().equals("")
+                    || txtNome.getText().equals("") || txtEndNumero.getText().equals("")
+                    || txtBairro.getText().equals("") || txtCidade.getText().equals("")
+                    || jcSituacaoPaciente.getSelectedIndex() == 0 || txtAtendimento.getText().equals("")
+                    || jcTipoPaciente.getSelectedIndex() == 0 || jtQueixaPaciente.getText().equals("")) {
                 JOptionPane.showMessageDialog(this, "Prencha os campos obrigatórios!!");
             } else {
+                
                 paciente.setNomePessoa(txtNome.getText().toUpperCase());
                 paciente.setDataNascimentoPessoa(formataData(txtDataNascimento.getText()));
                 paciente.setEnderecoPessoa(txtEndereco.getText());
                 paciente.setEnderecoNumeroPessoa(txtEndNumero.getText());
                 paciente.setTelefonePessoa(txtTelefone.getText());
+                paciente.setTelefoneOcionalPessoa(txtTelefoneOpcional.getText());
                 paciente.setNaturalidadePessoa(txtNaturalidade.getText());
                 paciente.setSexoPessoa(jcSexo.getSelectedItem().toString());
                 paciente.setEstadoCivilPessoa(jcEstadoCivil.getSelectedItem().toString());
@@ -1402,6 +1429,10 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 paciente.setPesoPaciente(txtPeso.getText());
                 paciente.setAlturaPaciente(txtAltura.getText());
                 paciente.setQueixaDoPaciente(jtQueixaPaciente.getText());
+                paciente.setSituacaoPaciente(jcSituacaoPaciente.getSelectedItem().toString());
+                paciente.setTipoAtendimento(atendimento);
+
+                paciente.setTipoPaciente(jcTipoPaciente.getSelectedItem().toString());
 
                 pacienteDAO.salvar(paciente);
                 jtGeral.setEnabledAt(2, false);
@@ -1410,7 +1441,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
             }
         } else if (txtNome.getText().equals("") || txtDataNascimento.getText().equals("")
                 || jcSexo.getSelectedIndex() == 0
-                || txtTelefone.getText().equals("")
+                || txtTelefoneOpcional.getText().equals("")
                 || txtEndereco.getText().equals("") || txtEndNumero.getText().equals("")
                 || txtCidade.getText().equals("") || txtBairro.getText().equals("")
                 || txtNaturalidade.getText().equals("") || txtOcupacao.getText().equals("")
@@ -1422,6 +1453,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 alunos.setDataNascimentoPessoa(formataData(txtDataNascimento.getText()));
                 alunos.setEnderecoPessoa(txtEndereco.getText());
                 alunos.setTelefonePessoa(txtTelefone.getText());
+                alunos.setTelefoneOcionalPessoa(txtTelefoneOpcional.getText());
                 alunos.setNaturalidadePessoa(txtNaturalidade.getText());
                 alunos.setSexoPessoa(jcSexo.getSelectedItem().toString());
                 alunos.setEstadoCivilPessoa(jcEstadoCivil.getSelectedItem().toString());
@@ -1449,6 +1481,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 funcionario.setEnderecoPessoa(txtEndereco.getText());
                 funcionario.setEnderecoNumeroPessoa(txtEndNumero.getText());
                 funcionario.setTelefonePessoa(txtTelefone.getText());
+                funcionario.setTelefoneOcionalPessoa(txtTelefoneOpcional.getText());
                 funcionario.setNaturalidadePessoa(txtNaturalidade.getText());
                 funcionario.setSexoPessoa(jcSexo.getSelectedItem().toString());
                 funcionario.setEstadoCivilPessoa(jcEstadoCivil.getSelectedItem().toString());
@@ -1476,6 +1509,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 supervisor.setEnderecoPessoa(txtEndereco.getText());
                 supervisor.setEnderecoNumeroPessoa(txtEndNumero.getText());
                 supervisor.setTelefonePessoa(txtTelefone.getText());
+                supervisor.setTelefoneOcionalPessoa(txtTelefoneOpcional.getText());
                 supervisor.setNaturalidadePessoa(txtNaturalidade.getText());
                 supervisor.setSexoPessoa(jcSexo.getSelectedItem().toString());
                 supervisor.setEstadoCivilPessoa(jcEstadoCivil.getSelectedItem().toString());
@@ -1622,7 +1656,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCidadeActionPerformed
 
-    private void btnProduto2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProduto2ActionPerformed
+    private void btnCidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCidadeActionPerformed
         List<Cidade> lista;
         lista = (cidadeDAO.listar());
         CidadeTableModel itm = new CidadeTableModel(lista);
@@ -1634,19 +1668,33 @@ public class CadastroPessoa extends javax.swing.JDialog {
             txtCidade.setEnabled(false);
 
         }
-    }//GEN-LAST:event_btnProduto2ActionPerformed
+    }//GEN-LAST:event_btnCidadeActionPerformed
 
-    private void jcTipoPaciente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcTipoPaciente1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jcTipoPaciente1ActionPerformed
+    private void jcTipoPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcTipoPacienteActionPerformed
+        if (!jcTipoPaciente.getSelectedItem().equals("Criança")) {
+            txtNomeResponsavel.setEnabled(false);
+            txtCpfResponsavel.setEnabled(false);
+            txtRgResponsavel.setEnabled(false);
+            txtRegistroNasc.setEnabled(false);
+        } else {
+            txtNomeResponsavel.setEnabled(true);
+            txtCpfResponsavel.setEnabled(true);
+            txtRgResponsavel.setEnabled(true);
+            txtRegistroNasc.setEnabled(true);
+            paciente.setNomeResponsavelPaciente(txtNomeResponsavel.getText());
+            paciente.setCpfResponsavelPaciente(txtCpfResponsavel.getText());
+            paciente.setRgResponsavelPaciente(txtRgResponsavel.getText());
+            paciente.setRegistroNascimentoPaciente(txtRegistroNasc.getText());
+        }
+    }//GEN-LAST:event_jcTipoPacienteActionPerformed
 
-    private void txtCpf1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCpf1ActionPerformed
+    private void txtCpfResponsavelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCpfResponsavelActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtCpf1ActionPerformed
+    }//GEN-LAST:event_txtCpfResponsavelActionPerformed
 
-    private void txtRg1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRg1ActionPerformed
+    private void txtRgResponsavelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRgResponsavelActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtRg1ActionPerformed
+    }//GEN-LAST:event_txtRgResponsavelActionPerformed
 
     private void txtRegistroNascActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRegistroNascActionPerformed
         // TODO add your handling code here:
@@ -1731,7 +1779,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
     private javax.swing.JButton btSalvar;
     private javax.swing.JButton btVoltar;
     private javax.swing.JButton btnAtendimento;
-    private javax.swing.JButton btnProduto2;
+    private javax.swing.JButton btnCidade;
     private javax.swing.JLabel jLObrigatorioNome12;
     private javax.swing.JLabel jLObrigatorioNome14;
     private javax.swing.JLabel jLObrigatorioNome15;
@@ -1802,7 +1850,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
     private javax.swing.JComboBox<String> jcEstadoCivil;
     private javax.swing.JComboBox<String> jcSexo;
     private javax.swing.JComboBox<String> jcSituacaoPaciente;
-    private javax.swing.JComboBox<String> jcTipoPaciente1;
+    private javax.swing.JComboBox<String> jcTipoPaciente;
     private javax.swing.JComboBox<String> jcTipoUsuario;
     private javax.swing.JLabel jlNomeUsuario2;
     private javax.swing.JLabel jlNomeUsuario6;
@@ -1825,10 +1873,9 @@ public class CadastroPessoa extends javax.swing.JDialog {
     private javax.swing.JTextField txtCidade;
     private javax.swing.JTextField txtComplemento;
     private javax.swing.JFormattedTextField txtCpf;
-    private javax.swing.JFormattedTextField txtCpf1;
+    private javax.swing.JFormattedTextField txtCpfResponsavel;
     private javax.swing.JFormattedTextField txtDataNascimento;
     private javax.swing.JTextField txtESF;
-    private javax.swing.JTextField txtESF1;
     private javax.swing.JTextField txtEmailAluno;
     private javax.swing.JTextField txtEmailFuncionario;
     private javax.swing.JTextField txtEmailSupervisor;
@@ -1842,16 +1889,17 @@ public class CadastroPessoa extends javax.swing.JDialog {
     private javax.swing.JTextField txtMatricula;
     private javax.swing.JTextField txtNaturalidade;
     private javax.swing.JTextField txtNome;
+    private javax.swing.JTextField txtNomeResponsavel;
     private javax.swing.JTextField txtNumProntuario;
     private javax.swing.JTextField txtOcupacao;
     private javax.swing.JTextField txtPeso;
     private javax.swing.JTextField txtRegistroNasc;
     private javax.swing.JTextField txtRg;
-    private javax.swing.JTextField txtRg1;
+    private javax.swing.JTextField txtRgResponsavel;
     private javax.swing.JPasswordField txtSenhaAluno;
     private javax.swing.JPasswordField txtSenhaFuncionario;
     private javax.swing.JPasswordField txtSenhaSupervisor;
     private javax.swing.JFormattedTextField txtTelefone;
-    private javax.swing.JFormattedTextField txtTelefone1;
+    private javax.swing.JFormattedTextField txtTelefoneOpcional;
     // End of variables declaration//GEN-END:variables
 }

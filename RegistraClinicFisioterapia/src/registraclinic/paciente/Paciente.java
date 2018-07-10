@@ -9,7 +9,11 @@ package registraclinic.paciente;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import registraclinic.atendimento.Atendimento;
 import registraclinic.pessoa.Pessoa;
 import registraclinic.triagem.Triagem;
@@ -35,7 +39,10 @@ public class Paciente extends Pessoa{
     private String registroNascimentoPaciente;
     private String nomeResponsavelPaciente;
     private String situacaoPaciente;
-    private Atendimento atendimento;
+    
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="idAtendimento")
+    private Atendimento tipoAtendimento;
     @Column(length = 100)
     private String queixaDoPaciente;
 
@@ -135,12 +142,12 @@ public class Paciente extends Pessoa{
         this.situacaoPaciente = situacaoPaciente;
     }
 
-    public Atendimento getAtendimento() {
-        return atendimento;
+    public Atendimento getTipoAtendimento() {
+        return tipoAtendimento;
     }
 
-    public void setAtendimento(Atendimento atendimento) {
-        this.atendimento = atendimento;
+    public void setTipoAtendimento(Atendimento tipoAtendimento) {
+        this.tipoAtendimento = tipoAtendimento;
     }
     
 }

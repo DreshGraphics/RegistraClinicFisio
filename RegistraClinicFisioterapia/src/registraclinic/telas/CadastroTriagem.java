@@ -405,7 +405,7 @@ public class CadastroTriagem extends javax.swing.JDialog {
             }
             triagem.setPaciente(paciente);
             triagem.setTipoAtendimento(atendimento);
-            triagem.setDataTriagem(Date.from(Instant.now()));
+            triagem.setDataTriagem(new Date());
             triagemDAO.salvar(triagem);
             grupoPrioridade.clearSelection();
             btLimparActionPerformed(null);
