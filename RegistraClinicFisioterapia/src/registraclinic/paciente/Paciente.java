@@ -42,9 +42,7 @@ public class Paciente extends Pessoa{
     private String situacaoPaciente;
     private Date dataCadastroPaciente;
     
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name="idAtendimento")
-    private Atendimento tipoAtendimento;
+    private String tipoAtendimento;
     @Column(length = 100)
     private String queixaDoPaciente;
 
@@ -144,11 +142,11 @@ public class Paciente extends Pessoa{
         this.situacaoPaciente = situacaoPaciente;
     }
 
-    public Atendimento getTipoAtendimento() {
+    public String getTipoAtendimento() {
         return tipoAtendimento;
     }
 
-    public void setTipoAtendimento(Atendimento tipoAtendimento) {
+    public void setTipoAtendimento(String tipoAtendimento) {
         this.tipoAtendimento = tipoAtendimento;
     }
 

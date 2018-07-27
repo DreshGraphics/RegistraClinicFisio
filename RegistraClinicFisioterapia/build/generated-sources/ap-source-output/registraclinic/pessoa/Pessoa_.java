@@ -13,6 +13,7 @@ public abstract class Pessoa_ {
 	public static volatile SingularAttribute<Pessoa, String> enderecoPessoa;
 	public static volatile SingularAttribute<Pessoa, Cidade> cidade;
 	public static volatile SingularAttribute<Pessoa, String> naturalidadePessoa;
+	public static volatile SingularAttribute<Pessoa, String> telefoneOcionalPessoa;
 	public static volatile SingularAttribute<Pessoa, String> bairroPessoa;
 	public static volatile SingularAttribute<Pessoa, String> ocupacaoPessoa;
 	public static volatile SingularAttribute<Pessoa, String> rgPessoa;
