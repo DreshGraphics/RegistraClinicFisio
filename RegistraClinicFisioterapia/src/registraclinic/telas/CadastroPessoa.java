@@ -749,7 +749,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jcAtendimento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-----" }));
         jcAtendimento.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jpPaciente.add(jcAtendimento);
-        jcAtendimento.setBounds(410, 150, 320, 30);
+        jcAtendimento.setBounds(370, 150, 230, 30);
 
         jLabel40.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel40.setText("ESF");
@@ -810,18 +810,18 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jlNomeUsuario6.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jlNomeUsuario6.setText("Atendimento");
         jpPaciente.add(jlNomeUsuario6);
-        jlNomeUsuario6.setBounds(410, 130, 120, 20);
+        jlNomeUsuario6.setBounds(370, 130, 120, 20);
 
         jcSituacaoPaciente.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jcSituacaoPaciente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-----", "Em espera", "Ativo", "Inativo" }));
         jcSituacaoPaciente.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jpPaciente.add(jcSituacaoPaciente);
-        jcSituacaoPaciente.setBounds(610, 210, 120, 30);
+        jcSituacaoPaciente.setBounds(610, 150, 120, 30);
 
         jLabel25.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel25.setText("Situação");
         jpPaciente.add(jLabel25);
-        jLabel25.setBounds(610, 190, 80, 19);
+        jLabel25.setBounds(610, 130, 80, 19);
 
         jLNomeResponsavel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLNomeResponsavel.setForeground(new java.awt.Color(204, 0, 0));
@@ -890,13 +890,13 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jLObrigatorioNome5.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome5.setText("*");
         jpPaciente.add(jLObrigatorioNome5);
-        jLObrigatorioNome5.setBounds(720, 200, 10, 10);
+        jLObrigatorioNome5.setBounds(720, 140, 10, 10);
 
         jLObrigatorioNome6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome6.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome6.setText("*");
         jpPaciente.add(jLObrigatorioNome6);
-        jLObrigatorioNome6.setBounds(720, 140, 10, 10);
+        jLObrigatorioNome6.setBounds(590, 140, 10, 10);
 
         jLabel45.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel45.setText("Nome(Responsável)");
@@ -939,7 +939,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
         txtAgenteDeSaude.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtAgenteDeSaude.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         jpPaciente.add(txtAgenteDeSaude);
-        txtAgenteDeSaude.setBounds(20, 150, 380, 30);
+        txtAgenteDeSaude.setBounds(20, 150, 340, 30);
 
         txtPeso.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtPeso.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
@@ -948,7 +948,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
 
         labelPaciente.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         jpPaciente.add(labelPaciente);
-        labelPaciente.setBounds(0, 0, 750, 310);
+        labelPaciente.setBounds(0, 0, 750, 330);
 
         jtGeral.addTab("Paciente", jpPaciente);
 
@@ -1034,7 +1034,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jtGeral.addTab("Supervisor", jpSupervisor);
 
         getContentPane().add(jtGeral);
-        jtGeral.setBounds(0, 60, 750, 340);
+        jtGeral.setBounds(0, 60, 750, 360);
 
         btVoltar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/voltar_fisio.png"))); // NOI18N
@@ -1049,7 +1049,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btVoltar);
-        btVoltar.setBounds(10, 410, 80, 70);
+        btVoltar.setBounds(10, 423, 80, 70);
 
         btPesquisar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/pesquisar_fisio.png"))); // NOI18N
@@ -1064,7 +1064,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btPesquisar);
-        btPesquisar.setBounds(320, 410, 100, 70);
+        btPesquisar.setBounds(320, 423, 100, 70);
 
         btExcluir.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/excluir_fisio.png"))); // NOI18N
@@ -1079,7 +1079,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btExcluir);
-        btExcluir.setBounds(460, 410, 90, 70);
+        btExcluir.setBounds(460, 423, 90, 70);
 
         btLimpar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/limpar_fisio.png"))); // NOI18N
@@ -1094,7 +1094,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btLimpar);
-        btLimpar.setBounds(190, 410, 90, 70);
+        btLimpar.setBounds(190, 423, 90, 70);
 
         btSalvar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/save_fisio.png"))); // NOI18N
@@ -1109,7 +1109,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btSalvar);
-        btSalvar.setBounds(650, 410, 90, 70);
+        btSalvar.setBounds(650, 423, 90, 70);
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/CADASTRO DE PESSOA.png"))); // NOI18N
         jLabel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));

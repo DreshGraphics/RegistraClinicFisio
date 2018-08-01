@@ -1,5 +1,6 @@
 package registraclinic.atendimento;
 
+import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -13,7 +14,7 @@ import registraclinic.paciente.Paciente;
  * @author root
  */
 @Entity
-public class Atendimento {
+public class Atendimento implements Serializable {
 
     @Id
     @GeneratedValue
