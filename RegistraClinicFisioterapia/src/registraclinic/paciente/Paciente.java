@@ -41,6 +41,7 @@ public class Paciente extends Pessoa{
     private String nomeResponsavelPaciente;
     private String situacaoPaciente;
     private Date dataCadastroPaciente;
+    private String diganosticoMedico;
     
     private String tipoAtendimento;
     @Column(length = 100)
@@ -156,6 +157,14 @@ public class Paciente extends Pessoa{
 
     public void setDataCadastroPaciente(Date dataCadastroPaciente) {
         this.dataCadastroPaciente = dataCadastroPaciente;
+    }
+
+    public String getDiganosticoMedico() {
+        return diganosticoMedico;
+    }
+
+    public void setDiganosticoMedico(String diganosticoMedico) {
+        this.diganosticoMedico = diganosticoMedico;
     }
     
 }

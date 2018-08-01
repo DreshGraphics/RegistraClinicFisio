@@ -168,6 +168,8 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jLabel37 = new javax.swing.JLabel();
         jLObrigatorioNome40 = new javax.swing.JLabel();
         jLabel42 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jtDiagnosticoMedico = new javax.swing.JTextArea();
         jScrollPane1 = new javax.swing.JScrollPane();
         jtQueixaPaciente = new javax.swing.JTextArea();
         jLabel43 = new javax.swing.JLabel();
@@ -186,6 +188,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jLObrigatorioNome5 = new javax.swing.JLabel();
         jLObrigatorioNome6 = new javax.swing.JLabel();
         jLabel45 = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
         jcTipoPaciente = new javax.swing.JComboBox<>();
         jLRegistro = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
@@ -559,7 +562,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
 
         labelDadosPessoais.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         jpDadosPessoais.add(labelDadosPessoais);
-        labelDadosPessoais.setBounds(0, 0, 750, 310);
+        labelDadosPessoais.setBounds(0, 0, 750, 330);
 
         jtGeral.addTab("Dados Pessoais", jpDadosPessoais);
 
@@ -645,7 +648,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
 
         labelAluno.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         jpAluno.add(labelAluno);
-        labelAluno.setBounds(0, 0, 750, 310);
+        labelAluno.setBounds(0, 0, 750, 330);
 
         jtGeral.addTab("Aluno", jpAluno);
 
@@ -731,7 +734,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
 
         labelFuncionario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         jpFuncionario.add(labelFuncionario);
-        labelFuncionario.setBounds(0, 0, 750, 310);
+        labelFuncionario.setBounds(0, 0, 750, 330);
 
         jtGeral.addTab("Funcionário", jpFuncionario);
 
@@ -769,23 +772,33 @@ public class CadastroPessoa extends javax.swing.JDialog {
         txtAltura.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtAltura.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         jpPaciente.add(txtAltura);
-        txtAltura.setBounds(20, 260, 90, 30);
+        txtAltura.setBounds(20, 290, 70, 30);
 
         jLabel37.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
-        jLabel37.setText("Queixa Paciente");
+        jLabel37.setText("Diagnóstico Médico");
         jpPaciente.add(jLabel37);
-        jLabel37.setBounds(120, 190, 130, 19);
+        jLabel37.setBounds(460, 190, 160, 19);
 
         jLObrigatorioNome40.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome40.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome40.setText("*");
         jpPaciente.add(jLObrigatorioNome40);
-        jLObrigatorioNome40.setBounds(590, 200, 10, 10);
+        jLObrigatorioNome40.setBounds(430, 200, 10, 10);
 
         jLabel42.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel42.setText("Agente de Saúde");
         jpPaciente.add(jLabel42);
         jLabel42.setBounds(20, 130, 150, 19);
+
+        jtDiagnosticoMedico.setColumns(20);
+        jtDiagnosticoMedico.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jtDiagnosticoMedico.setLineWrap(true);
+        jtDiagnosticoMedico.setRows(3);
+        jtDiagnosticoMedico.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(56, 100, 62), 1, true));
+        jScrollPane2.setViewportView(jtDiagnosticoMedico);
+
+        jpPaciente.add(jScrollPane2);
+        jScrollPane2.setBounds(460, 210, 270, 110);
 
         jtQueixaPaciente.setColumns(20);
         jtQueixaPaciente.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -795,17 +808,17 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jScrollPane1.setViewportView(jtQueixaPaciente);
 
         jpPaciente.add(jScrollPane1);
-        jScrollPane1.setBounds(120, 210, 480, 80);
+        jScrollPane1.setBounds(105, 210, 340, 110);
 
         jLabel43.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel43.setText("Peso(kg)");
         jpPaciente.add(jLabel43);
         jLabel43.setBounds(20, 190, 80, 19);
 
-        jLabel44.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel44.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel44.setText("Altura(cm)");
         jpPaciente.add(jLabel44);
-        jLabel44.setBounds(20, 240, 90, 19);
+        jLabel44.setBounds(20, 270, 90, 17);
 
         jlNomeUsuario6.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jlNomeUsuario6.setText("Atendimento");
@@ -903,6 +916,11 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jpPaciente.add(jLabel45);
         jLabel45.setBounds(20, 70, 160, 19);
 
+        jLabel47.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel47.setText("Queixa Paciente");
+        jpPaciente.add(jLabel47);
+        jLabel47.setBounds(110, 190, 130, 19);
+
         jcTipoPaciente.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jcTipoPaciente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "------", "Criança", "Adolescente", "Adulto" }));
         jcTipoPaciente.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
@@ -944,7 +962,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
         txtPeso.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtPeso.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         jpPaciente.add(txtPeso);
-        txtPeso.setBounds(20, 210, 90, 30);
+        txtPeso.setBounds(20, 210, 70, 30);
 
         labelPaciente.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         jpPaciente.add(labelPaciente);
@@ -1029,7 +1047,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
 
         labelSupervisor.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         jpSupervisor.add(labelSupervisor);
-        labelSupervisor.setBounds(0, 0, 750, 320);
+        labelSupervisor.setBounds(0, 0, 750, 330);
 
         jtGeral.addTab("Supervisor", jpSupervisor);
 
@@ -1270,8 +1288,8 @@ public class CadastroPessoa extends javax.swing.JDialog {
                 jcTipoPaciente.setSelectedItem(paciente.getTipoPaciente());
                 jcSituacaoPaciente.setSelectedItem(paciente.getSituacaoPaciente());
                 jcAtendimento.setSelectedItem(paciente.getTipoAtendimento());
+                jtDiagnosticoMedico.setText(paciente.getDiganosticoMedico());
                 
-                //atendimento = paciente.getTipoAtendimento();
                 cidade = paciente.getCidade();
                 btExcluir.setEnabled(true);
             } else {
@@ -1387,6 +1405,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
         txtRgResponsavel.setText("");
         txtRegistroNasc.setText("");
         txtNomeResponsavel.setText("");
+        jtDiagnosticoMedico.setText("");
 
         txtEspecializacao.setText("");
         txtEmailFuncionario.setText("");
@@ -1446,7 +1465,8 @@ public class CadastroPessoa extends javax.swing.JDialog {
                     paciente.setQueixaDoPaciente(jtQueixaPaciente.getText());
                     paciente.setSituacaoPaciente(jcSituacaoPaciente.getSelectedItem().toString());
                     paciente.setTipoAtendimento(jcAtendimento.getSelectedItem().toString());
-
+                    paciente.setDiganosticoMedico(jtDiagnosticoMedico.toString());
+                    
                     paciente.setTipoPaciente(jcTipoPaciente.getSelectedItem().toString());
                     paciente.setDataCadastroPaciente(new Date());
                     pacienteDAO.salvar(paciente);
@@ -1496,9 +1516,9 @@ public class CadastroPessoa extends javax.swing.JDialog {
                                 paciente.setAlturaPaciente(txtAltura.getText());
                                 paciente.setQueixaDoPaciente(jtQueixaPaciente.getText());
                                 paciente.setSituacaoPaciente(jcSituacaoPaciente.getSelectedItem().toString());
-                                //paciente.setTipoAtendimento(atendimento);
                                 paciente.setTipoAtendimento(jcAtendimento.getSelectedItem().toString());
-
+                                paciente.setDiganosticoMedico(jtDiagnosticoMedico.toString());
+                                
                                 paciente.setTipoPaciente(jcTipoPaciente.getSelectedItem().toString());
                                 paciente.setDataCadastroPaciente(new Date());
                                 pacienteDAO.salvar(paciente);
@@ -1550,8 +1570,8 @@ public class CadastroPessoa extends javax.swing.JDialog {
                             paciente.setAlturaPaciente(txtAltura.getText());
                             paciente.setQueixaDoPaciente(jtQueixaPaciente.getText());
                             paciente.setSituacaoPaciente(jcSituacaoPaciente.getSelectedItem().toString());
-                            //paciente.setTipoAtendimento(atendimento);
-
+                            paciente.setDiganosticoMedico(jtDiagnosticoMedico.toString());
+                            
                             paciente.setTipoPaciente(jcTipoPaciente.getSelectedItem().toString());
                             paciente.setDataCadastroPaciente(new Date());
                             pacienteDAO.salvar(paciente);
@@ -1957,10 +1977,12 @@ public class CadastroPessoa extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JComboBox<String> jcAtendimento;
     private javax.swing.JComboBox<String> jcEstadoCivil;
     private javax.swing.JComboBox<String> jcSexo;
@@ -1974,6 +1996,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
     private javax.swing.JPanel jpFuncionario;
     private javax.swing.JPanel jpPaciente;
     private javax.swing.JPanel jpSupervisor;
+    private javax.swing.JTextArea jtDiagnosticoMedico;
     private javax.swing.JTabbedPane jtGeral;
     private javax.swing.JTextArea jtQueixaPaciente;
     private javax.swing.JLabel labelAluno;
