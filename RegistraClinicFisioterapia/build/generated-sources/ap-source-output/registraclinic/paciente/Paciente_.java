@@ -13,6 +13,7 @@ public abstract class Paciente_ extends registraclinic.pessoa.Pessoa_ {
 	public static volatile SingularAttribute<Paciente, String> rgResponsavelPaciente;
 	public static volatile SingularAttribute<Paciente, String> queixaDoPaciente;
 	public static volatile SingularAttribute<Paciente, String> registroNascimentoPaciente;
+	public static volatile SingularAttribute<Paciente, String> diganosticoMedico;
 	public static volatile SingularAttribute<Paciente, String> numeroProntuarioPaciente;
 	public static volatile SingularAttribute<Paciente, String> postoDeSaudePaciente;
 	public static volatile SingularAttribute<Paciente, String> situacaoPaciente;

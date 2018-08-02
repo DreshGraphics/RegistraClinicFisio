@@ -10,7 +10,7 @@ import javax.persistence.Entity;
 import javax.swing.JOptionPane;
 import org.hibernate.criterion.Restrictions;
 import registraclinic.pessoa.Pessoa;
-import registraclinic.util.HibernateUtil;
+
 
 /**
  *
