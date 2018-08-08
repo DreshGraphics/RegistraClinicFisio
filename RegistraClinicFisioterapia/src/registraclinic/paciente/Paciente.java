@@ -9,6 +9,7 @@ package registraclinic.paciente;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Temporal;
 import registraclinic.pessoa.Pessoa;
 
 /**
@@ -32,11 +33,13 @@ public class Paciente extends Pessoa{
     private String registroNascimentoPaciente;
     private String nomeResponsavelPaciente;
     private String situacaoPaciente;
+    @Temporal(javax.persistence.TemporalType.DATE)
     private Date dataCadastroPaciente;
+    @Column(nullable = true)
     private String diganosticoMedico;
     
     private String tipoAtendimento;
-    @Column(length = 100)
+    
     private String queixaDoPaciente;
 
     public String getNumeroProntuarioPaciente() {

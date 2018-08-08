@@ -790,7 +790,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jpPaciente.add(jLabel42);
         jLabel42.setBounds(20, 130, 150, 19);
 
-        jtDiagnosticoMedico.setColumns(20);
+        jtDiagnosticoMedico.setColumns(6);
         jtDiagnosticoMedico.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jtDiagnosticoMedico.setLineWrap(true);
         jtDiagnosticoMedico.setRows(3);
@@ -800,7 +800,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
         jpPaciente.add(jScrollPane2);
         jScrollPane2.setBounds(460, 210, 270, 110);
 
-        jtQueixaPaciente.setColumns(20);
+        jtQueixaPaciente.setColumns(6);
         jtQueixaPaciente.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jtQueixaPaciente.setLineWrap(true);
         jtQueixaPaciente.setRows(3);
@@ -1465,7 +1465,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
                     paciente.setQueixaDoPaciente(jtQueixaPaciente.getText());
                     paciente.setSituacaoPaciente(jcSituacaoPaciente.getSelectedItem().toString());
                     paciente.setTipoAtendimento(jcAtendimento.getSelectedItem().toString());
-                    paciente.setDiganosticoMedico(jtDiagnosticoMedico.toString());
+                    paciente.setDiganosticoMedico(jtDiagnosticoMedico.getText());
                     
                     paciente.setTipoPaciente(jcTipoPaciente.getSelectedItem().toString());
                     paciente.setDataCadastroPaciente(new Date());
@@ -1517,7 +1517,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
                                 paciente.setQueixaDoPaciente(jtQueixaPaciente.getText());
                                 paciente.setSituacaoPaciente(jcSituacaoPaciente.getSelectedItem().toString());
                                 paciente.setTipoAtendimento(jcAtendimento.getSelectedItem().toString());
-                                paciente.setDiganosticoMedico(jtDiagnosticoMedico.toString());
+                                paciente.setDiganosticoMedico(jtDiagnosticoMedico.getText());
                                 
                                 paciente.setTipoPaciente(jcTipoPaciente.getSelectedItem().toString());
                                 paciente.setDataCadastroPaciente(new Date());
@@ -1570,7 +1570,7 @@ public class CadastroPessoa extends javax.swing.JDialog {
                             paciente.setAlturaPaciente(txtAltura.getText());
                             paciente.setQueixaDoPaciente(jtQueixaPaciente.getText());
                             paciente.setSituacaoPaciente(jcSituacaoPaciente.getSelectedItem().toString());
-                            paciente.setDiganosticoMedico(jtDiagnosticoMedico.toString());
+                            paciente.setDiganosticoMedico(jtDiagnosticoMedico.getText());
                             
                             paciente.setTipoPaciente(jcTipoPaciente.getSelectedItem().toString());
                             paciente.setDataCadastroPaciente(new Date());
