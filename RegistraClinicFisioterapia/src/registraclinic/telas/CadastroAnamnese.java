@@ -5,25 +5,13 @@
  */
 package registraclinic.telas;
 
-import java.awt.Color;
-import java.time.Instant;
-import java.util.Date;
-import registraclinic.util.Util;
 import java.util.List;
 import javax.swing.JOptionPane;
-import javax.swing.JTable;
 import registraclinic.anamnese.Anamnese;
 import registraclinic.anamnese.AnamneseDAO;
 import registraclinic.anamnese.AnamneseTableModel;
-import registraclinic.atendimento.Atendimento;
-import registraclinic.atendimento.AtendimentoDAO;
-import registraclinic.atendimento.AtendimentoTableModel;
 import registraclinic.paciente.Paciente;
 import registraclinic.paciente.PacienteDAO;
-import registraclinic.paciente.PacienteTableModel;
-import registraclinic.triagem.Triagem;
-import registraclinic.triagem.TriagemDAO;
-import registraclinic.triagem.TriagemTableModel;
 
 /**
  *

@@ -17,7 +17,7 @@ import javax.swing.table.AbstractTableModel;
 public class TraumatoOrtopediaTableModel extends AbstractTableModel {
 
     private List<TraumatoOrtopedia> traumatoOrtopedias = new ArrayList<>();
-    private String[] colunas = {"Código"};
+    private String[] colunas = {"Código", "Paciente"};
 
     public TraumatoOrtopediaTableModel(List<TraumatoOrtopedia> traumatoOrtopedias) {
         this.traumatoOrtopedias = traumatoOrtopedias;
@@ -39,8 +39,8 @@ public class TraumatoOrtopediaTableModel extends AbstractTableModel {
         switch (columnIndex) {
             case 0:
                 return traumatoOrtopedia.getIdTraumatoOrtopedia();
-//            case 1:
-//                return traumatoOrtopedia.getNomeAtendimento();
+            case 1:
+                return traumatoOrtopedia.getPaciente().getNomePessoa();
         }
         return null;
     }

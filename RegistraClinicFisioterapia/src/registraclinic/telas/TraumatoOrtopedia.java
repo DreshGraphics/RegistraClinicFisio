@@ -5,12 +5,11 @@
  */
 package registraclinic.telas;
 
-import registraclinic.atendimento.Atendimento;
-import registraclinic.atendimento.AtendimentoDAO;
-import registraclinic.atendimento.AtendimentoTableModel;
+import java.util.List;
 import registraclinic.usuario.Usuario;
 import registraclinic.util.Util;
-import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import registraclinic.paciente.Paciente;
 import registraclinic.paciente.PacienteDAO;
@@ -18,17 +17,16 @@ import registraclinic.paciente.PacienteTableModel;
 
 /**
  *
- * @author root
+ * @author Karlos Oliveira
  */
-public class TraumatoOrtopedia extends javax.swing.JDialog {
-
+public class TraumatoOrtopedia extends javax.swing.JFrame {
+    
     Paciente paciente = new Paciente();
     PacienteDAO pacienteDAO = new PacienteDAO();
 
-    public TraumatoOrtopedia(java.awt.Frame parent, boolean modal) {
-        super(parent, modal);
+    public TraumatoOrtopedia(Usuario usuario) {
         initComponents();
-        btAvaliacaoPostural.setEnabled(false);
+        txtPaciente.setEnabled(false);
     }
 
     /**
@@ -59,16 +57,15 @@ public class TraumatoOrtopedia extends javax.swing.JDialog {
         btAvaliacaoPostural = new javax.swing.JButton();
         jLFundo = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setLocationByPlatform(true);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(600, 500));
         setMinimumSize(new java.awt.Dimension(600, 500));
         setUndecorated(true);
-        setResizable(false);
+        setPreferredSize(new java.awt.Dimension(600, 500));
+        getContentPane().setLayout(null);
 
         jPanel1.setMaximumSize(new java.awt.Dimension(600, 500));
         jPanel1.setMinimumSize(new java.awt.Dimension(600, 500));
-        jPanel1.setPreferredSize(new java.awt.Dimension(600, 500));
         jPanel1.setLayout(null);
 
         jlNomeUsuario5.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
@@ -290,63 +287,30 @@ public class TraumatoOrtopedia extends javax.swing.JDialog {
         jPanel1.add(jLFundo);
         jLFundo.setBounds(0, 0, 600, 500);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 600, 500);
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btAnamneseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAnamneseActionPerformed
-        dispose();
-    }//GEN-LAST:event_btAnamneseActionPerformed
-
-    private void btGrauForcaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btGrauForcaActionPerformed
-    }//GEN-LAST:event_btGrauForcaActionPerformed
-
-    private void btAvaliacaoPosturalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAvaliacaoPosturalActionPerformed
-        btLimparActionPerformed(null);
-    }//GEN-LAST:event_btAvaliacaoPosturalActionPerformed
-
-    private void btGoniometriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btGoniometriaActionPerformed
-        Util.limparCamposGenerico(this);
-        btAvaliacaoPostural.setEnabled(false);
-    }//GEN-LAST:event_btGoniometriaActionPerformed
+    private void btDiagnosticoCineticoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btDiagnosticoCineticoActionPerformed
+        CadastroDiagnosticoCineticoFuncional cdcf = new CadastroDiagnosticoCineticoFuncional(this, rootPaneCheckingEnabled);
+        cdcf.setVisible(true);
+    }//GEN-LAST:event_btDiagnosticoCineticoActionPerformed
 
     private void txtPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPacienteActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPacienteActionPerformed
 
-    private void btnPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPacienteActionPerformed
-        List<Paciente> lista;
-        lista = (pacienteDAO.listar());
-        PacienteTableModel itm = new PacienteTableModel(lista);
-        Object objetoRetorno = PesquisaGenerica.exibeTela(itm, "Pacinte");
-        if (objetoRetorno != null) {
-            paciente = pacienteDAO.consultarObjetoId("idPessoa", objetoRetorno);
-            txtPaciente.setText(paciente.getNomePessoa());
-        }
-    }//GEN-LAST:event_btnPacienteActionPerformed
-
-    private void btExamesComplementaresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExamesComplementaresActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btExamesComplementaresActionPerformed
-
-    private void btDiagnosticoCineticoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btDiagnosticoCineticoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btDiagnosticoCineticoActionPerformed
-
     private void btPerimetriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPerimetriaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btPerimetriaActionPerformed
+
+    private void btExamesComplementaresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExamesComplementaresActionPerformed
+        CadastroExamesComplementares cec = new CadastroExamesComplementares(this, rootPaneCheckingEnabled);
+        cec.setVisible(true);
+    }//GEN-LAST:event_btExamesComplementaresActionPerformed
 
     private void btSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalvarActionPerformed
         if (true) {
@@ -363,6 +327,22 @@ public class TraumatoOrtopedia extends javax.swing.JDialog {
 
         }
     }//GEN-LAST:event_btSalvarActionPerformed
+
+    private void btnPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPacienteActionPerformed
+        List<Paciente> lista;
+        lista = (pacienteDAO.listar());
+        PacienteTableModel itm = new PacienteTableModel(lista);
+        Object objetoRetorno = PesquisaGenerica.exibeTela(itm, "Pacinte");
+        if (objetoRetorno != null) {
+            paciente = pacienteDAO.consultarObjetoId("idPessoa", objetoRetorno);
+            txtPaciente.setText(paciente.getNomePessoa());
+        }
+    }//GEN-LAST:event_btnPacienteActionPerformed
+
+    private void btAnamneseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAnamneseActionPerformed
+        CadastroAnamnese ct = new CadastroAnamnese(null, rootPaneCheckingEnabled);
+        ct.setVisible(true);
+    }//GEN-LAST:event_btAnamneseActionPerformed
 
     private void btExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExcluirActionPerformed
         //        triagemDAO.excluir(triagem);
@@ -384,7 +364,7 @@ public class TraumatoOrtopedia extends javax.swing.JDialog {
     }//GEN-LAST:event_btPesquisarActionPerformed
 
     private void btLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLimparActionPerformed
-        Util.limparCamposGenerico(this);
+       
         //        triagem = new Triagem();
         //        paciente = new Paciente();
         //        atendimento = new Atendimento();
@@ -394,6 +374,20 @@ public class TraumatoOrtopedia extends javax.swing.JDialog {
         dispose();
     }//GEN-LAST:event_btVoltarActionPerformed
 
+    private void btGoniometriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btGoniometriaActionPerformed
+        
+    }//GEN-LAST:event_btGoniometriaActionPerformed
+
+    private void btGrauForcaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btGrauForcaActionPerformed
+
+    }//GEN-LAST:event_btGrauForcaActionPerformed
+
+    private void btAvaliacaoPosturalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAvaliacaoPosturalActionPerformed
+        CadastroAvaliacaoPostural cap = new CadastroAvaliacaoPostural(null, rootPaneCheckingEnabled);
+        cap.setVisible(true);
+        
+    }//GEN-LAST:event_btAvaliacaoPosturalActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -401,7 +395,7 @@ public class TraumatoOrtopedia extends javax.swing.JDialog {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -421,18 +415,25 @@ public class TraumatoOrtopedia extends javax.swing.JDialog {
         }
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
-        /* Create and display the dialog */
+        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                TraumatoOrtopedia dialog = new TraumatoOrtopedia(new javax.swing.JFrame(), true);
-                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                    @Override
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-                        System.exit(0);
-                    }
-                });
-                dialog.setVisible(true);
+                new TraumatoOrtopedia(null).setVisible(true);
             }
         });
     }
