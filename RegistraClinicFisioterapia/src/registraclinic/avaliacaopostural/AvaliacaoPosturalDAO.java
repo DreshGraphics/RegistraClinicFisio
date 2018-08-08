@@ -1,6 +1,8 @@
 
-package registraclinic.atendimento;
+package registraclinic.avaliacaopostural;
 
+import registraclinic.anamnese.*;
+import registraclinic.atendimento.*;
 import javax.swing.JOptionPane;
 import registraclinic.atendimento.Atendimento;
 import registraclinic.util.GenericDAO;
@@ -9,23 +11,23 @@ import registraclinic.util.GenericDAO;
  *
  * @author root
  */
-public class AtendimentoDAO extends GenericDAO<Atendimento> {
+public class AvaliacaoPosturalDAO extends GenericDAO<AvaliacaoPostural> {
 
-    public AtendimentoDAO() {
-        super(Atendimento.class);
+    public AvaliacaoPosturalDAO() {
+        super(AvaliacaoPostural.class);
     }
     
-     public boolean salvar(Atendimento atendimento) {
+     public boolean salvar(AvaliacaoPostural avaliacaoPostural) {
         Object[] options = {"Sim", "Não"};
-        if (atendimento.getIdAtendimento() == 0) {
-            if (adicionar(atendimento)) {
-                JOptionPane.showMessageDialog(null, "Atendimento cadastrado com sucesso!");
+        if (avaliacaoPostural.getIdAvaliacaoPostural() == 0) {
+            if (adicionar(avaliacaoPostural)) {
+                JOptionPane.showMessageDialog(null, "Avaliação Postural cadastrada com sucesso!");
                 return true;
             }
         } else if (JOptionPane.showOptionDialog(null, "Deseja mesmo realizar essa edição"
                 + "?", "", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]) == JOptionPane.YES_OPTION) {
-            if (atualizar(atendimento)) {
-                JOptionPane.showMessageDialog(null, "Atendimento editado com sucesso!");
+            if (atualizar(avaliacaoPostural)) {
+                JOptionPane.showMessageDialog(null, "Avaliação Postural editada com sucesso!");
                 return true;
             }
         } else {
@@ -34,15 +36,15 @@ public class AtendimentoDAO extends GenericDAO<Atendimento> {
         }
         return false;
     }
-     public boolean excluir(Atendimento atendimento) {
+     public boolean excluir(AvaliacaoPostural avaliacaoPostural) {
         Object[] options = {"Sim", "Não"};
-        if (atendimento.getIdAtendimento() != 0) {
-            if (JOptionPane.showOptionDialog(null, "Deseja excluir o Atendimento " + atendimento.getNomeAtendimento()
+        if (avaliacaoPostural.getIdAvaliacaoPostural() != 0) {
+            if (JOptionPane.showOptionDialog(null, "Deseja excluir a Avaliação Postural"
                     + "?", "", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]) == JOptionPane.YES_OPTION) {
-                if (remover(atendimento)) {
-                    JOptionPane.showMessageDialog(null, "Atendimento excluído com sucesso!");
+                if (remover(avaliacaoPostural)) {
+                    JOptionPane.showMessageDialog(null, "Avaliação Postural excluída com sucesso!");
                 } else {
-                    JOptionPane.showMessageDialog(null, "Não foi possível excluir o Atendimento " + atendimento.getNomeAtendimento(),
+                    JOptionPane.showMessageDialog(null, "Não foi possível excluir a Avaliação Postural ",
                             "Erro ao Excluir", JOptionPane.ERROR_MESSAGE);
                     return false;
                 }

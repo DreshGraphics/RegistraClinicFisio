@@ -1,6 +1,6 @@
+package registraclinic.traumatoortopedia;
 
-package registraclinic.atendimento;
-
+import registraclinic.atendimento.*;
 import javax.swing.JOptionPane;
 import registraclinic.atendimento.Atendimento;
 import registraclinic.util.GenericDAO;
@@ -9,40 +9,41 @@ import registraclinic.util.GenericDAO;
  *
  * @author root
  */
-public class AtendimentoDAO extends GenericDAO<Atendimento> {
+public class TraumatoOrtopediaDAO extends GenericDAO<TraumatoOrtopedia> {
 
-    public AtendimentoDAO() {
-        super(Atendimento.class);
+    public TraumatoOrtopediaDAO() {
+        super(TraumatoOrtopedia.class);
     }
-    
-     public boolean salvar(Atendimento atendimento) {
+
+    public boolean salvar(TraumatoOrtopedia traumatoOrtopedia) {
         Object[] options = {"Sim", "Não"};
-        if (atendimento.getIdAtendimento() == 0) {
-            if (adicionar(atendimento)) {
-                JOptionPane.showMessageDialog(null, "Atendimento cadastrado com sucesso!");
+        if (traumatoOrtopedia.getIdTraumatoOrtopedia() == 0) {
+            if (adicionar(traumatoOrtopedia)) {
+                JOptionPane.showMessageDialog(null, "Cadastrado com sucesso!");
                 return true;
             }
         } else if (JOptionPane.showOptionDialog(null, "Deseja mesmo realizar essa edição"
                 + "?", "", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]) == JOptionPane.YES_OPTION) {
-            if (atualizar(atendimento)) {
-                JOptionPane.showMessageDialog(null, "Atendimento editado com sucesso!");
+            if (atualizar(traumatoOrtopedia)) {
+                JOptionPane.showMessageDialog(null, "Editado com sucesso!");
                 return true;
             }
         } else {
             JOptionPane.showMessageDialog(null, "A edição foi cancelada!");
-            
+
         }
         return false;
     }
-     public boolean excluir(Atendimento atendimento) {
+
+    public boolean excluir(TraumatoOrtopedia traumatoOrtopedia) {
         Object[] options = {"Sim", "Não"};
-        if (atendimento.getIdAtendimento() != 0) {
-            if (JOptionPane.showOptionDialog(null, "Deseja excluir o Atendimento " + atendimento.getNomeAtendimento()
+        if (traumatoOrtopedia.getIdTraumatoOrtopedia() != 0) {
+            if (JOptionPane.showOptionDialog(null, "Deseja excluir"
                     + "?", "", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]) == JOptionPane.YES_OPTION) {
-                if (remover(atendimento)) {
-                    JOptionPane.showMessageDialog(null, "Atendimento excluído com sucesso!");
+                if (remover(traumatoOrtopedia)) {
+                    JOptionPane.showMessageDialog(null, "Excluído com sucesso!");
                 } else {
-                    JOptionPane.showMessageDialog(null, "Não foi possível excluir o Atendimento " + atendimento.getNomeAtendimento(),
+                    JOptionPane.showMessageDialog(null, "Não foi possível excluir ",
                             "Erro ao Excluir", JOptionPane.ERROR_MESSAGE);
                     return false;
                 }
@@ -53,6 +54,4 @@ public class AtendimentoDAO extends GenericDAO<Atendimento> {
         return true;
     }
 
-    
-    
 }
