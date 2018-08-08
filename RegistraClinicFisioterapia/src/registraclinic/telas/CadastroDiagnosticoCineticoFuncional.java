@@ -15,6 +15,9 @@ import javax.swing.JTable;
 import registraclinic.atendimento.Atendimento;
 import registraclinic.atendimento.AtendimentoDAO;
 import registraclinic.atendimento.AtendimentoTableModel;
+import registraclinic.diagnosticocineticofuncional.DiagnosticoCineticoFuncional;
+import registraclinic.diagnosticocineticofuncional.DiagnosticoCineticoFuncionalDAO;
+import registraclinic.diagnosticocineticofuncional.DiagnosticoCineticoFuncionalTableModel;
 import registraclinic.paciente.Paciente;
 import registraclinic.paciente.PacienteDAO;
 import registraclinic.paciente.PacienteTableModel;
@@ -28,7 +31,8 @@ import registraclinic.triagem.TriagemTableModel;
  */
 public class CadastroDiagnosticoCineticoFuncional extends javax.swing.JDialog {
 
-    
+    DiagnosticoCineticoFuncional diagnosticoCineticoFuncional = new DiagnosticoCineticoFuncional();
+    DiagnosticoCineticoFuncionalDAO diagnosticoCineticoFuncionalDAO = new DiagnosticoCineticoFuncionalDAO();
 
     public CadastroDiagnosticoCineticoFuncional(java.awt.Frame parent, boolean modal) {
         initComponents();
@@ -46,22 +50,21 @@ public class CadastroDiagnosticoCineticoFuncional extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        grupoPrioridade = new javax.swing.ButtonGroup();
         btVoltar = new javax.swing.JButton();
         btPesquisar = new javax.swing.JButton();
         btExcluir = new javax.swing.JButton();
         btLimpar = new javax.swing.JButton();
         btSalvar = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jtDiagnosticoMedico1 = new javax.swing.JTextArea();
+        jtObjetivosTratamento = new javax.swing.JTextArea();
         jlNomeUsuario4 = new javax.swing.JLabel();
         jLObrigatorioNome3 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jtDiagnosticoMedico = new javax.swing.JTextArea();
+        jtDiagnosticoCineticoFuncional = new javax.swing.JTextArea();
         jlNomeUsuario3 = new javax.swing.JLabel();
         jLObrigatorioNome2 = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jtDiagnosticoMedico2 = new javax.swing.JTextArea();
+        jtObservacoesGerais = new javax.swing.JTextArea();
         jlNomeUsuario5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
 
@@ -77,7 +80,7 @@ public class CadastroDiagnosticoCineticoFuncional extends javax.swing.JDialog {
         btVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/voltar_fisio.png"))); // NOI18N
         btVoltar.setText("Voltar");
         btVoltar.setContentAreaFilled(false);
-        btVoltar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btVoltar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btVoltar.setDefaultCapable(false);
         btVoltar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btVoltar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -93,7 +96,7 @@ public class CadastroDiagnosticoCineticoFuncional extends javax.swing.JDialog {
         btPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/pesquisar_fisio.png"))); // NOI18N
         btPesquisar.setText("Pesquisar");
         btPesquisar.setContentAreaFilled(false);
-        btPesquisar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btPesquisar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btPesquisar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btPesquisar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         btPesquisar.addActionListener(new java.awt.event.ActionListener() {
@@ -108,7 +111,7 @@ public class CadastroDiagnosticoCineticoFuncional extends javax.swing.JDialog {
         btExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/excluir_fisio.png"))); // NOI18N
         btExcluir.setText("Excluir");
         btExcluir.setContentAreaFilled(false);
-        btExcluir.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btExcluir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btExcluir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btExcluir.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         btExcluir.addActionListener(new java.awt.event.ActionListener() {
@@ -123,7 +126,7 @@ public class CadastroDiagnosticoCineticoFuncional extends javax.swing.JDialog {
         btLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/limpar_fisio.png"))); // NOI18N
         btLimpar.setText("Limpar");
         btLimpar.setContentAreaFilled(false);
-        btLimpar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btLimpar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btLimpar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btLimpar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         btLimpar.addActionListener(new java.awt.event.ActionListener() {
@@ -138,7 +141,7 @@ public class CadastroDiagnosticoCineticoFuncional extends javax.swing.JDialog {
         btSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/save_fisio.png"))); // NOI18N
         btSalvar.setText("Salvar");
         btSalvar.setContentAreaFilled(false);
-        btSalvar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btSalvar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btSalvar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btSalvar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         btSalvar.addActionListener(new java.awt.event.ActionListener() {
@@ -149,12 +152,12 @@ public class CadastroDiagnosticoCineticoFuncional extends javax.swing.JDialog {
         getContentPane().add(btSalvar);
         btSalvar.setBounds(520, 460, 80, 70);
 
-        jtDiagnosticoMedico1.setColumns(20);
-        jtDiagnosticoMedico1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jtDiagnosticoMedico1.setLineWrap(true);
-        jtDiagnosticoMedico1.setRows(3);
-        jtDiagnosticoMedico1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(56, 100, 62), 1, true));
-        jScrollPane3.setViewportView(jtDiagnosticoMedico1);
+        jtObjetivosTratamento.setColumns(20);
+        jtObjetivosTratamento.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jtObjetivosTratamento.setLineWrap(true);
+        jtObjetivosTratamento.setRows(3);
+        jtObjetivosTratamento.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(56, 100, 62), 1, true));
+        jScrollPane3.setViewportView(jtObjetivosTratamento);
 
         getContentPane().add(jScrollPane3);
         jScrollPane3.setBounds(20, 213, 560, 100);
@@ -170,12 +173,12 @@ public class CadastroDiagnosticoCineticoFuncional extends javax.swing.JDialog {
         getContentPane().add(jLObrigatorioNome3);
         jLObrigatorioNome3.setBounds(570, 203, 10, 10);
 
-        jtDiagnosticoMedico.setColumns(20);
-        jtDiagnosticoMedico.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jtDiagnosticoMedico.setLineWrap(true);
-        jtDiagnosticoMedico.setRows(3);
-        jtDiagnosticoMedico.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(56, 100, 62), 1, true));
-        jScrollPane2.setViewportView(jtDiagnosticoMedico);
+        jtDiagnosticoCineticoFuncional.setColumns(20);
+        jtDiagnosticoCineticoFuncional.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jtDiagnosticoCineticoFuncional.setLineWrap(true);
+        jtDiagnosticoCineticoFuncional.setRows(3);
+        jtDiagnosticoCineticoFuncional.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(56, 100, 62), 1, true));
+        jScrollPane2.setViewportView(jtDiagnosticoCineticoFuncional);
 
         getContentPane().add(jScrollPane2);
         jScrollPane2.setBounds(20, 90, 560, 100);
@@ -191,12 +194,12 @@ public class CadastroDiagnosticoCineticoFuncional extends javax.swing.JDialog {
         getContentPane().add(jLObrigatorioNome2);
         jLObrigatorioNome2.setBounds(570, 80, 10, 10);
 
-        jtDiagnosticoMedico2.setColumns(20);
-        jtDiagnosticoMedico2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jtDiagnosticoMedico2.setLineWrap(true);
-        jtDiagnosticoMedico2.setRows(3);
-        jtDiagnosticoMedico2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(56, 100, 62), 1, true));
-        jScrollPane4.setViewportView(jtDiagnosticoMedico2);
+        jtObservacoesGerais.setColumns(20);
+        jtObservacoesGerais.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jtObservacoesGerais.setLineWrap(true);
+        jtObservacoesGerais.setRows(3);
+        jtObservacoesGerais.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(56, 100, 62), 1, true));
+        jScrollPane4.setViewportView(jtObservacoesGerais);
 
         getContentPane().add(jScrollPane4);
         jScrollPane4.setBounds(20, 340, 560, 100);
@@ -218,37 +221,36 @@ public class CadastroDiagnosticoCineticoFuncional extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPesquisarActionPerformed
-//        List<Triagem> lista;
-//        lista = (triagemDAO.listar());
-//        TriagemTableModel itm = new TriagemTableModel(lista);
-//        Object objetoRetorno = PesquisaTriagem.exibeTela(itm, "Triagem");
-//        if (objetoRetorno != null) {
-//            triagem = triagemDAO.consultarObjetoId("idTriagem", objetoRetorno);
-//            atendimento = triagem.getTipoAtendimento();
-//            paciente = triagem.getPaciente();
-//            btExcluir.setEnabled(true);
-//        }
+        List<DiagnosticoCineticoFuncional> lista;
+        lista = (diagnosticoCineticoFuncionalDAO.listar());
+        DiagnosticoCineticoFuncionalTableModel itm = new DiagnosticoCineticoFuncionalTableModel(lista);
+        Object objetoRetorno = PesquisaTriagem.exibeTela(itm, "Diagnóstico Cinético Funcional");
+        if (objetoRetorno != null) {
+            diagnosticoCineticoFuncional = diagnosticoCineticoFuncionalDAO.consultarObjetoId("idDiagnosticoCineticoFuncional", objetoRetorno);
+            jtDiagnosticoCineticoFuncional.setText(diagnosticoCineticoFuncional.getDiagnosticoCineticoFuncional());
+            jtObjetivosTratamento.setText(diagnosticoCineticoFuncional.getObjetivosDoTratamento());
+            jtObservacoesGerais.setText(diagnosticoCineticoFuncional.getObservacoesGerais());
+            btExcluir.setEnabled(true);
+        }
     }//GEN-LAST:event_btPesquisarActionPerformed
 
     private void btExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExcluirActionPerformed
-//        triagemDAO.excluir(triagem);
-        
+        diagnosticoCineticoFuncionalDAO.excluir(diagnosticoCineticoFuncional);
         btLimparActionPerformed(null);
     }//GEN-LAST:event_btExcluirActionPerformed
 
 
     private void btSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalvarActionPerformed
-        if (true) {
+        if (jtDiagnosticoCineticoFuncional.getText().equals("") || jtObjetivosTratamento.getText().equals("")) {
             JOptionPane.showMessageDialog(this, "Prencha todos os campos !!");
         } else {
             
-//            triagem.setPaciente(paciente);
-//            triagem.setTipoAtendimento(atendimento);
-//            triagem.setDataTriagem(new Date());
-//            triagemDAO.salvar(triagem);
-//            grupoPrioridade.clearSelection();
-//            btLimparActionPerformed(null);
-//            triagem = new Triagem();
+            diagnosticoCineticoFuncional.setDiagnosticoCineticoFuncional(jtDiagnosticoCineticoFuncional.getText());
+            diagnosticoCineticoFuncional.setObjetivosDoTratamento(jtObjetivosTratamento.getText());
+            diagnosticoCineticoFuncional.setObservacoesGerais(jtObservacoesGerais.getText());
+            diagnosticoCineticoFuncionalDAO.salvar(diagnosticoCineticoFuncional);
+            
+            btLimparActionPerformed(null);
 
         }
     }//GEN-LAST:event_btSalvarActionPerformed
@@ -261,11 +263,10 @@ public class CadastroDiagnosticoCineticoFuncional extends javax.swing.JDialog {
 
     private void btLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLimparActionPerformed
         Util.limparCamposGenerico(this);
-        grupoPrioridade.clearSelection();
-//        triagem = new Triagem();
-//        paciente = new Paciente();
-//        atendimento = new Atendimento();
-
+        diagnosticoCineticoFuncional = new DiagnosticoCineticoFuncional();
+        jtDiagnosticoCineticoFuncional.setText("");
+        jtObjetivosTratamento.setText("");
+        jtObservacoesGerais.setText("");
     }//GEN-LAST:event_btLimparActionPerformed
 
    
@@ -1277,7 +1278,6 @@ public class CadastroDiagnosticoCineticoFuncional extends javax.swing.JDialog {
     private javax.swing.JButton btPesquisar;
     private javax.swing.JButton btSalvar;
     private javax.swing.JButton btVoltar;
-    private javax.swing.ButtonGroup grupoPrioridade;
     private javax.swing.JLabel jLObrigatorioNome2;
     private javax.swing.JLabel jLObrigatorioNome3;
     private javax.swing.JLabel jLabel6;
@@ -1287,8 +1287,8 @@ public class CadastroDiagnosticoCineticoFuncional extends javax.swing.JDialog {
     private javax.swing.JLabel jlNomeUsuario3;
     private javax.swing.JLabel jlNomeUsuario4;
     private javax.swing.JLabel jlNomeUsuario5;
-    private javax.swing.JTextArea jtDiagnosticoMedico;
-    private javax.swing.JTextArea jtDiagnosticoMedico1;
-    private javax.swing.JTextArea jtDiagnosticoMedico2;
+    private javax.swing.JTextArea jtDiagnosticoCineticoFuncional;
+    private javax.swing.JTextArea jtObjetivosTratamento;
+    private javax.swing.JTextArea jtObservacoesGerais;
     // End of variables declaration//GEN-END:variables
 }
