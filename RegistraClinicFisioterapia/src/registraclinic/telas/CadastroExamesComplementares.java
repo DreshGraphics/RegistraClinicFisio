@@ -5,6 +5,10 @@
  */
 package registraclinic.telas;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import registraclinic.cidade.Cidade;
 import registraclinic.cidade.CidadeDAO;
 import registraclinic.cidade.CidadeTableModel;
@@ -12,6 +16,9 @@ import registraclinic.usuario.Usuario;
 import registraclinic.util.Util;
 import java.util.List;
 import javax.swing.JOptionPane;
+import registraclinic.examescomplementares.ExamesComplementares;
+import registraclinic.examescomplementares.ExamesComplementaresDAO;
+import registraclinic.examescomplementares.ExamesComplementaresTableModel;
 
 /**
  *
@@ -19,7 +26,8 @@ import javax.swing.JOptionPane;
  */
 public class CadastroExamesComplementares extends javax.swing.JDialog {
 
-    
+    ExamesComplementares examesComplementares = new ExamesComplementares();
+    ExamesComplementaresDAO examesComplementaresDAO = new ExamesComplementaresDAO();
 
     /**
      * Creates new form TelaCadastroUsuario
@@ -46,11 +54,11 @@ public class CadastroExamesComplementares extends javax.swing.JDialog {
         btExcluir = new javax.swing.JButton();
         btLimpar = new javax.swing.JButton();
         btSalvar = new javax.swing.JButton();
-        txtDataNascimento = new javax.swing.JFormattedTextField();
+        txtData = new javax.swing.JFormattedTextField();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jtDiagnosticoMedico1 = new javax.swing.JTextArea();
+        jtLaudo = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jtDiagnosticoMedico = new javax.swing.JTextArea();
+        jtExamesComplementares = new javax.swing.JTextArea();
         jLObrigatorioNome4 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLObrigatorioNome13 = new javax.swing.JLabel();
@@ -140,32 +148,32 @@ public class CadastroExamesComplementares extends javax.swing.JDialog {
         getContentPane().add(btSalvar);
         btSalvar.setBounds(500, 340, 80, 70);
 
-        txtDataNascimento.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        txtData.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
         try {
-            txtDataNascimento.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+            txtData.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        txtDataNascimento.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        getContentPane().add(txtDataNascimento);
-        txtDataNascimento.setBounds(20, 210, 110, 30);
+        txtData.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        getContentPane().add(txtData);
+        txtData.setBounds(20, 210, 110, 30);
 
-        jtDiagnosticoMedico1.setColumns(20);
-        jtDiagnosticoMedico1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jtDiagnosticoMedico1.setLineWrap(true);
-        jtDiagnosticoMedico1.setRows(3);
-        jtDiagnosticoMedico1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(56, 100, 62), 1, true));
-        jScrollPane3.setViewportView(jtDiagnosticoMedico1);
+        jtLaudo.setColumns(20);
+        jtLaudo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jtLaudo.setLineWrap(true);
+        jtLaudo.setRows(3);
+        jtLaudo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(56, 100, 62), 1, true));
+        jScrollPane3.setViewportView(jtLaudo);
 
         getContentPane().add(jScrollPane3);
         jScrollPane3.setBounds(140, 210, 440, 110);
 
-        jtDiagnosticoMedico.setColumns(20);
-        jtDiagnosticoMedico.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jtDiagnosticoMedico.setLineWrap(true);
-        jtDiagnosticoMedico.setRows(3);
-        jtDiagnosticoMedico.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(56, 100, 62), 1, true));
-        jScrollPane2.setViewportView(jtDiagnosticoMedico);
+        jtExamesComplementares.setColumns(20);
+        jtExamesComplementares.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jtExamesComplementares.setLineWrap(true);
+        jtExamesComplementares.setRows(3);
+        jtExamesComplementares.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(56, 100, 62), 1, true));
+        jScrollPane2.setViewportView(jtExamesComplementares);
 
         getContentPane().add(jScrollPane2);
         jScrollPane2.setBounds(20, 80, 560, 100);
@@ -216,49 +224,62 @@ public class CadastroExamesComplementares extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPesquisarActionPerformed
-//        List<Cidade> lista;
-//        lista = cidadeDAO.listar();
-//        CidadeTableModel itm = new CidadeTableModel(lista);
-//        Object objetoRetorno = PesquisaGenerica.exibeTela(itm, "Cidade");
-//        if (objetoRetorno != null) {
-//            cidade = cidadeDAO.consultarObjetoId("idCidade", objetoRetorno);
-//            txtCidade.setText(cidade.getNomeCidade());
-//            txtCep.setText(cidade.getCepCidade());
-//            jcEstado.setSelectedItem(cidade.getEstadoCidade());
-//            btExcluir.setEnabled(true);
-//
-//        }
+        List<ExamesComplementares> lista;
+        lista = examesComplementaresDAO.listar();
+        ExamesComplementaresTableModel itm = new ExamesComplementaresTableModel(lista);
+        Object objetoRetorno = PesquisaGenerica.exibeTela(itm, "Exames Complementares");
+        if (objetoRetorno != null) {
+            examesComplementares = examesComplementaresDAO.consultarObjetoId("idExamesComplementares", objetoRetorno);
+            jtExamesComplementares.setText(examesComplementares.getExamesComplementares());
+            jtLaudo.setText(examesComplementares.getLaudo());
+            txtData.setText(converterDataString(examesComplementares.getData()));
+            btExcluir.setEnabled(true);
+
+        }
 
     }//GEN-LAST:event_btPesquisarActionPerformed
 
     private void btExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExcluirActionPerformed
-//        cidadeDAO.excluir(cidade);
-//        btLimparActionPerformed(null);
+        examesComplementaresDAO.excluir(examesComplementares);
+        btLimparActionPerformed(null);
     }//GEN-LAST:event_btExcluirActionPerformed
 
     private void btLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLimparActionPerformed
-//        Util.limparCamposGenerico(this);
-//        btExcluir.setEnabled(false);
-//        cidade = new Cidade();
+        Util.limparCamposGenerico(this);
+        btExcluir.setEnabled(false);
+        examesComplementares = new ExamesComplementares();
     }//GEN-LAST:event_btLimparActionPerformed
 
     private void btSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalvarActionPerformed
 
-//        if (cidadeDAO.consultarValorRepetido("cepCidade", txtCep.getText()) && cidade.getIdCidade() == 0) {
-//            JOptionPane.showMessageDialog(rootPane, "O CEP '" + txtCep.getText() + "' já está cadastrado!",
-//                    "Erro ao salvar", JOptionPane.ERROR_MESSAGE);
-//        } else {
-//            if (Util.chkVazio(txtCep.getText(), txtCidade.getText(), String.valueOf(jcEstado.getSelectedItem()))) {
-//                cidade.setNomeCidade(txtCidade.getText().toUpperCase());
-//                cidade.setEstadoCidade(String.valueOf(jcEstado.getSelectedItem()));
-//                cidade.setCepCidade(txtCep.getText());
-//                cidadeDAO.salvar(cidade);
-//                btLimparActionPerformed(null);
-//                jcEstado.setSelectedIndex(0);
-//            }
-//        }
+        if (Util.chkVazio(jtExamesComplementares.getText(), jtLaudo.getText(), txtData.getText())) {
+            examesComplementares.setExamesComplementares(jtExamesComplementares.getText());
+            examesComplementares.setLaudo(jtLaudo.getText());
+            examesComplementares.setData(formataData(txtData.getText()));
+            
+            btLimparActionPerformed(null);
+        }
     }//GEN-LAST:event_btSalvarActionPerformed
+    
+    private Date formataData(String data) {
+        if (data == null || data.equals("")) {
+            return null;
+        }
+        Date d = null;
+        try {
+            DateFormat formatar = new SimpleDateFormat("dd/MM/yyyy");
+            d = formatar.parse(data);
+        } catch (ParseException e) {
 
+        }
+        return d;
+    }
+    
+    private String converterDataString(Date date) {
+        SimpleDateFormat f = new SimpleDateFormat("dd/MM/yyyy");
+        return f.format(date);
+    }
+    
     private void btVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarActionPerformed
         dispose();
 
@@ -384,8 +405,8 @@ public class CadastroExamesComplementares extends javax.swing.JDialog {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JLabel jlNomeUsuario3;
-    private javax.swing.JTextArea jtDiagnosticoMedico;
-    private javax.swing.JTextArea jtDiagnosticoMedico1;
-    private javax.swing.JFormattedTextField txtDataNascimento;
+    private javax.swing.JTextArea jtExamesComplementares;
+    private javax.swing.JTextArea jtLaudo;
+    private javax.swing.JFormattedTextField txtData;
     // End of variables declaration//GEN-END:variables
 }
