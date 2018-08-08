@@ -15,6 +15,8 @@ import javax.swing.JTable;
 import registraclinic.atendimento.Atendimento;
 import registraclinic.atendimento.AtendimentoDAO;
 import registraclinic.atendimento.AtendimentoTableModel;
+import registraclinic.avaliacaopostural.AvaliacaoPostural;
+import registraclinic.avaliacaopostural.AvaliacaoPosturalDAO;
 import registraclinic.paciente.Paciente;
 import registraclinic.paciente.PacienteDAO;
 import registraclinic.paciente.PacienteTableModel;
@@ -28,7 +30,8 @@ import registraclinic.triagem.TriagemTableModel;
  */
 public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
 
-    
+    AvaliacaoPostural avaliacaoPostural = new AvaliacaoPostural();
+    AvaliacaoPosturalDAO avaliacaoPosturalDAO = new AvaliacaoPosturalDAO();
 
     public CadastroAvaliacaoPostural(java.awt.Frame parent, boolean modal) {
         initComponents();
@@ -50,6 +53,7 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
         jtGeral = new javax.swing.JTabbedPane();
         jpExameFisico = new javax.swing.JPanel();
         jLabel37 = new javax.swing.JLabel();
+        jLObrigatorioNome26 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jtExameFisico = new javax.swing.JTextArea();
         labelExameFisico = new javax.swing.JLabel();
@@ -67,7 +71,6 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
         jlNomeUsuario8 = new javax.swing.JLabel();
         jLObrigatorioNome6 = new javax.swing.JLabel();
         txtPesVistaAnterior = new javax.swing.JTextField();
-        jLObrigatorioNome7 = new javax.swing.JLabel();
         jlNomeUsuario9 = new javax.swing.JLabel();
         jLObrigatorioNome8 = new javax.swing.JLabel();
         txtJoelhosVistaAnterior = new javax.swing.JTextField();
@@ -98,7 +101,6 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
         txtJoelhosVistaLateral = new javax.swing.JTextField();
         jLObrigatorioNome16 = new javax.swing.JLabel();
         jlNomeUsuario18 = new javax.swing.JLabel();
-        jLObrigatorioNome17 = new javax.swing.JLabel();
         txtTroncoVistaLateral = new javax.swing.JTextField();
         jlNomeUsuario19 = new javax.swing.JLabel();
         txtPelveVistaLateral = new javax.swing.JTextField();
@@ -136,10 +138,10 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
         jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(600, 521));
-        setMinimumSize(new java.awt.Dimension(600, 521));
+        setMaximumSize(new java.awt.Dimension(600, 420));
+        setMinimumSize(new java.awt.Dimension(600, 420));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(600, 521));
+        setPreferredSize(new java.awt.Dimension(600, 420));
         setResizable(false);
         getContentPane().setLayout(null);
 
@@ -157,7 +159,13 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
         jLabel37.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel37.setText("Exame Físico");
         jpExameFisico.add(jLabel37);
-        jLabel37.setBounds(20, 39, 160, 20);
+        jLabel37.setBounds(20, 10, 160, 20);
+
+        jLObrigatorioNome26.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome26.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome26.setText("*");
+        jpExameFisico.add(jLObrigatorioNome26);
+        jLObrigatorioNome26.setBounds(570, 20, 10, 10);
 
         jtExameFisico.setColumns(20);
         jtExameFisico.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -167,11 +175,11 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
         jScrollPane2.setViewportView(jtExameFisico);
 
         jpExameFisico.add(jScrollPane2);
-        jScrollPane2.setBounds(20, 60, 550, 250);
+        jScrollPane2.setBounds(20, 30, 560, 190);
 
         labelExameFisico.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         jpExameFisico.add(labelExameFisico);
-        labelExameFisico.setBounds(0, 0, 598, 340);
+        labelExameFisico.setBounds(0, 0, 598, 240);
 
         jtGeral.addTab("Exame Físico", jpExameFisico);
 
@@ -190,7 +198,7 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
             }
         });
         jpVistaAnterior.add(txtCabecaVistaAnterior);
-        txtCabecaVistaAnterior.setBounds(20, 40, 200, 30);
+        txtCabecaVistaAnterior.setBounds(20, 40, 150, 30);
 
         jlNomeUsuario5.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jlNomeUsuario5.setText("Cabeça");
@@ -201,12 +209,12 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
         jLObrigatorioNome3.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome3.setText("*");
         jpVistaAnterior.add(jLObrigatorioNome3);
-        jLObrigatorioNome3.setBounds(210, 30, 10, 10);
+        jLObrigatorioNome3.setBounds(160, 30, 10, 10);
 
         jlNomeUsuario6.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jlNomeUsuario6.setText("Altura dos Ombros");
         jpVistaAnterior.add(jlNomeUsuario6);
-        jlNomeUsuario6.setBounds(20, 80, 160, 20);
+        jlNomeUsuario6.setBounds(220, 20, 140, 20);
 
         txtAlturaOmbroVistaAnterior.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtAlturaOmbroVistaAnterior.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
@@ -218,24 +226,24 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
             }
         });
         jpVistaAnterior.add(txtAlturaOmbroVistaAnterior);
-        txtAlturaOmbroVistaAnterior.setBounds(20, 100, 200, 30);
+        txtAlturaOmbroVistaAnterior.setBounds(220, 40, 150, 30);
 
         jLObrigatorioNome4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome4.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome4.setText("*");
         jpVistaAnterior.add(jLObrigatorioNome4);
-        jLObrigatorioNome4.setBounds(210, 90, 10, 10);
+        jLObrigatorioNome4.setBounds(360, 30, 10, 10);
 
         jlNomeUsuario7.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jlNomeUsuario7.setText("Triângulo de Talles");
         jpVistaAnterior.add(jlNomeUsuario7);
-        jlNomeUsuario7.setBounds(20, 200, 150, 20);
+        jlNomeUsuario7.setBounds(20, 90, 142, 20);
 
         jLObrigatorioNome5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome5.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome5.setText("*");
         jpVistaAnterior.add(jLObrigatorioNome5);
-        jLObrigatorioNome5.setBounds(210, 210, 10, 10);
+        jLObrigatorioNome5.setBounds(160, 100, 10, 10);
 
         txtTrianguloTallesVistaAnterior.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtTrianguloTallesVistaAnterior.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
@@ -247,7 +255,7 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
             }
         });
         jpVistaAnterior.add(txtTrianguloTallesVistaAnterior);
-        txtTrianguloTallesVistaAnterior.setBounds(20, 220, 200, 30);
+        txtTrianguloTallesVistaAnterior.setBounds(20, 110, 150, 30);
 
         txtClaviculaVistaAnterior.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtClaviculaVistaAnterior.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
@@ -259,18 +267,18 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
             }
         });
         jpVistaAnterior.add(txtClaviculaVistaAnterior);
-        txtClaviculaVistaAnterior.setBounds(20, 160, 200, 30);
+        txtClaviculaVistaAnterior.setBounds(420, 40, 150, 30);
 
         jlNomeUsuario8.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jlNomeUsuario8.setText("Clavícula");
         jpVistaAnterior.add(jlNomeUsuario8);
-        jlNomeUsuario8.setBounds(20, 140, 70, 20);
+        jlNomeUsuario8.setBounds(420, 20, 70, 20);
 
         jLObrigatorioNome6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome6.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome6.setText("*");
         jpVistaAnterior.add(jLObrigatorioNome6);
-        jLObrigatorioNome6.setBounds(210, 150, 10, 10);
+        jLObrigatorioNome6.setBounds(560, 30, 10, 10);
 
         txtPesVistaAnterior.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtPesVistaAnterior.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
@@ -282,24 +290,18 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
             }
         });
         jpVistaAnterior.add(txtPesVistaAnterior);
-        txtPesVistaAnterior.setBounds(370, 220, 200, 30);
-
-        jLObrigatorioNome7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLObrigatorioNome7.setForeground(new java.awt.Color(204, 0, 0));
-        jLObrigatorioNome7.setText("*");
-        jpVistaAnterior.add(jLObrigatorioNome7);
-        jLObrigatorioNome7.setBounds(560, 150, 10, 10);
+        txtPesVistaAnterior.setBounds(420, 180, 150, 30);
 
         jlNomeUsuario9.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jlNomeUsuario9.setText("Pés");
         jpVistaAnterior.add(jlNomeUsuario9);
-        jlNomeUsuario9.setBounds(370, 200, 70, 20);
+        jlNomeUsuario9.setBounds(420, 160, 70, 20);
 
         jLObrigatorioNome8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome8.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome8.setText("*");
         jpVistaAnterior.add(jLObrigatorioNome8);
-        jLObrigatorioNome8.setBounds(560, 210, 10, 10);
+        jLObrigatorioNome8.setBounds(560, 170, 10, 10);
 
         txtJoelhosVistaAnterior.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtJoelhosVistaAnterior.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
@@ -311,12 +313,12 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
             }
         });
         jpVistaAnterior.add(txtJoelhosVistaAnterior);
-        txtJoelhosVistaAnterior.setBounds(370, 160, 200, 30);
+        txtJoelhosVistaAnterior.setBounds(220, 180, 150, 30);
 
         jlNomeUsuario10.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jlNomeUsuario10.setText("Joelhos");
         jpVistaAnterior.add(jlNomeUsuario10);
-        jlNomeUsuario10.setBounds(370, 140, 70, 20);
+        jlNomeUsuario10.setBounds(220, 160, 70, 20);
 
         txtEiasVistaAnterior.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtEiasVistaAnterior.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
@@ -328,18 +330,18 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
             }
         });
         jpVistaAnterior.add(txtEiasVistaAnterior);
-        txtEiasVistaAnterior.setBounds(370, 100, 200, 30);
+        txtEiasVistaAnterior.setBounds(20, 180, 150, 30);
 
         jLObrigatorioNome9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome9.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome9.setText("*");
         jpVistaAnterior.add(jLObrigatorioNome9);
-        jLObrigatorioNome9.setBounds(560, 90, 10, 10);
+        jLObrigatorioNome9.setBounds(160, 170, 10, 10);
 
         jlNomeUsuario11.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jlNomeUsuario11.setText("EIAS");
         jpVistaAnterior.add(jlNomeUsuario11);
-        jlNomeUsuario11.setBounds(370, 80, 70, 20);
+        jlNomeUsuario11.setBounds(20, 160, 70, 20);
 
         txtCristaIliacasVistaAnterior.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtCristaIliacasVistaAnterior.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
@@ -351,23 +353,23 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
             }
         });
         jpVistaAnterior.add(txtCristaIliacasVistaAnterior);
-        txtCristaIliacasVistaAnterior.setBounds(370, 40, 200, 30);
+        txtCristaIliacasVistaAnterior.setBounds(420, 110, 150, 30);
 
         jlNomeUsuario12.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jlNomeUsuario12.setText("Crista Ilíacas");
         jpVistaAnterior.add(jlNomeUsuario12);
-        jlNomeUsuario12.setBounds(370, 20, 130, 20);
+        jlNomeUsuario12.setBounds(420, 90, 130, 20);
 
         jLObrigatorioNome10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome10.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome10.setText("*");
         jpVistaAnterior.add(jLObrigatorioNome10);
-        jLObrigatorioNome10.setBounds(560, 30, 10, 10);
+        jLObrigatorioNome10.setBounds(560, 100, 10, 10);
 
         jlNomeUsuario13.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jlNomeUsuario13.setText("Altura das Mãos");
         jpVistaAnterior.add(jlNomeUsuario13);
-        jlNomeUsuario13.setBounds(20, 260, 130, 20);
+        jlNomeUsuario13.setBounds(220, 90, 130, 20);
 
         txtAlturaMaosVistaAnterior.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtAlturaMaosVistaAnterior.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
@@ -379,17 +381,17 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
             }
         });
         jpVistaAnterior.add(txtAlturaMaosVistaAnterior);
-        txtAlturaMaosVistaAnterior.setBounds(20, 280, 200, 30);
+        txtAlturaMaosVistaAnterior.setBounds(220, 110, 150, 30);
 
         jLObrigatorioNome11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome11.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome11.setText("*");
         jpVistaAnterior.add(jLObrigatorioNome11);
-        jLObrigatorioNome11.setBounds(210, 270, 10, 10);
+        jLObrigatorioNome11.setBounds(360, 100, 10, 10);
 
         labelAluno.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         jpVistaAnterior.add(labelAluno);
-        labelAluno.setBounds(0, 0, 597, 340);
+        labelAluno.setBounds(0, 0, 597, 240);
 
         jtGeral.addTab("Vista Anterior", jpVistaAnterior);
 
@@ -408,7 +410,7 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
             }
         });
         jpVistaLateral.add(txtCabecaVistaLateral);
-        txtCabecaVistaLateral.setBounds(20, 40, 200, 30);
+        txtCabecaVistaLateral.setBounds(20, 40, 150, 30);
 
         jlNomeUsuario14.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jlNomeUsuario14.setText("Cabeça");
@@ -419,12 +421,12 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
         jLObrigatorioNome12.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome12.setText("*");
         jpVistaLateral.add(jLObrigatorioNome12);
-        jLObrigatorioNome12.setBounds(210, 30, 10, 10);
+        jLObrigatorioNome12.setBounds(160, 30, 10, 10);
 
         jlNomeUsuario15.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jlNomeUsuario15.setText("Cervical");
         jpVistaLateral.add(jlNomeUsuario15);
-        jlNomeUsuario15.setBounds(20, 80, 160, 20);
+        jlNomeUsuario15.setBounds(220, 20, 120, 20);
 
         txtCervicalVistaLateral.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtCervicalVistaLateral.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
@@ -436,24 +438,24 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
             }
         });
         jpVistaLateral.add(txtCervicalVistaLateral);
-        txtCervicalVistaLateral.setBounds(20, 100, 200, 30);
+        txtCervicalVistaLateral.setBounds(220, 40, 150, 30);
 
         jLObrigatorioNome13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome13.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome13.setText("*");
         jpVistaLateral.add(jLObrigatorioNome13);
-        jLObrigatorioNome13.setBounds(210, 90, 10, 10);
+        jLObrigatorioNome13.setBounds(360, 30, 10, 10);
 
         jlNomeUsuario16.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jlNomeUsuario16.setText("Dorso");
         jpVistaLateral.add(jlNomeUsuario16);
-        jlNomeUsuario16.setBounds(20, 200, 150, 20);
+        jlNomeUsuario16.setBounds(20, 90, 120, 20);
 
         jLObrigatorioNome14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome14.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome14.setText("*");
         jpVistaLateral.add(jLObrigatorioNome14);
-        jLObrigatorioNome14.setBounds(210, 210, 10, 10);
+        jLObrigatorioNome14.setBounds(160, 100, 10, 10);
 
         txtDorsoVistaLateral.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtDorsoVistaLateral.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
@@ -465,7 +467,7 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
             }
         });
         jpVistaLateral.add(txtDorsoVistaLateral);
-        txtDorsoVistaLateral.setBounds(20, 220, 200, 30);
+        txtDorsoVistaLateral.setBounds(20, 110, 150, 30);
 
         txtOmbroVistaLateral.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtOmbroVistaLateral.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
@@ -477,18 +479,18 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
             }
         });
         jpVistaLateral.add(txtOmbroVistaLateral);
-        txtOmbroVistaLateral.setBounds(20, 160, 200, 30);
+        txtOmbroVistaLateral.setBounds(420, 40, 150, 30);
 
         jlNomeUsuario17.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jlNomeUsuario17.setText("Ombro");
         jpVistaLateral.add(jlNomeUsuario17);
-        jlNomeUsuario17.setBounds(20, 140, 70, 20);
+        jlNomeUsuario17.setBounds(420, 20, 70, 20);
 
         jLObrigatorioNome15.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome15.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome15.setText("*");
         jpVistaLateral.add(jLObrigatorioNome15);
-        jLObrigatorioNome15.setBounds(210, 150, 10, 10);
+        jLObrigatorioNome15.setBounds(560, 30, 10, 10);
 
         txtJoelhosVistaLateral.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtJoelhosVistaLateral.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
@@ -500,24 +502,18 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
             }
         });
         jpVistaLateral.add(txtJoelhosVistaLateral);
-        txtJoelhosVistaLateral.setBounds(370, 220, 200, 30);
+        txtJoelhosVistaLateral.setBounds(420, 180, 150, 30);
 
         jLObrigatorioNome16.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome16.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome16.setText("*");
         jpVistaLateral.add(jLObrigatorioNome16);
-        jLObrigatorioNome16.setBounds(560, 150, 10, 10);
+        jLObrigatorioNome16.setBounds(360, 170, 10, 10);
 
         jlNomeUsuario18.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jlNomeUsuario18.setText("Joelhos");
         jpVistaLateral.add(jlNomeUsuario18);
-        jlNomeUsuario18.setBounds(370, 200, 70, 20);
-
-        jLObrigatorioNome17.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLObrigatorioNome17.setForeground(new java.awt.Color(204, 0, 0));
-        jLObrigatorioNome17.setText("*");
-        jpVistaLateral.add(jLObrigatorioNome17);
-        jLObrigatorioNome17.setBounds(560, 210, 10, 10);
+        jlNomeUsuario18.setBounds(420, 160, 70, 20);
 
         txtTroncoVistaLateral.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtTroncoVistaLateral.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
@@ -529,12 +525,12 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
             }
         });
         jpVistaLateral.add(txtTroncoVistaLateral);
-        txtTroncoVistaLateral.setBounds(370, 160, 200, 30);
+        txtTroncoVistaLateral.setBounds(220, 180, 150, 30);
 
         jlNomeUsuario19.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jlNomeUsuario19.setText("Tronco");
         jpVistaLateral.add(jlNomeUsuario19);
-        jlNomeUsuario19.setBounds(370, 140, 70, 20);
+        jlNomeUsuario19.setBounds(220, 160, 70, 20);
 
         txtPelveVistaLateral.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtPelveVistaLateral.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
@@ -546,18 +542,18 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
             }
         });
         jpVistaLateral.add(txtPelveVistaLateral);
-        txtPelveVistaLateral.setBounds(370, 100, 200, 30);
+        txtPelveVistaLateral.setBounds(20, 180, 150, 30);
 
         jLObrigatorioNome18.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome18.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome18.setText("*");
         jpVistaLateral.add(jLObrigatorioNome18);
-        jLObrigatorioNome18.setBounds(560, 90, 10, 10);
+        jLObrigatorioNome18.setBounds(160, 170, 10, 10);
 
         jlNomeUsuario20.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jlNomeUsuario20.setText("Pelve");
         jpVistaLateral.add(jlNomeUsuario20);
-        jlNomeUsuario20.setBounds(370, 80, 70, 20);
+        jlNomeUsuario20.setBounds(20, 160, 70, 20);
 
         txtLombarVistaLateral.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtLombarVistaLateral.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
@@ -569,23 +565,23 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
             }
         });
         jpVistaLateral.add(txtLombarVistaLateral);
-        txtLombarVistaLateral.setBounds(370, 40, 200, 30);
+        txtLombarVistaLateral.setBounds(420, 110, 150, 30);
 
         jlNomeUsuario21.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jlNomeUsuario21.setText("Lombar");
         jpVistaLateral.add(jlNomeUsuario21);
-        jlNomeUsuario21.setBounds(370, 20, 130, 20);
+        jlNomeUsuario21.setBounds(420, 90, 130, 20);
 
         jLObrigatorioNome19.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome19.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome19.setText("*");
         jpVistaLateral.add(jLObrigatorioNome19);
-        jLObrigatorioNome19.setBounds(560, 30, 10, 10);
+        jLObrigatorioNome19.setBounds(560, 100, 10, 10);
 
         jlNomeUsuario22.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jlNomeUsuario22.setText("Abdomen");
         jpVistaLateral.add(jlNomeUsuario22);
-        jlNomeUsuario22.setBounds(20, 260, 130, 20);
+        jlNomeUsuario22.setBounds(220, 90, 130, 20);
 
         txtAbdomenVistaLateral.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtAbdomenVistaLateral.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
@@ -597,17 +593,17 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
             }
         });
         jpVistaLateral.add(txtAbdomenVistaLateral);
-        txtAbdomenVistaLateral.setBounds(20, 280, 200, 30);
+        txtAbdomenVistaLateral.setBounds(220, 110, 150, 30);
 
         jLObrigatorioNome20.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome20.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome20.setText("*");
         jpVistaLateral.add(jLObrigatorioNome20);
-        jLObrigatorioNome20.setBounds(210, 270, 10, 10);
+        jLObrigatorioNome20.setBounds(360, 100, 10, 10);
 
         labelVistaLateral.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         jpVistaLateral.add(labelVistaLateral);
-        labelVistaLateral.setBounds(0, 0, 598, 340);
+        labelVistaLateral.setBounds(0, 0, 598, 240);
 
         jtGeral.addTab("Vista Lateral", jpVistaLateral);
 
@@ -625,7 +621,7 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
         jLObrigatorioNome21.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome21.setText("*");
         jpVistaPosterior.add(jLObrigatorioNome21);
-        jLObrigatorioNome21.setBounds(210, 30, 10, 10);
+        jLObrigatorioNome21.setBounds(160, 30, 10, 10);
 
         txtCabecaVistaPosterior.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtCabecaVistaPosterior.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
@@ -637,18 +633,18 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
             }
         });
         jpVistaPosterior.add(txtCabecaVistaPosterior);
-        txtCabecaVistaPosterior.setBounds(20, 40, 200, 30);
+        txtCabecaVistaPosterior.setBounds(20, 40, 150, 30);
 
         jlNomeUsuario24.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jlNomeUsuario24.setText("Altura dos Ombros");
         jpVistaPosterior.add(jlNomeUsuario24);
-        jlNomeUsuario24.setBounds(20, 80, 160, 20);
+        jlNomeUsuario24.setBounds(230, 20, 140, 20);
 
         jLObrigatorioNome22.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome22.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome22.setText("*");
         jpVistaPosterior.add(jLObrigatorioNome22);
-        jLObrigatorioNome22.setBounds(210, 90, 10, 10);
+        jLObrigatorioNome22.setBounds(370, 30, 10, 10);
 
         txtAlturaOmbrosVistaPosterior.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtAlturaOmbrosVistaPosterior.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
@@ -660,12 +656,12 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
             }
         });
         jpVistaPosterior.add(txtAlturaOmbrosVistaPosterior);
-        txtAlturaOmbrosVistaPosterior.setBounds(20, 100, 200, 30);
+        txtAlturaOmbrosVistaPosterior.setBounds(230, 40, 150, 30);
 
         jlNomeUsuario25.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jlNomeUsuario25.setText("Escápula");
         jpVistaPosterior.add(jlNomeUsuario25);
-        jlNomeUsuario25.setBounds(20, 140, 70, 20);
+        jlNomeUsuario25.setBounds(420, 20, 70, 20);
 
         txtEscapulaVistaPosterior.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtEscapulaVistaPosterior.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
@@ -677,24 +673,24 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
             }
         });
         jpVistaPosterior.add(txtEscapulaVistaPosterior);
-        txtEscapulaVistaPosterior.setBounds(20, 160, 200, 30);
+        txtEscapulaVistaPosterior.setBounds(420, 40, 150, 30);
 
         jLObrigatorioNome23.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome23.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome23.setText("*");
         jpVistaPosterior.add(jLObrigatorioNome23);
-        jLObrigatorioNome23.setBounds(210, 150, 10, 10);
+        jLObrigatorioNome23.setBounds(560, 30, 10, 10);
 
         jlNomeUsuario26.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jlNomeUsuario26.setText("EIPIs");
         jpVistaPosterior.add(jlNomeUsuario26);
-        jlNomeUsuario26.setBounds(370, 20, 150, 20);
+        jlNomeUsuario26.setBounds(20, 90, 80, 20);
 
         jLObrigatorioNome24.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome24.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome24.setText("*");
         jpVistaPosterior.add(jLObrigatorioNome24);
-        jLObrigatorioNome24.setBounds(560, 30, 10, 10);
+        jLObrigatorioNome24.setBounds(160, 100, 10, 10);
 
         txtEipisVistaPosterior.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtEipisVistaPosterior.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
@@ -706,12 +702,12 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
             }
         });
         jpVistaPosterior.add(txtEipisVistaPosterior);
-        txtEipisVistaPosterior.setBounds(370, 40, 200, 30);
+        txtEipisVistaPosterior.setBounds(20, 110, 150, 30);
 
         jlNomeUsuario27.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jlNomeUsuario27.setText("Calcâneo");
         jpVistaPosterior.add(jlNomeUsuario27);
-        jlNomeUsuario27.setBounds(370, 80, 130, 20);
+        jlNomeUsuario27.setBounds(230, 90, 130, 20);
 
         txtCalcaneoVistaPosterior.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtCalcaneoVistaPosterior.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
@@ -723,22 +719,22 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
             }
         });
         jpVistaPosterior.add(txtCalcaneoVistaPosterior);
-        txtCalcaneoVistaPosterior.setBounds(370, 100, 200, 30);
+        txtCalcaneoVistaPosterior.setBounds(230, 110, 150, 30);
 
         jLObrigatorioNome25.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome25.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome25.setText("*");
         jpVistaPosterior.add(jLObrigatorioNome25);
-        jLObrigatorioNome25.setBounds(560, 90, 10, 10);
+        jLObrigatorioNome25.setBounds(370, 100, 10, 10);
 
         labelVistaPosterior.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         jpVistaPosterior.add(labelVistaPosterior);
-        labelVistaPosterior.setBounds(0, 0, 598, 340);
+        labelVistaPosterior.setBounds(0, 0, 598, 240);
 
         jtGeral.addTab("Vista Posterior", jpVistaPosterior);
 
         getContentPane().add(jtGeral);
-        jtGeral.setBounds(0, 60, 598, 370);
+        jtGeral.setBounds(0, 60, 598, 270);
 
         btVoltar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/voltar_fisio.png"))); // NOI18N
@@ -754,7 +750,7 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btVoltar);
-        btVoltar.setBounds(0, 440, 80, 70);
+        btVoltar.setBounds(0, 340, 80, 70);
 
         btPesquisar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/pesquisar_fisio.png"))); // NOI18N
@@ -769,7 +765,7 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btPesquisar);
-        btPesquisar.setBounds(250, 440, 100, 70);
+        btPesquisar.setBounds(250, 340, 100, 70);
 
         btExcluir.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/excluir_fisio.png"))); // NOI18N
@@ -784,7 +780,7 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btExcluir);
-        btExcluir.setBounds(390, 440, 80, 70);
+        btExcluir.setBounds(390, 340, 80, 70);
 
         btLimpar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/limpar_fisio.png"))); // NOI18N
@@ -799,7 +795,7 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btLimpar);
-        btLimpar.setBounds(130, 440, 80, 70);
+        btLimpar.setBounds(130, 340, 80, 70);
 
         btSalvar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/save_fisio.png"))); // NOI18N
@@ -814,14 +810,14 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btSalvar);
-        btSalvar.setBounds(520, 440, 80, 70);
+        btSalvar.setBounds(520, 340, 80, 70);
 
         jLabel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jLabel6.setMaximumSize(new java.awt.Dimension(600, 521));
-        jLabel6.setMinimumSize(new java.awt.Dimension(600, 521));
-        jLabel6.setPreferredSize(new java.awt.Dimension(600, 521));
+        jLabel6.setMaximumSize(new java.awt.Dimension(600, 420));
+        jLabel6.setMinimumSize(new java.awt.Dimension(600, 420));
+        jLabel6.setPreferredSize(new java.awt.Dimension(600, 420));
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(0, 0, 600, 521);
+        jLabel6.setBounds(0, 0, 600, 420);
 
         pack();
         setLocationRelativeTo(null);
@@ -848,17 +844,60 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
 
 
     private void btSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalvarActionPerformed
-        if (true) {
+        if (jtExameFisico.getText().equals("") || txtCabecaVistaAnterior.getText().equals("")
+                || txtAlturaOmbroVistaAnterior.getText().equals("")
+                || txtClaviculaVistaAnterior.getText().equals("")
+                || txtTrianguloTallesVistaAnterior.getText().equals("")
+                || txtAlturaMaosVistaAnterior.getText().equals("")
+                || txtCristaIliacasVistaAnterior.getText().equals("")
+                || txtEiasVistaAnterior.getText().equals("")
+                || txtPesVistaAnterior.getText().equals("")
+                || txtCabecaVistaLateral.getText().equals("")
+                || txtCervicalVistaLateral.getText().equals("")
+                || txtOmbroVistaLateral.getText().equals("")
+                || txtDorsoVistaLateral.getText().equals("")
+                || txtAbdomenVistaLateral.getText().equals("")
+                || txtLombarVistaLateral.getText().equals("")
+                || txtPelveVistaLateral.getText().equals("")
+                || txtTroncoVistaLateral.getText().equals("")
+                || txtCabecaVistaPosterior.getText().equals("")
+                || txtAlturaOmbrosVistaPosterior.getText().equals("")
+                || txtEscapulaVistaPosterior.getText().equals("")
+                || txtEipisVistaPosterior.getText().equals("")
+                || txtCalcaneoVistaPosterior.getText().equals("")) {
             JOptionPane.showMessageDialog(this, "Prencha todos os campos !!");
         } else {
             
-//            triagem.setPaciente(paciente);
-//            triagem.setTipoAtendimento(atendimento);
-//            triagem.setDataTriagem(new Date());
-//            triagemDAO.salvar(triagem);
-//            grupoPrioridade.clearSelection();
-//            btLimparActionPerformed(null);
-//            triagem = new Triagem();
+            avaliacaoPostural.setCabecaVistaAnterior(txtCabecaVistaAnterior.getText());
+            avaliacaoPostural.setAlturaDosOmbrosVistaAnterior(txtAlturaOmbroVistaAnterior.getText());
+            avaliacaoPostural.setClaviculaVistaAnterior(txtClaviculaVistaAnterior.getText());
+            avaliacaoPostural.setTrianguloDeTallesVistaAnterior(txtTrianguloTallesVistaAnterior.getText());
+            avaliacaoPostural.setAlturaDasMaosVistaAnterior(txtAlturaMaosVistaAnterior.getText());
+            avaliacaoPostural.setCristaIliacasVistaAnterior(txtCristaIliacasVistaAnterior.getText());
+            avaliacaoPostural.setEiasVistaAnterior(txtEiasVistaAnterior.getText());
+            avaliacaoPostural.setJoelhosVistaAnterior(txtJoelhosVistaAnterior.getText());
+            avaliacaoPostural.setPesVistaAnterior(txtPesVistaAnterior.getText());
+            
+            avaliacaoPostural.setCabecaVistaLateral(txtCabecaVistaLateral.getText());
+            avaliacaoPostural.setCervicalVistaLateral(txtCervicalVistaLateral.getText());
+            avaliacaoPostural.setOmbroVistaLateral(txtOmbroVistaLateral.getText());
+            avaliacaoPostural.setDorsoVistaLateral(txtDorsoVistaLateral.getText());
+            avaliacaoPostural.setAbdomenVistaLateral(txtAbdomenVistaLateral.getText());
+            avaliacaoPostural.setLombarVistaLateral(txtLombarVistaLateral.getText());
+            avaliacaoPostural.setPelveVistaLateral(txtPelveVistaLateral.getText());
+            avaliacaoPostural.setTroncoVistaLateral(txtTroncoVistaLateral.getText());
+            avaliacaoPostural.setJoelhosVistaLateral(txtJoelhosVistaLateral.getText());
+            
+            avaliacaoPostural.setCabecaVistaPosterior(txtCabecaVistaPosterior.getText());
+            avaliacaoPostural.setAlturaDosOmbrosPosterior(txtAlturaOmbrosVistaPosterior.getText());
+            avaliacaoPostural.setEscapulaPosterior(txtEscapulaVistaPosterior.getText());
+            avaliacaoPostural.setEipisPosterior(txtEipisVistaPosterior.getText());
+            avaliacaoPostural.setCalcaneoPosterior(txtCalcaneoVistaPosterior.getText());
+            
+            avaliacaoPosturalDAO.salvar(avaliacaoPostural);
+            grupoPrioridade.clearSelection();
+            btLimparActionPerformed(null);
+            avaliacaoPostural = new AvaliacaoPostural();
 
         }
     }//GEN-LAST:event_btSalvarActionPerformed
@@ -1507,7 +1546,6 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
     private javax.swing.JLabel jLObrigatorioNome14;
     private javax.swing.JLabel jLObrigatorioNome15;
     private javax.swing.JLabel jLObrigatorioNome16;
-    private javax.swing.JLabel jLObrigatorioNome17;
     private javax.swing.JLabel jLObrigatorioNome18;
     private javax.swing.JLabel jLObrigatorioNome19;
     private javax.swing.JLabel jLObrigatorioNome20;
@@ -1516,11 +1554,11 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
     private javax.swing.JLabel jLObrigatorioNome23;
     private javax.swing.JLabel jLObrigatorioNome24;
     private javax.swing.JLabel jLObrigatorioNome25;
+    private javax.swing.JLabel jLObrigatorioNome26;
     private javax.swing.JLabel jLObrigatorioNome3;
     private javax.swing.JLabel jLObrigatorioNome4;
     private javax.swing.JLabel jLObrigatorioNome5;
     private javax.swing.JLabel jLObrigatorioNome6;
-    private javax.swing.JLabel jLObrigatorioNome7;
     private javax.swing.JLabel jLObrigatorioNome8;
     private javax.swing.JLabel jLObrigatorioNome9;
     private javax.swing.JLabel jLabel37;
