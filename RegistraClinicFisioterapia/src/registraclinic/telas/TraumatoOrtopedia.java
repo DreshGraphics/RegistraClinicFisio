@@ -28,7 +28,7 @@ public class TraumatoOrtopedia extends javax.swing.JDialog {
     public TraumatoOrtopedia(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        btExcluir.setEnabled(false);
+        btAvaliacaoPostural.setEnabled(false);
     }
 
     /**
@@ -42,21 +42,21 @@ public class TraumatoOrtopedia extends javax.swing.JDialog {
 
         jPanel1 = new javax.swing.JPanel();
         jlNomeUsuario5 = new javax.swing.JLabel();
-        btPesquisar1 = new javax.swing.JButton();
+        btDiagnosticoCinetico = new javax.swing.JButton();
         txtPaciente = new javax.swing.JTextField();
-        btLimpar1 = new javax.swing.JButton();
-        btExcluir1 = new javax.swing.JButton();
+        btPerimetria = new javax.swing.JButton();
+        btExamesComplementares = new javax.swing.JButton();
         btSalvar = new javax.swing.JButton();
         btnPaciente = new javax.swing.JButton();
         jLObrigatorioNome3 = new javax.swing.JLabel();
-        btVoltar = new javax.swing.JButton();
-        btExcluir2 = new javax.swing.JButton();
-        btPesquisar2 = new javax.swing.JButton();
-        btLimpar2 = new javax.swing.JButton();
-        btVoltar1 = new javax.swing.JButton();
-        btLimpar = new javax.swing.JButton();
-        btPesquisar = new javax.swing.JButton();
+        btAnamnese = new javax.swing.JButton();
         btExcluir = new javax.swing.JButton();
+        btPesquisar = new javax.swing.JButton();
+        btLimpar = new javax.swing.JButton();
+        btVoltar = new javax.swing.JButton();
+        btGoniometria = new javax.swing.JButton();
+        btGrauForca = new javax.swing.JButton();
+        btAvaliacaoPostural = new javax.swing.JButton();
         jLFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -64,7 +64,6 @@ public class TraumatoOrtopedia extends javax.swing.JDialog {
         setMaximumSize(new java.awt.Dimension(600, 500));
         setMinimumSize(new java.awt.Dimension(600, 500));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(600, 500));
         setResizable(false);
 
         jPanel1.setMaximumSize(new java.awt.Dimension(600, 500));
@@ -77,19 +76,19 @@ public class TraumatoOrtopedia extends javax.swing.JDialog {
         jPanel1.add(jlNomeUsuario5);
         jlNomeUsuario5.setBounds(20, 70, 70, 20);
 
-        btPesquisar1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btPesquisar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/pesquisar_fisio.png"))); // NOI18N
-        btPesquisar1.setText("Diagnóstico Cinético Funcional");
-        btPesquisar1.setContentAreaFilled(false);
-        btPesquisar1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btPesquisar1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        btPesquisar1.addActionListener(new java.awt.event.ActionListener() {
+        btDiagnosticoCinetico.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btDiagnosticoCinetico.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/pesquisar_fisio.png"))); // NOI18N
+        btDiagnosticoCinetico.setText("Diagnóstico Cinético Funcional");
+        btDiagnosticoCinetico.setContentAreaFilled(false);
+        btDiagnosticoCinetico.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btDiagnosticoCinetico.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btDiagnosticoCinetico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btPesquisar1ActionPerformed(evt);
+                btDiagnosticoCineticoActionPerformed(evt);
             }
         });
-        jPanel1.add(btPesquisar1);
-        btPesquisar1.setBounds(300, 260, 300, 50);
+        jPanel1.add(btDiagnosticoCinetico);
+        btDiagnosticoCinetico.setBounds(300, 260, 297, 50);
 
         txtPaciente.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtPaciente.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
@@ -103,33 +102,33 @@ public class TraumatoOrtopedia extends javax.swing.JDialog {
         jPanel1.add(txtPaciente);
         txtPaciente.setBounds(20, 90, 540, 30);
 
-        btLimpar1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btLimpar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/limpar_fisio.png"))); // NOI18N
-        btLimpar1.setText("Perimetria");
-        btLimpar1.setContentAreaFilled(false);
-        btLimpar1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btLimpar1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        btLimpar1.addActionListener(new java.awt.event.ActionListener() {
+        btPerimetria.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btPerimetria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/limpar_fisio.png"))); // NOI18N
+        btPerimetria.setText("Perimetria");
+        btPerimetria.setContentAreaFilled(false);
+        btPerimetria.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btPerimetria.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btPerimetria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btLimpar1ActionPerformed(evt);
+                btPerimetriaActionPerformed(evt);
             }
         });
-        jPanel1.add(btLimpar1);
-        btLimpar1.setBounds(0, 200, 160, 50);
+        jPanel1.add(btPerimetria);
+        btPerimetria.setBounds(0, 200, 160, 50);
 
-        btExcluir1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btExcluir1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/excluir_fisio.png"))); // NOI18N
-        btExcluir1.setText("Exames Complementares");
-        btExcluir1.setContentAreaFilled(false);
-        btExcluir1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btExcluir1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        btExcluir1.addActionListener(new java.awt.event.ActionListener() {
+        btExamesComplementares.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btExamesComplementares.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/excluir_fisio.png"))); // NOI18N
+        btExamesComplementares.setText("Exames Complementares");
+        btExamesComplementares.setContentAreaFilled(false);
+        btExamesComplementares.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btExamesComplementares.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btExamesComplementares.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btExcluir1ActionPerformed(evt);
+                btExamesComplementaresActionPerformed(evt);
             }
         });
-        jPanel1.add(btExcluir1);
-        btExcluir1.setBounds(300, 200, 260, 50);
+        jPanel1.add(btExamesComplementares);
+        btExamesComplementares.setBounds(300, 200, 260, 50);
 
         btSalvar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/save_fisio.png"))); // NOI18N
@@ -166,122 +165,122 @@ public class TraumatoOrtopedia extends javax.swing.JDialog {
         jPanel1.add(jLObrigatorioNome3);
         jLObrigatorioNome3.setBounds(550, 80, 10, 10);
 
-        btVoltar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/voltar_fisio.png"))); // NOI18N
-        btVoltar.setText("Anamnese");
-        btVoltar.setContentAreaFilled(false);
-        btVoltar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btVoltar.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        btVoltar.addActionListener(new java.awt.event.ActionListener() {
+        btAnamnese.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btAnamnese.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/voltar_fisio.png"))); // NOI18N
+        btAnamnese.setText("Anamnese");
+        btAnamnese.setContentAreaFilled(false);
+        btAnamnese.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btAnamnese.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btAnamnese.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btVoltarActionPerformed(evt);
+                btAnamneseActionPerformed(evt);
             }
         });
-        jPanel1.add(btVoltar);
-        btVoltar.setBounds(0, 140, 160, 50);
-
-        btExcluir2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btExcluir2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/excluir_fisio.png"))); // NOI18N
-        btExcluir2.setText("Excluir");
-        btExcluir2.setContentAreaFilled(false);
-        btExcluir2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btExcluir2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btExcluir2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btExcluir2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btExcluir2ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btExcluir2);
-        btExcluir2.setBounds(390, 420, 80, 70);
-
-        btPesquisar2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btPesquisar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/pesquisar_fisio.png"))); // NOI18N
-        btPesquisar2.setText("Pesquisar");
-        btPesquisar2.setContentAreaFilled(false);
-        btPesquisar2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btPesquisar2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btPesquisar2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btPesquisar2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btPesquisar2ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btPesquisar2);
-        btPesquisar2.setBounds(250, 420, 100, 70);
-
-        btLimpar2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btLimpar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/limpar_fisio.png"))); // NOI18N
-        btLimpar2.setText("Limpar");
-        btLimpar2.setContentAreaFilled(false);
-        btLimpar2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btLimpar2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btLimpar2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btLimpar2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btLimpar2ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btLimpar2);
-        btLimpar2.setBounds(140, 420, 80, 70);
-
-        btVoltar1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btVoltar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/voltar_fisio.png"))); // NOI18N
-        btVoltar1.setText("Voltar");
-        btVoltar1.setContentAreaFilled(false);
-        btVoltar1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btVoltar1.setDefaultCapable(false);
-        btVoltar1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btVoltar1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btVoltar1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btVoltar1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btVoltar1);
-        btVoltar1.setBounds(20, 420, 80, 70);
-
-        btLimpar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/limpar_fisio.png"))); // NOI18N
-        btLimpar.setText("Goniometria");
-        btLimpar.setContentAreaFilled(false);
-        btLimpar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btLimpar.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        btLimpar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btLimparActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btLimpar);
-        btLimpar.setBounds(0, 260, 170, 50);
-
-        btPesquisar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/pesquisar_fisio.png"))); // NOI18N
-        btPesquisar.setText("Grau de Força");
-        btPesquisar.setContentAreaFilled(false);
-        btPesquisar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btPesquisar.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        btPesquisar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btPesquisarActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btPesquisar);
-        btPesquisar.setBounds(0, 320, 181, 50);
+        jPanel1.add(btAnamnese);
+        btAnamnese.setBounds(0, 140, 160, 50);
 
         btExcluir.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/excluir_fisio.png"))); // NOI18N
-        btExcluir.setText("Avaliação Postural");
+        btExcluir.setText("Excluir");
         btExcluir.setContentAreaFilled(false);
         btExcluir.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btExcluir.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btExcluir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btExcluir.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         btExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btExcluirActionPerformed(evt);
             }
         });
         jPanel1.add(btExcluir);
-        btExcluir.setBounds(300, 140, 210, 50);
+        btExcluir.setBounds(390, 420, 80, 70);
+
+        btPesquisar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/pesquisar_fisio.png"))); // NOI18N
+        btPesquisar.setText("Pesquisar");
+        btPesquisar.setContentAreaFilled(false);
+        btPesquisar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btPesquisar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btPesquisar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btPesquisar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPesquisarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btPesquisar);
+        btPesquisar.setBounds(250, 420, 100, 70);
+
+        btLimpar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/limpar_fisio.png"))); // NOI18N
+        btLimpar.setText("Limpar");
+        btLimpar.setContentAreaFilled(false);
+        btLimpar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btLimpar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btLimpar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btLimpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btLimparActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btLimpar);
+        btLimpar.setBounds(140, 420, 80, 70);
+
+        btVoltar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/voltar_fisio.png"))); // NOI18N
+        btVoltar.setText("Voltar");
+        btVoltar.setContentAreaFilled(false);
+        btVoltar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btVoltar.setDefaultCapable(false);
+        btVoltar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btVoltar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btVoltarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btVoltar);
+        btVoltar.setBounds(10, 420, 80, 70);
+
+        btGoniometria.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btGoniometria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/limpar_fisio.png"))); // NOI18N
+        btGoniometria.setText("Goniometria");
+        btGoniometria.setContentAreaFilled(false);
+        btGoniometria.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btGoniometria.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btGoniometria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btGoniometriaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btGoniometria);
+        btGoniometria.setBounds(0, 260, 170, 50);
+
+        btGrauForca.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btGrauForca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/pesquisar_fisio.png"))); // NOI18N
+        btGrauForca.setText("Grau de Força");
+        btGrauForca.setContentAreaFilled(false);
+        btGrauForca.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btGrauForca.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btGrauForca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btGrauForcaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btGrauForca);
+        btGrauForca.setBounds(0, 320, 181, 50);
+
+        btAvaliacaoPostural.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btAvaliacaoPostural.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/excluir_fisio.png"))); // NOI18N
+        btAvaliacaoPostural.setText("Avaliação Postural");
+        btAvaliacaoPostural.setContentAreaFilled(false);
+        btAvaliacaoPostural.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btAvaliacaoPostural.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btAvaliacaoPostural.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btAvaliacaoPosturalActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btAvaliacaoPostural);
+        btAvaliacaoPostural.setBounds(300, 140, 210, 50);
 
         jLFundo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLFundo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
@@ -306,21 +305,21 @@ public class TraumatoOrtopedia extends javax.swing.JDialog {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarActionPerformed
+    private void btAnamneseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAnamneseActionPerformed
         dispose();
-    }//GEN-LAST:event_btVoltarActionPerformed
+    }//GEN-LAST:event_btAnamneseActionPerformed
 
-    private void btPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPesquisarActionPerformed
-    }//GEN-LAST:event_btPesquisarActionPerformed
+    private void btGrauForcaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btGrauForcaActionPerformed
+    }//GEN-LAST:event_btGrauForcaActionPerformed
 
-    private void btExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExcluirActionPerformed
+    private void btAvaliacaoPosturalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAvaliacaoPosturalActionPerformed
         btLimparActionPerformed(null);
-    }//GEN-LAST:event_btExcluirActionPerformed
+    }//GEN-LAST:event_btAvaliacaoPosturalActionPerformed
 
-    private void btLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLimparActionPerformed
+    private void btGoniometriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btGoniometriaActionPerformed
         Util.limparCamposGenerico(this);
-        btExcluir.setEnabled(false);
-    }//GEN-LAST:event_btLimparActionPerformed
+        btAvaliacaoPostural.setEnabled(false);
+    }//GEN-LAST:event_btGoniometriaActionPerformed
 
     private void txtPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPacienteActionPerformed
         // TODO add your handling code here:
@@ -337,17 +336,17 @@ public class TraumatoOrtopedia extends javax.swing.JDialog {
         }
     }//GEN-LAST:event_btnPacienteActionPerformed
 
-    private void btExcluir1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExcluir1ActionPerformed
+    private void btExamesComplementaresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExamesComplementaresActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btExcluir1ActionPerformed
+    }//GEN-LAST:event_btExamesComplementaresActionPerformed
 
-    private void btPesquisar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPesquisar1ActionPerformed
+    private void btDiagnosticoCineticoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btDiagnosticoCineticoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btPesquisar1ActionPerformed
+    }//GEN-LAST:event_btDiagnosticoCineticoActionPerformed
 
-    private void btLimpar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLimpar1ActionPerformed
+    private void btPerimetriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPerimetriaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btLimpar1ActionPerformed
+    }//GEN-LAST:event_btPerimetriaActionPerformed
 
     private void btSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalvarActionPerformed
         if (true) {
@@ -365,13 +364,13 @@ public class TraumatoOrtopedia extends javax.swing.JDialog {
         }
     }//GEN-LAST:event_btSalvarActionPerformed
 
-    private void btExcluir2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExcluir2ActionPerformed
+    private void btExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExcluirActionPerformed
         //        triagemDAO.excluir(triagem);
 
         btLimparActionPerformed(null);
-    }//GEN-LAST:event_btExcluir2ActionPerformed
+    }//GEN-LAST:event_btExcluirActionPerformed
 
-    private void btPesquisar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPesquisar2ActionPerformed
+    private void btPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPesquisarActionPerformed
         //        List<Triagem> lista;
         //        lista = (triagemDAO.listar());
         //        TriagemTableModel itm = new TriagemTableModel(lista);
@@ -382,19 +381,18 @@ public class TraumatoOrtopedia extends javax.swing.JDialog {
             //            paciente = triagem.getPaciente();
             //            btExcluir.setEnabled(true);
             //        }
-    }//GEN-LAST:event_btPesquisar2ActionPerformed
+    }//GEN-LAST:event_btPesquisarActionPerformed
 
-    private void btLimpar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLimpar2ActionPerformed
+    private void btLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLimparActionPerformed
         Util.limparCamposGenerico(this);
-        grupoPrioridade.clearSelection();
         //        triagem = new Triagem();
         //        paciente = new Paciente();
         //        atendimento = new Atendimento();
-    }//GEN-LAST:event_btLimpar2ActionPerformed
+    }//GEN-LAST:event_btLimparActionPerformed
 
-    private void btVoltar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltar1ActionPerformed
+    private void btVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarActionPerformed
         dispose();
-    }//GEN-LAST:event_btVoltar1ActionPerformed
+    }//GEN-LAST:event_btVoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -440,18 +438,18 @@ public class TraumatoOrtopedia extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btAnamnese;
+    private javax.swing.JButton btAvaliacaoPostural;
+    private javax.swing.JButton btDiagnosticoCinetico;
+    private javax.swing.JButton btExamesComplementares;
     private javax.swing.JButton btExcluir;
-    private javax.swing.JButton btExcluir1;
-    private javax.swing.JButton btExcluir2;
+    private javax.swing.JButton btGoniometria;
+    private javax.swing.JButton btGrauForca;
     private javax.swing.JButton btLimpar;
-    private javax.swing.JButton btLimpar1;
-    private javax.swing.JButton btLimpar2;
+    private javax.swing.JButton btPerimetria;
     private javax.swing.JButton btPesquisar;
-    private javax.swing.JButton btPesquisar1;
-    private javax.swing.JButton btPesquisar2;
     private javax.swing.JButton btSalvar;
     private javax.swing.JButton btVoltar;
-    private javax.swing.JButton btVoltar1;
     private javax.swing.JButton btnPaciente;
     private javax.swing.JLabel jLFundo;
     private javax.swing.JLabel jLObrigatorioNome3;

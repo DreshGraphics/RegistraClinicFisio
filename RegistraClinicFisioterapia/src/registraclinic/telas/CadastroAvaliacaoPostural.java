@@ -47,22 +47,698 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
     private void initComponents() {
 
         grupoPrioridade = new javax.swing.ButtonGroup();
-        btVoltar = new javax.swing.JButton();
+        jtGeral = new javax.swing.JTabbedPane();
+        jpExameFisico = new javax.swing.JPanel();
+        jLabel37 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jtDiagnosticoMedico = new javax.swing.JTextArea();
+        labelDadosPessoais = new javax.swing.JLabel();
+        jpAluno = new javax.swing.JPanel();
+        txtPaciente = new javax.swing.JTextField();
+        jlNomeUsuario5 = new javax.swing.JLabel();
+        jLObrigatorioNome3 = new javax.swing.JLabel();
+        jlNomeUsuario6 = new javax.swing.JLabel();
+        txtPaciente1 = new javax.swing.JTextField();
+        jLObrigatorioNome4 = new javax.swing.JLabel();
+        jlNomeUsuario7 = new javax.swing.JLabel();
+        jLObrigatorioNome5 = new javax.swing.JLabel();
+        txtPaciente2 = new javax.swing.JTextField();
+        txtPaciente3 = new javax.swing.JTextField();
+        jlNomeUsuario8 = new javax.swing.JLabel();
+        jLObrigatorioNome6 = new javax.swing.JLabel();
+        txtPaciente4 = new javax.swing.JTextField();
+        jLObrigatorioNome7 = new javax.swing.JLabel();
+        jlNomeUsuario9 = new javax.swing.JLabel();
+        jLObrigatorioNome8 = new javax.swing.JLabel();
+        txtPaciente5 = new javax.swing.JTextField();
+        jlNomeUsuario10 = new javax.swing.JLabel();
+        txtPaciente6 = new javax.swing.JTextField();
+        jLObrigatorioNome9 = new javax.swing.JLabel();
+        jlNomeUsuario11 = new javax.swing.JLabel();
+        txtPaciente7 = new javax.swing.JTextField();
+        jlNomeUsuario12 = new javax.swing.JLabel();
+        jLObrigatorioNome10 = new javax.swing.JLabel();
+        jlNomeUsuario13 = new javax.swing.JLabel();
+        txtPaciente8 = new javax.swing.JTextField();
+        jLObrigatorioNome11 = new javax.swing.JLabel();
+        labelAluno = new javax.swing.JLabel();
+        jpFuncionario = new javax.swing.JPanel();
+        txtPaciente9 = new javax.swing.JTextField();
+        jlNomeUsuario14 = new javax.swing.JLabel();
+        jLObrigatorioNome12 = new javax.swing.JLabel();
+        jlNomeUsuario15 = new javax.swing.JLabel();
+        txtPaciente10 = new javax.swing.JTextField();
+        jLObrigatorioNome13 = new javax.swing.JLabel();
+        jlNomeUsuario16 = new javax.swing.JLabel();
+        jLObrigatorioNome14 = new javax.swing.JLabel();
+        txtPaciente11 = new javax.swing.JTextField();
+        txtPaciente12 = new javax.swing.JTextField();
+        jlNomeUsuario17 = new javax.swing.JLabel();
+        jLObrigatorioNome15 = new javax.swing.JLabel();
+        txtPaciente13 = new javax.swing.JTextField();
+        jLObrigatorioNome16 = new javax.swing.JLabel();
+        jlNomeUsuario18 = new javax.swing.JLabel();
+        jLObrigatorioNome17 = new javax.swing.JLabel();
+        txtPaciente14 = new javax.swing.JTextField();
+        jlNomeUsuario19 = new javax.swing.JLabel();
+        txtPaciente15 = new javax.swing.JTextField();
+        jLObrigatorioNome18 = new javax.swing.JLabel();
+        jlNomeUsuario20 = new javax.swing.JLabel();
+        txtPaciente16 = new javax.swing.JTextField();
+        jlNomeUsuario21 = new javax.swing.JLabel();
+        jLObrigatorioNome19 = new javax.swing.JLabel();
+        jlNomeUsuario22 = new javax.swing.JLabel();
+        txtPaciente17 = new javax.swing.JTextField();
+        jLObrigatorioNome20 = new javax.swing.JLabel();
+        labelFuncionario = new javax.swing.JLabel();
+        jpPaciente = new javax.swing.JPanel();
+        jlNomeUsuario23 = new javax.swing.JLabel();
+        jLObrigatorioNome21 = new javax.swing.JLabel();
+        txtPaciente18 = new javax.swing.JTextField();
+        jlNomeUsuario24 = new javax.swing.JLabel();
+        jLObrigatorioNome22 = new javax.swing.JLabel();
+        txtPaciente19 = new javax.swing.JTextField();
+        jlNomeUsuario25 = new javax.swing.JLabel();
+        txtPaciente20 = new javax.swing.JTextField();
+        jLObrigatorioNome23 = new javax.swing.JLabel();
+        jlNomeUsuario26 = new javax.swing.JLabel();
+        jLObrigatorioNome24 = new javax.swing.JLabel();
+        txtPaciente21 = new javax.swing.JTextField();
+        jlNomeUsuario27 = new javax.swing.JLabel();
+        txtPaciente22 = new javax.swing.JTextField();
+        jLObrigatorioNome25 = new javax.swing.JLabel();
+        labelPaciente = new javax.swing.JLabel();
+        btVoltar = new javax.swing.JButton();
         btPesquisar = new javax.swing.JButton();
         btExcluir = new javax.swing.JButton();
         btLimpar = new javax.swing.JButton();
         btSalvar = new javax.swing.JButton();
-        jlNomeUsuario5 = new javax.swing.JLabel();
-        jLObrigatorioNome3 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(810, 521));
+        setMaximumSize(new java.awt.Dimension(600, 521));
+        setMinimumSize(new java.awt.Dimension(600, 521));
         setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(600, 521));
         setResizable(false);
         getContentPane().setLayout(null);
+
+        jtGeral.setBackground(new java.awt.Color(255, 255, 255));
+        jtGeral.setForeground(new java.awt.Color(22, 64, 61));
+        jtGeral.setToolTipText("");
+        jtGeral.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        jtGeral.setVerifyInputWhenFocusTarget(false);
+
+        jpExameFisico.setBackground(new java.awt.Color(255, 255, 255));
+        jpExameFisico.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jpExameFisico.setForeground(new java.awt.Color(22, 64, 61));
+        jpExameFisico.setLayout(null);
+
+        jLabel37.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel37.setText("Exame Físico");
+        jpExameFisico.add(jLabel37);
+        jLabel37.setBounds(20, 39, 160, 20);
+
+        jtDiagnosticoMedico.setColumns(20);
+        jtDiagnosticoMedico.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jtDiagnosticoMedico.setLineWrap(true);
+        jtDiagnosticoMedico.setRows(3);
+        jtDiagnosticoMedico.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(56, 100, 62), 1, true));
+        jScrollPane2.setViewportView(jtDiagnosticoMedico);
+
+        jpExameFisico.add(jScrollPane2);
+        jScrollPane2.setBounds(20, 60, 550, 250);
+
+        labelDadosPessoais.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        jpExameFisico.add(labelDadosPessoais);
+        labelDadosPessoais.setBounds(0, 0, 598, 340);
+
+        jtGeral.addTab("Exame Físico", jpExameFisico);
+
+        jpAluno.setBackground(new java.awt.Color(255, 255, 255));
+        jpAluno.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jpAluno.setForeground(new java.awt.Color(22, 64, 61));
+        jpAluno.setLayout(null);
+
+        txtPaciente.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtPaciente.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        txtPaciente.setMaximumSize(new java.awt.Dimension(8, 200));
+        txtPaciente.setMinimumSize(new java.awt.Dimension(8, 200));
+        txtPaciente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPacienteActionPerformed(evt);
+            }
+        });
+        jpAluno.add(txtPaciente);
+        txtPaciente.setBounds(20, 40, 200, 30);
+
+        jlNomeUsuario5.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jlNomeUsuario5.setText("Cabeça");
+        jpAluno.add(jlNomeUsuario5);
+        jlNomeUsuario5.setBounds(20, 20, 70, 20);
+
+        jLObrigatorioNome3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome3.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome3.setText("*");
+        jpAluno.add(jLObrigatorioNome3);
+        jLObrigatorioNome3.setBounds(210, 30, 10, 10);
+
+        jlNomeUsuario6.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jlNomeUsuario6.setText("Altura dos Ombros");
+        jpAluno.add(jlNomeUsuario6);
+        jlNomeUsuario6.setBounds(20, 80, 160, 20);
+
+        txtPaciente1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtPaciente1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        txtPaciente1.setMaximumSize(new java.awt.Dimension(8, 200));
+        txtPaciente1.setMinimumSize(new java.awt.Dimension(8, 200));
+        txtPaciente1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPaciente1ActionPerformed(evt);
+            }
+        });
+        jpAluno.add(txtPaciente1);
+        txtPaciente1.setBounds(20, 100, 200, 30);
+
+        jLObrigatorioNome4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome4.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome4.setText("*");
+        jpAluno.add(jLObrigatorioNome4);
+        jLObrigatorioNome4.setBounds(210, 90, 10, 10);
+
+        jlNomeUsuario7.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jlNomeUsuario7.setText("Triângulo de Talles");
+        jpAluno.add(jlNomeUsuario7);
+        jlNomeUsuario7.setBounds(20, 200, 150, 20);
+
+        jLObrigatorioNome5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome5.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome5.setText("*");
+        jpAluno.add(jLObrigatorioNome5);
+        jLObrigatorioNome5.setBounds(210, 210, 10, 10);
+
+        txtPaciente2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtPaciente2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        txtPaciente2.setMaximumSize(new java.awt.Dimension(8, 200));
+        txtPaciente2.setMinimumSize(new java.awt.Dimension(8, 200));
+        txtPaciente2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPaciente2ActionPerformed(evt);
+            }
+        });
+        jpAluno.add(txtPaciente2);
+        txtPaciente2.setBounds(20, 220, 200, 30);
+
+        txtPaciente3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtPaciente3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        txtPaciente3.setMaximumSize(new java.awt.Dimension(8, 200));
+        txtPaciente3.setMinimumSize(new java.awt.Dimension(8, 200));
+        txtPaciente3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPaciente3ActionPerformed(evt);
+            }
+        });
+        jpAluno.add(txtPaciente3);
+        txtPaciente3.setBounds(20, 160, 200, 30);
+
+        jlNomeUsuario8.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jlNomeUsuario8.setText("Clavícula");
+        jpAluno.add(jlNomeUsuario8);
+        jlNomeUsuario8.setBounds(20, 140, 70, 20);
+
+        jLObrigatorioNome6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome6.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome6.setText("*");
+        jpAluno.add(jLObrigatorioNome6);
+        jLObrigatorioNome6.setBounds(210, 150, 10, 10);
+
+        txtPaciente4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtPaciente4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        txtPaciente4.setMaximumSize(new java.awt.Dimension(8, 200));
+        txtPaciente4.setMinimumSize(new java.awt.Dimension(8, 200));
+        txtPaciente4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPaciente4ActionPerformed(evt);
+            }
+        });
+        jpAluno.add(txtPaciente4);
+        txtPaciente4.setBounds(370, 220, 200, 30);
+
+        jLObrigatorioNome7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome7.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome7.setText("*");
+        jpAluno.add(jLObrigatorioNome7);
+        jLObrigatorioNome7.setBounds(560, 150, 10, 10);
+
+        jlNomeUsuario9.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jlNomeUsuario9.setText("Pés");
+        jpAluno.add(jlNomeUsuario9);
+        jlNomeUsuario9.setBounds(370, 200, 70, 20);
+
+        jLObrigatorioNome8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome8.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome8.setText("*");
+        jpAluno.add(jLObrigatorioNome8);
+        jLObrigatorioNome8.setBounds(560, 210, 10, 10);
+
+        txtPaciente5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtPaciente5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        txtPaciente5.setMaximumSize(new java.awt.Dimension(8, 200));
+        txtPaciente5.setMinimumSize(new java.awt.Dimension(8, 200));
+        txtPaciente5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPaciente5ActionPerformed(evt);
+            }
+        });
+        jpAluno.add(txtPaciente5);
+        txtPaciente5.setBounds(370, 160, 200, 30);
+
+        jlNomeUsuario10.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jlNomeUsuario10.setText("Joelhos");
+        jpAluno.add(jlNomeUsuario10);
+        jlNomeUsuario10.setBounds(370, 140, 70, 20);
+
+        txtPaciente6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtPaciente6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        txtPaciente6.setMaximumSize(new java.awt.Dimension(8, 200));
+        txtPaciente6.setMinimumSize(new java.awt.Dimension(8, 200));
+        txtPaciente6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPaciente6ActionPerformed(evt);
+            }
+        });
+        jpAluno.add(txtPaciente6);
+        txtPaciente6.setBounds(370, 100, 200, 30);
+
+        jLObrigatorioNome9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome9.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome9.setText("*");
+        jpAluno.add(jLObrigatorioNome9);
+        jLObrigatorioNome9.setBounds(560, 90, 10, 10);
+
+        jlNomeUsuario11.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jlNomeUsuario11.setText("EIAS");
+        jpAluno.add(jlNomeUsuario11);
+        jlNomeUsuario11.setBounds(370, 80, 70, 20);
+
+        txtPaciente7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtPaciente7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        txtPaciente7.setMaximumSize(new java.awt.Dimension(8, 200));
+        txtPaciente7.setMinimumSize(new java.awt.Dimension(8, 200));
+        txtPaciente7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPaciente7ActionPerformed(evt);
+            }
+        });
+        jpAluno.add(txtPaciente7);
+        txtPaciente7.setBounds(370, 40, 200, 30);
+
+        jlNomeUsuario12.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jlNomeUsuario12.setText("Crista Ilíacas");
+        jpAluno.add(jlNomeUsuario12);
+        jlNomeUsuario12.setBounds(370, 20, 130, 20);
+
+        jLObrigatorioNome10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome10.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome10.setText("*");
+        jpAluno.add(jLObrigatorioNome10);
+        jLObrigatorioNome10.setBounds(560, 30, 10, 10);
+
+        jlNomeUsuario13.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jlNomeUsuario13.setText("Altura das Mãos");
+        jpAluno.add(jlNomeUsuario13);
+        jlNomeUsuario13.setBounds(20, 260, 130, 20);
+
+        txtPaciente8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtPaciente8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        txtPaciente8.setMaximumSize(new java.awt.Dimension(8, 200));
+        txtPaciente8.setMinimumSize(new java.awt.Dimension(8, 200));
+        txtPaciente8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPaciente8ActionPerformed(evt);
+            }
+        });
+        jpAluno.add(txtPaciente8);
+        txtPaciente8.setBounds(20, 280, 200, 30);
+
+        jLObrigatorioNome11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome11.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome11.setText("*");
+        jpAluno.add(jLObrigatorioNome11);
+        jLObrigatorioNome11.setBounds(210, 270, 10, 10);
+
+        labelAluno.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        jpAluno.add(labelAluno);
+        labelAluno.setBounds(0, 0, 650, 340);
+
+        jtGeral.addTab("Vista Anterior", jpAluno);
+
+        jpFuncionario.setBackground(new java.awt.Color(255, 255, 255));
+        jpFuncionario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jpFuncionario.setForeground(new java.awt.Color(22, 64, 61));
+        jpFuncionario.setLayout(null);
+
+        txtPaciente9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtPaciente9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        txtPaciente9.setMaximumSize(new java.awt.Dimension(8, 200));
+        txtPaciente9.setMinimumSize(new java.awt.Dimension(8, 200));
+        txtPaciente9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPaciente9ActionPerformed(evt);
+            }
+        });
+        jpFuncionario.add(txtPaciente9);
+        txtPaciente9.setBounds(20, 40, 200, 30);
+
+        jlNomeUsuario14.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jlNomeUsuario14.setText("Cabeça");
+        jpFuncionario.add(jlNomeUsuario14);
+        jlNomeUsuario14.setBounds(20, 20, 70, 20);
+
+        jLObrigatorioNome12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome12.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome12.setText("*");
+        jpFuncionario.add(jLObrigatorioNome12);
+        jLObrigatorioNome12.setBounds(210, 30, 10, 10);
+
+        jlNomeUsuario15.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jlNomeUsuario15.setText("Cervical");
+        jpFuncionario.add(jlNomeUsuario15);
+        jlNomeUsuario15.setBounds(20, 80, 160, 20);
+
+        txtPaciente10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtPaciente10.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        txtPaciente10.setMaximumSize(new java.awt.Dimension(8, 200));
+        txtPaciente10.setMinimumSize(new java.awt.Dimension(8, 200));
+        txtPaciente10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPaciente10ActionPerformed(evt);
+            }
+        });
+        jpFuncionario.add(txtPaciente10);
+        txtPaciente10.setBounds(20, 100, 200, 30);
+
+        jLObrigatorioNome13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome13.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome13.setText("*");
+        jpFuncionario.add(jLObrigatorioNome13);
+        jLObrigatorioNome13.setBounds(210, 90, 10, 10);
+
+        jlNomeUsuario16.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jlNomeUsuario16.setText("Dorso");
+        jpFuncionario.add(jlNomeUsuario16);
+        jlNomeUsuario16.setBounds(20, 200, 150, 20);
+
+        jLObrigatorioNome14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome14.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome14.setText("*");
+        jpFuncionario.add(jLObrigatorioNome14);
+        jLObrigatorioNome14.setBounds(210, 210, 10, 10);
+
+        txtPaciente11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtPaciente11.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        txtPaciente11.setMaximumSize(new java.awt.Dimension(8, 200));
+        txtPaciente11.setMinimumSize(new java.awt.Dimension(8, 200));
+        txtPaciente11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPaciente11ActionPerformed(evt);
+            }
+        });
+        jpFuncionario.add(txtPaciente11);
+        txtPaciente11.setBounds(20, 220, 200, 30);
+
+        txtPaciente12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtPaciente12.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        txtPaciente12.setMaximumSize(new java.awt.Dimension(8, 200));
+        txtPaciente12.setMinimumSize(new java.awt.Dimension(8, 200));
+        txtPaciente12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPaciente12ActionPerformed(evt);
+            }
+        });
+        jpFuncionario.add(txtPaciente12);
+        txtPaciente12.setBounds(20, 160, 200, 30);
+
+        jlNomeUsuario17.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jlNomeUsuario17.setText("Ombro");
+        jpFuncionario.add(jlNomeUsuario17);
+        jlNomeUsuario17.setBounds(20, 140, 70, 20);
+
+        jLObrigatorioNome15.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome15.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome15.setText("*");
+        jpFuncionario.add(jLObrigatorioNome15);
+        jLObrigatorioNome15.setBounds(210, 150, 10, 10);
+
+        txtPaciente13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtPaciente13.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        txtPaciente13.setMaximumSize(new java.awt.Dimension(8, 200));
+        txtPaciente13.setMinimumSize(new java.awt.Dimension(8, 200));
+        txtPaciente13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPaciente13ActionPerformed(evt);
+            }
+        });
+        jpFuncionario.add(txtPaciente13);
+        txtPaciente13.setBounds(370, 220, 200, 30);
+
+        jLObrigatorioNome16.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome16.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome16.setText("*");
+        jpFuncionario.add(jLObrigatorioNome16);
+        jLObrigatorioNome16.setBounds(560, 150, 10, 10);
+
+        jlNomeUsuario18.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jlNomeUsuario18.setText("Joelhos");
+        jpFuncionario.add(jlNomeUsuario18);
+        jlNomeUsuario18.setBounds(370, 200, 70, 20);
+
+        jLObrigatorioNome17.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome17.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome17.setText("*");
+        jpFuncionario.add(jLObrigatorioNome17);
+        jLObrigatorioNome17.setBounds(560, 210, 10, 10);
+
+        txtPaciente14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtPaciente14.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        txtPaciente14.setMaximumSize(new java.awt.Dimension(8, 200));
+        txtPaciente14.setMinimumSize(new java.awt.Dimension(8, 200));
+        txtPaciente14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPaciente14ActionPerformed(evt);
+            }
+        });
+        jpFuncionario.add(txtPaciente14);
+        txtPaciente14.setBounds(370, 160, 200, 30);
+
+        jlNomeUsuario19.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jlNomeUsuario19.setText("Tronco");
+        jpFuncionario.add(jlNomeUsuario19);
+        jlNomeUsuario19.setBounds(370, 140, 70, 20);
+
+        txtPaciente15.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtPaciente15.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        txtPaciente15.setMaximumSize(new java.awt.Dimension(8, 200));
+        txtPaciente15.setMinimumSize(new java.awt.Dimension(8, 200));
+        txtPaciente15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPaciente15ActionPerformed(evt);
+            }
+        });
+        jpFuncionario.add(txtPaciente15);
+        txtPaciente15.setBounds(370, 100, 200, 30);
+
+        jLObrigatorioNome18.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome18.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome18.setText("*");
+        jpFuncionario.add(jLObrigatorioNome18);
+        jLObrigatorioNome18.setBounds(560, 90, 10, 10);
+
+        jlNomeUsuario20.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jlNomeUsuario20.setText("Pelve");
+        jpFuncionario.add(jlNomeUsuario20);
+        jlNomeUsuario20.setBounds(370, 80, 70, 20);
+
+        txtPaciente16.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtPaciente16.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        txtPaciente16.setMaximumSize(new java.awt.Dimension(8, 200));
+        txtPaciente16.setMinimumSize(new java.awt.Dimension(8, 200));
+        txtPaciente16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPaciente16ActionPerformed(evt);
+            }
+        });
+        jpFuncionario.add(txtPaciente16);
+        txtPaciente16.setBounds(370, 40, 200, 30);
+
+        jlNomeUsuario21.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jlNomeUsuario21.setText("Lombar");
+        jpFuncionario.add(jlNomeUsuario21);
+        jlNomeUsuario21.setBounds(370, 20, 130, 20);
+
+        jLObrigatorioNome19.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome19.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome19.setText("*");
+        jpFuncionario.add(jLObrigatorioNome19);
+        jLObrigatorioNome19.setBounds(560, 30, 10, 10);
+
+        jlNomeUsuario22.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jlNomeUsuario22.setText("Abdomen");
+        jpFuncionario.add(jlNomeUsuario22);
+        jlNomeUsuario22.setBounds(20, 260, 130, 20);
+
+        txtPaciente17.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtPaciente17.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        txtPaciente17.setMaximumSize(new java.awt.Dimension(8, 200));
+        txtPaciente17.setMinimumSize(new java.awt.Dimension(8, 200));
+        txtPaciente17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPaciente17ActionPerformed(evt);
+            }
+        });
+        jpFuncionario.add(txtPaciente17);
+        txtPaciente17.setBounds(20, 280, 200, 30);
+
+        jLObrigatorioNome20.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome20.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome20.setText("*");
+        jpFuncionario.add(jLObrigatorioNome20);
+        jLObrigatorioNome20.setBounds(210, 270, 10, 10);
+
+        labelFuncionario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        jpFuncionario.add(labelFuncionario);
+        labelFuncionario.setBounds(0, 0, 598, 340);
+
+        jtGeral.addTab("Vista Lateral", jpFuncionario);
+
+        jpPaciente.setBackground(new java.awt.Color(255, 255, 255));
+        jpPaciente.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jpPaciente.setForeground(new java.awt.Color(22, 64, 61));
+        jpPaciente.setLayout(null);
+
+        jlNomeUsuario23.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jlNomeUsuario23.setText("Cabeça");
+        jpPaciente.add(jlNomeUsuario23);
+        jlNomeUsuario23.setBounds(20, 20, 70, 20);
+
+        jLObrigatorioNome21.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome21.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome21.setText("*");
+        jpPaciente.add(jLObrigatorioNome21);
+        jLObrigatorioNome21.setBounds(210, 30, 10, 10);
+
+        txtPaciente18.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtPaciente18.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        txtPaciente18.setMaximumSize(new java.awt.Dimension(8, 200));
+        txtPaciente18.setMinimumSize(new java.awt.Dimension(8, 200));
+        txtPaciente18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPaciente18ActionPerformed(evt);
+            }
+        });
+        jpPaciente.add(txtPaciente18);
+        txtPaciente18.setBounds(20, 40, 200, 30);
+
+        jlNomeUsuario24.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jlNomeUsuario24.setText("Altura dos Ombros");
+        jpPaciente.add(jlNomeUsuario24);
+        jlNomeUsuario24.setBounds(20, 80, 160, 20);
+
+        jLObrigatorioNome22.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome22.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome22.setText("*");
+        jpPaciente.add(jLObrigatorioNome22);
+        jLObrigatorioNome22.setBounds(210, 90, 10, 10);
+
+        txtPaciente19.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtPaciente19.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        txtPaciente19.setMaximumSize(new java.awt.Dimension(8, 200));
+        txtPaciente19.setMinimumSize(new java.awt.Dimension(8, 200));
+        txtPaciente19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPaciente19ActionPerformed(evt);
+            }
+        });
+        jpPaciente.add(txtPaciente19);
+        txtPaciente19.setBounds(20, 100, 200, 30);
+
+        jlNomeUsuario25.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jlNomeUsuario25.setText("Escápula");
+        jpPaciente.add(jlNomeUsuario25);
+        jlNomeUsuario25.setBounds(20, 140, 70, 20);
+
+        txtPaciente20.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtPaciente20.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        txtPaciente20.setMaximumSize(new java.awt.Dimension(8, 200));
+        txtPaciente20.setMinimumSize(new java.awt.Dimension(8, 200));
+        txtPaciente20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPaciente20ActionPerformed(evt);
+            }
+        });
+        jpPaciente.add(txtPaciente20);
+        txtPaciente20.setBounds(20, 160, 200, 30);
+
+        jLObrigatorioNome23.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome23.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome23.setText("*");
+        jpPaciente.add(jLObrigatorioNome23);
+        jLObrigatorioNome23.setBounds(210, 150, 10, 10);
+
+        jlNomeUsuario26.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jlNomeUsuario26.setText("EIPIs");
+        jpPaciente.add(jlNomeUsuario26);
+        jlNomeUsuario26.setBounds(370, 20, 150, 20);
+
+        jLObrigatorioNome24.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome24.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome24.setText("*");
+        jpPaciente.add(jLObrigatorioNome24);
+        jLObrigatorioNome24.setBounds(560, 30, 10, 10);
+
+        txtPaciente21.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtPaciente21.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        txtPaciente21.setMaximumSize(new java.awt.Dimension(8, 200));
+        txtPaciente21.setMinimumSize(new java.awt.Dimension(8, 200));
+        txtPaciente21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPaciente21ActionPerformed(evt);
+            }
+        });
+        jpPaciente.add(txtPaciente21);
+        txtPaciente21.setBounds(370, 40, 200, 30);
+
+        jlNomeUsuario27.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jlNomeUsuario27.setText("Calcâneo");
+        jpPaciente.add(jlNomeUsuario27);
+        jlNomeUsuario27.setBounds(370, 80, 130, 20);
+
+        txtPaciente22.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtPaciente22.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        txtPaciente22.setMaximumSize(new java.awt.Dimension(8, 200));
+        txtPaciente22.setMinimumSize(new java.awt.Dimension(8, 200));
+        txtPaciente22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPaciente22ActionPerformed(evt);
+            }
+        });
+        jpPaciente.add(txtPaciente22);
+        txtPaciente22.setBounds(370, 100, 200, 30);
+
+        jLObrigatorioNome25.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome25.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome25.setText("*");
+        jpPaciente.add(jLObrigatorioNome25);
+        jLObrigatorioNome25.setBounds(560, 90, 10, 10);
+
+        labelPaciente.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        jpPaciente.add(labelPaciente);
+        labelPaciente.setBounds(0, 0, 598, 340);
+
+        jtGeral.addTab("Vista Posterior", jpPaciente);
+
+        getContentPane().add(jtGeral);
+        jtGeral.setBounds(0, 60, 598, 370);
 
         btVoltar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/voltar_fisio.png"))); // NOI18N
@@ -78,17 +754,7 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btVoltar);
-        btVoltar.setBounds(20, 440, 80, 70);
-
-        jtDiagnosticoMedico.setColumns(20);
-        jtDiagnosticoMedico.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jtDiagnosticoMedico.setLineWrap(true);
-        jtDiagnosticoMedico.setRows(3);
-        jtDiagnosticoMedico.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(56, 100, 62), 1, true));
-        jScrollPane2.setViewportView(jtDiagnosticoMedico);
-
-        getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(20, 90, 360, 110);
+        btVoltar.setBounds(0, 440, 80, 70);
 
         btPesquisar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/pesquisar_fisio.png"))); // NOI18N
@@ -103,7 +769,7 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btPesquisar);
-        btPesquisar.setBounds(360, 440, 100, 70);
+        btPesquisar.setBounds(250, 440, 100, 70);
 
         btExcluir.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/excluir_fisio.png"))); // NOI18N
@@ -118,7 +784,7 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btExcluir);
-        btExcluir.setBounds(500, 440, 80, 70);
+        btExcluir.setBounds(390, 440, 80, 70);
 
         btLimpar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/limpar_fisio.png"))); // NOI18N
@@ -133,7 +799,7 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btLimpar);
-        btLimpar.setBounds(240, 440, 80, 70);
+        btLimpar.setBounds(130, 440, 80, 70);
 
         btSalvar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/save_fisio.png"))); // NOI18N
@@ -148,26 +814,14 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btSalvar);
-        btSalvar.setBounds(720, 440, 80, 70);
+        btSalvar.setBounds(520, 440, 80, 70);
 
-        jlNomeUsuario5.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
-        jlNomeUsuario5.setText("Exame Físico");
-        getContentPane().add(jlNomeUsuario5);
-        jlNomeUsuario5.setBounds(20, 70, 110, 20);
-
-        jLObrigatorioNome3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLObrigatorioNome3.setForeground(new java.awt.Color(204, 0, 0));
-        jLObrigatorioNome3.setText("*");
-        getContentPane().add(jLObrigatorioNome3);
-        jLObrigatorioNome3.setBounds(350, 70, 10, 30);
-
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/TRIAGEM.png"))); // NOI18N
         jLabel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jLabel6.setMaximumSize(new java.awt.Dimension(809, 521));
-        jLabel6.setMinimumSize(new java.awt.Dimension(809, 521));
-        jLabel6.setPreferredSize(new java.awt.Dimension(809, 521));
+        jLabel6.setMaximumSize(new java.awt.Dimension(600, 521));
+        jLabel6.setMinimumSize(new java.awt.Dimension(600, 521));
+        jLabel6.setPreferredSize(new java.awt.Dimension(600, 521));
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(0, 0, 810, 521);
+        jLabel6.setBounds(0, 0, 600, 521);
 
         pack();
         setLocationRelativeTo(null);
@@ -223,6 +877,98 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
 //        atendimento = new Atendimento();
 
     }//GEN-LAST:event_btLimparActionPerformed
+
+    private void txtPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPacienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPacienteActionPerformed
+
+    private void txtPaciente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPaciente1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPaciente1ActionPerformed
+
+    private void txtPaciente2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPaciente2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPaciente2ActionPerformed
+
+    private void txtPaciente3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPaciente3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPaciente3ActionPerformed
+
+    private void txtPaciente4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPaciente4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPaciente4ActionPerformed
+
+    private void txtPaciente5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPaciente5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPaciente5ActionPerformed
+
+    private void txtPaciente6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPaciente6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPaciente6ActionPerformed
+
+    private void txtPaciente7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPaciente7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPaciente7ActionPerformed
+
+    private void txtPaciente8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPaciente8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPaciente8ActionPerformed
+
+    private void txtPaciente9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPaciente9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPaciente9ActionPerformed
+
+    private void txtPaciente10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPaciente10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPaciente10ActionPerformed
+
+    private void txtPaciente11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPaciente11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPaciente11ActionPerformed
+
+    private void txtPaciente12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPaciente12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPaciente12ActionPerformed
+
+    private void txtPaciente13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPaciente13ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPaciente13ActionPerformed
+
+    private void txtPaciente14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPaciente14ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPaciente14ActionPerformed
+
+    private void txtPaciente15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPaciente15ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPaciente15ActionPerformed
+
+    private void txtPaciente16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPaciente16ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPaciente16ActionPerformed
+
+    private void txtPaciente17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPaciente17ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPaciente17ActionPerformed
+
+    private void txtPaciente18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPaciente18ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPaciente18ActionPerformed
+
+    private void txtPaciente19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPaciente19ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPaciente19ActionPerformed
+
+    private void txtPaciente20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPaciente20ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPaciente20ActionPerformed
+
+    private void txtPaciente21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPaciente21ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPaciente21ActionPerformed
+
+    private void txtPaciente22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPaciente22ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPaciente22ActionPerformed
 
    
 
@@ -754,10 +1500,87 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
     private javax.swing.JButton btSalvar;
     private javax.swing.JButton btVoltar;
     private javax.swing.ButtonGroup grupoPrioridade;
+    private javax.swing.JLabel jLObrigatorioNome10;
+    private javax.swing.JLabel jLObrigatorioNome11;
+    private javax.swing.JLabel jLObrigatorioNome12;
+    private javax.swing.JLabel jLObrigatorioNome13;
+    private javax.swing.JLabel jLObrigatorioNome14;
+    private javax.swing.JLabel jLObrigatorioNome15;
+    private javax.swing.JLabel jLObrigatorioNome16;
+    private javax.swing.JLabel jLObrigatorioNome17;
+    private javax.swing.JLabel jLObrigatorioNome18;
+    private javax.swing.JLabel jLObrigatorioNome19;
+    private javax.swing.JLabel jLObrigatorioNome20;
+    private javax.swing.JLabel jLObrigatorioNome21;
+    private javax.swing.JLabel jLObrigatorioNome22;
+    private javax.swing.JLabel jLObrigatorioNome23;
+    private javax.swing.JLabel jLObrigatorioNome24;
+    private javax.swing.JLabel jLObrigatorioNome25;
     private javax.swing.JLabel jLObrigatorioNome3;
+    private javax.swing.JLabel jLObrigatorioNome4;
+    private javax.swing.JLabel jLObrigatorioNome5;
+    private javax.swing.JLabel jLObrigatorioNome6;
+    private javax.swing.JLabel jLObrigatorioNome7;
+    private javax.swing.JLabel jLObrigatorioNome8;
+    private javax.swing.JLabel jLObrigatorioNome9;
+    private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel jlNomeUsuario10;
+    private javax.swing.JLabel jlNomeUsuario11;
+    private javax.swing.JLabel jlNomeUsuario12;
+    private javax.swing.JLabel jlNomeUsuario13;
+    private javax.swing.JLabel jlNomeUsuario14;
+    private javax.swing.JLabel jlNomeUsuario15;
+    private javax.swing.JLabel jlNomeUsuario16;
+    private javax.swing.JLabel jlNomeUsuario17;
+    private javax.swing.JLabel jlNomeUsuario18;
+    private javax.swing.JLabel jlNomeUsuario19;
+    private javax.swing.JLabel jlNomeUsuario20;
+    private javax.swing.JLabel jlNomeUsuario21;
+    private javax.swing.JLabel jlNomeUsuario22;
+    private javax.swing.JLabel jlNomeUsuario23;
+    private javax.swing.JLabel jlNomeUsuario24;
+    private javax.swing.JLabel jlNomeUsuario25;
+    private javax.swing.JLabel jlNomeUsuario26;
+    private javax.swing.JLabel jlNomeUsuario27;
     private javax.swing.JLabel jlNomeUsuario5;
+    private javax.swing.JLabel jlNomeUsuario6;
+    private javax.swing.JLabel jlNomeUsuario7;
+    private javax.swing.JLabel jlNomeUsuario8;
+    private javax.swing.JLabel jlNomeUsuario9;
+    private javax.swing.JPanel jpAluno;
+    private javax.swing.JPanel jpExameFisico;
+    private javax.swing.JPanel jpFuncionario;
+    private javax.swing.JPanel jpPaciente;
     private javax.swing.JTextArea jtDiagnosticoMedico;
+    private javax.swing.JTabbedPane jtGeral;
+    private javax.swing.JLabel labelAluno;
+    private javax.swing.JLabel labelDadosPessoais;
+    private javax.swing.JLabel labelFuncionario;
+    private javax.swing.JLabel labelPaciente;
+    private javax.swing.JTextField txtPaciente;
+    private javax.swing.JTextField txtPaciente1;
+    private javax.swing.JTextField txtPaciente10;
+    private javax.swing.JTextField txtPaciente11;
+    private javax.swing.JTextField txtPaciente12;
+    private javax.swing.JTextField txtPaciente13;
+    private javax.swing.JTextField txtPaciente14;
+    private javax.swing.JTextField txtPaciente15;
+    private javax.swing.JTextField txtPaciente16;
+    private javax.swing.JTextField txtPaciente17;
+    private javax.swing.JTextField txtPaciente18;
+    private javax.swing.JTextField txtPaciente19;
+    private javax.swing.JTextField txtPaciente2;
+    private javax.swing.JTextField txtPaciente20;
+    private javax.swing.JTextField txtPaciente21;
+    private javax.swing.JTextField txtPaciente22;
+    private javax.swing.JTextField txtPaciente3;
+    private javax.swing.JTextField txtPaciente4;
+    private javax.swing.JTextField txtPaciente5;
+    private javax.swing.JTextField txtPaciente6;
+    private javax.swing.JTextField txtPaciente7;
+    private javax.swing.JTextField txtPaciente8;
+    private javax.swing.JTextField txtPaciente9;
     // End of variables declaration//GEN-END:variables
 }
