@@ -17,6 +17,7 @@ import registraclinic.atendimento.AtendimentoDAO;
 import registraclinic.atendimento.AtendimentoTableModel;
 import registraclinic.avaliacaopostural.AvaliacaoPostural;
 import registraclinic.avaliacaopostural.AvaliacaoPosturalDAO;
+import registraclinic.avaliacaopostural.AvaliacaoPosturalTableModel;
 import registraclinic.paciente.Paciente;
 import registraclinic.paciente.PacienteDAO;
 import registraclinic.paciente.PacienteTableModel;
@@ -49,7 +50,6 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        grupoPrioridade = new javax.swing.ButtonGroup();
         jtGeral = new javax.swing.JTabbedPane();
         jpExameFisico = new javax.swing.JPanel();
         jLabel37 = new javax.swing.JLabel();
@@ -824,21 +824,43 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPesquisarActionPerformed
-//        List<Triagem> lista;
-//        lista = (triagemDAO.listar());
-//        TriagemTableModel itm = new TriagemTableModel(lista);
-//        Object objetoRetorno = PesquisaTriagem.exibeTela(itm, "Triagem");
-//        if (objetoRetorno != null) {
-//            triagem = triagemDAO.consultarObjetoId("idTriagem", objetoRetorno);
-//            atendimento = triagem.getTipoAtendimento();
-//            paciente = triagem.getPaciente();
-//            btExcluir.setEnabled(true);
-//        }
+        List<AvaliacaoPostural> lista;
+        lista = (avaliacaoPosturalDAO.listar());
+        AvaliacaoPosturalTableModel itm = new AvaliacaoPosturalTableModel(lista);
+        Object objetoRetorno = PesquisaTriagem.exibeTela(itm, "Avaliação Postural");
+        if (objetoRetorno != null) {
+            avaliacaoPostural = avaliacaoPosturalDAO.consultarObjetoId("idAvaliacaoPostural", objetoRetorno);
+            jtExameFisico.setText(avaliacaoPostural.getExameFisico());
+            txtCabecaVistaAnterior.setText(avaliacaoPostural.getCabecaVistaAnterior());
+            txtAlturaOmbroVistaAnterior.setText(avaliacaoPostural.getAlturaDosOmbrosVistaAnterior());
+            txtClaviculaVistaAnterior.setText(avaliacaoPostural.getClaviculaVistaAnterior());
+            txtTrianguloTallesVistaAnterior.setText(avaliacaoPostural.getTrianguloDeTallesVistaAnterior());
+            txtAlturaMaosVistaAnterior.setText(avaliacaoPostural.getAlturaDasMaosVistaAnterior());
+            txtCristaIliacasVistaAnterior.setText(avaliacaoPostural.getCristaIliacasVistaAnterior());
+            txtEiasVistaAnterior.setText(avaliacaoPostural.getEiasVistaAnterior());
+            txtJoelhosVistaAnterior.setText(avaliacaoPostural.getJoelhosVistaAnterior());
+            txtPesVistaAnterior.setText(avaliacaoPostural.getPesVistaAnterior());
+            txtCabecaVistaLateral.setText(avaliacaoPostural.getCabecaVistaLateral());
+            txtCervicalVistaLateral.setText(avaliacaoPostural.getCervicalVistaLateral());
+            txtOmbroVistaLateral.setText(avaliacaoPostural.getOmbroVistaLateral());
+            txtDorsoVistaLateral.setText(avaliacaoPostural.getDorsoVistaLateral());
+            txtAbdomenVistaLateral.setText(avaliacaoPostural.getAbdomenVistaLateral());
+            txtLombarVistaLateral.setText(avaliacaoPostural.getLombarVistaLateral());
+            txtPelveVistaLateral.setText(avaliacaoPostural.getPelveVistaLateral());
+            txtTroncoVistaLateral.setText(avaliacaoPostural.getTroncoVistaLateral());
+            txtJoelhosVistaLateral.setText(avaliacaoPostural.getJoelhosVistaLateral());
+            txtCabecaVistaPosterior.setText(avaliacaoPostural.getCabecaVistaPosterior());
+            txtAlturaOmbrosVistaPosterior.setText(avaliacaoPostural.getAlturaDosOmbrosPosterior());
+            txtEscapulaVistaPosterior.setText(avaliacaoPostural.getEscapulaPosterior());
+            txtEipisVistaPosterior.setText(avaliacaoPostural.getEipisPosterior());
+            txtCalcaneoVistaPosterior.setText(avaliacaoPostural.getCalcaneoPosterior());
+            
+            btExcluir.setEnabled(true);
+        }
     }//GEN-LAST:event_btPesquisarActionPerformed
 
     private void btExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExcluirActionPerformed
-//        triagemDAO.excluir(triagem);
-        
+        avaliacaoPosturalDAO.excluir(avaliacaoPostural);
         btLimparActionPerformed(null);
     }//GEN-LAST:event_btExcluirActionPerformed
 
@@ -868,6 +890,7 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
             JOptionPane.showMessageDialog(this, "Prencha todos os campos !!");
         } else {
             
+            avaliacaoPostural.setExameFisico(jtExameFisico.getText());
             avaliacaoPostural.setCabecaVistaAnterior(txtCabecaVistaAnterior.getText());
             avaliacaoPostural.setAlturaDosOmbrosVistaAnterior(txtAlturaOmbroVistaAnterior.getText());
             avaliacaoPostural.setClaviculaVistaAnterior(txtClaviculaVistaAnterior.getText());
@@ -877,7 +900,7 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
             avaliacaoPostural.setEiasVistaAnterior(txtEiasVistaAnterior.getText());
             avaliacaoPostural.setJoelhosVistaAnterior(txtJoelhosVistaAnterior.getText());
             avaliacaoPostural.setPesVistaAnterior(txtPesVistaAnterior.getText());
-            
+
             avaliacaoPostural.setCabecaVistaLateral(txtCabecaVistaLateral.getText());
             avaliacaoPostural.setCervicalVistaLateral(txtCervicalVistaLateral.getText());
             avaliacaoPostural.setOmbroVistaLateral(txtOmbroVistaLateral.getText());
@@ -887,15 +910,14 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
             avaliacaoPostural.setPelveVistaLateral(txtPelveVistaLateral.getText());
             avaliacaoPostural.setTroncoVistaLateral(txtTroncoVistaLateral.getText());
             avaliacaoPostural.setJoelhosVistaLateral(txtJoelhosVistaLateral.getText());
-            
+
             avaliacaoPostural.setCabecaVistaPosterior(txtCabecaVistaPosterior.getText());
             avaliacaoPostural.setAlturaDosOmbrosPosterior(txtAlturaOmbrosVistaPosterior.getText());
             avaliacaoPostural.setEscapulaPosterior(txtEscapulaVistaPosterior.getText());
             avaliacaoPostural.setEipisPosterior(txtEipisVistaPosterior.getText());
             avaliacaoPostural.setCalcaneoPosterior(txtCalcaneoVistaPosterior.getText());
-            
+
             avaliacaoPosturalDAO.salvar(avaliacaoPostural);
-            grupoPrioridade.clearSelection();
             btLimparActionPerformed(null);
             avaliacaoPostural = new AvaliacaoPostural();
 
@@ -910,11 +932,31 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
 
     private void btLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLimparActionPerformed
         Util.limparCamposGenerico(this);
-        grupoPrioridade.clearSelection();
-//        triagem = new Triagem();
-//        paciente = new Paciente();
-//        atendimento = new Atendimento();
-
+        avaliacaoPostural = new AvaliacaoPostural();
+        jtExameFisico.setText("");
+        txtCabecaVistaAnterior.setText("");
+        txtAlturaOmbroVistaAnterior.setText("");
+        txtClaviculaVistaAnterior.setText("");
+        txtTrianguloTallesVistaAnterior.setText("");
+        txtAlturaMaosVistaAnterior.setText("");
+        txtCristaIliacasVistaAnterior.setText("");
+        txtEiasVistaAnterior.setText("");
+        txtPesVistaAnterior.setText("");
+        txtCabecaVistaLateral.setText("");
+        txtCervicalVistaLateral.setText("");
+        txtOmbroVistaLateral.setText("");
+        txtDorsoVistaLateral.setText("");
+        txtAbdomenVistaLateral.setText("");
+        txtLombarVistaLateral.setText("");
+        txtPelveVistaLateral.setText("");
+        txtTroncoVistaLateral.setText("");
+        txtCabecaVistaPosterior.setText("");
+        txtAlturaOmbrosVistaPosterior.setText("");
+        txtEscapulaVistaPosterior.setText("");
+        txtEipisVistaPosterior.setText("");
+        txtCalcaneoVistaPosterior.setText("");
+        txtJoelhosVistaAnterior.setText("");
+        txtJoelhosVistaLateral.setText("");
     }//GEN-LAST:event_btLimparActionPerformed
 
     private void txtCabecaVistaAnteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCabecaVistaAnteriorActionPerformed
@@ -1008,8 +1050,6 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
     private void txtCalcaneoVistaPosteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCalcaneoVistaPosteriorActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCalcaneoVistaPosteriorActionPerformed
-
-   
 
     /**
      * @param args the command line arguments
@@ -1538,7 +1578,6 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
     private javax.swing.JButton btPesquisar;
     private javax.swing.JButton btSalvar;
     private javax.swing.JButton btVoltar;
-    private javax.swing.ButtonGroup grupoPrioridade;
     private javax.swing.JLabel jLObrigatorioNome10;
     private javax.swing.JLabel jLObrigatorioNome11;
     private javax.swing.JLabel jLObrigatorioNome12;

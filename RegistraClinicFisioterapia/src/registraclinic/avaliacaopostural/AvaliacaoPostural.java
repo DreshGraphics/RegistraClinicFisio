@@ -18,6 +18,8 @@ public class AvaliacaoPostural implements Serializable {
     @GeneratedValue
     private int idAvaliacaoPostural;
     
+    private String ExameFisico;
+            
     private String cabecaVistaAnterior;
     private String alturaDosOmbrosVistaAnterior;
     private String claviculaVistaAnterior;
@@ -44,6 +46,14 @@ public class AvaliacaoPostural implements Serializable {
     private String eipisPosterior;
     private String calcaneoPosterior;
 
+    public String getExameFisico() {
+        return ExameFisico;
+    }
+
+    public void setExameFisico(String ExameFisico) {
+        this.ExameFisico = ExameFisico;
+    }
+    
     public int getIdAvaliacaoPostural() {
         return idAvaliacaoPostural;
     }

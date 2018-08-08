@@ -22,7 +22,11 @@
         <mapping class="registraclinic.supervisor.Supervisor"/>
         <mapping class="registraclinic.triagem.Triagem"/>
         <mapping class="registraclinic.usuario.Usuario"/>
-
+        <mapping class="registraclinic.anamnese.Anamnese"/>
+        <mapping class="registraclinic.avaliacaopostural.AvaliacaoPostural"/>
+        <mapping class="registraclinic.diagnosticocineticofuncional.DiagnosticoCineticoFuncional"/>
+        <mapping class="registraclinic.examescomplementares.ExamesComplementares"/>
+        <mapping class="registraclinic.traumatoortopedia.TraumatoOrtopedia"/>
         
     </session-factory>
 </hibernate-configuration>
