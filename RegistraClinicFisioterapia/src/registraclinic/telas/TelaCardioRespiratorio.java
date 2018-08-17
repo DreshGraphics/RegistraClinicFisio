@@ -102,7 +102,7 @@ public class TelaCardioRespiratorio extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        TelaAnamneseCardio tac= new TelaAnamneseCardio(null, rootPaneCheckingEnabled);
+        telaAnamneseCardio1 tac = new telaAnamneseCardio1(null, rootPaneCheckingEnabled);
         tac.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
