@@ -35,7 +35,6 @@ public class TelaCardioRespiratorio extends javax.swing.JDialog {
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -49,7 +48,7 @@ public class TelaCardioRespiratorio extends javax.swing.JDialog {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(70, 150, 83, 30);
+        jButton1.setBounds(70, 150, 130, 30);
 
         jButton2.setText("Exame Fisico");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -58,7 +57,7 @@ public class TelaCardioRespiratorio extends javax.swing.JDialog {
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(300, 150, 93, 30);
+        jButton2.setBounds(270, 150, 150, 30);
 
         jButton3.setText("Função Pulmonar");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -67,9 +66,15 @@ public class TelaCardioRespiratorio extends javax.swing.JDialog {
             }
         });
         jPanel1.add(jButton3);
-        jButton3.setBounds(510, 150, 115, 30);
+        jButton3.setBounds(495, 150, 160, 30);
+
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton4);
-        jButton4.setBounds(290, 430, 33, 60);
+        jButton4.setBounds(290, 430, 70, 60);
         jPanel1.add(jButton5);
         jButton5.setBounds(440, 430, 70, 60);
 
@@ -80,8 +85,6 @@ public class TelaCardioRespiratorio extends javax.swing.JDialog {
         });
         jPanel1.add(jButton6);
         jButton6.setBounds(590, 430, 70, 60);
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(0, 0, 700, 500);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -121,6 +124,12 @@ public class TelaCardioRespiratorio extends javax.swing.JDialog {
         pg.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        dispose();
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -172,7 +181,6 @@ public class TelaCardioRespiratorio extends javax.swing.JDialog {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

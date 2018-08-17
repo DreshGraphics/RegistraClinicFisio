@@ -5,6 +5,7 @@
  */
 package registraclinic.telas;
 
+import javax.swing.JOptionPane;
 import registraclinic.provapulmonar.ProvaPulmonar;
 import registraclinic.provapulmonar.ProvaPulmonarDAO;
 
@@ -37,35 +38,35 @@ public class TelaFuncaoPulmonar extends javax.swing.JDialog {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
+        jTPregaAxilar = new javax.swing.JTextField();
+        jTProcessoXifoide = new javax.swing.JTextField();
+        jTLinhaUmbilical = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jTConclusao = new javax.swing.JTextField();
         PEAKFLOW = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        jTFluxoPessoal = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         MANOVACUOMETRIA = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
         jLabel14 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        jTPE = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
+        jTPI = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
+        jTParecer = new javax.swing.JTextField();
+        jTParecer1 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextPane1 = new javax.swing.JTextPane();
+        jTObjTratamento = new javax.swing.JTextPane();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextPane2 = new javax.swing.JTextPane();
+        jTCondultas = new javax.swing.JTextPane();
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jBsalvar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -86,16 +87,21 @@ public class TelaFuncaoPulmonar extends javax.swing.JDialog {
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setText("LINHA UMBILICAL:");
 
-        jTextField3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jTPregaAxilar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jTPregaAxilar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTPregaAxilarActionPerformed(evt);
+            }
+        });
 
-        jTextField4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jTProcessoXifoide.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
 
-        jTextField5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jTLinhaUmbilical.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setText("CONCLUSÃO:");
 
-        jTextField1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jTConclusao.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
 
         javax.swing.GroupLayout CIRTOMETRIALayout = new javax.swing.GroupLayout(CIRTOMETRIA);
         CIRTOMETRIA.setLayout(CIRTOMETRIALayout);
@@ -109,14 +115,14 @@ public class TelaFuncaoPulmonar extends javax.swing.JDialog {
                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(CIRTOMETRIALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTLinhaUmbilical, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(CIRTOMETRIALayout.createSequentialGroup()
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTPregaAxilar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(78, 78, 78)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jTextField1))
+                        .addComponent(jTProcessoXifoide, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTConclusao))
                 .addGap(57, 57, 57))
         );
         CIRTOMETRIALayout.setVerticalGroup(
@@ -125,16 +131,16 @@ public class TelaFuncaoPulmonar extends javax.swing.JDialog {
                 .addGap(69, 69, 69)
                 .addGroup(CIRTOMETRIALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTPregaAxilar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTProcessoXifoide, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
                 .addGroup(CIRTOMETRIALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTLinhaUmbilical, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
                 .addGroup(CIRTOMETRIALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTConclusao, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(67, Short.MAX_VALUE))
         );
@@ -146,7 +152,7 @@ public class TelaFuncaoPulmonar extends javax.swing.JDialog {
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/tabelaAsma1.png"))); // NOI18N
 
-        jTextField2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jTFluxoPessoal.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -166,7 +172,7 @@ public class TelaFuncaoPulmonar extends javax.swing.JDialog {
                     .addGroup(PEAKFLOWLayout.createSequentialGroup()
                         .addGap(50, 50, 50)
                         .addGroup(PEAKFLOWLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 595, Short.MAX_VALUE)
+                            .addComponent(jTFluxoPessoal, javax.swing.GroupLayout.DEFAULT_SIZE, 595, Short.MAX_VALUE)
                             .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(50, Short.MAX_VALUE))
         );
@@ -178,7 +184,7 @@ public class TelaFuncaoPulmonar extends javax.swing.JDialog {
                 .addGap(47, 47, 47)
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTFluxoPessoal, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25))
         );
 
@@ -198,7 +204,7 @@ public class TelaFuncaoPulmonar extends javax.swing.JDialog {
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel14.setText("TIPO RESPIRTÓRIO:");
 
-        jTextField6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jTPE.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel11.setText("PEmax:");
@@ -206,7 +212,7 @@ public class TelaFuncaoPulmonar extends javax.swing.JDialog {
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel10.setText("PImax:");
 
-        jTextField7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jTPI.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel13.setText("PARECER:");
@@ -214,13 +220,13 @@ public class TelaFuncaoPulmonar extends javax.swing.JDialog {
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel12.setText("PARECER:");
 
-        jTextField8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jTParecer.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
 
-        jTextField9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jTParecer1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
 
-        jScrollPane1.setViewportView(jTextPane1);
+        jScrollPane1.setViewportView(jTObjTratamento);
 
-        jScrollPane2.setViewportView(jTextPane2);
+        jScrollPane2.setViewportView(jTCondultas);
 
         javax.swing.GroupLayout MANOVACUOMETRIALayout = new javax.swing.GroupLayout(MANOVACUOMETRIA);
         MANOVACUOMETRIA.setLayout(MANOVACUOMETRIALayout);
@@ -248,18 +254,18 @@ public class TelaFuncaoPulmonar extends javax.swing.JDialog {
                                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addGroup(MANOVACUOMETRIALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jTPI, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTPE, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGap(41, 41, 41)
                             .addGroup(MANOVACUOMETRIALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(MANOVACUOMETRIALayout.createSequentialGroup()
                                     .addComponent(jLabel12)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jTextField8))
+                                    .addComponent(jTParecer))
                                 .addGroup(MANOVACUOMETRIALayout.createSequentialGroup()
                                     .addComponent(jLabel13)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                    .addComponent(jTParecer1, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addGap(50, 50, 50))
         );
         MANOVACUOMETRIALayout.setVerticalGroup(
@@ -268,15 +274,15 @@ public class TelaFuncaoPulmonar extends javax.swing.JDialog {
                 .addContainerGap()
                 .addGroup(MANOVACUOMETRIALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTPI, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTParecer1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(MANOVACUOMETRIALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTPE, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTParecer, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(MANOVACUOMETRIALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -310,14 +316,14 @@ public class TelaFuncaoPulmonar extends javax.swing.JDialog {
         jPanel1.add(jButton3);
         jButton3.setBounds(460, 440, 70, 60);
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/save_fisio.png"))); // NOI18N
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jBsalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/save_fisio.png"))); // NOI18N
+        jBsalvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jBsalvarActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2);
-        jButton2.setBounds(580, 440, 70, 60);
+        jPanel1.add(jBsalvar);
+        jBsalvar.setBounds(580, 440, 70, 60);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Tela-Fisioterapia.png"))); // NOI18N
         jLabel1.setToolTipText("");
@@ -344,9 +350,31 @@ public class TelaFuncaoPulmonar extends javax.swing.JDialog {
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jBsalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBsalvarActionPerformed
+        if(!jTPregaAxilar.getText().equals(" ")){
+        provapulmonar.setPregaAxilar(jTPregaAxilar.getText());
+        provapulmonar.setProcessoXifoide(jTProcessoXifoide.getText());
+        provapulmonar.setLinhaUmbilical(jTLinhaUmbilical.getText());
+        provapulmonar.setConclusao(jTConclusao.getText());
+        provapulmonar.setMelhorFluxoPessoal(jTFluxoPessoal.getText());
+        provapulmonar.setPImax(jTPI.getText());
+        provapulmonar.setPEmax(jTPE.getText());
+        provapulmonar.setPIParecer(jTParecer1.getText());
+        provapulmonar.setPEParecer(jTParecer.getText());
+        provapulmonar.setOBJTratamento(jTObjTratamento.getText());
+        provapulmonar.setCondultas(jTCondultas.getText());
+        provaPulmonarDAO.salvar(provapulmonar);
+            JOptionPane.showMessageDialog(null,"savo com sucesso!");
+        }else{
+            JOptionPane.showMessageDialog(null,"erro ao salvar!");
+        }
+        
+        // TODO add your handling codeova here:
+    }//GEN-LAST:event_jBsalvarActionPerformed
+
+    private void jTPregaAxilarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTPregaAxilarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jTPregaAxilarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -397,8 +425,8 @@ public class TelaFuncaoPulmonar extends javax.swing.JDialog {
     private javax.swing.JPanel CIRTOMETRIA;
     private javax.swing.JPanel MANOVACUOMETRIA;
     private javax.swing.JPanel PEAKFLOW;
+    private javax.swing.JButton jBsalvar;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
@@ -418,17 +446,17 @@ public class TelaFuncaoPulmonar extends javax.swing.JDialog {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextField jTConclusao;
+    private javax.swing.JTextPane jTCondultas;
+    private javax.swing.JTextField jTFluxoPessoal;
+    private javax.swing.JTextField jTLinhaUmbilical;
+    private javax.swing.JTextPane jTObjTratamento;
+    private javax.swing.JTextField jTPE;
+    private javax.swing.JTextField jTPI;
+    private javax.swing.JTextField jTParecer;
+    private javax.swing.JTextField jTParecer1;
+    private javax.swing.JTextField jTPregaAxilar;
+    private javax.swing.JTextField jTProcessoXifoide;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
-    private javax.swing.JTextPane jTextPane1;
-    private javax.swing.JTextPane jTextPane2;
     // End of variables declaration//GEN-END:variables
 }

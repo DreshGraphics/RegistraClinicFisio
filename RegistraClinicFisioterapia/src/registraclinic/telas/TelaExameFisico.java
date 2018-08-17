@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */package registraclinic.telas;
 
+import javax.swing.JOptionPane;
 import registraclinic.examefisico.ExameFisico;
 import registraclinic.examefisico.ExameFisicoDAO;
 
@@ -354,7 +355,8 @@ public class TelaExameFisico extends javax.swing.JDialog {
     }//GEN-LAST:event_jbVoltarActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-    examefisico.setPA(jtPa.getText());
+         if(!jtPa.getText().equals(" ")){
+        examefisico.setPA(jtPa.getText());
     examefisico.setFC(jtFc.getText());
     examefisico.setFR(jtFr.getText());
     examefisico.setSaO2(jtSaO.getText());
@@ -369,8 +371,12 @@ public class TelaExameFisico extends javax.swing.JDialog {
     examefisico.setTosse(jcTosse.getSelectedItem().toString());
     examefisico.setExpectoracao(jcExpectoracao.getSelectedItem().toString());
     examefisico.setDispneia(jcheckDispineia.isSelected());
-    examefisico.setRespiracaoParadoxal(jcheckRespiracaoParadoxal.isSelected());        ;
-            
+    examefisico.setRespiracaoParadoxal(jcheckRespiracaoParadoxal.isSelected()); 
+        examefisicoDAO.salvar(examefisico);
+             JOptionPane.showMessageDialog(null,"salvo com sucesso! ");
+         } else{
+             JOptionPane.showMessageDialog(null,"ERRO AO SALVAR!");
+         }
    
     }//GEN-LAST:event_jButton2ActionPerformed
 
