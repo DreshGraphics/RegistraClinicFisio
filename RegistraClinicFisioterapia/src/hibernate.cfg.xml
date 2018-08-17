@@ -27,6 +27,10 @@
         <mapping class="registraclinic.diagnosticocineticofuncional.DiagnosticoCineticoFuncional"/>
         <mapping class="registraclinic.examescomplementares.ExamesComplementares"/>
         <mapping class="registraclinic.traumatoortopedia.TraumatoOrtopedia"/>
+        <mapping class="registraclinic.anamnesecardio.AnamneseCardio"/>
+        <mapping class="registraclinic.examefisico.ExameFisico"/>
+        <mapping class="registraclinic.provapulmonar.ProvaPulmonar"/>
+        
         
     </session-factory>
 </hibernate-configuration>
