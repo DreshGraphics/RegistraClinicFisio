@@ -325,7 +325,7 @@ public class TelaFuncaoPulmonar extends javax.swing.JDialog {
         jPanel1.add(jBsalvar);
         jBsalvar.setBounds(580, 440, 70, 60);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Tela-Fisioterapia.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/funcaopulmonar0000.png"))); // NOI18N
         jLabel1.setToolTipText("");
         jPanel1.add(jLabel1);
         jLabel1.setBounds(0, 0, 700, 500);

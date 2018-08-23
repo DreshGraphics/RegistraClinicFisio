@@ -35,6 +35,7 @@ public class TelaCardioRespiratorio extends javax.swing.JDialog {
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -68,6 +69,7 @@ public class TelaCardioRespiratorio extends javax.swing.JDialog {
         jPanel1.add(jButton3);
         jButton3.setBounds(495, 150, 160, 30);
 
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/voltar_fisio.png"))); // NOI18N
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -75,9 +77,12 @@ public class TelaCardioRespiratorio extends javax.swing.JDialog {
         });
         jPanel1.add(jButton4);
         jButton4.setBounds(290, 430, 70, 60);
+
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/pesquisar_fisio.png"))); // NOI18N
         jPanel1.add(jButton5);
         jButton5.setBounds(440, 430, 70, 60);
 
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/save_fisio.png"))); // NOI18N
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -85,6 +90,10 @@ public class TelaCardioRespiratorio extends javax.swing.JDialog {
         });
         jPanel1.add(jButton6);
         jButton6.setBounds(590, 430, 70, 60);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/cardiorespiratotio0000.png"))); // NOI18N
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(0, 0, 700, 500);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -181,6 +190,7 @@ public class TelaCardioRespiratorio extends javax.swing.JDialog {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

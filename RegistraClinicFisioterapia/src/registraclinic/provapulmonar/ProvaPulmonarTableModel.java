@@ -5,30 +5,29 @@
  */
 package registraclinic.provapulmonar;
 
-import registraclinic.paciente.*;
-import java.text.SimpleDateFormat;
+import registraclinic.provapulmonar.*;
+import registraclinic.provapulmonar.*;
+import registraclinic.atendimento.*;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
-import registraclinic.usuario.Usuario;
 
 /**
  *
- * @author Karlos Oliveira
+ * @author root 
  */
 public class ProvaPulmonarTableModel extends AbstractTableModel {
 
-    private List<Paciente> pacientes = new ArrayList<>();
-    private final String[] colunas = {"Código", "Prontuário", "Nome", "Sexo", "Idade", "Peso(kg)", "Altura(cm)", "Queixa Paciente", "Endereço", "Cidade", "Telefone", "Situação", "Atendimento"};
+    private List<ProvaPulmonar> provaspulmonares = new ArrayList<>();
+    private String[] colunas = {"Código", "Atendimento"};
 
-    public ProvaPulmonarTableModel(List<Paciente> pacientes) {
-        this.pacientes = pacientes;
+    public ProvaPulmonarTableModel(List<Atendimento> atendimentos) {
+        this.provaspulmonares = provaspulmonares;
     }
 
     @Override
     public int getRowCount() {
-        return pacientes.size();
+        return provaspulmonares.size();
     }
 
     @Override
@@ -36,40 +35,37 @@ public class ProvaPulmonarTableModel extends AbstractTableModel {
         return colunas.length;
     }
 
-//    private String converterDataString(Date date) {
-//        SimpleDateFormat f = new SimpleDateFormat("dd/MM/yyyy");
-//        return f.format(date);
-//    }
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        Paciente paciente = pacientes.get(rowIndex);
+        ProvaPulmonar provapulmonar = provaspulmonares.get(rowIndex);
         switch (columnIndex) {
             case 0:
-                return paciente.getIdPessoa();
+                return provapulmonar.getIdProvaPulmonar();
             case 1:
-                return paciente.getNumeroProntuarioPaciente();
+                return provapulmonar.getPregaAxilar();
             case 2:
-                return paciente.getNomePessoa();
+                return provapulmonar.getMelhorFluxoPessoal();
             case 3:
-                return paciente.getSexoPessoa();
+                return provapulmonar.getProcessoXifoide();
             case 4:
-                return paciente.getIdadePessoa();
+                return provapulmonar.getLinhaUmbilical();
             case 5:
-                return paciente.getPesoPaciente();
+                return provapulmonar.getConclusao();
             case 6:
-                return paciente.getAlturaPaciente();
+                return provapulmonar.getPImax();
             case 7:
-                return paciente.getQueixaDoPaciente();
+                return provapulmonar.getPEmax();
             case 8:
-                return paciente.getEnderecoPessoa();
+                return provapulmonar.getPIParecer();
             case 9:
-                return paciente.getCidade().getNomeCidade();
+                return provapulmonar.getPEParecer();
             case 10:
-                return paciente.getTelefonePessoa();
+                return provapulmonar.getTipoRespiratorio();
             case 11:
-                return paciente.getSituacaoPaciente();
+                return provapulmonar.getOBJTratamento();
             case 12:
-                return paciente.getTipoAtendimento();
+                return provapulmonar.getCondultas();
+            
         }
         return null;
     }
@@ -86,8 +82,6 @@ public class ProvaPulmonarTableModel extends AbstractTableModel {
             case 3:
                 return colunas[3];
             case 4:
-                return colunas[4];
-            case 5:
                 return colunas[5];
             case 6:
                 return colunas[6];
@@ -103,8 +97,10 @@ public class ProvaPulmonarTableModel extends AbstractTableModel {
                 return colunas[11];
             case 12:
                 return colunas[12];
+            
         }
         return null;
     }
 
 }
+

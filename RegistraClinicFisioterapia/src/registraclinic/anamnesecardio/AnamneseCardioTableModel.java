@@ -5,31 +5,27 @@
  */
 package registraclinic.anamnesecardio;
 
-import registraclinic.provapulmonar.*;
-import registraclinic.paciente.*;
-import java.text.SimpleDateFormat;
+import registraclinic.atendimento.*;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
-import registraclinic.usuario.Usuario;
 
 /**
  *
- * @author Karlos Oliveira
+ * @author root 
  */
 public class AnamneseCardioTableModel extends AbstractTableModel {
 
-    private List<Paciente> pacientes = new ArrayList<>();
-    private final String[] colunas = {"Código", "Prontuário", "Nome", "Sexo", "Idade", "Peso(kg)", "Altura(cm)", "Queixa Paciente", "Endereço", "Cidade", "Telefone", "Situação", "Atendimento"};
+    private List<AnamneseCardio> anamnesescardio = new ArrayList<>();
+    private String[] colunas = {"Código", "Atendimento"};
 
-    public AnamneseCardioTableModel(List<Paciente> pacientes) {
-        this.pacientes = pacientes;
+    public AnamneseCardioTableModel(List<Atendimento> atendimentos) {
+        this.anamnesescardio = anamnesescardio;
     }
 
     @Override
     public int getRowCount() {
-        return pacientes.size();
+        return anamnesescardio.size();
     }
 
     @Override
@@ -37,40 +33,42 @@ public class AnamneseCardioTableModel extends AbstractTableModel {
         return colunas.length;
     }
 
-//    private String converterDataString(Date date) {
-//        SimpleDateFormat f = new SimpleDateFormat("dd/MM/yyyy");
-//        return f.format(date);
-//    }
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        Paciente paciente = pacientes.get(rowIndex);
+        AnamneseCardio anamnesecardio = anamnesescardio.get(rowIndex);
         switch (columnIndex) {
             case 0:
-                return paciente.getIdPessoa();
+                return anamnesecardio.getIdAnamneseCardio();
             case 1:
-                return paciente.getNumeroProntuarioPaciente();
+                return anamnesecardio.getQueixaPrincipal();
             case 2:
-                return paciente.getNomePessoa();
+                return anamnesecardio.getHistoricoFamiliar();
             case 3:
-                return paciente.getSexoPessoa();
+                return anamnesecardio.getAtividadeFisica();
             case 4:
-                return paciente.getIdadePessoa();
+                return anamnesecardio.getCigarrosDias();
             case 5:
-                return paciente.getPesoPaciente();
+                return anamnesecardio.getAnosTabag();
             case 6:
-                return paciente.getAlturaPaciente();
+                return anamnesecardio.getTempoParado();
             case 7:
-                return paciente.getQueixaDoPaciente();
+                return anamnesecardio.getMedicacaoDeUso();
             case 8:
-                return paciente.getEnderecoPessoa();
+                return anamnesecardio.getExamesComplementares();
             case 9:
-                return paciente.getCidade().getNomeCidade();
+                return anamnesecardio.getHDA();
             case 10:
-                return paciente.getTelefonePessoa();
+                return anamnesecardio.isTabagismo();
             case 11:
-                return paciente.getSituacaoPaciente();
+                return anamnesecardio.isEtilismo();
             case 12:
-                return paciente.getTipoAtendimento();
+                return anamnesecardio.isDiabetes();
+            case 13:
+                return anamnesecardio.isObesidade();
+            case 14:
+                return anamnesecardio.isHAS();
+            case 15:
+                return anamnesecardio.isControleAlimentar();
         }
         return null;
     }
@@ -87,8 +85,6 @@ public class AnamneseCardioTableModel extends AbstractTableModel {
             case 3:
                 return colunas[3];
             case 4:
-                return colunas[4];
-            case 5:
                 return colunas[5];
             case 6:
                 return colunas[6];
@@ -104,8 +100,15 @@ public class AnamneseCardioTableModel extends AbstractTableModel {
                 return colunas[11];
             case 12:
                 return colunas[12];
+            case 13:
+                return colunas[13];
+            case 14:
+                return colunas[14];
+            case 15:
+                return colunas[15];
         }
         return null;
     }
 
 }
+

@@ -5,13 +5,23 @@
  */
 package registraclinic.provapulmonar;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 /**
  *
  * @author Paulo
  */
+@Entity
 public class ProvaPulmonar {
     
+    @Id
+    @GeneratedValue
     private int IdProvaPulmonar;
+    
+    @Column( nullable = false)
     private String PregaAxilar;
     private String MelhorFluxoPessoal;
     private String ProcessoXifoide;

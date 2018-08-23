@@ -5,31 +5,28 @@
  */
 package registraclinic.examefisico;
 
-import registraclinic.provapulmonar.*;
-import registraclinic.paciente.*;
-import java.text.SimpleDateFormat;
+import registraclinic.examefisico.*;
+import registraclinic.atendimento.*;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
-import registraclinic.usuario.Usuario;
 
 /**
  *
- * @author Karlos Oliveira
+ * @author root 
  */
 public class ExameFisicoTableModel extends AbstractTableModel {
 
-    private List<Paciente> pacientes = new ArrayList<>();
-    private final String[] colunas = {"Código", "Prontuário", "Nome", "Sexo", "Idade", "Peso(kg)", "Altura(cm)", "Queixa Paciente", "Endereço", "Cidade", "Telefone", "Situação", "Atendimento"};
+    private List<ExameFisico> examesfisicos = new ArrayList<>();
+    private String[] colunas = {"Código", "Atendimento"};
 
-    public ExameFisicoTableModel(List<Paciente> pacientes) {
-        this.pacientes = pacientes;
+    public ExameFisicoTableModel(List<Atendimento> atendimentos) {
+        this.examesfisicos = examesfisicos;
     }
 
     @Override
     public int getRowCount() {
-        return pacientes.size();
+        return examesfisicos.size();
     }
 
     @Override
@@ -37,40 +34,48 @@ public class ExameFisicoTableModel extends AbstractTableModel {
         return colunas.length;
     }
 
-//    private String converterDataString(Date date) {
-//        SimpleDateFormat f = new SimpleDateFormat("dd/MM/yyyy");
-//        return f.format(date);
-//    }
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        Paciente paciente = pacientes.get(rowIndex);
+        ExameFisico examefisico = examesfisicos.get(rowIndex);
         switch (columnIndex) {
             case 0:
-                return paciente.getIdPessoa();
+                return examefisico.getIdExameFisico();
             case 1:
-                return paciente.getNumeroProntuarioPaciente();
+                return examefisico.getPA();
             case 2:
-                return paciente.getNomePessoa();
+                return examefisico.getFC();
             case 3:
-                return paciente.getSexoPessoa();
+                return examefisico.getFR();
             case 4:
-                return paciente.getIdadePessoa();
+                return examefisico.getSaO2();
             case 5:
-                return paciente.getPesoPaciente();
+                return examefisico.getAuscutaPulmonar();
             case 6:
-                return paciente.getAlturaPaciente();
+                return examefisico.getAuscutaCardiaca();
             case 7:
-                return paciente.getQueixaDoPaciente();
+                return examefisico.getFormaDoTorax();
             case 8:
-                return paciente.getEnderecoPessoa();
+                return examefisico.getSimetriaDoTorax();
             case 9:
-                return paciente.getCidade().getNomeCidade();
+                return examefisico.getExpansibilidade();
             case 10:
-                return paciente.getTelefonePessoa();
+                return examefisico.getMobilidadeToracica();
             case 11:
-                return paciente.getSituacaoPaciente();
+                return examefisico.isDispneia();
             case 12:
-                return paciente.getTipoAtendimento();
+                return examefisico.isRespiracaoParadoxal();
+            case 13:
+                return examefisico.getUsoDeMusculaturaAcessoria();
+            case 14:
+                return examefisico.getRitmoRespiratorio();
+            case 15:
+                return examefisico.getTosse();
+            case 16:
+                return examefisico.getExpectoracao();
+            case 17:
+                return examefisico.getPalpacao();
+            case 18:
+                return examefisico.getPercucao();
         }
         return null;
     }
@@ -87,8 +92,6 @@ public class ExameFisicoTableModel extends AbstractTableModel {
             case 3:
                 return colunas[3];
             case 4:
-                return colunas[4];
-            case 5:
                 return colunas[5];
             case 6:
                 return colunas[6];
@@ -104,8 +107,21 @@ public class ExameFisicoTableModel extends AbstractTableModel {
                 return colunas[11];
             case 12:
                 return colunas[12];
+            case 13:
+                return colunas[13];
+            case 14:
+                return colunas[14];
+            case 15:
+                return colunas[15];
+            case 16:
+                return colunas[16];
+            case 17:
+                return colunas[17];
+            case 18:
+                return colunas[18];
         }
         return null;
     }
 
 }
+
