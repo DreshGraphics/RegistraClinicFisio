@@ -5,6 +5,14 @@
  */
 package registraclinic.telas;
 
+import static java.nio.file.Files.list;
+import static java.rmi.Naming.list;
+import static java.util.Collections.list;
+import java.util.List;
+import registraclinic.paciente.Paciente;
+import registraclinic.paciente.PacienteDAO;
+import registraclinic.paciente.PacienteTableModel;
+
 /**
  *
  * @author Paulo
@@ -14,9 +22,13 @@ public class TelaCardioRespiratorio extends javax.swing.JDialog {
     /**
      * Creates new form TelaCardioRespiratorio
      */
+    Paciente paciente = new Paciente();
+    PacienteDAO pacienteDAO = new PacienteDAO();
     public TelaCardioRespiratorio(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
+        
         initComponents();
+        txtPaciente.setEnabled(false);
     }
 
     /**
@@ -33,8 +45,10 @@ public class TelaCardioRespiratorio extends javax.swing.JDialog {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        jButtonPesquisa = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        txtPaciente = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -49,7 +63,7 @@ public class TelaCardioRespiratorio extends javax.swing.JDialog {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(70, 150, 130, 30);
+        jButton1.setBounds(60, 130, 130, 30);
 
         jButton2.setText("Exame Fisico");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -58,7 +72,7 @@ public class TelaCardioRespiratorio extends javax.swing.JDialog {
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(270, 150, 150, 30);
+        jButton2.setBounds(270, 130, 150, 30);
 
         jButton3.setText("Função Pulmonar");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -67,7 +81,7 @@ public class TelaCardioRespiratorio extends javax.swing.JDialog {
             }
         });
         jPanel1.add(jButton3);
-        jButton3.setBounds(495, 150, 160, 30);
+        jButton3.setBounds(490, 130, 160, 30);
 
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/voltar_fisio.png"))); // NOI18N
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -78,9 +92,14 @@ public class TelaCardioRespiratorio extends javax.swing.JDialog {
         jPanel1.add(jButton4);
         jButton4.setBounds(290, 430, 70, 60);
 
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/pesquisar_fisio.png"))); // NOI18N
-        jPanel1.add(jButton5);
-        jButton5.setBounds(440, 430, 70, 60);
+        jButtonPesquisa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/pesquisar_fisio.png"))); // NOI18N
+        jButtonPesquisa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonPesquisaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButtonPesquisa);
+        jButtonPesquisa.setBounds(440, 430, 70, 60);
 
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/save_fisio.png"))); // NOI18N
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -90,6 +109,17 @@ public class TelaCardioRespiratorio extends javax.swing.JDialog {
         });
         jPanel1.add(jButton6);
         jButton6.setBounds(590, 430, 70, 60);
+
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/add_sub_14-14.png"))); // NOI18N
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton5);
+        jButton5.setBounds(550, 210, 49, 40);
+        jPanel1.add(txtPaciente);
+        txtPaciente.setBounds(60, 210, 470, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/cardiorespiratotio0000.png"))); // NOI18N
         jPanel1.add(jLabel1);
@@ -129,8 +159,7 @@ public class TelaCardioRespiratorio extends javax.swing.JDialog {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        PesquisaGenerica pg = new PesquisaGenerica(null, rootPaneCheckingEnabled);
-        pg.setVisible(true);
+        
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
 
@@ -140,7 +169,28 @@ public class TelaCardioRespiratorio extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    /**
+    private void jButtonPesquisaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPesquisaActionPerformed
+        PesquisaGenerica pg = new PesquisaGenerica(null, rootPaneCheckingEnabled);
+        pg.setVisible(true);
+        
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonPesquisaActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        List<Paciente> lista;
+        lista = (pacienteDAO.listar());
+        PacienteTableModel itm = new PacienteTableModel(lista);
+        Object objetoRetorno = PesquisaGenerica.exibeTela(itm, "Pacinte");
+        if (objetoRetorno != null) {
+            paciente = pacienteDAO.consultarObjetoId("idPessoa", objetoRetorno);
+            txtPaciente.setText(paciente.getNomePessoa());
+        }
+        
+        
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    /** 
      * @param args the command line arguments
      */
     public static void main(String args[]) {
@@ -190,7 +240,9 @@ public class TelaCardioRespiratorio extends javax.swing.JDialog {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButtonPesquisa;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField txtPaciente;
     // End of variables declaration//GEN-END:variables
 }

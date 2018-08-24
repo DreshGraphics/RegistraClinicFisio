@@ -70,8 +70,8 @@ public class telaAnamneseCardio1 extends javax.swing.JDialog {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(700, 500));
 
+        jPanel1.setPreferredSize(new java.awt.Dimension(700, 500));
         jPanel1.setLayout(null);
 
         jLabel2.setText("DIAGNÓSTICO CLÍNICO:");
@@ -131,12 +131,17 @@ public class telaAnamneseCardio1 extends javax.swing.JDialog {
                 .addGroup(ANAMNESELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTHistoricoFamiliar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(57, Short.MAX_VALUE))
+                .addGap(38, 38, 38))
         );
 
         jTabbedPane1.addTab("ANAMNESE", ANAMNESE);
 
         jCTabagismo.setText("TABAGISMO");
+        jCTabagismo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCTabagismoActionPerformed(evt);
+            }
+        });
 
         jCObesidade.setText("OBESIDADE");
 
@@ -261,13 +266,13 @@ public class telaAnamneseCardio1 extends javax.swing.JDialog {
                 .addGroup(HABITOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTExamesComplementares, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("HABITOS DE VIDA E FR", HABITOS);
 
         jPanel1.add(jTabbedPane1);
-        jTabbedPane1.setBounds(0, 130, 700, 310);
+        jTabbedPane1.setBounds(0, 130, 700, 290);
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/voltar_fisio.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -276,11 +281,11 @@ public class telaAnamneseCardio1 extends javax.swing.JDialog {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(340, 440, 70, 60);
+        jButton1.setBounds(340, 430, 70, 60);
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/limpar_fisio.png"))); // NOI18N
         jPanel1.add(jButton3);
-        jButton3.setBounds(460, 440, 70, 60);
+        jButton3.setBounds(460, 430, 70, 60);
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/save_fisio.png"))); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -289,7 +294,7 @@ public class telaAnamneseCardio1 extends javax.swing.JDialog {
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(580, 440, 70, 60);
+        jButton2.setBounds(580, 430, 70, 60);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/anamnesecardio0000.png"))); // NOI18N
         jPanel1.add(jLabel1);
@@ -299,12 +304,14 @@ public class telaAnamneseCardio1 extends javax.swing.JDialog {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
+
+        jPanel1.getAccessibleContext().setAccessibleName("");
 
         pack();
         setLocationRelativeTo(null);
@@ -349,6 +356,10 @@ public class telaAnamneseCardio1 extends javax.swing.JDialog {
             JOptionPane.showMessageDialog(null,"preencha todos os campos");
         }
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jCTabagismoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCTabagismoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCTabagismoActionPerformed
 
     /**
      * @param args the command line arguments
