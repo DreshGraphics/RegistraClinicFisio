@@ -51,12 +51,6 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
     private void initComponents() {
 
         jtGeral = new javax.swing.JTabbedPane();
-        jpExameFisico = new javax.swing.JPanel();
-        jLabel37 = new javax.swing.JLabel();
-        jLObrigatorioNome26 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jtExameFisico = new javax.swing.JTextArea();
-        labelExameFisico = new javax.swing.JLabel();
         jpVistaAnterior = new javax.swing.JPanel();
         txtCabecaVistaAnterior = new javax.swing.JTextField();
         jlNomeUsuario5 = new javax.swing.JLabel();
@@ -150,38 +144,6 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
         jtGeral.setToolTipText("");
         jtGeral.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         jtGeral.setVerifyInputWhenFocusTarget(false);
-
-        jpExameFisico.setBackground(new java.awt.Color(255, 255, 255));
-        jpExameFisico.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jpExameFisico.setForeground(new java.awt.Color(22, 64, 61));
-        jpExameFisico.setLayout(null);
-
-        jLabel37.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
-        jLabel37.setText("Exame Físico");
-        jpExameFisico.add(jLabel37);
-        jLabel37.setBounds(20, 10, 160, 20);
-
-        jLObrigatorioNome26.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLObrigatorioNome26.setForeground(new java.awt.Color(204, 0, 0));
-        jLObrigatorioNome26.setText("*");
-        jpExameFisico.add(jLObrigatorioNome26);
-        jLObrigatorioNome26.setBounds(570, 20, 10, 10);
-
-        jtExameFisico.setColumns(20);
-        jtExameFisico.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jtExameFisico.setLineWrap(true);
-        jtExameFisico.setRows(3);
-        jtExameFisico.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(56, 100, 62), 1, true));
-        jScrollPane2.setViewportView(jtExameFisico);
-
-        jpExameFisico.add(jScrollPane2);
-        jScrollPane2.setBounds(20, 30, 560, 190);
-
-        labelExameFisico.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        jpExameFisico.add(labelExameFisico);
-        labelExameFisico.setBounds(0, 0, 598, 240);
-
-        jtGeral.addTab("Exame Físico", jpExameFisico);
 
         jpVistaAnterior.setBackground(new java.awt.Color(255, 255, 255));
         jpVistaAnterior.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
@@ -830,7 +792,6 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
         Object objetoRetorno = PesquisaTriagem.exibeTela(itm, "Avaliação Postural");
         if (objetoRetorno != null) {
             avaliacaoPostural = avaliacaoPosturalDAO.consultarObjetoId("idAvaliacaoPostural", objetoRetorno);
-            jtExameFisico.setText(avaliacaoPostural.getExameFisico());
             txtCabecaVistaAnterior.setText(avaliacaoPostural.getCabecaVistaAnterior());
             txtAlturaOmbroVistaAnterior.setText(avaliacaoPostural.getAlturaDosOmbrosVistaAnterior());
             txtClaviculaVistaAnterior.setText(avaliacaoPostural.getClaviculaVistaAnterior());
@@ -854,7 +815,7 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
             txtEscapulaVistaPosterior.setText(avaliacaoPostural.getEscapulaPosterior());
             txtEipisVistaPosterior.setText(avaliacaoPostural.getEipisPosterior());
             txtCalcaneoVistaPosterior.setText(avaliacaoPostural.getCalcaneoPosterior());
-            
+
             btExcluir.setEnabled(true);
         }
     }//GEN-LAST:event_btPesquisarActionPerformed
@@ -866,7 +827,7 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
 
 
     private void btSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalvarActionPerformed
-        if (jtExameFisico.getText().equals("") || txtCabecaVistaAnterior.getText().equals("")
+        if (txtCabecaVistaAnterior.getText().equals("")
                 || txtAlturaOmbroVistaAnterior.getText().equals("")
                 || txtClaviculaVistaAnterior.getText().equals("")
                 || txtTrianguloTallesVistaAnterior.getText().equals("")
@@ -889,8 +850,7 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
                 || txtCalcaneoVistaPosterior.getText().equals("")) {
             JOptionPane.showMessageDialog(this, "Prencha todos os campos !!");
         } else {
-            
-            avaliacaoPostural.setExameFisico(jtExameFisico.getText());
+
             avaliacaoPostural.setCabecaVistaAnterior(txtCabecaVistaAnterior.getText());
             avaliacaoPostural.setAlturaDosOmbrosVistaAnterior(txtAlturaOmbroVistaAnterior.getText());
             avaliacaoPostural.setClaviculaVistaAnterior(txtClaviculaVistaAnterior.getText());
@@ -933,7 +893,6 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
     private void btLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLimparActionPerformed
         Util.limparCamposGenerico(this);
         avaliacaoPostural = new AvaliacaoPostural();
-        jtExameFisico.setText("");
         txtCabecaVistaAnterior.setText("");
         txtAlturaOmbroVistaAnterior.setText("");
         txtClaviculaVistaAnterior.setText("");
@@ -1593,16 +1552,13 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
     private javax.swing.JLabel jLObrigatorioNome23;
     private javax.swing.JLabel jLObrigatorioNome24;
     private javax.swing.JLabel jLObrigatorioNome25;
-    private javax.swing.JLabel jLObrigatorioNome26;
     private javax.swing.JLabel jLObrigatorioNome3;
     private javax.swing.JLabel jLObrigatorioNome4;
     private javax.swing.JLabel jLObrigatorioNome5;
     private javax.swing.JLabel jLObrigatorioNome6;
     private javax.swing.JLabel jLObrigatorioNome8;
     private javax.swing.JLabel jLObrigatorioNome9;
-    private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel jlNomeUsuario10;
     private javax.swing.JLabel jlNomeUsuario11;
     private javax.swing.JLabel jlNomeUsuario12;
@@ -1626,14 +1582,11 @@ public class CadastroAvaliacaoPostural extends javax.swing.JDialog {
     private javax.swing.JLabel jlNomeUsuario7;
     private javax.swing.JLabel jlNomeUsuario8;
     private javax.swing.JLabel jlNomeUsuario9;
-    private javax.swing.JPanel jpExameFisico;
     private javax.swing.JPanel jpVistaAnterior;
     private javax.swing.JPanel jpVistaLateral;
     private javax.swing.JPanel jpVistaPosterior;
-    private javax.swing.JTextArea jtExameFisico;
     private javax.swing.JTabbedPane jtGeral;
     private javax.swing.JLabel labelAluno;
-    private javax.swing.JLabel labelExameFisico;
     private javax.swing.JLabel labelVistaLateral;
     private javax.swing.JLabel labelVistaPosterior;
     private javax.swing.JTextField txtAbdomenVistaLateral;

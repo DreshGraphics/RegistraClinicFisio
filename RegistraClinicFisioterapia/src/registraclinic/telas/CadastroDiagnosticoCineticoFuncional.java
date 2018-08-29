@@ -205,9 +205,9 @@ public class CadastroDiagnosticoCineticoFuncional extends javax.swing.JDialog {
         jScrollPane4.setBounds(20, 340, 560, 100);
 
         jlNomeUsuario5.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
-        jlNomeUsuario5.setText("Observações Gerais");
+        jlNomeUsuario5.setText("Testes especiais - colocar lá em cima");
         getContentPane().add(jlNomeUsuario5);
-        jlNomeUsuario5.setBounds(20, 320, 200, 20);
+        jlNomeUsuario5.setBounds(20, 320, 400, 20);
 
         jLabel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jLabel6.setMaximumSize(new java.awt.Dimension(600, 540));

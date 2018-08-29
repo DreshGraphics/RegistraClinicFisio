@@ -85,7 +85,7 @@ public class TraumatoOrtopedia extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btDiagnosticoCinetico);
-        btDiagnosticoCinetico.setBounds(300, 260, 297, 50);
+        btDiagnosticoCinetico.setBounds(300, 290, 297, 50);
 
         txtPaciente.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtPaciente.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
@@ -111,7 +111,7 @@ public class TraumatoOrtopedia extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btPerimetria);
-        btPerimetria.setBounds(0, 200, 160, 50);
+        btPerimetria.setBounds(0, 230, 160, 50);
 
         btExamesComplementares.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btExamesComplementares.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/excluir_fisio.png"))); // NOI18N
@@ -125,7 +125,7 @@ public class TraumatoOrtopedia extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btExamesComplementares);
-        btExamesComplementares.setBounds(300, 200, 260, 50);
+        btExamesComplementares.setBounds(300, 230, 260, 50);
 
         btSalvar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/save_fisio.png"))); // NOI18N
@@ -174,7 +174,7 @@ public class TraumatoOrtopedia extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btAnamnese);
-        btAnamnese.setBounds(0, 140, 160, 50);
+        btAnamnese.setBounds(0, 170, 160, 50);
 
         btExcluir.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/excluir_fisio.png"))); // NOI18N
@@ -249,7 +249,7 @@ public class TraumatoOrtopedia extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btGoniometria);
-        btGoniometria.setBounds(0, 260, 170, 50);
+        btGoniometria.setBounds(0, 290, 170, 50);
 
         btGrauForca.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btGrauForca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/pesquisar_fisio.png"))); // NOI18N
@@ -263,7 +263,7 @@ public class TraumatoOrtopedia extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btGrauForca);
-        btGrauForca.setBounds(0, 320, 181, 50);
+        btGrauForca.setBounds(0, 350, 181, 50);
 
         btAvaliacaoPostural.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btAvaliacaoPostural.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/excluir_fisio.png"))); // NOI18N
@@ -277,7 +277,7 @@ public class TraumatoOrtopedia extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btAvaliacaoPostural);
-        btAvaliacaoPostural.setBounds(300, 140, 210, 50);
+        btAvaliacaoPostural.setBounds(300, 170, 210, 50);
 
         jLFundo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLFundo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
