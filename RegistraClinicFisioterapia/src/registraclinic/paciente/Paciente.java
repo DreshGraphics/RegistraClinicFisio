@@ -39,8 +39,8 @@ public class Paciente extends Pessoa{
     private String diganosticoMedico;
     
     private String tipoAtendimento;
+    private String nomeMedicoPaciente;
     
-    private String queixaDoPaciente;
 
     public String getNumeroProntuarioPaciente() {
         return numeroProntuarioPaciente;
@@ -80,14 +80,6 @@ public class Paciente extends Pessoa{
 
     public void setAlturaPaciente(String alturaPaciente) {
         this.alturaPaciente = alturaPaciente;
-    }
-
-    public String getQueixaDoPaciente() {
-        return queixaDoPaciente;
-    }
-
-    public void setQueixaDoPaciente(String queixaDoPaciente) {
-        this.queixaDoPaciente = queixaDoPaciente;
     }
 
     public String getTipoPaciente() {
@@ -160,6 +152,14 @@ public class Paciente extends Pessoa{
 
     public void setDiganosticoMedico(String diganosticoMedico) {
         this.diganosticoMedico = diganosticoMedico;
+    }
+
+    public String getNomeMedicoPaciente() {
+        return nomeMedicoPaciente;
+    }
+
+    public void setNomeMedicoPaciente(String nomeMedicoPaciente) {
+        this.nomeMedicoPaciente = nomeMedicoPaciente;
     }
     
 }

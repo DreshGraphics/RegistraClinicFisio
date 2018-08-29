@@ -41,41 +41,335 @@ public class CadastroAnamnese extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btVoltar = new javax.swing.JButton();
-        btPesquisar = new javax.swing.JButton();
-        btExcluir = new javax.swing.JButton();
-        btLimpar = new javax.swing.JButton();
-        btSalvar = new javax.swing.JButton();
-        txtPa = new javax.swing.JTextField();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jtHistoricoFamiliar = new javax.swing.JTextArea();
-        jLabel39 = new javax.swing.JLabel();
-        jLObrigatorioNome42 = new javax.swing.JLabel();
+        jtGeral = new javax.swing.JTabbedPane();
+        jpAnamnese = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jtHpp = new javax.swing.JTextArea();
         jScrollPane1 = new javax.swing.JScrollPane();
         jtHda = new javax.swing.JTextArea();
         jLabel37 = new javax.swing.JLabel();
-        jSeparator2 = new javax.swing.JSeparator();
         jLObrigatorioNome40 = new javax.swing.JLabel();
         jLObrigatorioNome41 = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
-        jLabel40 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jtQueixaPrincipal = new javax.swing.JTextArea();
+        jLObrigatorioNome47 = new javax.swing.JLabel();
+        labelDadosPessoais = new javax.swing.JLabel();
+        jpSinaisVitais = new javax.swing.JPanel();
+        jLObrigatorioNome42 = new javax.swing.JLabel();
+        jLObrigatorioNome55 = new javax.swing.JLabel();
         jLabel43 = new javax.swing.JLabel();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        jtHistoricoFamiliar = new javax.swing.JTextArea();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        jtHistoricoSocial = new javax.swing.JTextArea();
+        jLabel44 = new javax.swing.JLabel();
+        labelAluno = new javax.swing.JLabel();
+        jpSinaisVitais1 = new javax.swing.JPanel();
         txtFc = new javax.swing.JTextField();
-        jLObrigatorioNome45 = new javax.swing.JLabel();
-        jLObrigatorioNome44 = new javax.swing.JLabel();
-        jLObrigatorioNome43 = new javax.swing.JLabel();
-        jLabel41 = new javax.swing.JLabel();
-        jLabel42 = new javax.swing.JLabel();
+        jLObrigatorioNome51 = new javax.swing.JLabel();
+        jLabel50 = new javax.swing.JLabel();
+        jLabel51 = new javax.swing.JLabel();
+        txtPa = new javax.swing.JTextField();
+        jLObrigatorioNome52 = new javax.swing.JLabel();
         txtFr = new javax.swing.JTextField();
+        jLObrigatorioNome53 = new javax.swing.JLabel();
+        jLabel52 = new javax.swing.JLabel();
+        jLObrigatorioNome54 = new javax.swing.JLabel();
+        txtTemperatura = new javax.swing.JTextField();
+        jLabel53 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jtExamesComplementares = new javax.swing.JTextArea();
+        jLObrigatorioNome45 = new javax.swing.JLabel();
+        labelAluno1 = new javax.swing.JLabel();
+        btVoltar = new javax.swing.JButton();
+        btPesquisar = new javax.swing.JButton();
+        btExcluir = new javax.swing.JButton();
+        btLimpar = new javax.swing.JButton();
+        btSalvar = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(810, 521));
+        setMaximumSize(new java.awt.Dimension(810, 520));
+        setMinimumSize(new java.awt.Dimension(810, 520));
         setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(810, 520));
         setResizable(false);
         getContentPane().setLayout(null);
+
+        jtGeral.setBackground(new java.awt.Color(255, 255, 255));
+        jtGeral.setForeground(new java.awt.Color(22, 64, 61));
+        jtGeral.setToolTipText("");
+        jtGeral.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        jtGeral.setMaximumSize(new java.awt.Dimension(810, 360));
+        jtGeral.setMinimumSize(new java.awt.Dimension(810, 360));
+        jtGeral.setPreferredSize(new java.awt.Dimension(810, 360));
+        jtGeral.setVerifyInputWhenFocusTarget(false);
+
+        jpAnamnese.setBackground(new java.awt.Color(255, 255, 255));
+        jpAnamnese.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jpAnamnese.setForeground(new java.awt.Color(22, 64, 61));
+        jpAnamnese.setLayout(null);
+
+        jtHpp.setColumns(20);
+        jtHpp.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jtHpp.setLineWrap(true);
+        jtHpp.setRows(3);
+        jtHpp.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(56, 100, 62), 1, true));
+        jScrollPane2.setViewportView(jtHpp);
+
+        jpAnamnese.add(jScrollPane2);
+        jScrollPane2.setBounds(10, 130, 380, 190);
+
+        jtHda.setColumns(20);
+        jtHda.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jtHda.setLineWrap(true);
+        jtHda.setRows(3);
+        jtHda.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(56, 100, 62), 1, true));
+        jScrollPane1.setViewportView(jtHda);
+
+        jpAnamnese.add(jScrollPane1);
+        jScrollPane1.setBounds(410, 30, 380, 290);
+
+        jLabel37.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel37.setText("HDA");
+        jpAnamnese.add(jLabel37);
+        jLabel37.setBounds(410, 10, 60, 19);
+
+        jLObrigatorioNome40.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome40.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome40.setText("*");
+        jpAnamnese.add(jLObrigatorioNome40);
+        jLObrigatorioNome40.setBounds(780, 20, 10, 10);
+
+        jLObrigatorioNome41.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome41.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome41.setText("*");
+        jpAnamnese.add(jLObrigatorioNome41);
+        jLObrigatorioNome41.setBounds(380, 120, 10, 10);
+
+        jLabel38.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel38.setText("HPP");
+        jpAnamnese.add(jLabel38);
+        jLabel38.setBounds(10, 110, 60, 19);
+
+        jLabel46.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel46.setText("Queixa Principal");
+        jpAnamnese.add(jLabel46);
+        jLabel46.setBounds(10, 10, 150, 19);
+
+        jtQueixaPrincipal.setColumns(20);
+        jtQueixaPrincipal.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jtQueixaPrincipal.setLineWrap(true);
+        jtQueixaPrincipal.setRows(3);
+        jtQueixaPrincipal.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(56, 100, 62), 1, true));
+        jScrollPane4.setViewportView(jtQueixaPrincipal);
+
+        jpAnamnese.add(jScrollPane4);
+        jScrollPane4.setBounds(10, 30, 380, 70);
+
+        jLObrigatorioNome47.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome47.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome47.setText("*");
+        jpAnamnese.add(jLObrigatorioNome47);
+        jLObrigatorioNome47.setBounds(380, 20, 10, 10);
+
+        labelDadosPessoais.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        labelDadosPessoais.setMaximumSize(new java.awt.Dimension(810, 330));
+        labelDadosPessoais.setMinimumSize(new java.awt.Dimension(810, 330));
+        labelDadosPessoais.setPreferredSize(new java.awt.Dimension(810, 330));
+        jpAnamnese.add(labelDadosPessoais);
+        labelDadosPessoais.setBounds(0, 0, 810, 330);
+
+        jtGeral.addTab("Anamnese", jpAnamnese);
+
+        jpSinaisVitais.setBackground(new java.awt.Color(255, 255, 255));
+        jpSinaisVitais.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jpSinaisVitais.setForeground(new java.awt.Color(22, 64, 61));
+        jpSinaisVitais.setLayout(null);
+
+        jLObrigatorioNome42.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome42.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome42.setText("*");
+        jpSinaisVitais.add(jLObrigatorioNome42);
+        jLObrigatorioNome42.setBounds(770, 180, 10, 10);
+
+        jLObrigatorioNome55.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome55.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome55.setText("*");
+        jpSinaisVitais.add(jLObrigatorioNome55);
+        jLObrigatorioNome55.setBounds(770, 20, 10, 10);
+
+        jLabel43.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel43.setText("História Familiar");
+        jpSinaisVitais.add(jLabel43);
+        jLabel43.setBounds(20, 10, 160, 19);
+
+        jtHistoricoFamiliar.setColumns(20);
+        jtHistoricoFamiliar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jtHistoricoFamiliar.setLineWrap(true);
+        jtHistoricoFamiliar.setRows(3);
+        jtHistoricoFamiliar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(56, 100, 62), 1, true));
+        jScrollPane7.setViewportView(jtHistoricoFamiliar);
+
+        jpSinaisVitais.add(jScrollPane7);
+        jScrollPane7.setBounds(20, 30, 760, 130);
+
+        jtHistoricoSocial.setColumns(20);
+        jtHistoricoSocial.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jtHistoricoSocial.setLineWrap(true);
+        jtHistoricoSocial.setRows(3);
+        jtHistoricoSocial.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(56, 100, 62), 1, true));
+        jScrollPane8.setViewportView(jtHistoricoSocial);
+
+        jpSinaisVitais.add(jScrollPane8);
+        jScrollPane8.setBounds(20, 190, 760, 130);
+
+        jLabel44.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel44.setText("História Social");
+        jpSinaisVitais.add(jLabel44);
+        jLabel44.setBounds(20, 170, 160, 19);
+
+        labelAluno.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        labelAluno.setMaximumSize(new java.awt.Dimension(810, 330));
+        labelAluno.setMinimumSize(new java.awt.Dimension(810, 330));
+        labelAluno.setPreferredSize(new java.awt.Dimension(810, 330));
+        jpSinaisVitais.add(labelAluno);
+        labelAluno.setBounds(0, 0, 810, 330);
+
+        jtGeral.addTab("Hábitos de Vida", jpSinaisVitais);
+
+        jpSinaisVitais1.setBackground(new java.awt.Color(255, 255, 255));
+        jpSinaisVitais1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jpSinaisVitais1.setForeground(new java.awt.Color(22, 64, 61));
+        jpSinaisVitais1.setLayout(null);
+
+        txtFc.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtFc.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        txtFc.setMaximumSize(new java.awt.Dimension(8, 200));
+        txtFc.setMinimumSize(new java.awt.Dimension(8, 200));
+        txtFc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtFcActionPerformed(evt);
+            }
+        });
+        jpSinaisVitais1.add(txtFc);
+        txtFc.setBounds(430, 40, 150, 30);
+
+        jLObrigatorioNome51.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome51.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome51.setText("*");
+        jpSinaisVitais1.add(jLObrigatorioNome51);
+        jLObrigatorioNome51.setBounds(570, 30, 10, 10);
+
+        jLabel50.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel50.setText("FC");
+        jpSinaisVitais1.add(jLabel50);
+        jLabel50.setBounds(430, 20, 30, 19);
+
+        jLabel51.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel51.setText("PA");
+        jpSinaisVitais1.add(jLabel51);
+        jLabel51.setBounds(20, 20, 30, 19);
+
+        txtPa.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtPa.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        txtPa.setMaximumSize(new java.awt.Dimension(8, 200));
+        txtPa.setMinimumSize(new java.awt.Dimension(8, 200));
+        txtPa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPaActionPerformed(evt);
+            }
+        });
+        jpSinaisVitais1.add(txtPa);
+        txtPa.setBounds(20, 40, 150, 30);
+
+        jLObrigatorioNome52.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome52.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome52.setText("*");
+        jpSinaisVitais1.add(jLObrigatorioNome52);
+        jLObrigatorioNome52.setBounds(160, 30, 10, 10);
+
+        txtFr.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtFr.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        txtFr.setMaximumSize(new java.awt.Dimension(8, 200));
+        txtFr.setMinimumSize(new java.awt.Dimension(8, 200));
+        txtFr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtFrActionPerformed(evt);
+            }
+        });
+        jpSinaisVitais1.add(txtFr);
+        txtFr.setBounds(220, 40, 150, 30);
+
+        jLObrigatorioNome53.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome53.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome53.setText("*");
+        jpSinaisVitais1.add(jLObrigatorioNome53);
+        jLObrigatorioNome53.setBounds(360, 30, 10, 10);
+
+        jLabel52.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel52.setText("FR");
+        jpSinaisVitais1.add(jLabel52);
+        jLabel52.setBounds(220, 20, 30, 19);
+
+        jLObrigatorioNome54.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome54.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome54.setText("*");
+        jpSinaisVitais1.add(jLObrigatorioNome54);
+        jLObrigatorioNome54.setBounds(770, 30, 10, 10);
+
+        txtTemperatura.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtTemperatura.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        txtTemperatura.setMaximumSize(new java.awt.Dimension(8, 200));
+        txtTemperatura.setMinimumSize(new java.awt.Dimension(8, 200));
+        txtTemperatura.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTemperaturaActionPerformed(evt);
+            }
+        });
+        jpSinaisVitais1.add(txtTemperatura);
+        txtTemperatura.setBounds(630, 40, 150, 30);
+
+        jLabel53.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel53.setText("Temperatura");
+        jpSinaisVitais1.add(jLabel53);
+        jLabel53.setBounds(630, 20, 110, 19);
+
+        jLabel42.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel42.setText("Exames Complementares");
+        jpSinaisVitais1.add(jLabel42);
+        jLabel42.setBounds(20, 90, 200, 19);
+
+        jtExamesComplementares.setColumns(20);
+        jtExamesComplementares.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jtExamesComplementares.setLineWrap(true);
+        jtExamesComplementares.setRows(3);
+        jtExamesComplementares.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(56, 100, 62), 1, true));
+        jScrollPane6.setViewportView(jtExamesComplementares);
+
+        jpSinaisVitais1.add(jScrollPane6);
+        jScrollPane6.setBounds(20, 110, 760, 200);
+
+        jLObrigatorioNome45.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLObrigatorioNome45.setForeground(new java.awt.Color(204, 0, 0));
+        jLObrigatorioNome45.setText("*");
+        jpSinaisVitais1.add(jLObrigatorioNome45);
+        jLObrigatorioNome45.setBounds(770, 100, 10, 10);
+
+        labelAluno1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        labelAluno1.setMaximumSize(new java.awt.Dimension(810, 330));
+        labelAluno1.setMinimumSize(new java.awt.Dimension(810, 330));
+        labelAluno1.setPreferredSize(new java.awt.Dimension(810, 330));
+        jpSinaisVitais1.add(labelAluno1);
+        labelAluno1.setBounds(0, 0, 810, 330);
+
+        jtGeral.addTab("Sinais Vitais", jpSinaisVitais1);
+
+        getContentPane().add(jtGeral);
+        jtGeral.setBounds(0, 60, 810, 360);
 
         btVoltar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/voltar_fisio.png"))); // NOI18N
@@ -153,155 +447,13 @@ public class CadastroAnamnese extends javax.swing.JDialog {
         getContentPane().add(btSalvar);
         btSalvar.setBounds(720, 440, 80, 70);
 
-        txtPa.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtPa.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
-        txtPa.setMaximumSize(new java.awt.Dimension(8, 200));
-        txtPa.setMinimumSize(new java.awt.Dimension(8, 200));
-        txtPa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtPaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtPa);
-        txtPa.setBounds(620, 290, 170, 30);
-
-        jtHistoricoFamiliar.setColumns(20);
-        jtHistoricoFamiliar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jtHistoricoFamiliar.setLineWrap(true);
-        jtHistoricoFamiliar.setRows(3);
-        jtHistoricoFamiliar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(56, 100, 62), 1, true));
-        jScrollPane3.setViewportView(jtHistoricoFamiliar);
-
-        getContentPane().add(jScrollPane3);
-        jScrollPane3.setBounds(20, 280, 520, 140);
-
-        jLabel39.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
-        jLabel39.setText("PA");
-        getContentPane().add(jLabel39);
-        jLabel39.setBounds(590, 300, 30, 19);
-
-        jLObrigatorioNome42.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLObrigatorioNome42.setForeground(new java.awt.Color(204, 0, 0));
-        jLObrigatorioNome42.setText("*");
-        getContentPane().add(jLObrigatorioNome42);
-        jLObrigatorioNome42.setBounds(780, 380, 10, 10);
-
-        jtHpp.setColumns(20);
-        jtHpp.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jtHpp.setLineWrap(true);
-        jtHpp.setRows(3);
-        jtHpp.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(56, 100, 62), 1, true));
-        jScrollPane2.setViewportView(jtHpp);
-
-        getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(410, 90, 380, 150);
-
-        jtHda.setColumns(20);
-        jtHda.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jtHda.setLineWrap(true);
-        jtHda.setRows(3);
-        jtHda.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(56, 100, 62), 1, true));
-        jScrollPane1.setViewportView(jtHda);
-
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(20, 90, 380, 150);
-
-        jLabel37.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
-        jLabel37.setText("HDA");
-        getContentPane().add(jLabel37);
-        jLabel37.setBounds(20, 70, 60, 19);
-
-        jSeparator2.setBackground(new java.awt.Color(0, 0, 0));
-        jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
-        jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator2);
-        jSeparator2.setBounds(570, 260, 10, 160);
-
-        jLObrigatorioNome40.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLObrigatorioNome40.setForeground(new java.awt.Color(204, 0, 0));
-        jLObrigatorioNome40.setText("*");
-        getContentPane().add(jLObrigatorioNome40);
-        jLObrigatorioNome40.setBounds(390, 80, 10, 10);
-
-        jLObrigatorioNome41.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLObrigatorioNome41.setForeground(new java.awt.Color(204, 0, 0));
-        jLObrigatorioNome41.setText("*");
-        getContentPane().add(jLObrigatorioNome41);
-        jLObrigatorioNome41.setBounds(780, 80, 10, 10);
-
-        jLabel38.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
-        jLabel38.setText("HPP");
-        getContentPane().add(jLabel38);
-        jLabel38.setBounds(410, 70, 60, 19);
-
-        jLabel40.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
-        jLabel40.setText("História Familiar");
-        getContentPane().add(jLabel40);
-        jLabel40.setBounds(20, 260, 160, 19);
-
-        jLabel43.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
-        jLabel43.setText("FC");
-        getContentPane().add(jLabel43);
-        jLabel43.setBounds(590, 400, 30, 19);
-
-        txtFc.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtFc.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
-        txtFc.setMaximumSize(new java.awt.Dimension(8, 200));
-        txtFc.setMinimumSize(new java.awt.Dimension(8, 200));
-        txtFc.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtFcActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtFc);
-        txtFc.setBounds(620, 390, 170, 30);
-
-        jLObrigatorioNome45.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLObrigatorioNome45.setForeground(new java.awt.Color(204, 0, 0));
-        jLObrigatorioNome45.setText("*");
-        getContentPane().add(jLObrigatorioNome45);
-        jLObrigatorioNome45.setBounds(780, 330, 10, 10);
-
-        jLObrigatorioNome44.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLObrigatorioNome44.setForeground(new java.awt.Color(204, 0, 0));
-        jLObrigatorioNome44.setText("*");
-        getContentPane().add(jLObrigatorioNome44);
-        jLObrigatorioNome44.setBounds(780, 280, 10, 10);
-
-        jLObrigatorioNome43.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLObrigatorioNome43.setForeground(new java.awt.Color(204, 0, 0));
-        jLObrigatorioNome43.setText("*");
-        getContentPane().add(jLObrigatorioNome43);
-        jLObrigatorioNome43.setBounds(530, 270, 10, 10);
-
-        jLabel41.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
-        jLabel41.setText("Sinais Vitais");
-        getContentPane().add(jLabel41);
-        jLabel41.setBounds(580, 260, 160, 19);
-
-        jLabel42.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
-        jLabel42.setText("FR");
-        getContentPane().add(jLabel42);
-        jLabel42.setBounds(590, 350, 30, 19);
-
-        txtFr.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtFr.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
-        txtFr.setMaximumSize(new java.awt.Dimension(8, 200));
-        txtFr.setMinimumSize(new java.awt.Dimension(8, 200));
-        txtFr.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtFrActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtFr);
-        txtFr.setBounds(620, 340, 170, 30);
-
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/CADASTRO ANAMNESE.png"))); // NOI18N
         jLabel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jLabel6.setMaximumSize(new java.awt.Dimension(809, 521));
-        jLabel6.setMinimumSize(new java.awt.Dimension(809, 521));
-        jLabel6.setPreferredSize(new java.awt.Dimension(809, 521));
+        jLabel6.setMaximumSize(new java.awt.Dimension(809, 520));
+        jLabel6.setMinimumSize(new java.awt.Dimension(809, 520));
+        jLabel6.setPreferredSize(new java.awt.Dimension(809, 520));
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(0, 0, 810, 435);
+        jLabel6.setBounds(0, 0, 810, 520);
 
         pack();
         setLocationRelativeTo(null);
@@ -316,7 +468,7 @@ public class CadastroAnamnese extends javax.swing.JDialog {
             anamnese = anamneseDAO.consultarObjetoId("idAnamnese", objetoRetorno);
             jtHda.setText(anamnese.getHda());
             jtHpp.setText(anamnese.getHpp());
-            jtHistoricoFamiliar.setText(anamnese.getHistoriaFamiliar());
+            jtExamesComplementares.setText(anamnese.getHistoriaFamiliar());
             txtPa.setText(anamnese.getPa());
             txtFr.setText(anamnese.getFr());
             txtFc.setText(anamnese.getFc());
@@ -333,14 +485,14 @@ public class CadastroAnamnese extends javax.swing.JDialog {
 
     private void btSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalvarActionPerformed
         if (jtHda.getText().isEmpty() || jtHpp.getText().isEmpty()
-                || jtHistoricoFamiliar.getText().isEmpty() || txtPa.getText().equals("")
+                || jtExamesComplementares.getText().isEmpty() || txtPa.getText().equals("")
                 || txtFr.getText().equals("") || txtFc.getText().equals("")) {
             JOptionPane.showMessageDialog(this, "Prencha todos os campos !!");
         } else {
 
             anamnese.setHda(jtHda.getText());
             anamnese.setHpp(jtHpp.getText());
-            anamnese.setHistoriaFamiliar(jtHistoricoFamiliar.getText());
+            anamnese.setHistoriaFamiliar(jtExamesComplementares.getText());
             anamnese.setPa(txtPa.getText());
             anamnese.setFr(txtFr.getText());
             anamnese.setFc(txtFc.getText());
@@ -366,6 +518,10 @@ public class CadastroAnamnese extends javax.swing.JDialog {
 
     }//GEN-LAST:event_btLimparActionPerformed
 
+    private void txtFcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFcActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFcActionPerformed
+
     private void txtPaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPaActionPerformed
@@ -374,9 +530,9 @@ public class CadastroAnamnese extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtFrActionPerformed
 
-    private void txtFcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFcActionPerformed
+    private void txtTemperaturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTemperaturaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtFcActionPerformed
+    }//GEN-LAST:event_txtTemperaturaActionPerformed
 
 //    public void addAPorraToda() {
 //        if (paciente != null) {
@@ -1397,26 +1553,46 @@ public class CadastroAnamnese extends javax.swing.JDialog {
     private javax.swing.JLabel jLObrigatorioNome40;
     private javax.swing.JLabel jLObrigatorioNome41;
     private javax.swing.JLabel jLObrigatorioNome42;
-    private javax.swing.JLabel jLObrigatorioNome43;
-    private javax.swing.JLabel jLObrigatorioNome44;
     private javax.swing.JLabel jLObrigatorioNome45;
+    private javax.swing.JLabel jLObrigatorioNome47;
+    private javax.swing.JLabel jLObrigatorioNome51;
+    private javax.swing.JLabel jLObrigatorioNome52;
+    private javax.swing.JLabel jLObrigatorioNome53;
+    private javax.swing.JLabel jLObrigatorioNome54;
+    private javax.swing.JLabel jLObrigatorioNome55;
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel39;
-    private javax.swing.JLabel jLabel40;
-    private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JPanel jpAnamnese;
+    private javax.swing.JPanel jpSinaisVitais;
+    private javax.swing.JPanel jpSinaisVitais1;
+    private javax.swing.JTextArea jtExamesComplementares;
+    private javax.swing.JTabbedPane jtGeral;
     private javax.swing.JTextArea jtHda;
     private javax.swing.JTextArea jtHistoricoFamiliar;
+    private javax.swing.JTextArea jtHistoricoSocial;
     private javax.swing.JTextArea jtHpp;
+    private javax.swing.JTextArea jtQueixaPrincipal;
+    private javax.swing.JLabel labelAluno;
+    private javax.swing.JLabel labelAluno1;
+    private javax.swing.JLabel labelDadosPessoais;
     private javax.swing.JTextField txtFc;
     private javax.swing.JTextField txtFr;
     private javax.swing.JTextField txtPa;
+    private javax.swing.JTextField txtTemperatura;
     // End of variables declaration//GEN-END:variables
 }

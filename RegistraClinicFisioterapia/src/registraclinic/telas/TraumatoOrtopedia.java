@@ -14,6 +14,9 @@ import javax.swing.JOptionPane;
 import registraclinic.paciente.Paciente;
 import registraclinic.paciente.PacienteDAO;
 import registraclinic.paciente.PacienteTableModel;
+import registraclinic.supervisor.Supervisor;
+import registraclinic.supervisor.SupervisorDAO;
+import registraclinic.supervisor.SupervisorTableModel;
 
 /**
  *
@@ -23,10 +26,13 @@ public class TraumatoOrtopedia extends javax.swing.JFrame {
     
     Paciente paciente = new Paciente();
     PacienteDAO pacienteDAO = new PacienteDAO();
+    Supervisor supervisor = new Supervisor();
+    SupervisorDAO supervisorDAO = new SupervisorDAO();
 
     public TraumatoOrtopedia(Usuario usuario) {
         initComponents();
         txtPaciente.setEnabled(false);
+        txtSupervisor.setEnabled(false);
     }
 
     /**
@@ -55,17 +61,21 @@ public class TraumatoOrtopedia extends javax.swing.JFrame {
         btGoniometria = new javax.swing.JButton();
         btGrauForca = new javax.swing.JButton();
         btAvaliacaoPostural = new javax.swing.JButton();
+        txtSupervisor = new javax.swing.JTextField();
+        jlNomeUsuario6 = new javax.swing.JLabel();
+        btnPaciente1 = new javax.swing.JButton();
         jLFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(600, 500));
-        setMinimumSize(new java.awt.Dimension(600, 500));
+        setMaximumSize(new java.awt.Dimension(850, 500));
+        setMinimumSize(new java.awt.Dimension(850, 500));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(600, 500));
+        setPreferredSize(new java.awt.Dimension(850, 500));
         getContentPane().setLayout(null);
 
-        jPanel1.setMaximumSize(new java.awt.Dimension(600, 500));
-        jPanel1.setMinimumSize(new java.awt.Dimension(600, 500));
+        jPanel1.setMaximumSize(new java.awt.Dimension(850, 500));
+        jPanel1.setMinimumSize(new java.awt.Dimension(850, 500));
+        jPanel1.setPreferredSize(new java.awt.Dimension(850, 500));
         jPanel1.setLayout(null);
 
         jlNomeUsuario5.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
@@ -85,7 +95,7 @@ public class TraumatoOrtopedia extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btDiagnosticoCinetico);
-        btDiagnosticoCinetico.setBounds(300, 290, 297, 50);
+        btDiagnosticoCinetico.setBounds(0, 250, 297, 50);
 
         txtPaciente.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtPaciente.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
@@ -97,11 +107,11 @@ public class TraumatoOrtopedia extends javax.swing.JFrame {
             }
         });
         jPanel1.add(txtPaciente);
-        txtPaciente.setBounds(20, 90, 540, 30);
+        txtPaciente.setBounds(20, 90, 360, 30);
 
         btPerimetria.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btPerimetria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/limpar_fisio.png"))); // NOI18N
-        btPerimetria.setText("Perimetria");
+        btPerimetria.setText("Exame Físico");
         btPerimetria.setContentAreaFilled(false);
         btPerimetria.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btPerimetria.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -111,11 +121,11 @@ public class TraumatoOrtopedia extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btPerimetria);
-        btPerimetria.setBounds(0, 230, 160, 50);
+        btPerimetria.setBounds(350, 170, 170, 50);
 
         btExamesComplementares.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btExamesComplementares.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/excluir_fisio.png"))); // NOI18N
-        btExamesComplementares.setText("Exames Complementares");
+        btExamesComplementares.setText("Avaliação Subjetiva da Dor");
         btExamesComplementares.setContentAreaFilled(false);
         btExamesComplementares.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btExamesComplementares.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -125,7 +135,7 @@ public class TraumatoOrtopedia extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btExamesComplementares);
-        btExamesComplementares.setBounds(300, 230, 260, 50);
+        btExamesComplementares.setBounds(580, 170, 270, 50);
 
         btSalvar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/save_fisio.png"))); // NOI18N
@@ -140,7 +150,7 @@ public class TraumatoOrtopedia extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btSalvar);
-        btSalvar.setBounds(510, 420, 80, 70);
+        btSalvar.setBounds(760, 420, 80, 70);
 
         btnPaciente.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnPaciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/add_20-20_fisio.png"))); // NOI18N
@@ -154,13 +164,13 @@ public class TraumatoOrtopedia extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnPaciente);
-        btnPaciente.setBounds(560, 90, 30, 30);
+        btnPaciente.setBounds(380, 90, 30, 30);
 
         jLObrigatorioNome3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLObrigatorioNome3.setForeground(new java.awt.Color(204, 0, 0));
         jLObrigatorioNome3.setText("*");
         jPanel1.add(jLObrigatorioNome3);
-        jLObrigatorioNome3.setBounds(550, 80, 10, 10);
+        jLObrigatorioNome3.setBounds(370, 80, 10, 10);
 
         btAnamnese.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btAnamnese.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/voltar_fisio.png"))); // NOI18N
@@ -189,7 +199,7 @@ public class TraumatoOrtopedia extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btExcluir);
-        btExcluir.setBounds(390, 420, 80, 70);
+        btExcluir.setBounds(510, 420, 80, 70);
 
         btPesquisar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/pesquisar_fisio.png"))); // NOI18N
@@ -204,7 +214,7 @@ public class TraumatoOrtopedia extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btPesquisar);
-        btPesquisar.setBounds(250, 420, 100, 70);
+        btPesquisar.setBounds(370, 420, 100, 70);
 
         btLimpar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/limpar_fisio.png"))); // NOI18N
@@ -219,7 +229,7 @@ public class TraumatoOrtopedia extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btLimpar);
-        btLimpar.setBounds(140, 420, 80, 70);
+        btLimpar.setBounds(260, 420, 80, 70);
 
         btVoltar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/voltar_fisio.png"))); // NOI18N
@@ -249,11 +259,11 @@ public class TraumatoOrtopedia extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btGoniometria);
-        btGoniometria.setBounds(0, 290, 170, 50);
+        btGoniometria.setBounds(350, 250, 170, 50);
 
         btGrauForca.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btGrauForca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/pesquisar_fisio.png"))); // NOI18N
-        btGrauForca.setText("Grau de Força");
+        btGrauForca.setText("Força Muscular");
         btGrauForca.setContentAreaFilled(false);
         btGrauForca.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btGrauForca.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -263,7 +273,7 @@ public class TraumatoOrtopedia extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btGrauForca);
-        btGrauForca.setBounds(0, 350, 181, 50);
+        btGrauForca.setBounds(580, 250, 190, 50);
 
         btAvaliacaoPostural.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btAvaliacaoPostural.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/excluir_fisio.png"))); // NOI18N
@@ -277,18 +287,50 @@ public class TraumatoOrtopedia extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btAvaliacaoPostural);
-        btAvaliacaoPostural.setBounds(300, 170, 210, 50);
+        btAvaliacaoPostural.setBounds(0, 330, 210, 50);
+
+        txtSupervisor.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtSupervisor.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(58, 100, 62), 1, true));
+        txtSupervisor.setMaximumSize(new java.awt.Dimension(8, 200));
+        txtSupervisor.setMinimumSize(new java.awt.Dimension(8, 200));
+        txtSupervisor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSupervisorActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txtSupervisor);
+        txtSupervisor.setBounds(440, 90, 360, 30);
+
+        jlNomeUsuario6.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jlNomeUsuario6.setText("Supervisor");
+        jPanel1.add(jlNomeUsuario6);
+        jlNomeUsuario6.setBounds(440, 70, 90, 20);
+
+        btnPaciente1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnPaciente1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/add_20-20_fisio.png"))); // NOI18N
+        btnPaciente1.setContentAreaFilled(false);
+        btnPaciente1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnPaciente1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnPaciente1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnPaciente1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPaciente1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnPaciente1);
+        btnPaciente1.setBounds(800, 90, 30, 30);
 
         jLFundo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Traumato-Ortopedia.png"))); // NOI18N
         jLFundo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jLFundo.setMaximumSize(new java.awt.Dimension(600, 500));
-        jLFundo.setMinimumSize(new java.awt.Dimension(600, 500));
-        jLFundo.setPreferredSize(new java.awt.Dimension(600, 500));
+        jLFundo.setMaximumSize(new java.awt.Dimension(850, 500));
+        jLFundo.setMinimumSize(new java.awt.Dimension(850, 500));
+        jLFundo.setPreferredSize(new java.awt.Dimension(850, 500));
         jPanel1.add(jLFundo);
-        jLFundo.setBounds(0, 0, 600, 500);
+        jLFundo.setBounds(0, 0, 850, 500);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 600, 500);
+        jPanel1.setBounds(0, 0, 850, 500);
 
         pack();
         setLocationRelativeTo(null);
@@ -388,6 +430,21 @@ public class TraumatoOrtopedia extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btAvaliacaoPosturalActionPerformed
 
+    private void txtSupervisorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSupervisorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtSupervisorActionPerformed
+
+    private void btnPaciente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPaciente1ActionPerformed
+        List<Supervisor> lista;
+        lista = (supervisorDAO.listar());
+        SupervisorTableModel itm = new SupervisorTableModel(lista);
+        Object objetoRetorno = PesquisaGenerica.exibeTela(itm, "Supervisor");
+        if (objetoRetorno != null) {
+            supervisor = supervisorDAO.consultarObjetoId("idPessoa", objetoRetorno);
+            txtSupervisor.setText(supervisor.getNomePessoa());
+        }
+    }//GEN-LAST:event_btnPaciente1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -452,10 +509,13 @@ public class TraumatoOrtopedia extends javax.swing.JFrame {
     private javax.swing.JButton btSalvar;
     private javax.swing.JButton btVoltar;
     private javax.swing.JButton btnPaciente;
+    private javax.swing.JButton btnPaciente1;
     private javax.swing.JLabel jLFundo;
     private javax.swing.JLabel jLObrigatorioNome3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel jlNomeUsuario5;
+    private javax.swing.JLabel jlNomeUsuario6;
     private javax.swing.JTextField txtPaciente;
+    private javax.swing.JTextField txtSupervisor;
     // End of variables declaration//GEN-END:variables
 }

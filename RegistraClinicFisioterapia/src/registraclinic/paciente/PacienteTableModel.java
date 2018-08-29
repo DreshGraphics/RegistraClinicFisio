@@ -19,16 +19,13 @@ import registraclinic.usuario.Usuario;
 public class PacienteTableModel extends AbstractTableModel {
 
     private List<Paciente> pacientes = new ArrayList<>();
-    private final String[] colunas = {"Código", "Prontuário", "Nome", "Sexo", "Idade", "Peso(kg)", "Altura(cm)", "Queixa Paciente", "Endereço", "Cidade", "Telefone", "Situação", "Atendimento"};
+    private final String[] colunas = {"Código", "Prontuário", "Nome", "Sexo", "Idade", "Peso(kg)", "Altura(cm)", "Médico", "Endereço", "Cidade", "Telefone", "Situação", "Atendimento"};
 
     public PacienteTableModel(List<Paciente> pacientes) {
         this.pacientes = pacientes;
     }
 
-    public PacienteTableModel() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
+    
     @Override
     public int getRowCount() {
         return pacientes.size();
@@ -62,7 +59,7 @@ public class PacienteTableModel extends AbstractTableModel {
             case 6:
                 return paciente.getAlturaPaciente();
             case 7:
-                return paciente.getQueixaDoPaciente();
+                return paciente.getNomeMedicoPaciente();
             case 8:
                 return paciente.getEnderecoPessoa();
             case 9:

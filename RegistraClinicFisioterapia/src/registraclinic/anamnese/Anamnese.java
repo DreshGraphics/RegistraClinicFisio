@@ -5,23 +5,9 @@
  */
 package registraclinic.anamnese;
 
-import registraclinic.triagem.*;
-import java.io.Serializable;
-import java.util.Date;
-import java.util.List;
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
-import registraclinic.atendimento.Atendimento;
-import registraclinic.paciente.Paciente;
-
 /**
  *
  * @author Karlos Oliveira
@@ -35,10 +21,14 @@ public class Anamnese {
     private String hda;
     private String hpp;
     private String historiaFamiliar;
+    private String historiaSocial;
     private String pa;
     private String fr;
     private String fc;
-
+    private String temperatura;
+    private String queixaPrincipal;
+    private String examesComplementares;
+    
     public int getIdAnamnese() {
         return idAnamnese;
     }
@@ -94,6 +84,37 @@ public class Anamnese {
     public void setFc(String fc) {
         this.fc = fc;
     }
-    
+
+    public String getHistoriaSocial() {
+        return historiaSocial;
+    }
+
+    public void setHistoriaSocial(String historiaSocial) {
+        this.historiaSocial = historiaSocial;
+    }
+
+    public String getTemperatura() {
+        return temperatura;
+    }
+
+    public void setTemperatura(String temperatura) {
+        this.temperatura = temperatura;
+    }
+
+    public String getQueixaPrincipal() {
+        return queixaPrincipal;
+    }
+
+    public void setQueixaPrincipal(String queixaPrincipal) {
+        this.queixaPrincipal = queixaPrincipal;
+    }
+
+    public String getExamesComplementares() {
+        return examesComplementares;
+    }
+
+    public void setExamesComplementares(String examesComplementares) {
+        this.examesComplementares = examesComplementares;
+    }
     
 }
