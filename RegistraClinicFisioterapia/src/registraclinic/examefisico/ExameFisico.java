@@ -10,6 +10,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import registraclinic.paciente.Paciente;
 
 /**
  *
@@ -41,6 +43,17 @@ public class ExameFisico implements Serializable {
     private String Expectoracao;
     private String Palpacao;
     private String Percucao;
+    
+    @OneToOne
+    private Paciente paciente;
+
+    public Paciente getPaciente() {
+        return paciente;
+    }
+
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
+    }
 
     /**
      * @return the PA
