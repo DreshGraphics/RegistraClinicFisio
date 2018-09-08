@@ -9,6 +9,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import registraclinic.paciente.Paciente;
 
 /**
  *
@@ -39,6 +41,17 @@ public class AnamneseCardio {
     private boolean Estresse;
     private boolean HAS;
     private boolean ControleAlimentar;
+    
+    @OneToOne
+    private Paciente paciente;
+
+    public Paciente getPaciente() {
+        return paciente;
+    }
+
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
+    }
 
     /**
      * @return the DiagnosticoClinico

@@ -30,8 +30,8 @@
         <mapping class="registraclinic.anamnesecardio.AnamneseCardio"/>
         <mapping class="registraclinic.examefisico.ExameFisico"/>
         <mapping class="registraclinic.provapulmonar.ProvaPulmonar"/>
-        
-        
+        <mapping class="registraclinic.cardiorespiratorio.CardioRespiratorio"/>
+
     </session-factory>
 </hibernate-configuration>
 
