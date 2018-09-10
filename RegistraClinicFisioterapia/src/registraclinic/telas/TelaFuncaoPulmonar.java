@@ -6,8 +6,9 @@
 package registraclinic.telas;
 
 import javax.swing.JOptionPane;
-import registraclinic.provapulmonar.ProvaPulmonar;
-import registraclinic.provapulmonar.ProvaPulmonarDAO;
+import registraclinic.cardiorespiratorio.CardioRespiratorio;
+import registraclinic.cardiorespiratorio.CardioRespiratorioDAO;
+
 
 /**
  *
@@ -15,8 +16,8 @@ import registraclinic.provapulmonar.ProvaPulmonarDAO;
  */
 public class TelaFuncaoPulmonar extends javax.swing.JDialog {
 
-    ProvaPulmonar provapulmonar = new ProvaPulmonar();
-    ProvaPulmonarDAO provaPulmonarDAO = new ProvaPulmonarDAO();
+    CardioRespiratorio cardio = new CardioRespiratorio();
+    CardioRespiratorioDAO cardioDAO = new CardioRespiratorioDAO();
     
     public TelaFuncaoPulmonar(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
@@ -352,18 +353,18 @@ public class TelaFuncaoPulmonar extends javax.swing.JDialog {
 
     private void jBsalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBsalvarActionPerformed
         if(!jTPregaAxilar.getText().equals(" ")){
-        provapulmonar.setPregaAxilar(jTPregaAxilar.getText());
-        provapulmonar.setProcessoXifoide(jTProcessoXifoide.getText());
-        provapulmonar.setLinhaUmbilical(jTLinhaUmbilical.getText());
-        provapulmonar.setConclusao(jTConclusao.getText());
-        provapulmonar.setMelhorFluxoPessoal(jTFluxoPessoal.getText());
-        provapulmonar.setPImax(jTPI.getText());
-        provapulmonar.setPEmax(jTPE.getText());
-        provapulmonar.setPIParecer(jTParecer1.getText());
-        provapulmonar.setPEParecer(jTParecer.getText());
-        provapulmonar.setOBJTratamento(jTObjTratamento.getText());
-        provapulmonar.setCondultas(jTCondultas.getText());
-        provaPulmonarDAO.salvar(provapulmonar);
+        cardio.setPregaAxilar(jTPregaAxilar.getText());
+        cardio.setProcessoXifoide(jTProcessoXifoide.getText());
+        cardio.setLinhaUmbilical(jTLinhaUmbilical.getText());
+        cardio.setConclusao(jTConclusao.getText());
+        cardio.setMelhorFluxoPessoal(jTFluxoPessoal.getText());
+        cardio.setPImax(jTPI.getText());
+        cardio.setPEmax(jTPE.getText());
+        cardio.setPIParecer(jTParecer1.getText());
+        cardio.setPEParecer(jTParecer.getText());
+        cardio.setOBJTratamento(jTObjTratamento.getText());
+        cardio.setCondultas(jTCondultas.getText());
+        cardioDAO.salvar(cardio);
             JOptionPane.showMessageDialog(null,"savo com sucesso!");
         }else{
             JOptionPane.showMessageDialog(null,"erro ao salvar!");

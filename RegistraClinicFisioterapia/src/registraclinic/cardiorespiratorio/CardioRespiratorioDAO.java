@@ -1,11 +1,8 @@
 
 package registraclinic.cardiorespiratorio;
 
-import registraclinic.avaliacaopostural.*;
-import registraclinic.anamnese.*;
-import registraclinic.atendimento.*;
+
 import javax.swing.JOptionPane;
-import registraclinic.atendimento.Atendimento;
 import registraclinic.util.GenericDAO;
 
 /**

@@ -5,8 +5,8 @@
  */package registraclinic.telas;
 
 import javax.swing.JOptionPane;
-import registraclinic.examefisico.ExameFisico;
-import registraclinic.examefisico.ExameFisicoDAO;
+import registraclinic.cardiorespiratorio.CardioRespiratorio;
+import registraclinic.cardiorespiratorio.CardioRespiratorioDAO;
 
 
 
@@ -16,8 +16,10 @@ import registraclinic.examefisico.ExameFisicoDAO;
  */
 public class TelaExameFisico extends javax.swing.JDialog {
 
-    ExameFisico examefisico = new ExameFisico();
-    ExameFisicoDAO examefisicoDAO = new ExameFisicoDAO();
+    
+    
+    CardioRespiratorio cardio = new CardioRespiratorio();
+    CardioRespiratorioDAO cardioDAO = new CardioRespiratorioDAO();
             
 
     public TelaExameFisico(java.awt.Frame parent, boolean modal) {
@@ -356,23 +358,23 @@ public class TelaExameFisico extends javax.swing.JDialog {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
          if(!jtPa.getText().equals(" ")){
-        examefisico.setPA(jtPa.getText());
-    examefisico.setFC(jtFc.getText());
-    examefisico.setFR(jtFr.getText());
-    examefisico.setSaO2(jtSaO.getText());
-    examefisico.setAuscutaCardiaca(jtAuscultaCardiaca.getText());
-    examefisico.setAuscutaPulmonar(jtAuscultaPulmonar.getText());
-    examefisico.setFormaDoTorax(jcFormaDoTorax.getSelectedItem().toString());
-    examefisico.setSimetriaDoTorax(jtSimetriaDoTorax.getText());
-    examefisico.setExpansibilidade(jtExpansibilidade.getText());
-    examefisico.setMobilidadeToracica(jtMobilidadeToraxica.getText());
-    examefisico.setUsoDeMusculaturaAcessoria(jcUsoDeMusculatura.getSelectedItem().toString());
-    examefisico.setRitmoRespiratorio(jcRitmoRespiratorio.getSelectedItem().toString());
-    examefisico.setTosse(jcTosse.getSelectedItem().toString());
-    examefisico.setExpectoracao(jcExpectoracao.getSelectedItem().toString());
-    examefisico.setDispneia(jcheckDispineia.isSelected());
-    examefisico.setRespiracaoParadoxal(jcheckRespiracaoParadoxal.isSelected()); 
-        examefisicoDAO.salvar(examefisico);
+        cardio.setPA(jtPa.getText());
+    cardio.setFC(jtFc.getText());
+    cardio.setFR(jtFr.getText());
+    cardio.setSaO2(jtSaO.getText());
+    cardio.setAuscutaCardiaca(jtAuscultaCardiaca.getText());
+    cardio.setAuscutaPulmonar(jtAuscultaPulmonar.getText());
+    cardio.setFormaDoTorax(jcFormaDoTorax.getSelectedItem().toString());
+    cardio.setSimetriaDoTorax(jtSimetriaDoTorax.getText());
+    cardio.setExpansibilidade(jtExpansibilidade.getText());
+    cardio.setMobilidadeToracica(jtMobilidadeToraxica.getText());
+    cardio.setUsoDeMusculaturaAcessoria(jcUsoDeMusculatura.getSelectedItem().toString());
+    cardio.setRitmoRespiratorio(jcRitmoRespiratorio.getSelectedItem().toString());
+    cardio.setTosse(jcTosse.getSelectedItem().toString());
+    cardio.setExpectoracao(jcExpectoracao.getSelectedItem().toString());
+    cardio.setDispneia(jcheckDispineia.isSelected());
+    cardio.setRespiracaoParadoxal(jcheckRespiracaoParadoxal.isSelected()); 
+        cardioDAO.salvar(cardio);
              JOptionPane.showMessageDialog(null,"salvo com sucesso! ");
          } else{
              JOptionPane.showMessageDialog(null,"ERRO AO SALVAR!");

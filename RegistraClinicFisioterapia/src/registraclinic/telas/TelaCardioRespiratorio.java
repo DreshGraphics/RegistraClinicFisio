@@ -10,16 +10,14 @@ import static java.rmi.Naming.list;
 import static java.util.Collections.list;
 import java.util.List;
 import javax.swing.JOptionPane;
-import registraclinic.anamnesecardio.AnamneseCardio;
-import registraclinic.anamnesecardio.AnamneseCardioDAO;
+
 import registraclinic.cardiorespiratorio.CardioRespiratorio;
 import registraclinic.cardiorespiratorio.CardioRespiratorioDAO;
-import registraclinic.examefisico.ExameFisico;
-import registraclinic.examefisico.ExameFisicoDAO;
+
 import registraclinic.paciente.Paciente;
 import registraclinic.paciente.PacienteDAO;
 import registraclinic.paciente.PacienteTableModel;
-import registraclinic.provapulmonar.ProvaPulmonar;
+
 
 /**
  *
@@ -30,17 +28,7 @@ public class TelaCardioRespiratorio extends javax.swing.JDialog {
     /**
      * Creates new form TelaCardioRespiratorio
      */
-    
-    AnamneseCardio anamnesecardio;
-    AnamneseCardioDAO anamnesecardioDAO = new AnamneseCardioDAO();
-    
-    ExameFisico examefisico;
-    ExameFisicoDAO examefisicoDAO = new ExameFisicoDAO();
-    
-    ProvaPulmonar provapulmonar;
-    PacienteDAO provapulmonarDAO = new PacienteDAO();
             
-    
    CardioRespiratorio cardio = new CardioRespiratorio();
    CardioRespiratorioDAO cardiodao = new CardioRespiratorioDAO();
    
@@ -183,9 +171,7 @@ public class TelaCardioRespiratorio extends javax.swing.JDialog {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
        if(!txtPaciente.getText().isEmpty()){
-        cardio.setAnamnesecardio(anamnesecardio);
-        cardio.setExamefisico(examefisico);
-        cardio.setProvapulmonar(provapulmonar);
+        
         cardio.setPaciente(paciente);
         cardiodao.salvar(cardio);
            JOptionPane.showMessageDialog(null, "salvo com sucesso");

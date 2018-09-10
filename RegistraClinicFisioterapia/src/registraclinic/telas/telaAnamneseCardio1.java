@@ -6,8 +6,8 @@
 package registraclinic.telas;
 
 import javax.swing.JOptionPane;
-import registraclinic.anamnesecardio.AnamneseCardio;
-import registraclinic.anamnesecardio.AnamneseCardioDAO;
+import registraclinic.cardiorespiratorio.CardioRespiratorio;
+import registraclinic.cardiorespiratorio.CardioRespiratorioDAO;
 
 /**
  *
@@ -22,8 +22,8 @@ public class telaAnamneseCardio1 extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
     }
-    AnamneseCardio anamnesecardio = new AnamneseCardio();
-    AnamneseCardioDAO anamnesecardioDAO = new AnamneseCardioDAO();
+    CardioRespiratorio cardio = new CardioRespiratorio();
+    CardioRespiratorioDAO cardioDAO = new CardioRespiratorioDAO();
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -332,24 +332,24 @@ public class telaAnamneseCardio1 extends javax.swing.JDialog {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         if(!jTDiagnosticoClinico.getText().equals(" ")){
-            anamnesecardio.setDiagnosticoClinico(jTDiagnosticoClinico.getText());
-            anamnesecardio.setQueixaPrincipal(jTQueixaPrincipal.getText());
-            anamnesecardio.setHDA(jTHDA.getText());
-            anamnesecardio.setHistoricoFamiliar(jTHistoricoFamiliar.getText());
-            anamnesecardio.setMedicacaoDeUso(jTMedicacoesUso.getText());
-            anamnesecardio.setExamesComplementares(jTExamesComplementares.getText());
-            anamnesecardio.setCigarrosDias(jTCigarrosDia.getText());
-            anamnesecardio.setTempoParado(jTTempoParado.getText());
-            anamnesecardio.setAnosTabag(jTAnosTabagismo.getText());
-            anamnesecardio.setAtividadeFisica(jcAtividadeFisica.getSelectedItem().toString());
-            anamnesecardio.setObesidade(jCTabagismo.isSelected());
-            anamnesecardio.setTabagismo(jCTabagismo.isSelected());
-            anamnesecardio.setHAS(jCHAS.isSelected());
-            anamnesecardio.setEtilismo(jCEtilismo.isSelected());
-            anamnesecardio.setEstresse(jChEstresse.isSelected());
-            anamnesecardio.setDiabetes(jCControleAlimentar.isSelected());
-            anamnesecardio.setControleAlimentar(jCControleAlimentar.isSelected());
-            anamnesecardioDAO.salvar(anamnesecardio);
+            cardio.setDiagnosticoClinico(jTDiagnosticoClinico.getText());
+            cardio.setQueixaPrincipal(jTQueixaPrincipal.getText());
+            cardio.setHDA(jTHDA.getText());
+            cardio.setHistoricoFamiliar(jTHistoricoFamiliar.getText());
+            cardio.setMedicacaoDeUso(jTMedicacoesUso.getText());
+            cardio.setExamesComplementares(jTExamesComplementares.getText());
+            cardio.setCigarrosDias(jTCigarrosDia.getText());
+            cardio.setTempoParado(jTTempoParado.getText());
+            cardio.setAnosTabag(jTAnosTabagismo.getText());
+            cardio.setAtividadeFisica(jcAtividadeFisica.getSelectedItem().toString());
+            cardio.setObesidade(jCTabagismo.isSelected());
+            cardio.setTabagismo(jCTabagismo.isSelected());
+            cardio.setHAS(jCHAS.isSelected());
+            cardio.setEtilismo(jCEtilismo.isSelected());
+            cardio.setEstresse(jChEstresse.isSelected());
+            cardio.setDiabetes(jCControleAlimentar.isSelected());
+            cardio.setControleAlimentar(jCControleAlimentar.isSelected());
+            cardioDAO.salvar(cardio);
             JOptionPane.showMessageDialog(null,"salvo com sucesso");
 
         }else{
