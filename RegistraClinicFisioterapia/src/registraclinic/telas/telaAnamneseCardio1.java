@@ -331,7 +331,7 @@ public class telaAnamneseCardio1 extends javax.swing.JDialog {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        if(!jTDiagnosticoClinico.getText().equals(" ")){
+        if(!jTDiagnosticoClinico.getText().isEmpty()){
             cardio.setDiagnosticoClinico(jTDiagnosticoClinico.getText());
             cardio.setQueixaPrincipal(jTQueixaPrincipal.getText());
             cardio.setHDA(jTHDA.getText());

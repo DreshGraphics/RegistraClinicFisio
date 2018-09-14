@@ -95,6 +95,7 @@ public class TelaCardioRespiratorio extends javax.swing.JDialog {
         jBFuncaoPulmonar.setBounds(490, 130, 160, 30);
 
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/voltar_fisio.png"))); // NOI18N
+        jButton4.setContentAreaFilled(false);
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -104,6 +105,7 @@ public class TelaCardioRespiratorio extends javax.swing.JDialog {
         jButton4.setBounds(290, 430, 70, 60);
 
         jButtonPesquisa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/pesquisar_fisio.png"))); // NOI18N
+        jButtonPesquisa.setContentAreaFilled(false);
         jButtonPesquisa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonPesquisaActionPerformed(evt);
@@ -113,6 +115,7 @@ public class TelaCardioRespiratorio extends javax.swing.JDialog {
         jButtonPesquisa.setBounds(440, 430, 70, 60);
 
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/save_fisio.png"))); // NOI18N
+        jButton6.setContentAreaFilled(false);
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -122,6 +125,7 @@ public class TelaCardioRespiratorio extends javax.swing.JDialog {
         jButton6.setBounds(590, 430, 70, 60);
 
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/add_sub_14-14.png"))); // NOI18N
+        jButton5.setContentAreaFilled(false);
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
