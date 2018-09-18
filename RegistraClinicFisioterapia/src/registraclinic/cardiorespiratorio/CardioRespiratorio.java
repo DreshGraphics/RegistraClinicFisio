@@ -7,6 +7,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import registraclinic.paciente.Paciente;
 
@@ -22,12 +23,11 @@ public class CardioRespiratorio {
     @GeneratedValue
     private int idCardioRespiratorio;
     
-    
-    @OneToOne(fetch = FetchType.LAZY ,mappedBy="pessoa", optional = false)
+    @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="idPaciente")
     private Paciente paciente;
         
-    @Column(nullable = false)
+    @Column(nullable = false )
     private String DiagnosticoClinico;
     private String QueixaPrincipal;
     private String HistoricoFamiliar;

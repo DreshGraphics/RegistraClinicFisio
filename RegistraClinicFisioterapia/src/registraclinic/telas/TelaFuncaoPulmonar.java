@@ -364,10 +364,8 @@ public class TelaFuncaoPulmonar extends javax.swing.JDialog {
         cardio.setPEParecer(jTParecer.getText());
         cardio.setOBJTratamento(jTObjTratamento.getText());
         cardio.setCondultas(jTCondultas.getText());
-        cardioDAO.salvar(cardio);
-            JOptionPane.showMessageDialog(null,"savo com sucesso!");
         }else{
-            JOptionPane.showMessageDialog(null,"erro ao salvar!");
+            JOptionPane.showMessageDialog(null,"preencha tudo!");
         }
         
         // TODO add your handling codeova here:

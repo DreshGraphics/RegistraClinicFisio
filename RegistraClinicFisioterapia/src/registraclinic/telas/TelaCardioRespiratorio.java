@@ -157,18 +157,21 @@ public class TelaCardioRespiratorio extends javax.swing.JDialog {
 
     private void jBAnamneseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAnamneseActionPerformed
         telaAnamneseCardio1 tac = new telaAnamneseCardio1(null, rootPaneCheckingEnabled);
+        tac.cardio= cardio;
         tac.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jBAnamneseActionPerformed
 
     private void jBExameFisicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBExameFisicoActionPerformed
         TelaExameFisico tef = new TelaExameFisico(null, rootPaneCheckingEnabled);
+        tef.cardio = cardio;
         tef.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jBExameFisicoActionPerformed
 
     private void jBFuncaoPulmonarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBFuncaoPulmonarActionPerformed
         TelaFuncaoPulmonar tfp = new TelaFuncaoPulmonar(null, rootPaneCheckingEnabled);
+        tfp.cardio = cardio;
         tfp.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jBFuncaoPulmonarActionPerformed
@@ -176,12 +179,11 @@ public class TelaCardioRespiratorio extends javax.swing.JDialog {
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
        if(!txtPaciente.getText().isEmpty()){
         
-        cardio.setPaciente(paciente);
-        cardiodao.salvar(cardio);
-           JOptionPane.showMessageDialog(null, "salvo com sucesso");
+       cardio.setPaciente(paciente);
+       cardiodao.salvar(cardio);
+        JOptionPane.showMessageDialog(null, "salvo com sucesso");
        }else{
-       
-          JOptionPane.showMessageDialog(null, "deu errdo");
+        JOptionPane.showMessageDialog(null, "deu errdo");
        }
 
         
@@ -212,7 +214,7 @@ public class TelaCardioRespiratorio extends javax.swing.JDialog {
             txtPaciente.setText(paciente.getNomePessoa());
         }
         
-        
+           
     }//GEN-LAST:event_jButton5ActionPerformed
 
     /** 

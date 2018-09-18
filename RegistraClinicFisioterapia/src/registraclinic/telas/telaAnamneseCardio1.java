@@ -14,7 +14,8 @@ import registraclinic.cardiorespiratorio.CardioRespiratorioDAO;
  * @author Paulo
  */
 public class telaAnamneseCardio1 extends javax.swing.JDialog {
-
+     CardioRespiratorio cardio = new CardioRespiratorio();
+    CardioRespiratorioDAO cardioDAO = new CardioRespiratorioDAO();
     /**
      * Creates new form telaAnamneseCardio1
      */
@@ -22,8 +23,7 @@ public class telaAnamneseCardio1 extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
     }
-    CardioRespiratorio cardio = new CardioRespiratorio();
-    CardioRespiratorioDAO cardioDAO = new CardioRespiratorioDAO();
+   
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -294,7 +294,7 @@ public class telaAnamneseCardio1 extends javax.swing.JDialog {
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(580, 430, 70, 60);
+        jButton2.setBounds(580, 420, 70, 60);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/anamnesecardio0000.png"))); // NOI18N
         jPanel1.add(jLabel1);
@@ -349,8 +349,6 @@ public class telaAnamneseCardio1 extends javax.swing.JDialog {
             cardio.setEstresse(jChEstresse.isSelected());
             cardio.setDiabetes(jCControleAlimentar.isSelected());
             cardio.setControleAlimentar(jCControleAlimentar.isSelected());
-            cardioDAO.salvar(cardio);
-            JOptionPane.showMessageDialog(null,"salvo com sucesso");
 
         }else{
             JOptionPane.showMessageDialog(null,"preencha todos os campos");

@@ -374,10 +374,9 @@ public class TelaExameFisico extends javax.swing.JDialog {
     cardio.setExpectoracao(jcExpectoracao.getSelectedItem().toString());
     cardio.setDispneia(jcheckDispineia.isSelected());
     cardio.setRespiracaoParadoxal(jcheckRespiracaoParadoxal.isSelected()); 
-        cardioDAO.salvar(cardio);
-             JOptionPane.showMessageDialog(null,"salvo com sucesso! ");
+        
          } else{
-             JOptionPane.showMessageDialog(null,"ERRO AO SALVAR!");
+             JOptionPane.showMessageDialog(null,"preencha todos os campos!");
          }
    
     }//GEN-LAST:event_jButton2ActionPerformed
