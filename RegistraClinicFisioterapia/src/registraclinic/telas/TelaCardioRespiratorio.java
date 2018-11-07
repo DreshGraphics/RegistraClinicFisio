@@ -104,7 +104,7 @@ public class TelaCardioRespiratorio extends javax.swing.JDialog {
             }
         });
         jPanel1.add(jButton4);
-        jButton4.setBounds(290, 430, 70, 60);
+        jButton4.setBounds(380, 440, 70, 60);
 
         jButtonPesquisa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/pesquisar_fisio.png"))); // NOI18N
         jButtonPesquisa.setContentAreaFilled(false);
@@ -114,7 +114,7 @@ public class TelaCardioRespiratorio extends javax.swing.JDialog {
             }
         });
         jPanel1.add(jButtonPesquisa);
-        jButtonPesquisa.setBounds(440, 430, 70, 60);
+        jButtonPesquisa.setBounds(490, 440, 70, 60);
 
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/save_fisio.png"))); // NOI18N
         jButton6.setContentAreaFilled(false);
@@ -124,9 +124,9 @@ public class TelaCardioRespiratorio extends javax.swing.JDialog {
             }
         });
         jPanel1.add(jButton6);
-        jButton6.setBounds(590, 430, 70, 60);
+        jButton6.setBounds(600, 440, 70, 60);
 
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/add_sub_14-14.png"))); // NOI18N
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/add_cad.png"))); // NOI18N
         jButton5.setContentAreaFilled(false);
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -134,7 +134,7 @@ public class TelaCardioRespiratorio extends javax.swing.JDialog {
             }
         });
         jPanel1.add(jButton5);
-        jButton5.setBounds(490, 180, 90, 90);
+        jButton5.setBounds(570, 270, 70, 50);
 
         jBEvolucao.setText("Evolução");
         jBEvolucao.addActionListener(new java.awt.event.ActionListener() {
@@ -154,7 +154,7 @@ public class TelaCardioRespiratorio extends javax.swing.JDialog {
         jPanel1.add(jBFuncaoPulmonar1);
         jBFuncaoPulmonar1.setBounds(350, 130, 140, 30);
         jPanel1.add(txtPaciente);
-        txtPaciente.setBounds(20, 200, 470, 40);
+        txtPaciente.setBounds(40, 270, 530, 50);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/cardiorespiratotio0000.png"))); // NOI18N
         jPanel1.add(jLabel1);
