@@ -59,7 +59,7 @@ public class TelaAutenticacao extends javax.swing.JFrame {
 
         btCancelar.setBackground(new java.awt.Color(0, 102, 0));
         btCancelar.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        btCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Sair_80-80.png"))); // NOI18N
+        btCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Sair_7.png"))); // NOI18N
         btCancelar.setText("Sair");
         btCancelar.setBorder(null);
         btCancelar.setBorderPainted(false);
@@ -79,14 +79,14 @@ public class TelaAutenticacao extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btCancelar);
-        btCancelar.setBounds(780, 430, 90, 110);
+        btCancelar.setBounds(790, 440, 90, 100);
 
         btEntrar.setBackground(new java.awt.Color(255, 255, 255));
         btEntrar.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        btEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Entrar_80-80.png"))); // NOI18N
+        btEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Entrar_7.png"))); // NOI18N
         btEntrar.setText("Entrar");
         btEntrar.setContentAreaFilled(false);
-        btEntrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btEntrar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btEntrar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btEntrar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         btEntrar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -96,17 +96,17 @@ public class TelaAutenticacao extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btEntrar);
-        btEntrar.setBounds(890, 430, 90, 113);
+        btEntrar.setBounds(880, 438, 90, 95);
 
         jLabel3.setFont(new java.awt.Font("Calibri", 1, 28)); // NOI18N
         jLabel3.setText("TIPO DE USUÁRIO");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(460, 290, 220, 30);
+        jLabel3.setBounds(550, 290, 220, 30);
 
         jLabel2.setFont(new java.awt.Font("Calibri", 1, 28)); // NOI18N
         jLabel2.setText("LOGIN");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(460, 90, 110, 30);
+        jLabel2.setBounds(550, 90, 110, 30);
 
         jcTipoUsuario.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
         jcTipoUsuario.setForeground(new java.awt.Color(58, 100, 62));
@@ -118,7 +118,7 @@ public class TelaAutenticacao extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jcTipoUsuario);
-        jcTipoUsuario.setBounds(460, 320, 340, 50);
+        jcTipoUsuario.setBounds(550, 320, 340, 50);
 
         txtLogin.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
         txtLogin.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(56, 100, 62), 2, true));
@@ -128,12 +128,12 @@ public class TelaAutenticacao extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtLogin);
-        txtLogin.setBounds(460, 120, 340, 50);
+        txtLogin.setBounds(550, 120, 340, 50);
 
         jLabel4.setFont(new java.awt.Font("Calibri", 1, 28)); // NOI18N
         jLabel4.setText("SENHA");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(460, 190, 120, 30);
+        jLabel4.setBounds(550, 190, 120, 30);
 
         txtSenha.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
         txtSenha.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(56, 100, 62), 2, true));
@@ -145,9 +145,10 @@ public class TelaAutenticacao extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtSenha);
-        txtSenha.setBounds(460, 220, 340, 50);
+        txtSenha.setBounds(550, 220, 340, 50);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/Login_2.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/prototipoTelaLoginPronta.png"))); // NOI18N
+        jLabel1.setToolTipText("");
         jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel1.setMaximumSize(new java.awt.Dimension(1000, 570));
         jLabel1.setMinimumSize(new java.awt.Dimension(1000, 570));

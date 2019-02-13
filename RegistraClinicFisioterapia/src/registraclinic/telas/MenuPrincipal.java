@@ -20,9 +20,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     public MenuPrincipal(Usuario usuario) {
         initComponents();
-        menuRelatorio.setVisible(false);
-        menuSaida.setVisible(false);
-        menuSaida1.setVisible(false);
+       
         this.usuario = usuario;
         jlUsuario.setText(usuario.getLoginUsuario());
         if (usuario.getTipoUsuario().equalsIgnoreCase("Aluno")) {
@@ -53,17 +51,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
         subAtendimento = new javax.swing.JMenuItem();
         subCidades = new javax.swing.JMenuItem();
         subPessoa = new javax.swing.JMenuItem();
-        menuSaida = new javax.swing.JMenu();
-        subProdutoConsumo = new javax.swing.JMenuItem();
-        subUsuario2 = new javax.swing.JMenuItem();
-        saidaProdutoDeConsumo = new javax.swing.JMenuItem();
-        subDevolverEstoqueConsumo = new javax.swing.JMenuItem();
-        menuSaida1 = new javax.swing.JMenu();
-        subProdutoPermanente = new javax.swing.JMenuItem();
-        subEstoquePermanente3 = new javax.swing.JMenuItem();
-        saidaProdutoPermanente1 = new javax.swing.JMenuItem();
-        subDevolverEstoquePermanente = new javax.swing.JMenuItem();
-        menuRelatorio = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1020, 623));
@@ -75,7 +62,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btLogout.setText("Sair");
         btLogout.setToolTipText("Sair");
         btLogout.setContentAreaFilled(false);
-        btLogout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btLogout.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btLogout.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btLogout.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         btLogout.addActionListener(new java.awt.event.ActionListener() {
@@ -96,7 +83,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         getContentPane().add(jlNome3);
         jlNome3.setBounds(10, 470, 110, 30);
 
-        jlHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registraclinic/imagens/TELA_INICIAL_5.png"))); // NOI18N
+        jlHome.setBackground(new java.awt.Color(0, 153, 51));
         jlHome.setMaximumSize(new java.awt.Dimension(1020, 540));
         jlHome.setMinimumSize(new java.awt.Dimension(1020, 540));
         jlHome.setPreferredSize(new java.awt.Dimension(1020, 540));
@@ -163,108 +150,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jMenu.add(menuCadastros);
 
-        menuSaida.setText("Consumo");
-        menuSaida.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        menuSaida.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
-        menuSaida.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        menuSaida.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        menuSaida.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-
-        subProdutoConsumo.setText("Cadastro Produto de Consumo");
-        subProdutoConsumo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        subProdutoConsumo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                subProdutoConsumoActionPerformed(evt);
-            }
-        });
-        menuSaida.add(subProdutoConsumo);
-
-        subUsuario2.setText("Cadastro Estoque Consumo");
-        subUsuario2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        subUsuario2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                subUsuario2ActionPerformed(evt);
-            }
-        });
-        menuSaida.add(subUsuario2);
-
-        saidaProdutoDeConsumo.setText("Saída Produto Consumo");
-        saidaProdutoDeConsumo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        saidaProdutoDeConsumo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                saidaProdutoDeConsumoActionPerformed(evt);
-            }
-        });
-        menuSaida.add(saidaProdutoDeConsumo);
-
-        subDevolverEstoqueConsumo.setText("Devolver Produtos Consumo");
-        subDevolverEstoqueConsumo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        subDevolverEstoqueConsumo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                subDevolverEstoqueConsumoActionPerformed(evt);
-            }
-        });
-        menuSaida.add(subDevolverEstoqueConsumo);
-
-        jMenu.add(menuSaida);
-
-        menuSaida1.setText("Permanente");
-        menuSaida1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        menuSaida1.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
-        menuSaida1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        menuSaida1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        menuSaida1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-
-        subProdutoPermanente.setText("Cadastro Produto Permanente");
-        subProdutoPermanente.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        subProdutoPermanente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                subProdutoPermanenteActionPerformed(evt);
-            }
-        });
-        menuSaida1.add(subProdutoPermanente);
-
-        subEstoquePermanente3.setText("Cadastro Estoque Permanente");
-        subEstoquePermanente3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        subEstoquePermanente3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                subEstoquePermanente3ActionPerformed(evt);
-            }
-        });
-        menuSaida1.add(subEstoquePermanente3);
-
-        saidaProdutoPermanente1.setText("Saída Produto Permanente");
-        saidaProdutoPermanente1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        saidaProdutoPermanente1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                saidaProdutoPermanente1ActionPerformed(evt);
-            }
-        });
-        menuSaida1.add(saidaProdutoPermanente1);
-
-        subDevolverEstoquePermanente.setText("Devolver Produtos Permanente");
-        subDevolverEstoquePermanente.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        subDevolverEstoquePermanente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                subDevolverEstoquePermanenteActionPerformed(evt);
-            }
-        });
-        menuSaida1.add(subDevolverEstoquePermanente);
-
-        jMenu.add(menuSaida1);
-
-        menuRelatorio.setText("Relatórios");
-        menuRelatorio.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        menuRelatorio.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
-        menuRelatorio.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        menuRelatorio.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        menuRelatorio.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuRelatorioActionPerformed(evt);
-            }
-        });
-        jMenu.add(menuRelatorio);
-
         setJMenuBar(jMenu);
 
         pack();
@@ -282,51 +167,15 @@ public class MenuPrincipal extends javax.swing.JFrame {
         cp.setVisible(true);
     }//GEN-LAST:event_subPessoaActionPerformed
 
-    private void subProdutoConsumoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subProdutoConsumoActionPerformed
-       
-    }//GEN-LAST:event_subProdutoConsumoActionPerformed
-
     private void subTriagemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subTriagemActionPerformed
         CadastroTriagem ct = new CadastroTriagem(this, rootPaneCheckingEnabled);
         ct.setVisible(true);
     }//GEN-LAST:event_subTriagemActionPerformed
 
-    private void menuRelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuRelatorioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_menuRelatorioActionPerformed
-
-    private void subUsuario2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subUsuario2ActionPerformed
-       
-    }//GEN-LAST:event_subUsuario2ActionPerformed
-
-    private void saidaProdutoDeConsumoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saidaProdutoDeConsumoActionPerformed
-       
-    }//GEN-LAST:event_saidaProdutoDeConsumoActionPerformed
-
-    private void subProdutoPermanenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subProdutoPermanenteActionPerformed
-        
-    }//GEN-LAST:event_subProdutoPermanenteActionPerformed
-
     private void subAtendimentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subAtendimentoActionPerformed
         CadastroAtendimento ca = new CadastroAtendimento(this, rootPaneCheckingEnabled);
         ca.setVisible(true);
     }//GEN-LAST:event_subAtendimentoActionPerformed
-
-    private void subDevolverEstoqueConsumoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subDevolverEstoqueConsumoActionPerformed
-       
-    }//GEN-LAST:event_subDevolverEstoqueConsumoActionPerformed
-
-    private void saidaProdutoPermanente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saidaProdutoPermanente1ActionPerformed
-       
-    }//GEN-LAST:event_saidaProdutoPermanente1ActionPerformed
-
-    private void subEstoquePermanente3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subEstoquePermanente3ActionPerformed
-        
-    }//GEN-LAST:event_subEstoquePermanente3ActionPerformed
-
-    private void subDevolverEstoquePermanenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subDevolverEstoquePermanenteActionPerformed
-        
-    }//GEN-LAST:event_subDevolverEstoquePermanenteActionPerformed
 
     private void subCidadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subCidadesActionPerformed
         CadastroCidades cc = new CadastroCidades(this, rootPaneCheckingEnabled);
@@ -378,20 +227,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jlNome3;
     private javax.swing.JLabel jlUsuario;
     private javax.swing.JMenu menuCadastros;
-    private javax.swing.JMenu menuRelatorio;
-    private javax.swing.JMenu menuSaida;
-    private javax.swing.JMenu menuSaida1;
-    private javax.swing.JMenuItem saidaProdutoDeConsumo;
-    private javax.swing.JMenuItem saidaProdutoPermanente1;
     private javax.swing.JMenuItem subAtendimento;
     private javax.swing.JMenuItem subCidades;
-    private javax.swing.JMenuItem subDevolverEstoqueConsumo;
-    private javax.swing.JMenuItem subDevolverEstoquePermanente;
-    private javax.swing.JMenuItem subEstoquePermanente3;
     private javax.swing.JMenuItem subPessoa;
-    private javax.swing.JMenuItem subProdutoConsumo;
-    private javax.swing.JMenuItem subProdutoPermanente;
     private javax.swing.JMenuItem subTriagem;
-    private javax.swing.JMenuItem subUsuario2;
     // End of variables declaration//GEN-END:variables
 }
